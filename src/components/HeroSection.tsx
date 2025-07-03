@@ -34,31 +34,31 @@ const HeroSection = () => {
           <div className="text-left animate-fade-in">
             {/* Main Headline */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-cream mb-6 leading-tight animate-fade-in delay-200">
-              Transform Your
+              Start Feeling
               <br />
               <span className="bg-gradient-to-r from-sage-light to-cream text-transparent bg-clip-text px-4 py-2 inline-block animate-fade-in delay-400">
-                Inner World!
+                Safe, Seen & Connected Again
               </span>
             </h1>
             
             {/* Subheadline */}
             <p className="text-xl md:text-2xl text-cream/90 mb-8 leading-relaxed font-light animate-fade-in delay-600">
-              Welcome to healing with Nagham! I'll help you master:
+              Hi, I'm Nagham and I help you release what's weighing you down so you can feel calm in your body, clear in your mind, and free in your life.
             </p>
 
             {/* Key points list */}
             <div className="mb-10 space-y-3">
               <div className="flex items-center text-cream/90 text-lg animate-fade-in delay-700">
-                <span className="text-sage-light mr-3">✓</span>
-                <span>Subconscious Pattern Release</span>
+                <span className="text-sage-light mr-3">•</span>
+                <span>Subconscious healing</span>
               </div>
               <div className="flex items-center text-cream/90 text-lg animate-fade-in delay-800">
-                <span className="text-sage-light mr-3">✓</span>
-                <span>Nervous System Regulation</span>
+                <span className="text-sage-light mr-3">•</span>
+                <span>Nervous system regulation</span>
               </div>
               <div className="flex items-center text-cream/90 text-lg animate-fade-in delay-1000">
-                <span className="text-sage-light mr-3">✓</span>
-                <span>Deep Emotional Healing</span>
+                <span className="text-sage-light mr-3">•</span>
+                <span>Deep emotional shifts</span>
               </div>
             </div>
 
