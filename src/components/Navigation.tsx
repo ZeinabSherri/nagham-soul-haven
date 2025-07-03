@@ -47,7 +47,7 @@ const Navigation = () => {
           <div className="hidden md:block">
             <Button 
               onClick={() => scrollToSection('consulting')} 
-              className="bg-purple-dark hover:bg-purple-medium text-white px-6 py-2 rounded-md font-light transition-all duration-300"
+              className="bg-sage-light hover:bg-sage-dark text-purple-dark px-6 py-2 rounded-md font-light transition-all duration-300"
             >
               Book Session
             </Button>
@@ -87,7 +87,7 @@ const Navigation = () => {
             </button>
             <Button 
               onClick={() => scrollToSection('consulting')} 
-              className="bg-purple-dark hover:bg-purple-medium text-white px-6 py-2 rounded-md w-full font-light"
+              className="bg-sage-light hover:bg-sage-dark text-purple-dark px-6 py-2 rounded-md w-full font-light"
             >
               Book Session
             </Button>
