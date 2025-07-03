@@ -152,13 +152,48 @@ const ContactSection = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-purple-dark mb-6">Connect With Me</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="w-12 h-12 bg-purple-medium hover:bg-purple-dark rounded-full flex items-center justify-center text-white transition-colors">
-                    <Instagram className="w-6 h-6" />
-                  </a>
-                  <a href="#" className="w-12 h-12 bg-sage-dark hover:bg-sage-light rounded-full flex items-center justify-center text-white transition-colors">
+                  <a 
+                    href="https://www.facebook.com/NaghamTheCoach" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-sage-dark hover:bg-sage-light rounded-full flex items-center justify-center text-white transition-colors"
+                  >
                     <Facebook className="w-6 h-6" />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-purple-dark hover:bg-purple-medium rounded-full flex items-center justify-center text-white transition-colors">
+                  <a 
+                    href="https://www.instagram.com/naghamthecoach/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-purple-medium hover:bg-purple-dark rounded-full flex items-center justify-center text-white transition-colors"
+                  >
+                    <Instagram className="w-6 h-6" />
+                  </a>
+                  <a 
+                    href="https://x.com/NaghamTheCoach" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-purple-dark hover:bg-purple-medium rounded-full flex items-center justify-center text-white transition-colors"
+                  >
+                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </a>
+                  <a 
+                    href="https://www.tiktok.com/@naghamthecoach" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-purple-medium hover:bg-purple-dark rounded-full flex items-center justify-center text-white transition-colors"
+                  >
+                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.142-1.935-1.142-3.338h-2.515v13.917a3.72 3.72 0 0 1-1.814 3.193 3.729 3.729 0 0 1-3.967.289 3.704 3.704 0 0 1-2.017-3.289c0-2.061 1.673-3.734 3.734-3.734.387 0 .764.062 1.121.18v-2.586a6.27 6.27 0 0 0-1.121-.099C5.03 8.871 2 11.901 2 15.891c0 2.433 1.203 4.584 3.047 5.891.849.601 1.88.949 2.967.949 2.99 0 5.421-2.431 5.421-5.421V9.562a8.667 8.667 0 0 0 5.074 1.621V8.611c-.849 0-1.644-.258-2.293-.711-.522-.362-.959-.849-1.279-1.431-.174-.318-.318-.653-.431-1.003-.107-.332-.18-.678-.185-1.024z"/>
+                    </svg>
+                  </a>
+                  <a 
+                    href="https://www.youtube.com/@NaghamTheCoach" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-purple-dark hover:bg-purple-medium rounded-full flex items-center justify-center text-white transition-colors"
+                  >
                     <Youtube className="w-6 h-6" />
                   </a>
                 </div>
