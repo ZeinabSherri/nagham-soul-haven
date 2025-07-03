@@ -18,11 +18,11 @@ const ConsultingSection = () => {
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
             </div>
-            {/* Floating elements for visual interest */}
-            <div className="absolute -top-4 -right-4 bg-purple-dark text-white p-4 rounded-full shadow-lg animate-pulse hover:scale-110 transition-transform duration-300">
+            {/* Floating elements for visual interest - removed animations from icons */}
+            <div className="absolute -top-4 -right-4 bg-purple-dark text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
               <Star className="w-6 h-6" />
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-sage-light text-purple-dark p-4 rounded-full shadow-lg animate-pulse delay-500 hover:scale-110 transition-transform duration-300">
+            <div className="absolute -bottom-4 -left-4 bg-sage-light text-purple-dark p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
               <Users className="w-6 h-6" />
             </div>
           </div>
