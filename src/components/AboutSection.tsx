@@ -63,7 +63,7 @@ const AboutSection = () => {
                 />
               </div>
               {/* Floating badge */}
-              <div className="absolute -bottom-4 -right-4 bg-purple-dark text-white p-4 rounded-full shadow-lg animate-pulse hover:scale-110 transition-transform duration-300">
+              <div className="absolute -bottom-4 -right-4 bg-purple-dark text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
                 <Heart className="w-6 h-6" />
               </div>
             </div>
