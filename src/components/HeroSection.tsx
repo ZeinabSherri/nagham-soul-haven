@@ -15,11 +15,13 @@ const HeroSection = () => {
     <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
+          {/* Headline */}
           <h1 className="text-4xl md:text-6xl font-bold text-amber-900 mb-6 leading-tight">
             Start Feeling Safe, Seen & <br />
             <span className="text-rose-600">Connected Again</span>
           </h1>
           
+          {/* Subheadline */}
           <p className="text-xl md:text-2xl text-amber-800 mb-8 max-w-4xl mx-auto leading-relaxed">
             Hi, I'm Nagham and I help you release what's weighing you down so you can feel 
             <span className="font-semibold text-rose-600"> calm in your body</span>, 
@@ -27,6 +29,7 @@ const HeroSection = () => {
             <span className="font-semibold text-amber-700"> free in your life</span>.
           </p>
 
+          {/* Call-to-Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
               onClick={() => scrollToSection('services')}
@@ -43,7 +46,7 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Key Benefits */}
+          {/* Key Points */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="flex flex-col items-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg">
               <Heart className="w-12 h-12 text-rose-500 mb-4" />
