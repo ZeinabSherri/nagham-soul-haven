@@ -34,10 +34,8 @@ const HeroSection = () => {
           <div className="text-left animate-fade-in">
             {/* Main Headline */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-cream mb-6 leading-tight animate-fade-in delay-200">
-              Start Feeling
-              <br />
               <span className="bg-gradient-to-r from-sage-light to-cream text-transparent bg-clip-text px-4 py-2 inline-block animate-fade-in delay-400">
-                Safe, Seen & Connected Again
+                Start Feeling Safe, Seen & Connected Again
               </span>
             </h1>
             
