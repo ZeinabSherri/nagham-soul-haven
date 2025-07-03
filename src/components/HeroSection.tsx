@@ -21,8 +21,8 @@ const HeroSection = () => {
         }}
       ></div>
       
-      {/* Color Overlay using your palette */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-dark/85 via-purple-medium/80 to-sage-dark/85"></div>
+      {/* Color Overlay using static colors */}
+      <div className="absolute inset-0 bg-purple-dark/85"></div>
       
       {/* Decorative Elements */}
       <div className="absolute top-20 right-20 w-32 h-32 bg-cream/10 rounded-full blur-xl"></div>
