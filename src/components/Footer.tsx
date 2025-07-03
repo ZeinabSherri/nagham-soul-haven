@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Instagram, Facebook, Youtube, Heart } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-gradient-to-r from-purple-dark to-sage-dark text-white py-12 px-4 sm:px-6 lg:px-8">
+  return <footer className="bg-gradient-to-r from-purple-dark to-sage-dark text-white py-12 px-4 sm:px-6 lg:px-8 bg-purple-800">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <h3 className="text-2xl font-bold mb-2">Nagham Rasbieh</h3>
@@ -34,8 +31,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
