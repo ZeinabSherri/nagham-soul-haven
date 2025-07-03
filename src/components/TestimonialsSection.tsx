@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from 'lucide-react';
@@ -6,40 +5,22 @@ import { Star, Quote } from 'lucide-react';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Sarah M.",
-      text: "Working with Nagham has been life-changing. Her gentle yet powerful approach helped me release years of anxiety and find peace I never thought possible. I finally feel safe in my own body.",
+      name: "Zeinab",
+      text: "I tried years of therapy. One session with Nagham shifted something I didn't even know was stuck.",
       rating: 5,
       color: "purple-light"
     },
     {
-      name: "Michael R.",
-      text: "Nagham's unique combination of therapy and energy work created profound shifts in my life. I've overcome limiting beliefs that held me back for decades. Her space feels incredibly safe and healing.",
+      name: "Maya", 
+      text: "I finally feel safe in my body after years of anxiety. She held space for everything.",
       rating: 5,
       color: "sage-light"
     },
     {
-      name: "Elena K.",
-      text: "The Access Bars session was incredible - I felt like years of mental clutter just melted away. Nagham has such a warm, intuitive presence that makes you feel completely held and supported.",
+      name: "Rana",
+      text: "Her sessions helped me reconnect with myself in ways I didn't think were possible.",
       rating: 5,
       color: "purple-very-light"
-    },
-    {
-      name: "David L.",
-      text: "After just a few sessions, I noticed dramatic changes in my relationships and self-confidence. Nagham's integrative approach addresses both the logical and intuitive aspects of healing beautifully.",
-      rating: 5,
-      color: "purple-medium"
-    },
-    {
-      name: "Jessica T.",
-      text: "The past life regression session provided insights that completely reframed my understanding of current challenges. Nagham creates such a sacred, safe space for deep healing work.",
-      rating: 5,
-      color: "sage-dark"
-    },
-    {
-      name: "Robert H.",
-      text: "I was skeptical about energy healing, but Nagham's scientific background and gentle approach made me feel comfortable. The results speak for themselves - I feel more centered and clear than ever.",
-      rating: 5,
-      color: "cream"
     }
   ];
 
