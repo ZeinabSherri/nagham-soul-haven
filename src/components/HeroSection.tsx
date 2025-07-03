@@ -67,7 +67,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button 
                 onClick={() => scrollToSection('services')}
-                className="bg-gradient-to-r from-sage-light to-sage-dark hover:from-sage-dark hover:to-sage-light text-purple-dark px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="bg-purple-medium hover:bg-purple-dark text-cream px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Discover My Services →
               </Button>
