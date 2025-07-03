@@ -84,7 +84,7 @@ const HeroSection = () => {
                   {/* Feature icons */}
                   <div className="grid grid-cols-3 gap-6 mb-8">
                     <div className="flex flex-col items-center">
-                      <div className="w-16 h-16 bg-purple-dark flex items-center justify-center mb-3">
+                      <div className="w-16 h-16 bg-gradient-to-r from-sage-light to-sage-dark rounded-full flex items-center justify-center mb-3">
                         <Heart className="w-8 h-8 text-purple-dark" />
                       </div>
                       <p className="text-cream/80 text-sm">Healing</p>
