@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
+
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -10,11 +12,13 @@ const HeroSection = () => {
       });
     }
   };
-  return <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
+
+  return (
+    <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: "url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=2000&q=80')"
-    }}></div>
+        backgroundImage: "url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=2000&q=80')"
+      }}></div>
       
       {/* Color Overlay using static colors */}
       <div className="absolute inset-0 bg-purple-dark/85"></div>
@@ -61,7 +65,7 @@ const HeroSection = () => {
             {/* Call-to-Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button onClick={() => scrollToSection('services')} className="bg-purple-medium hover:bg-purple-dark text-cream px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Begin Your Healing</Button>
-              <Button onClick={() => scrollToSection('contact')} variant="outline" className="border-2 border-cream/30 text-cream backdrop-blur-sm px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 bg-purple-600 hover:bg-purple-500">Let’s Talk</Button>
+              <Button onClick={() => scrollToSection('contact')} variant="outline" className="border-2 border-cream/30 text-cream backdrop-blur-sm px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 bg-purple-600 hover:bg-purple-500">Let's Talk</Button>
             </div>
           </div>
 
@@ -84,19 +88,19 @@ const HeroSection = () => {
                   {/* Feature icons */}
                   <div className="grid grid-cols-3 gap-6 mb-8">
                     <div className="flex flex-col items-center">
-                      <div className="w-16 h-16 bg-gradient-to-r from-sage-light to-sage-dark rounded-full flex items-center justify-center mb-3">
+                      <div className="w-16 h-16 bg-sage-light rounded-full flex items-center justify-center mb-3">
                         <Heart className="w-8 h-8 text-purple-dark" />
                       </div>
                       <p className="text-cream/80 text-sm">Healing</p>
                     </div>
                     <div className="flex flex-col items-center">
-                      <div className="w-16 h-16 bg-gradient-to-r from-sage-light to-sage-dark rounded-full flex items-center justify-center mb-3">
+                      <div className="w-16 h-16 bg-sage-light rounded-full flex items-center justify-center mb-3">
                         <Shield className="w-8 h-8 text-purple-dark" />
                       </div>
                       <p className="text-cream/80 text-sm">Safety</p>
                     </div>
                     <div className="flex flex-col items-center">
-                      <div className="w-16 h-16 bg-gradient-to-r from-sage-light to-sage-dark rounded-full flex items-center justify-center mb-3">
+                      <div className="w-16 h-16 bg-sage-light rounded-full flex items-center justify-center mb-3">
                         <Sparkles className="w-8 h-8 text-purple-dark" />
                       </div>
                       <p className="text-cream/80 text-sm">Transform</p>
@@ -112,6 +116,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
