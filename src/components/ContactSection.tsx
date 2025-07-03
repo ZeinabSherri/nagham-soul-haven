@@ -26,6 +26,10 @@ const ContactSection = () => {
     });
   };
 
+  const handleCalendlyClick = () => {
+    window.open('https://calendly.com/nagham-rasbieh', '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
       <div className="max-w-7xl mx-auto">
@@ -56,7 +60,10 @@ const ContactSection = () => {
                 <p className="text-amber-700 mb-6">
                   Click below to view available times and book your session instantly
                 </p>
-                <Button className="bg-rose-500 hover:bg-rose-600 text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                <Button 
+                  onClick={handleCalendlyClick}
+                  className="bg-rose-500 hover:bg-rose-600 text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
                   View Available Times
                 </Button>
                 <p className="text-sm text-amber-600 mt-4">
