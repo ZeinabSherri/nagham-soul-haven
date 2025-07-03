@@ -12,7 +12,7 @@ const ServicesSection = () => {
       duration: "90 minutes",
       format: "Online & In-Person",
       icon: Users,
-      color: "rose"
+      color: "purple-medium"
     },
     {
       title: "Hypnotherapy",
@@ -20,7 +20,7 @@ const ServicesSection = () => {
       duration: "60-90 minutes",
       format: "Online & In-Person",
       icon: Clock,
-      color: "amber"
+      color: "purple-light"
     },
     {
       title: "NLP & Time Line Therapy®",
@@ -28,7 +28,7 @@ const ServicesSection = () => {
       duration: "90 minutes",
       format: "Online & In-Person",
       icon: Video,
-      color: "green"
+      color: "sage-light"
     },
     {
       title: "Access Bars",
@@ -36,7 +36,7 @@ const ServicesSection = () => {
       duration: "60 minutes",
       format: "In-Person Only",
       icon: Home,
-      color: "purple"
+      color: "purple-dark"
     },
     {
       title: "Reiki Healing",
@@ -44,7 +44,7 @@ const ServicesSection = () => {
       duration: "60 minutes",
       format: "Online & In-Person",
       icon: Users,
-      color: "blue"
+      color: "sage-dark"
     },
     {
       title: "Past Life Regression",
@@ -52,7 +52,7 @@ const ServicesSection = () => {
       duration: "2 hours",
       format: "Online & In-Person",
       icon: Clock,
-      color: "indigo"
+      color: "purple-very-light"
     },
     {
       title: "Laughter Yoga",
@@ -60,35 +60,35 @@ const ServicesSection = () => {
       duration: "45 minutes",
       format: "Group Sessions",
       icon: Users,
-      color: "yellow"
+      color: "cream"
     }
   ];
 
   const getColorClasses = (color: string) => {
     const colors = {
-      rose: "from-rose-50 to-rose-100 border-rose-200 text-rose-800",
-      amber: "from-amber-50 to-amber-100 border-amber-200 text-amber-800",
-      green: "from-green-50 to-green-100 border-green-200 text-green-800",
-      purple: "from-purple-50 to-purple-100 border-purple-200 text-purple-800",
-      blue: "from-blue-50 to-blue-100 border-blue-200 text-blue-800",
-      indigo: "from-indigo-50 to-indigo-100 border-indigo-200 text-indigo-800",
-      yellow: "from-yellow-50 to-yellow-100 border-yellow-200 text-yellow-800"
+      "purple-medium": "from-purple-medium/20 to-purple-medium/30 border-purple-medium text-purple-dark",
+      "purple-light": "from-purple-light/50 to-purple-light/70 border-purple-light text-purple-dark",
+      "sage-light": "from-sage-light/30 to-sage-light/50 border-sage-light text-purple-dark",
+      "purple-dark": "from-purple-dark/20 to-purple-dark/30 border-purple-dark text-purple-dark",
+      "sage-dark": "from-sage-dark/30 to-sage-dark/50 border-sage-dark text-purple-dark",
+      "purple-very-light": "from-purple-very-light/70 to-purple-very-light/90 border-purple-light text-purple-dark",
+      "cream": "from-cream/70 to-cream/90 border-purple-light text-purple-dark"
     };
-    return colors[color as keyof typeof colors] || colors.rose;
+    return colors[color as keyof typeof colors] || colors["purple-medium"];
   };
 
   return (
-    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-purple-dark mb-6">
             My Services
           </h2>
-          <p className="text-xl text-amber-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-purple-medium max-w-3xl mx-auto leading-relaxed">
             Each healing session is uniquely designed for you, combining ancient wisdom 
             with modern therapeutic techniques for profound transformation.
           </p>
-          <div className="w-24 h-1 bg-rose-400 mx-auto rounded-full mt-6"></div>
+          <div className="w-24 h-1 bg-purple-medium mx-auto rounded-full mt-6"></div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,21 +98,21 @@ const ServicesSection = () => {
               <Card key={index} className={`bg-gradient-to-br ${getColorClasses(service.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-4">
-                    <IconComponent className="w-8 h-8" />
-                    <Badge variant="secondary" className="bg-white/70">
+                    <IconComponent className="w-8 h-8 text-purple-dark" />
+                    <Badge variant="secondary" className="bg-white/70 text-purple-dark">
                       {service.duration}
                     </Badge>
                   </div>
-                  <CardTitle className="text-xl font-bold mb-2">
+                  <CardTitle className="text-xl font-bold mb-2 text-purple-dark">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-4 leading-relaxed">
+                  <p className="mb-4 leading-relaxed text-purple-dark">
                     {service.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <Badge variant="outline" className="border-current">
+                    <Badge variant="outline" className="border-purple-medium text-purple-dark">
                       {service.format}
                     </Badge>
                   </div>
@@ -122,22 +122,22 @@ const ServicesSection = () => {
           })}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-amber-50 to-rose-50 rounded-2xl p-8 border-2 border-amber-200">
-          <h3 className="text-2xl font-bold text-amber-900 mb-4 text-center">
+        <div className="mt-16 bg-gradient-to-r from-purple-very-light to-sage-light/30 rounded-2xl p-8 border-2 border-purple-light">
+          <h3 className="text-2xl font-bold text-purple-dark mb-4 text-center">
             What Makes My Work Different
           </h3>
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div>
-              <h4 className="font-semibold text-amber-900 mb-2">Integrative Approach</h4>
-              <p className="text-amber-700">Combining multiple healing modalities for comprehensive transformation</p>
+              <h4 className="font-semibold text-purple-dark mb-2">Integrative Approach</h4>
+              <p className="text-purple-medium">Combining multiple healing modalities for comprehensive transformation</p>
             </div>
             <div>
-              <h4 className="font-semibold text-amber-900 mb-2">Client-Focused Customization</h4>
-              <p className="text-amber-700">Every session is tailored to your unique needs and healing journey</p>
+              <h4 className="font-semibold text-purple-dark mb-2">Client-Focused Customization</h4>
+              <p className="text-purple-medium">Every session is tailored to your unique needs and healing journey</p>
             </div>
             <div>
-              <h4 className="font-semibold text-amber-900 mb-2">Safe & Deep Results</h4>
-              <p className="text-amber-700">Creating lasting change in a supportive, non-judgmental environment</p>
+              <h4 className="font-semibold text-purple-dark mb-2">Safe & Deep Results</h4>
+              <p className="text-purple-medium">Creating lasting change in a supportive, non-judgmental environment</p>
             </div>
           </div>
         </div>

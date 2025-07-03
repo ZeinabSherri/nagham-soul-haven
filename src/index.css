@@ -39,14 +39,14 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    /* Custom color palette variables */
+    /* Updated custom color palette based on your provided colors */
     --cream: 45 86% 92%;
-    --purple-dark: 280 65% 45%;
+    --purple-dark: 280 65% 35%;
     --purple-medium: 280 45% 60%;
-    --purple-light: 300 40% 80%;
-    --purple-very-light: 300 20% 90%;
-    --sage-light: 75 25% 75%;
-    --sage-dark: 75 35% 55%;
+    --purple-light: 300 50% 85%;
+    --purple-very-light: 300 50% 92%;
+    --sage-light: 75 30% 75%;
+    --sage-dark: 75 40% 55%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;

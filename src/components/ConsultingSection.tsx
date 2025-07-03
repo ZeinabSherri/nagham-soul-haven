@@ -6,7 +6,7 @@ import { Calendar, MessageCircle, Clock, Users, Star } from 'lucide-react';
 
 const ConsultingSection = () => {
   return (
-    <section id="consulting" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="consulting" className="py-20 px-4 sm:px-6 lg:px-8 bg-cream">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image */}
@@ -82,7 +82,7 @@ const ConsultingSection = () => {
               {/* WhatsApp Consultation Card */}
               <Card className="bg-gradient-to-br from-sage-light/30 to-sage-light/50 border-2 border-sage-light hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-sage-dark rounded-full flex items-center justify-center mx-auto mb-4">
                     <MessageCircle className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-purple-dark mb-3">
@@ -95,7 +95,7 @@ const ConsultingSection = () => {
                     Prefer a chat? Reach out directly via WhatsApp for a text-based conversation about how our 
                     healing services can address your specific needs.
                   </p>
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                  <Button className="w-full bg-sage-dark hover:bg-sage-dark/80 text-white">
                     Chat on WhatsApp
                   </Button>
                 </CardContent>
