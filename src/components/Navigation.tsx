@@ -24,22 +24,22 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <button onClick={() => scrollToSection('about')} className="text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-110">
+            <button onClick={() => scrollToSection('about')} className="text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-purple-medium">
               About
             </button>
-            <button onClick={() => scrollToSection('services')} className="text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-110">
+            <button onClick={() => scrollToSection('services')} className="text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-purple-medium">
               Services
             </button>
-            <button onClick={() => scrollToSection('consulting')} className="text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-110">
+            <button onClick={() => scrollToSection('consulting')} className="text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-purple-medium">
               Consulting
             </button>
-            <button onClick={() => scrollToSection('certifications')} className="text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-110">
+            <button onClick={() => scrollToSection('certifications')} className="text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-purple-medium">
               Certifications
             </button>
-            <button onClick={() => scrollToSection('testimonials')} className="text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-110">
+            <button onClick={() => scrollToSection('testimonials')} className="text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-purple-medium">
               Testimonials
             </button>
-            <button onClick={() => scrollToSection('contact')} className="text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-110">
+            <button onClick={() => scrollToSection('contact')} className="text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-purple-medium">
               Contact
             </button>
           </div>
@@ -67,22 +67,22 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-4 border-t border-purple-light">
-            <button onClick={() => scrollToSection('about')} className="block text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-105">
+            <button onClick={() => scrollToSection('about')} className="block text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-purple-medium w-full text-left">
               About
             </button>
-            <button onClick={() => scrollToSection('services')} className="block text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-105">
+            <button onClick={() => scrollToSection('services')} className="block text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-purple-medium w-full text-left">
               Services
             </button>
-            <button onClick={() => scrollToSection('consulting')} className="block text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-105">
+            <button onClick={() => scrollToSection('consulting')} className="block text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-purple-medium w-full text-left">
               Consulting
             </button>
-            <button onClick={() => scrollToSection('certifications')} className="block text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-105">
+            <button onClick={() => scrollToSection('certifications')} className="block text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-purple-medium w-full text-left">
               Certifications
             </button>
-            <button onClick={() => scrollToSection('testimonials')} className="block text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-105">
+            <button onClick={() => scrollToSection('testimonials')} className="block text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-purple-medium w-full text-left">
               Testimonials
             </button>
-            <button onClick={() => scrollToSection('contact')} className="block text-purple-medium hover:text-purple-dark font-medium hover:font-bold transition-all duration-300 hover:scale-105">
+            <button onClick={() => scrollToSection('contact')} className="block text-purple-medium hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-purple-medium w-full text-left">
               Contact
             </button>
             <Button 
