@@ -45,12 +45,12 @@ const TestimonialsSection = () => {
 
   const getColorClasses = (color: string) => {
     const colors = {
-      "purple-light": "from-purple-light/50 to-purple-light/70 border-purple-light",
-      "sage-light": "from-sage-light/30 to-sage-light/50 border-sage-light",
-      "purple-very-light": "from-purple-very-light/70 to-purple-very-light/90 border-purple-light",
-      "purple-medium": "from-purple-medium/20 to-purple-medium/40 border-purple-medium",
-      "sage-dark": "from-sage-dark/30 to-sage-dark/50 border-sage-dark",
-      "cream": "from-cream/70 to-cream/90 border-purple-light"
+      "purple-light": "bg-purple-light border-purple-light text-purple-dark",
+      "sage-light": "bg-sage-light border-sage-light text-purple-dark",
+      "purple-very-light": "bg-purple-very-light border-purple-light text-purple-dark",
+      "purple-medium": "bg-purple-medium border-purple-medium text-white",
+      "sage-dark": "bg-sage-dark border-sage-dark text-white",
+      "cream": "bg-cream border-purple-light text-purple-dark"
     };
     return colors[color as keyof typeof colors] || colors["purple-light"];
   };
@@ -70,20 +70,20 @@ const TestimonialsSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className={`bg-gradient-to-br ${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
+            <Card key={index} className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <Quote className="w-8 h-8 text-purple-medium mr-3" />
+                  <Quote className={`w-8 h-8 mr-3 ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-medium'}`} />
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-purple-medium fill-current" />
+                      <Star key={i} className={`w-5 h-5 fill-current ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-medium'}`} />
                     ))}
                   </div>
                 </div>
-                <p className="text-purple-dark mb-4 leading-relaxed italic">
+                <p className={`mb-4 leading-relaxed italic ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'}`}>
                   "{testimonial.text}"
                 </p>
-                <p className="font-semibold text-purple-dark">
+                <p className={`font-semibold ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'}`}>
                   — {testimonial.name}
                 </p>
               </CardContent>
@@ -92,7 +92,7 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-purple-very-light to-sage-light/30 rounded-2xl p-8 border-2 border-purple-light max-w-4xl mx-auto">
+          <div className="bg-purple-very-light rounded-2xl p-8 border-2 border-purple-light max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-purple-dark mb-4">
               Ready to Start Your Healing Journey?
             </h3>

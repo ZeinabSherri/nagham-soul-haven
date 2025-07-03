@@ -66,13 +66,13 @@ const ServicesSection = () => {
 
   const getColorClasses = (color: string) => {
     const colors = {
-      "purple-medium": "from-purple-medium/20 to-purple-medium/30 border-purple-medium text-purple-dark",
-      "purple-light": "from-purple-light/50 to-purple-light/70 border-purple-light text-purple-dark",
-      "sage-light": "from-sage-light/30 to-sage-light/50 border-sage-light text-purple-dark",
-      "purple-dark": "from-purple-dark/20 to-purple-dark/30 border-purple-dark text-purple-dark",
-      "sage-dark": "from-sage-dark/30 to-sage-dark/50 border-sage-dark text-purple-dark",
-      "purple-very-light": "from-purple-very-light/70 to-purple-very-light/90 border-purple-light text-purple-dark",
-      "cream": "from-cream/70 to-cream/90 border-purple-light text-purple-dark"
+      "purple-medium": "bg-purple-medium border-purple-medium text-white",
+      "purple-light": "bg-purple-light border-purple-light text-purple-dark",
+      "sage-light": "bg-sage-light border-sage-light text-purple-dark",
+      "purple-dark": "bg-purple-dark border-purple-dark text-white",
+      "sage-dark": "bg-sage-dark border-sage-dark text-white",
+      "purple-very-light": "bg-purple-very-light border-purple-light text-purple-dark",
+      "cream": "bg-cream border-purple-light text-purple-dark"
     };
     return colors[color as keyof typeof colors] || colors["purple-medium"];
   };
@@ -95,24 +95,24 @@ const ServicesSection = () => {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className={`bg-gradient-to-br ${getColorClasses(service.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
+              <Card key={index} className={`${getColorClasses(service.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-4">
-                    <IconComponent className="w-8 h-8 text-purple-dark" />
+                    <IconComponent className={`w-8 h-8 ${service.color === 'purple-medium' || service.color === 'purple-dark' || service.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'}`} />
                     <Badge variant="secondary" className="bg-white/70 text-purple-dark">
                       {service.duration}
                     </Badge>
                   </div>
-                  <CardTitle className="text-xl font-bold mb-2 text-purple-dark">
+                  <CardTitle className={`text-xl font-bold mb-2 ${service.color === 'purple-medium' || service.color === 'purple-dark' || service.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'}`}>
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-4 leading-relaxed text-purple-dark">
+                  <p className={`mb-4 leading-relaxed ${service.color === 'purple-medium' || service.color === 'purple-dark' || service.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'}`}>
                     {service.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <Badge variant="outline" className="border-purple-medium text-purple-dark">
+                    <Badge variant="outline" className="border-purple-medium text-purple-dark bg-white">
                       {service.format}
                     </Badge>
                   </div>
@@ -122,7 +122,7 @@ const ServicesSection = () => {
           })}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-purple-very-light to-sage-light/30 rounded-2xl p-8 border-2 border-purple-light">
+        <div className="mt-16 bg-purple-very-light rounded-2xl p-8 border-2 border-purple-light">
           <h3 className="text-2xl font-bold text-purple-dark mb-4 text-center">
             What Makes My Work Different
           </h3>

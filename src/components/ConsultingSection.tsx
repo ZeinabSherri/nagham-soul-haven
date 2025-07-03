@@ -58,7 +58,7 @@ const ConsultingSection = () => {
             {/* Consultation options */}
             <div className="grid md:grid-cols-2 gap-6">
               {/* Discovery Call Card */}
-              <Card className="bg-gradient-to-br from-purple-very-light to-purple-light/50 border-2 border-purple-light hover:shadow-lg transition-all duration-300">
+              <Card className="bg-purple-very-light border-2 border-purple-light hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
                     <Calendar className="w-8 h-8 text-white" />
@@ -80,7 +80,7 @@ const ConsultingSection = () => {
               </Card>
 
               {/* WhatsApp Consultation Card */}
-              <Card className="bg-gradient-to-br from-sage-light/30 to-sage-light/50 border-2 border-sage-light hover:shadow-lg transition-all duration-300">
+              <Card className="bg-sage-light border-2 border-sage-light hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-sage-dark rounded-full flex items-center justify-center mx-auto mb-4">
                     <MessageCircle className="w-8 h-8 text-white" />
