@@ -58,7 +58,7 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-cream">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-purple-dark mb-6">
             What Clients Say
           </h2>
@@ -70,20 +70,28 @@ const TestimonialsSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
+            <Card 
+              key={index} 
+              className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group`}
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <Quote className={`w-8 h-8 mr-3 ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-medium'}`} />
+                  <Quote className={`w-8 h-8 mr-3 ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-medium'} transition-transform duration-300 group-hover:scale-110`} />
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className={`w-5 h-5 fill-current ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-medium'}`} />
+                      <Star 
+                        key={i} 
+                        className={`w-5 h-5 fill-current ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-medium'} transition-all duration-300 hover:scale-110`}
+                        style={{ animationDelay: `${i * 100}ms` }}
+                      />
                     ))}
                   </div>
                 </div>
-                <p className={`mb-4 leading-relaxed italic ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'}`}>
+                <p className={`mb-4 leading-relaxed italic ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'} transition-all duration-300 group-hover:text-opacity-90`}>
                   "{testimonial.text}"
                 </p>
-                <p className={`font-semibold ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'}`}>
+                <p className={`font-semibold ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'} transition-all duration-300`}>
                   — {testimonial.name}
                 </p>
               </CardContent>
@@ -91,8 +99,8 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-purple-very-light rounded-2xl p-8 border-2 border-purple-light max-w-4xl mx-auto">
+        <div className="mt-16 text-center animate-fade-in delay-1000">
+          <div className="bg-purple-very-light rounded-2xl p-8 border-2 border-purple-light max-w-4xl mx-auto hover:shadow-lg transition-all duration-500 hover:scale-105">
             <h3 className="text-2xl font-bold text-purple-dark mb-4">
               Ready to Start Your Healing Journey?
             </h3>
@@ -108,7 +116,7 @@ const TestimonialsSection = () => {
               </button>
               <button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-purple-medium text-purple-dark hover:bg-purple-very-light px-8 py-3 rounded-full font-semibold transition-all duration-300"
+                className="border-2 border-purple-medium text-purple-dark hover:bg-purple-very-light px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105"
               >
                 Ask a Question
               </button>
