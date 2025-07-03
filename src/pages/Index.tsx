@@ -7,6 +7,7 @@ import { Phone, Mail, MapPin, Calendar, Heart, Star, Sparkles, Leaf, Shield } fr
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
+import ConsultingSection from '@/components/ConsultingSection';
 import CertificationsSection from '@/components/CertificationsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactSection from '@/components/ContactSection';
@@ -20,6 +21,7 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <ConsultingSection />
       <CertificationsSection />
       <TestimonialsSection />
       <ContactSection />
