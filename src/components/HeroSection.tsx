@@ -60,12 +60,8 @@ const HeroSection = () => {
 
             {/* Call-to-Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button onClick={() => scrollToSection('services')} className="bg-purple-medium hover:bg-purple-dark text-cream px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-                Discover My Services →
-              </Button>
-              <Button onClick={() => scrollToSection('contact')} variant="outline" className="border-2 border-cream/30 text-cream backdrop-blur-sm px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 bg-purple-600 hover:bg-purple-500">
-                Get in Touch
-              </Button>
+              <Button onClick={() => scrollToSection('services')} className="bg-purple-medium hover:bg-purple-dark text-cream px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Begin Your Healing</Button>
+              <Button onClick={() => scrollToSection('contact')} variant="outline" className="border-2 border-cream/30 text-cream backdrop-blur-sm px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 bg-purple-600 hover:bg-purple-500">Let’s Talk</Button>
             </div>
           </div>
 
