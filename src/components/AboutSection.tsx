@@ -54,26 +54,19 @@ const AboutSection = () => {
           </div>
 
           <div className="flex justify-center">
-            <Card className="w-full max-w-md bg-gradient-to-br from-purple-very-light to-purple-light border-purple-light shadow-xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-48 h-48 bg-gradient-to-br from-purple-light to-sage-light rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <div className="text-6xl">🌸</div>
-                </div>
-                <h3 className="text-2xl font-bold text-purple-dark mb-2">Nagham Rasbieh</h3>
-                <p className="text-purple-medium mb-4">Certified Healing Practitioner</p>
-                <div className="space-y-2">
-                  <Badge variant="secondary" className="bg-purple-light text-purple-dark border-purple-medium">
-                    Licensed Therapist
-                  </Badge>
-                  <Badge variant="secondary" className="bg-sage-light text-sage-dark border-sage-dark">
-                    Energy Healer
-                  </Badge>
-                  <Badge variant="secondary" className="bg-purple-very-light text-purple-dark border-purple-medium">
-                    Certified NLP Practitioner
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="relative">
+              <div className="aspect-[4/5] w-full max-w-md rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="/lovable-uploads/8e92d398-8495-4988-a303-5fb8be016750.png" 
+                  alt="Nagham Rasbieh - Professional Therapist and Healer" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -right-4 bg-purple-dark text-white p-4 rounded-full shadow-lg">
+                <Heart className="w-6 h-6" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

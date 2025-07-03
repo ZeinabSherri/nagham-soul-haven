@@ -13,8 +13,8 @@ const ConsultingSection = () => {
           <div className="relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
               <img 
-                src="/lovable-uploads/80cc333c-c44f-4b3d-90b2-857d22c7531a.png" 
-                alt="Nagham Rasbieh - Professional Consultant" 
+                src="/lovable-uploads/c4b0d2fc-4a47-4b54-9288-4d88a56e4554.png" 
+                alt="Professional Therapy and Consultation Space" 
                 className="w-full h-full object-cover"
               />
             </div>

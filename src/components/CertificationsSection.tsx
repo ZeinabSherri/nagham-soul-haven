@@ -69,6 +69,22 @@ const CertificationsSection = () => {
           <div className="w-24 h-1 bg-rose-400 mx-auto rounded-full mt-6"></div>
         </div>
 
+        {/* Certificate wall image */}
+        <div className="mb-16 flex justify-center">
+          <div className="relative max-w-4xl">
+            <img 
+              src="/lovable-uploads/b84e3626-0d98-484b-81e7-ee27351bbe3e.png" 
+              alt="Wall of Professional Certifications and Credentials" 
+              className="w-full rounded-2xl shadow-xl"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+            <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-4 rounded-lg">
+              <p className="text-amber-900 font-semibold">Professional Certifications Display</p>
+              <p className="text-amber-700 text-sm">Years of dedicated training and education</p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {certifications.map((cert, index) => {
             const IconComponent = cert.icon;
