@@ -39,7 +39,7 @@ const Navigation = () => {
               Services
             </button>
             <button onClick={() => scrollToSection('consulting')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">
-              Consulting
+              What Makes My Work Different?
             </button>
             <button onClick={() => scrollToSection('certifications')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">
               Certifications
@@ -54,8 +54,8 @@ const Navigation = () => {
 
           <div className="hidden md:block">
             <Button 
-              onClick={() => scrollToSection('consulting')} 
-              className="bg-light-olive hover:bg-dark-olive text-deep-purple px-6 py-2 rounded-md font-light transition-all duration-300 hover:scale-105"
+              onClick={() => scrollToSection('contact')} 
+              className="bg-deep-purple hover:bg-vibrant-purple text-white px-6 py-2 rounded-lg font-bold transition-all duration-300 hover:scale-105"
             >
               Book Session
             </Button>
@@ -82,7 +82,7 @@ const Navigation = () => {
               Services
             </button>
             <button onClick={() => scrollToSection('consulting')} className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left">
-              Consulting
+              What Makes My Work Different?
             </button>
             <button onClick={() => scrollToSection('certifications')} className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left">
               Certifications
@@ -94,8 +94,8 @@ const Navigation = () => {
               Contact
             </button>
             <Button 
-              onClick={() => scrollToSection('consulting')} 
-              className="bg-light-olive hover:bg-dark-olive text-deep-purple px-6 py-2 rounded-md w-full font-light hover:scale-105 transition-all duration-300"
+              onClick={() => scrollToSection('contact')} 
+              className="bg-deep-purple hover:bg-vibrant-purple text-white px-6 py-2 rounded-lg w-full font-bold hover:scale-105 transition-all duration-300"
             >
               Book Session
             </Button>
