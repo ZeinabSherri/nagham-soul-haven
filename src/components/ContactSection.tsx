@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Calendar, Instagram, Facebook, Youtube } from 'lucide-react';
+import { Phone, Mail, MapPin, Calendar, Instagram, Youtube } from 'lucide-react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +15,6 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
   };
 
@@ -30,43 +29,46 @@ const ContactSection = () => {
     window.open('https://calendly.com/nagham-rasbieh', '_blank');
   };
 
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/9613633483', '_blank');
+  };
+
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-purple-dark mb-6">
+        <div className="mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-6">
             Ways to Start
           </h2>
-          <p className="text-xl text-purple-medium max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-dark-olive max-w-3xl leading-relaxed">
             Take the first step towards healing. I'm here to support you on your journey.
           </p>
-          <div className="w-24 h-1 bg-purple-medium mx-auto rounded-full mt-6"></div>
         </div>
 
         {/* Booking Calendar Section */}
-        <div className="mb-16">
-          <Card className="max-w-4xl mx-auto bg-purple-very-light border-2 border-purple-light shadow-xl">
+        <div className="mb-16 animate-fade-in delay-300">
+          <Card className="max-w-4xl mx-auto bg-white border-2 border-deep-purple/20 shadow-xl">
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl font-bold text-purple-dark flex items-center justify-center">
-                <Calendar className="w-6 h-6 mr-3 text-purple-medium" />
+              <CardTitle className="text-2xl font-bold text-deep-purple flex items-center justify-center">
+                <Calendar className="w-6 h-6 mr-3 text-vibrant-purple" />
                 Book Your Healing Session
               </CardTitle>
-              <p className="text-purple-medium">Schedule your personalized healing session directly through my calendar</p>
+              <p className="text-dark-olive">Schedule your personalized healing session directly through my calendar</p>
             </CardHeader>
             <CardContent className="text-center">
-              <div className="bg-white rounded-xl p-8 border border-purple-light">
+              <div className="bg-gray-50 rounded-xl p-8 border border-deep-purple/10">
                 <div className="text-6xl mb-4">📅</div>
-                <h3 className="text-xl font-semibold text-purple-dark mb-4">Online Booking Calendar</h3>
-                <p className="text-purple-medium mb-6">
+                <h3 className="text-xl font-semibold text-deep-purple mb-4">Online Booking Calendar</h3>
+                <p className="text-dark-olive mb-6">
                   Click below to view available times and book your session instantly
                 </p>
                 <Button 
                   onClick={handleCalendlyClick}
-                  className="bg-purple-medium hover:bg-purple-dark text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="bg-deep-purple hover:bg-vibrant-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   View Available Times
                 </Button>
-                <p className="text-sm text-purple-medium mt-4">
+                <p className="text-sm text-dark-olive mt-4">
                   Sessions available online and in-person • Flexible scheduling • Instant confirmation
                 </p>
               </div>
@@ -76,12 +78,12 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="bg-sage-light border-2 border-sage-light shadow-lg">
+          <Card className="bg-white border-2 border-deep-purple/20 shadow-lg animate-fade-in delay-600">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-purple-dark">
+              <CardTitle className="text-2xl font-bold text-deep-purple">
                 Get in Touch
               </CardTitle>
-              <p className="text-purple-medium">
+              <p className="text-dark-olive">
                 Have questions? I'd love to hear from you and help you get started.
               </p>
             </CardHeader>
@@ -94,7 +96,7 @@ const ContactSection = () => {
                     placeholder="Your Name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="bg-white border-purple-light focus:border-purple-medium"
+                    className="bg-white border-deep-purple/30 focus:border-vibrant-purple"
                   />
                 </div>
                 <div>
@@ -104,7 +106,7 @@ const ContactSection = () => {
                     placeholder="Your Email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="bg-white border-purple-light focus:border-purple-medium"
+                    className="bg-white border-deep-purple/30 focus:border-vibrant-purple"
                   />
                 </div>
                 <div>
@@ -113,12 +115,12 @@ const ContactSection = () => {
                     placeholder="Tell me a bit about what you're looking for..."
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="bg-white border-purple-light focus:border-purple-medium min-h-32"
+                    className="bg-white border-deep-purple/30 focus:border-vibrant-purple min-h-32"
                   />
                 </div>
                 <Button 
                   type="submit"
-                  className="w-full bg-purple-medium hover:bg-purple-dark text-white py-3 rounded-full font-semibold transition-all duration-300"
+                  className="w-full bg-deep-purple hover:bg-vibrant-purple text-white py-3 rounded-full font-semibold transition-all duration-300"
                 >
                   Send Message
                 </Button>
@@ -127,72 +129,52 @@ const ContactSection = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
-            <Card className="bg-purple-light border-2 border-purple-light shadow-lg">
+          <div className="space-y-8 animate-fade-in delay-800">
+            <Card className="bg-white border-2 border-deep-purple/20 shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-purple-dark mb-6">Contact Information</h3>
+                <h3 className="text-xl font-bold text-deep-purple mb-6">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
-                    <Mail className="w-6 h-6 text-purple-medium" />
-                    <span className="text-purple-dark">hello@naghamsoul.com</span>
+                    <Mail className="w-6 h-6 text-vibrant-purple" />
+                    <span className="text-deep-purple">hello@naghamsoul.com</span>
+                  </div>
+                  <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={handleWhatsAppClick}>
+                    <Phone className="w-6 h-6 text-vibrant-purple" />
+                    <span className="text-deep-purple">+961 3 633 483</span>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <Phone className="w-6 h-6 text-sage-dark" />
-                    <span className="text-purple-dark">+961 3 633 483</span>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <MapPin className="w-6 h-6 text-purple-medium" />
-                    <span className="text-purple-dark">Dawhet el Hoss, Lebanon (Online sessions available worldwide)</span>
+                    <MapPin className="w-6 h-6 text-vibrant-purple" />
+                    <span className="text-deep-purple">Dawhet el Hoss, Lebanon (Online sessions available worldwide)</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-purple-very-light border-2 border-purple-light shadow-lg">
+            <Card className="bg-gray-50 border-2 border-deep-purple/20 shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-purple-dark mb-6">Connect With Me</h3>
+                <h3 className="text-xl font-bold text-deep-purple mb-6">Let's Stay Connected</h3>
                 <div className="flex space-x-4">
-                  <a 
-                    href="https://www.facebook.com/NaghamTheCoach" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-sage-dark hover:bg-sage-light rounded-full flex items-center justify-center text-white transition-colors"
-                  >
-                    <Facebook className="w-6 h-6" />
-                  </a>
                   <a 
                     href="https://www.instagram.com/naghamthecoach/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-purple-medium hover:bg-purple-dark rounded-full flex items-center justify-center text-white transition-colors"
+                    className="w-12 h-12 bg-vibrant-purple hover:bg-deep-purple rounded-full flex items-center justify-center text-white transition-colors duration-300 transform hover:scale-110"
                   >
                     <Instagram className="w-6 h-6" />
                   </a>
-                  <a 
-                    href="https://x.com/NaghamTheCoach" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-purple-dark hover:bg-purple-medium rounded-full flex items-center justify-center text-white transition-colors"
+                  <button
+                    onClick={handleWhatsAppClick}
+                    className="w-12 h-12 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white transition-colors duration-300 transform hover:scale-110"
                   >
                     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.688"/>
                     </svg>
-                  </a>
-                  <a 
-                    href="https://www.tiktok.com/@naghamthecoach" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-purple-medium hover:bg-purple-dark rounded-full flex items-center justify-center text-white transition-colors"
-                  >
-                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.142-1.935-1.142-3.338h-2.515v13.917a3.72 3.72 0 0 1-1.814 3.193 3.729 3.729 0 0 1-3.967.289 3.704 3.704 0 0 1-2.017-3.289c0-2.061 1.673-3.734 3.734-3.734.387 0 .764.062 1.121.18v-2.586a6.27 6.27 0 0 0-1.121-.099C5.03 8.871 2 11.901 2 15.891c0 2.433 1.203 4.584 3.047 5.891.849.601 1.88.949 2.967.949 2.99 0 5.421-2.431 5.421-5.421V9.562a8.667 8.667 0 0 0 5.074 1.621V8.611c-.849 0-1.644-.258-2.293-.711-.522-.362-.959-.849-1.279-1.431-.174-.318-.318-.653-.431-1.003-.107-.332-.18-.678-.185-1.024z"/>
-                    </svg>
-                  </a>
+                  </button>
                   <a 
                     href="https://www.youtube.com/@NaghamTheCoach" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-purple-dark hover:bg-purple-medium rounded-full flex items-center justify-center text-white transition-colors"
+                    className="w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white transition-colors duration-300 transform hover:scale-110"
                   >
                     <Youtube className="w-6 h-6" />
                   </a>
@@ -200,19 +182,19 @@ const ContactSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-cream border-2 border-purple-light shadow-lg">
+            <Card className="bg-white border-2 border-deep-purple/20 shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-purple-dark mb-4">Newsletter</h3>
-                <p className="text-purple-medium mb-4">
+                <h3 className="text-xl font-bold text-deep-purple mb-4">Newsletter</h3>
+                <p className="text-dark-olive mb-4">
                   Receive healing tips and insights directly to your inbox
                 </p>
                 <div className="flex space-x-2">
                   <Input 
                     type="email" 
                     placeholder="Your email" 
-                    className="bg-white border-purple-light"
+                    className="bg-white border-deep-purple/30 focus:border-vibrant-purple"
                   />
-                  <Button className="bg-sage-dark hover:bg-sage-light text-white px-6 rounded-full">
+                  <Button className="bg-deep-purple hover:bg-vibrant-purple text-white px-6 rounded-full">
                     Subscribe
                   </Button>
                 </div>

@@ -1,68 +1,70 @@
+
 import React from 'react';
-import { Instagram, Facebook, Youtube, Heart, Twitter } from 'lucide-react';
+import { Instagram, Youtube, Heart } from 'lucide-react';
 
 const Footer = () => {
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/9613633483', '_blank');
+  };
+
   return (
-    <footer className="bg-purple-dark text-white py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-white border-t border-deep-purple/10 text-deep-purple py-12 px-4 sm:px-6 lg:px-8 animate-fade-in">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
-          <h3 className="text-2xl font-bold mb-2">Nagham Rasbieh</h3>
-          <p className="text-purple-light text-lg">
+          <h3 className="text-2xl font-bold mb-2 text-deep-purple">Nagham Rasbieh</h3>
+          <p className="text-dark-olive text-lg">
             Emotional Healing • Subconscious Work • Energy Clearing
           </p>
         </div>
 
-        <div className="flex justify-center space-x-6 mb-8">
-          <a 
-            href="https://www.facebook.com/NaghamTheCoach" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors"
-          >
-            <Facebook className="w-6 h-6" />
-          </a>
-          <a 
-            href="https://www.instagram.com/naghamthecoach/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors"
-          >
-            <Instagram className="w-6 h-6" />
-          </a>
-          <a 
-            href="https://x.com/NaghamTheCoach" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors"
-          >
-            <Twitter className="w-6 h-6" />
-          </a>
-          <a 
-            href="https://www.tiktok.com/@naghamthecoach" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors"
-          >
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.142-1.935-1.142-3.338h-2.515v13.917a3.72 3.72 0 0 1-1.814 3.193 3.729 3.729 0 0 1-3.967.289 3.704 3.704 0 0 1-2.017-3.289c0-2.061 1.673-3.734 3.734-3.734.387 0 .764.062 1.121.18v-2.586a6.27 6.27 0 0 0-1.121-.099C5.03 8.871 2 11.901 2 15.891c0 2.433 1.203 4.584 3.047 5.891.849.601 1.88.949 2.967.949 2.99 0 5.421-2.431 5.421-5.421V9.562a8.667 8.667 0 0 0 5.074 1.621V8.611c-.849 0-1.644-.258-2.293-.711-.522-.362-.959-.849-1.279-1.431-.174-.318-.318-.653-.431-1.003-.107-.332-.18-.678-.185-1.024z"/>
-            </svg>
-          </a>
-          <a 
-            href="https://www.youtube.com/@NaghamTheCoach" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors"
-          >
-            <Youtube className="w-6 h-6" />
-          </a>
+        <div className="text-center mb-8">
+          <h4 className="text-lg font-semibold mb-4 text-deep-purple">Let's stay connected:</h4>
+          <div className="flex justify-center space-x-6 mb-6">
+            <a 
+              href="https://www.instagram.com/naghamthecoach/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-deep-purple hover:text-vibrant-purple transition-colors duration-300 transform hover:scale-105"
+            >
+              <Instagram className="w-6 h-6" />
+              <span className="font-medium">Instagram</span>
+            </a>
+            <button
+              onClick={handleWhatsAppClick}
+              className="flex items-center space-x-2 text-deep-purple hover:text-green-600 transition-colors duration-300 transform hover:scale-105"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.688"/>
+              </svg>
+              <span className="font-medium">WhatsApp</span>
+            </button>
+            <a 
+              href="https://www.youtube.com/@NaghamTheCoach" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-deep-purple hover:text-red-600 transition-colors duration-300 transform hover:scale-105"
+            >
+              <Youtube className="w-6 h-6" />
+              <span className="font-medium">YouTube</span>
+            </a>
+            <div className="flex items-center space-x-2 text-deep-purple hover:text-vibrant-purple transition-colors duration-300 cursor-pointer transform hover:scale-105">
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21.8 8.001c0-1.3-.6-2.5-1.6-3.3-.9-.7-2.2-1.1-3.4-1.1H7.2c-1.2 0-2.5.4-3.4 1.1-1 .8-1.6 2-1.6 3.3v7.998c0 1.3.6 2.5 1.6 3.3.9.7 2.2 1.1 3.4 1.1h9.6c1.2 0 2.5-.4 3.4-1.1 1-.8 1.6-2 1.6-3.3V8.001zM12 16c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm5.5-7.5c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/>
+              </svg>
+              <span className="font-medium">Newsletter</span>
+            </div>
+          </div>
         </div>
 
-        <div className="border-t border-white/20 pt-8 text-center">
-          <p className="text-purple-light mb-2">
+        <div className="border-t border-deep-purple/20 pt-8 text-center">
+          <p className="text-lg font-medium text-deep-purple mb-4 italic">
+            "Healing doesn't have to be hard. It just has to be honest."
+          </p>
+          <p className="text-dark-olive mb-2">
             © 2024 Nagham Rasbieh. All rights reserved.
           </p>
-          <p className="text-white flex items-center justify-center">
-            Made with <Heart className="w-4 h-4 mx-2 text-purple-light" /> for healing and transformation
+          <p className="text-deep-purple flex items-center justify-center">
+            Made with <Heart className="w-4 h-4 mx-2 text-vibrant-purple" /> for healing and transformation
           </p>
         </div>
       </div>

@@ -14,7 +14,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
+    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=2000&q=80')"
@@ -29,31 +29,31 @@ const HeroSection = () => {
       <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-soft-lavender/20 rounded-full blur-lg animate-pulse delay-500"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[75vh]">
           {/* Left side - Content */}
           <div className="text-left animate-fade-in">
-            {/* Main Headline */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-creamy-beige mb-6 leading-tight animate-fade-in delay-200">
+            {/* Main Headline with improved spacing */}
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-creamy-beige mb-8 leading-tight animate-fade-in delay-200">
               Start Feeling Safe, Seen & Connected Again
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-creamy-beige/90 mb-8 leading-relaxed font-light animate-fade-in delay-600">
+            <p className="text-xl md:text-2xl text-creamy-beige/90 mb-10 leading-relaxed font-light animate-fade-in delay-600">
               Hi, I'm Nagham and I help you release what's weighing you down so you can feel calm in your body, clear in your mind, and free in your life.
             </p>
 
             {/* Key points list */}
-            <div className="mb-10 space-y-3">
+            <div className="mb-12 space-y-4">
               <div className="flex items-center text-creamy-beige/90 text-lg animate-fade-in delay-700">
-                <span className="text-light-olive mr-3">•</span>
+                <span className="text-light-olive mr-4 text-xl">•</span>
                 <span>Subconscious healing</span>
               </div>
               <div className="flex items-center text-creamy-beige/90 text-lg animate-fade-in delay-800">
-                <span className="text-light-olive mr-3">•</span>
+                <span className="text-light-olive mr-4 text-xl">•</span>
                 <span>Nervous system regulation</span>
               </div>
               <div className="flex items-center text-creamy-beige/90 text-lg animate-fade-in delay-1000">
-                <span className="text-light-olive mr-3">•</span>
+                <span className="text-light-olive mr-4 text-xl">•</span>
                 <span>Deep emotional shifts</span>
               </div>
             </div>
