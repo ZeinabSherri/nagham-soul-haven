@@ -61,11 +61,11 @@ const ServicesSection = () => {
     <section id="services" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Left-aligned title */}
-        <div className="mb-12">
+        <div className="mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
             My Services
           </h2>
-          <p className="text-lg text-dark-olive mt-4 max-w-3xl">
+          <p className="text-lg text-dark-olive mt-4 max-w-3xl animate-fade-in delay-200">
             Each healing session is uniquely designed for you, combining ancient wisdom 
             with modern therapeutic techniques for profound transformation.
           </p>
@@ -78,7 +78,8 @@ const ServicesSection = () => {
             return (
               <Card 
                 key={index} 
-                className="bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"
+                style={{ animationDelay: `${400 + index * 200}ms` }}
               >
                 <CardContent className="p-6">
                   {/* Icon */}
@@ -121,20 +122,20 @@ const ServicesSection = () => {
         </div>
 
         {/* What Makes My Work Different - Compact */}
-        <div className="bg-creamy-beige rounded-xl p-6 border border-vibrant-purple/20">
+        <div className="bg-creamy-beige rounded-xl p-6 border border-vibrant-purple/20 animate-fade-in delay-1600">
           <h3 className="text-xl font-bold text-deep-purple mb-4 text-left">
             What Makes My Work Different
           </h3>
           <div className="grid md:grid-cols-3 gap-4 text-sm">
-            <div>
+            <div className="animate-fade-in delay-1800">
               <h4 className="font-semibold text-deep-purple mb-2">Integrative Approach</h4>
               <p className="text-dark-olive">Combining multiple healing modalities for comprehensive transformation</p>
             </div>
-            <div>
+            <div className="animate-fade-in delay-2000">
               <h4 className="font-semibold text-deep-purple mb-2">Client-Focused Customization</h4>
               <p className="text-dark-olive">Every session is tailored to your unique needs and healing journey</p>
             </div>
-            <div>
+            <div className="animate-fade-in delay-2200">
               <h4 className="font-semibold text-deep-purple mb-2">Safe & Deep Results</h4>
               <p className="text-dark-olive">Creating lasting change in a supportive, non-judgmental environment</p>
             </div>

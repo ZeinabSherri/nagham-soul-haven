@@ -8,7 +8,7 @@ const AboutSection = () => {
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Left-aligned title */}
-        <div className="mb-12">
+        <div className="mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
             About me
           </h2>
@@ -16,7 +16,7 @@ const AboutSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Portrait Photo */}
-          <div className="flex justify-center items-center lg:justify-center">
+          <div className="flex justify-center items-center lg:justify-center animate-fade-in delay-300">
             <div className="relative">
               <div className="aspect-[4/5] w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
                 <img 
@@ -29,54 +29,54 @@ const AboutSection = () => {
           </div>
 
           {/* Right Column - Text Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 animate-fade-in delay-500">
             {/* Subtitle with roles/titles */}
-            <h3 className="text-xl md:text-2xl font-semibold text-vibrant-purple">
+            <h3 className="text-xl md:text-2xl font-semibold text-vibrant-purple animate-fade-in delay-700">
               Therapist | Subconscious Guide | Energy Healer
             </h3>
 
             {/* Italic tagline */}
-            <p className="text-lg text-deep-purple italic">
+            <p className="text-lg text-deep-purple italic animate-fade-in delay-900">
               Helping you reconnect with your truth and find peace from the inside out.
             </p>
 
             {/* Descriptive paragraphs */}
             <div className="space-y-4">
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1100">
                 I'm <span className="font-semibold text-deep-purple">Nagham Rasbieh</span>, a certified subconscious healing practitioner blending science-backed tools and spiritual depth. My approach is gentle, rooted in emotional safety, and designed to bring real results in fewer sessions.
               </p>
               
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1300">
                 I work with children, teens, mothers, and adults using NLP, hypnotherapy, energy work, and consciousness-based healing. My goal is to help you reconnect with your truth, regulate your nervous system, and experience peace from the inside out.
               </p>
             </div>
 
             {/* My Approach Subheading */}
-            <h4 className="text-2xl font-bold text-deep-purple mt-8">
+            <h4 className="text-2xl font-bold text-deep-purple mt-8 animate-fade-in delay-1500">
               My Approach
             </h4>
 
             {/* Bullet list */}
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
+              <li className="flex items-start space-x-3 animate-fade-in delay-1700">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   Blend scientific tools like NLP, hypnotherapy, and CBT with intuitive healing methods
                 </span>
               </li>
-              <li className="flex items-start space-x-3">
+              <li className="flex items-start space-x-3 animate-fade-in delay-1900">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   Create emotionally safe spaces for healing and transformation
                 </span>
               </li>
-              <li className="flex items-start space-x-3">
+              <li className="flex items-start space-x-3 animate-fade-in delay-2100">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   Focus on nervous system regulation and inner peace
                 </span>
               </li>
-              <li className="flex items-start space-x-3">
+              <li className="flex items-start space-x-3 animate-fade-in delay-2300">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   Tailor each session to your unique needs and healing journey
@@ -85,7 +85,7 @@ const AboutSection = () => {
             </ul>
 
             {/* Call-to-action Button */}
-            <div className="pt-6">
+            <div className="pt-6 animate-fade-in delay-2500">
               <Button 
                 size="lg"
                 className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200"
