@@ -1,13 +1,10 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
 import LogoProcessor from './LogoProcessor';
-
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [logoUrl, setLogoUrl] = useState<string>('');
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -17,20 +14,13 @@ const Navigation = () => {
     }
     setIsOpen(false);
   };
-
   const handleLogoProcessed = (processedUrl: string) => {
     setLogoUrl(processedUrl);
   };
-
-  return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-soft-lavender shadow-sm">
+  return <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-soft-lavender shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <LogoProcessor 
-            originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png" 
-            onProcessed={handleLogoProcessed} 
-            className="h-20 w-auto" 
-          />
+          <LogoProcessor originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png" onProcessed={handleLogoProcessed} className="h-20 w-auto" />
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
@@ -40,7 +30,7 @@ const Navigation = () => {
             <button onClick={() => scrollToSection('services')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">
               Services
             </button>
-            <button onClick={() => scrollToSection('consulting')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">Differntiation</button>
+            <button onClick={() => scrollToSection('consulting')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">What’s Unique</button>
             <button onClick={() => scrollToSection('certifications')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">
               Certifications
             </button>
@@ -91,8 +81,6 @@ const Navigation = () => {
             </Button>
           </div>}
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navigation;
