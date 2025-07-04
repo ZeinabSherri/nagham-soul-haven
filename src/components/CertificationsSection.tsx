@@ -54,14 +54,14 @@ const CertificationsSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#562383' }}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-deep-purple">
             Certifications
           </h2>
-          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#657024' }}>
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed text-dark-olive">
             Professional credentials reflecting years of dedicated study and commitment to providing 
             the highest quality healing services.
           </p>
-          <div className="w-24 h-1 mx-auto rounded-full mt-6" style={{ backgroundColor: '#a3399c' }}></div>
+          <div className="w-24 h-1 bg-vibrant-purple mx-auto rounded-full mt-6"></div>
         </div>
 
         {/* Certificate Wall Image */}
@@ -73,8 +73,8 @@ const CertificationsSection = () => {
               className="w-full rounded-2xl shadow-lg"
             />
             <div className="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow-md">
-              <p className="font-semibold" style={{ color: '#562383' }}>Professional Certifications Display</p>
-              <p className="text-sm" style={{ color: '#657024' }}>Years of dedicated training and education</p>
+              <p className="font-semibold text-deep-purple">Professional Certifications Display</p>
+              <p className="text-sm text-dark-olive">Years of dedicated training and education</p>
             </div>
           </div>
         </div>
@@ -86,45 +86,32 @@ const CertificationsSection = () => {
             return (
               <Card 
                 key={index} 
-                className="bg-white border-2 border-gray-200 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 group cursor-pointer"
-                style={{ 
-                  '--hover-border-color': '#a3399c'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = '#a3399c';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = '#e5e7eb';
-                }}
+                className="bg-white border-2 border-gray-200 shadow-md hover:shadow-lg hover:border-vibrant-purple transition-all duration-300 transform hover:scale-105 group cursor-pointer"
               >
                 <CardContent className="p-6 text-center">
                   <div className="mb-4">
-                    <IconComponent 
-                      className="w-16 h-16 mx-auto mb-3" 
-                      style={{ color: '#562383' }}
-                    />
+                    <IconComponent className="w-16 h-16 mx-auto mb-3 text-deep-purple" />
                     <Badge 
                       variant="secondary" 
-                      className="text-white text-xs font-semibold px-3 py-1"
-                      style={{ backgroundColor: '#a3399c' }}
+                      className="bg-vibrant-purple text-white text-xs font-semibold px-3 py-1"
                     >
                       {cert.org}
                     </Badge>
                   </div>
                   
-                  <h3 className="font-bold text-lg mb-2 leading-tight" style={{ color: '#562383' }}>
+                  <h3 className="font-bold text-lg mb-2 leading-tight text-deep-purple">
                     {cert.title}
                   </h3>
                   
-                  <p className="text-sm font-medium mb-3" style={{ color: '#657024' }}>
+                  <p className="text-sm font-medium mb-3 text-dark-olive">
                     {cert.credential}
                   </p>
                   
-                  <p className="text-xs mb-3 leading-relaxed" style={{ color: '#657024' }}>
+                  <p className="text-xs mb-3 leading-relaxed text-dark-olive">
                     {cert.description}
                   </p>
                   
-                  <div className="flex items-center justify-center text-xs" style={{ color: '#a3399c' }}>
+                  <div className="flex items-center justify-center text-xs text-vibrant-purple">
                     <Calendar className="w-3 h-3 mr-1" />
                     <span>{cert.year}</span>
                   </div>
@@ -135,22 +122,21 @@ const CertificationsSection = () => {
         </div>
 
         {/* Additional Specialized Trainings */}
-        <div className="rounded-2xl p-8 border-2" style={{ backgroundColor: '#f9f1dc', borderColor: '#c6d48a' }}>
-          <h3 className="text-2xl font-bold mb-8 text-center" style={{ color: '#562383' }}>
+        <div className="bg-creamy-beige rounded-2xl p-8 border-2 border-light-olive">
+          <h3 className="text-2xl font-bold mb-8 text-center text-deep-purple">
             Additional Specialized Trainings
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {additionalTrainings.map((training, index) => (
               <div 
                 key={index} 
-                className="bg-white p-4 rounded-lg shadow-sm border-l-4 hover:shadow-md transition-shadow duration-300"
-                style={{ borderLeftColor: '#a3399c' }}
+                className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-vibrant-purple hover:shadow-md transition-shadow duration-300"
               >
                 <div className="flex justify-between items-start">
-                  <span className="font-medium text-sm leading-tight" style={{ color: '#562383' }}>
+                  <span className="font-medium text-sm leading-tight text-deep-purple">
                     {training.name}
                   </span>
-                  <span className="text-xs ml-2 flex-shrink-0" style={{ color: '#657024' }}>
+                  <span className="text-xs ml-2 flex-shrink-0 text-dark-olive">
                     {training.year}
                   </span>
                 </div>
@@ -160,37 +146,37 @@ const CertificationsSection = () => {
         </div>
 
         {/* Perfect for You Section */}
-        <div className="mt-16 rounded-2xl p-8 border-2 text-center" style={{ backgroundColor: '#f7e3fc', borderColor: '#d8c8f4' }}>
-          <h3 className="text-2xl font-bold mb-6" style={{ color: '#562383' }}>
+        <div className="mt-16 bg-light-lavender-pink rounded-2xl p-8 border-2 border-soft-lavender text-center">
+          <h3 className="text-2xl font-bold mb-6 text-deep-purple">
             Perfect for You If...
           </h3>
           <div className="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: '#a3399c' }}></div>
-                <p style={{ color: '#562383' }}>You're ready to release what's been holding you back</p>
+                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-deep-purple">You're ready to release what's been holding you back</p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: '#a3399c' }}></div>
-                <p style={{ color: '#562383' }}>You want to feel more calm and grounded in your body</p>
+                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-deep-purple">You want to feel more calm and grounded in your body</p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: '#a3399c' }}></div>
-                <p style={{ color: '#562383' }}>You're seeking deeper self-understanding and clarity</p>
+                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-deep-purple">You're seeking deeper self-understanding and clarity</p>
               </div>
             </div>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: '#a3399c' }}></div>
-                <p style={{ color: '#562383' }}>You're open to exploring both mind and energy healing</p>
+                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-deep-purple">You're open to exploring both mind and energy healing</p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: '#a3399c' }}></div>
-                <p style={{ color: '#562383' }}>You want to break free from limiting patterns and beliefs</p>
+                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-deep-purple">You want to break free from limiting patterns and beliefs</p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: '#a3399c' }}></div>
-                <p style={{ color: '#562383' }}>You're committed to your personal growth and healing journey</p>
+                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
+                <p className="text-deep-purple">You're committed to your personal growth and healing journey</p>
               </div>
             </div>
           </div>
