@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
-
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -12,13 +10,11 @@ const HeroSection = () => {
       });
     }
   };
-
-  return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
+  return <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=2000&q=80')"
-      }}></div>
+      backgroundImage: "url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=2000&q=80')"
+    }}></div>
       
       {/* Color Overlay */}
       <div className="absolute inset-0 bg-deep-purple/85"></div>
@@ -33,7 +29,7 @@ const HeroSection = () => {
           {/* Left side - Content */}
           <div className="text-left animate-fade-in">
             {/* Main Headline with improved spacing */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-creamy-beige mb-8 leading-tight animate-fade-in delay-200">
+            <h1 className="text-4xl lg:text-7xl font-bold text-creamy-beige mb-8 leading-tight animate-fade-in delay-200 md:text-5xl my-[20px]">
               Start Feeling Safe, Seen & Connected Again
             </h1>
             
@@ -112,8 +108,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
