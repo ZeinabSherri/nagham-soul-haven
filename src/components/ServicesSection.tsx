@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Clock, Users, Video, Home } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Clock, Users, Video, Home, Heart, Star, Sparkles } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
@@ -12,7 +12,7 @@ const ServicesSection = () => {
       duration: "90 minutes",
       format: "Online & In-Person",
       icon: Users,
-      color: "purple-medium"
+      isEven: false
     },
     {
       title: "Hypnotherapy",
@@ -20,7 +20,7 @@ const ServicesSection = () => {
       duration: "60-90 minutes",
       format: "Online & In-Person",
       icon: Clock,
-      color: "purple-light"
+      isEven: true
     },
     {
       title: "NLP & Time Line Therapy®",
@@ -28,7 +28,7 @@ const ServicesSection = () => {
       duration: "90 minutes",
       format: "Online & In-Person",
       icon: Video,
-      color: "sage-light"
+      isEven: false
     },
     {
       title: "Access Bars",
@@ -36,89 +36,102 @@ const ServicesSection = () => {
       duration: "60 minutes",
       format: "In-Person Only",
       icon: Home,
-      color: "purple-dark"
+      isEven: true
     },
     {
       title: "Reiki Healing",
       description: "Energy healing to balance chakras, reduce stress, and promote deep relaxation.",
       duration: "60 minutes",
       format: "Online & In-Person",
-      icon: Users,
-      color: "sage-dark"
+      icon: Heart,
+      isEven: false
     },
     {
       title: "Past Life Regression",
       description: "Explore past lives to understand current patterns and release karmic blocks.",
       duration: "2 hours",
       format: "Online & In-Person",
-      icon: Clock,
-      color: "purple-very-light"
+      icon: Star,
+      isEven: true
     },
     {
       title: "Laughter Yoga",
       description: "Joyful practice combining laughter exercises with yogic breathing for stress relief.",
       duration: "45 minutes",
       format: "Group Sessions",
-      icon: Users,
-      color: "cream"
+      icon: Sparkles,
+      isEven: false
     }
   ];
 
-  const getColorClasses = (color: string) => {
-    const colors = {
-      "purple-medium": "bg-purple-medium border-purple-medium text-white",
-      "purple-light": "bg-purple-light border-purple-light text-purple-dark",
-      "sage-light": "bg-sage-light border-sage-light text-purple-dark",
-      "purple-dark": "bg-purple-dark border-purple-dark text-white",
-      "sage-dark": "bg-sage-dark border-sage-dark text-white",
-      "purple-very-light": "bg-purple-very-light border-purple-light text-purple-dark",
-      "cream": "bg-cream border-purple-light text-purple-dark"
-    };
-    return colors[color as keyof typeof colors] || colors["purple-medium"];
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-purple-dark mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple mb-6">
             My Services
           </h2>
-          <p className="text-xl text-purple-medium max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-dark-olive max-w-3xl mx-auto leading-relaxed">
             Each healing session is uniquely designed for you, combining ancient wisdom 
             with modern therapeutic techniques for profound transformation.
           </p>
-          <div className="w-24 h-1 bg-purple-medium mx-auto rounded-full mt-6"></div>
+          <div className="w-24 h-1 bg-vibrant-purple mx-auto rounded-full mt-6"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="space-y-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <Card 
                 key={index} 
-                className={`${getColorClasses(service.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group`}
-                style={{ animationDelay: `${index * 150}ms` }}
+                className={`${service.isEven ? 'bg-creamy-beige' : 'bg-white'} border-2 border-vibrant-purple/20 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in`}
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <IconComponent className={`w-8 h-8 ${service.color === 'purple-medium' || service.color === 'purple-dark' || service.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'} transition-transform duration-300 group-hover:scale-110`} />
-                    <Badge variant="secondary" className="bg-white/70 text-purple-dark transition-all duration-300 group-hover:bg-white">
-                      {service.duration}
-                    </Badge>
-                  </div>
-                  <CardTitle className={`text-xl font-bold mb-2 ${service.color === 'purple-medium' || service.color === 'purple-dark' || service.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'} transition-all duration-300`}>
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className={`mb-4 leading-relaxed ${service.color === 'purple-medium' || service.color === 'purple-dark' || service.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'} transition-all duration-300`}>
-                    {service.description}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <Badge variant="outline" className="border-purple-medium text-purple-dark bg-white transition-all duration-300 group-hover:bg-purple-very-light">
-                      {service.format}
-                    </Badge>
+                <CardContent className="p-8">
+                  <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                    {/* Icon Section */}
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-vibrant-purple rounded-full flex items-center justify-center">
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
+                    </div>
+                    
+                    {/* Content Section */}
+                    <div className="flex-grow">
+                      <div className="mb-4">
+                        <h3 className="text-2xl font-bold text-deep-purple mb-3">
+                          {service.title}
+                        </h3>
+                        <p className="text-lg text-dark-olive leading-relaxed mb-4">
+                          {service.description}
+                        </p>
+                        <div className="flex flex-wrap gap-4 text-sm">
+                          <span className="bg-vibrant-purple/10 text-deep-purple px-3 py-1 rounded-full font-medium">
+                            Duration: {service.duration}
+                          </span>
+                          <span className="bg-vibrant-purple/10 text-deep-purple px-3 py-1 rounded-full font-medium">
+                            {service.format}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Call-to-Action Button */}
+                    <div className="flex-shrink-0">
+                      <Button 
+                        onClick={scrollToContact}
+                        className="bg-deep-purple hover:bg-vibrant-purple text-white px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+                      >
+                        Book Now
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -126,22 +139,22 @@ const ServicesSection = () => {
           })}
         </div>
 
-        <div className="mt-16 bg-purple-very-light rounded-2xl p-8 border-2 border-purple-light animate-fade-in delay-1000 hover:shadow-lg transition-all duration-500">
-          <h3 className="text-2xl font-bold text-purple-dark mb-4 text-center">
+        <div className="mt-16 bg-creamy-beige rounded-2xl p-8 border-2 border-vibrant-purple/20 animate-fade-in delay-700 hover:shadow-lg transition-all duration-500">
+          <h3 className="text-2xl font-bold text-deep-purple mb-4 text-center">
             What Makes My Work Different
           </h3>
           <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div className="animate-fade-in delay-1200 hover:scale-105 transition-transform duration-300">
-              <h4 className="font-semibold text-purple-dark mb-2">Integrative Approach</h4>
-              <p className="text-purple-medium">Combining multiple healing modalities for comprehensive transformation</p>
+            <div className="animate-fade-in delay-800 hover:scale-105 transition-transform duration-300">
+              <h4 className="font-semibold text-deep-purple mb-2">Integrative Approach</h4>
+              <p className="text-dark-olive">Combining multiple healing modalities for comprehensive transformation</p>
             </div>
-            <div className="animate-fade-in delay-1400 hover:scale-105 transition-transform duration-300">
-              <h4 className="font-semibold text-purple-dark mb-2">Client-Focused Customization</h4>
-              <p className="text-purple-medium">Every session is tailored to your unique needs and healing journey</p>
+            <div className="animate-fade-in delay-900 hover:scale-105 transition-transform duration-300">
+              <h4 className="font-semibold text-deep-purple mb-2">Client-Focused Customization</h4>
+              <p className="text-dark-olive">Every session is tailored to your unique needs and healing journey</p>
             </div>
-            <div className="animate-fade-in delay-1600 hover:scale-105 transition-transform duration-300">
-              <h4 className="font-semibold text-purple-dark mb-2">Safe & Deep Results</h4>
-              <p className="text-purple-medium">Creating lasting change in a supportive, non-judgmental environment</p>
+            <div className="animate-fade-in delay-1000 hover:scale-105 transition-transform duration-300">
+              <h4 className="font-semibold text-deep-purple mb-2">Safe & Deep Results</h4>
+              <p className="text-dark-olive">Creating lasting change in a supportive, non-judgmental environment</p>
             </div>
           </div>
         </div>
