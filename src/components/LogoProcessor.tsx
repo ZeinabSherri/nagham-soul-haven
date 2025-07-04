@@ -47,9 +47,11 @@ const LogoProcessor: React.FC<LogoProcessorProps> = ({ originalImageUrl, onProce
 
   if (isProcessing) {
     return (
-      <div className={`flex items-center justify-center ${className}`}>
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-vibrant-purple"></div>
-      </div>
+      <img 
+        src="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png" 
+        alt="Nagham Logo" 
+        className={`${className} opacity-75`}
+      />
     );
   }
 
