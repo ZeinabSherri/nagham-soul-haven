@@ -1,10 +1,11 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
+import LogoProcessor from './LogoProcessor';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [logoUrl, setLogoUrl] = useState<string>('');
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -14,12 +15,23 @@ const Navigation = () => {
     setIsOpen(false);
   };
 
+  const handleLogoProcessed = (processedUrl: string) => {
+    setLogoUrl(processedUrl);
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-purple-light shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-light text-purple-dark">
-            Nagham Rasbieh
+          <div className="flex items-center space-x-3">
+            <LogoProcessor 
+              originalImageUrl="/lovable-uploads/96c45d35-a86f-45f2-bb90-1fdb7c1455c1.png"
+              onProcessed={handleLogoProcessed}
+              className="h-10 w-auto"
+            />
+            <div className="text-2xl font-light text-purple-dark">
+              Nagham Rasbieh
+            </div>
           </div>
           
           {/* Desktop Navigation */}
