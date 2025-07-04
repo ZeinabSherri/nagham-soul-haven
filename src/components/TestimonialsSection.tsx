@@ -1,29 +1,23 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from 'lucide-react';
-
 const TestimonialsSection = () => {
-  const testimonials = [
-    {
-      name: "Zeinab",
-      text: "I tried years of therapy. One session with Nagham shifted something I didn't even know was stuck.",
-      rating: 5,
-      color: "purple-light"
-    },
-    {
-      name: "Maya", 
-      text: "I finally feel safe in my body after years of anxiety. She held space for everything.",
-      rating: 5,
-      color: "sage-light"
-    },
-    {
-      name: "Rana",
-      text: "Her sessions helped me reconnect with myself in ways I didn't think were possible.",
-      rating: 5,
-      color: "purple-very-light"
-    }
-  ];
-
+  const testimonials = [{
+    name: "Zeinab",
+    text: "I tried years of therapy. One session with Nagham shifted something I didn't even know was stuck.",
+    rating: 5,
+    color: "purple-light"
+  }, {
+    name: "Maya",
+    text: "I finally feel safe in my body after years of anxiety. She held space for everything.",
+    rating: 5,
+    color: "sage-light"
+  }, {
+    name: "Rana",
+    text: "Her sessions helped me reconnect with myself in ways I didn't think were possible.",
+    rating: 5,
+    color: "purple-very-light"
+  }];
   const getColorClasses = (color: string) => {
     const colors = {
       "purple-light": "bg-purple-light border-purple-light text-purple-dark",
@@ -35,9 +29,7 @@ const TestimonialsSection = () => {
     };
     return colors[color as keyof typeof colors] || colors["purple-light"];
   };
-
-  return (
-    <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-cream">
+  return <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-purple-dark mb-6">
@@ -50,23 +42,16 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
-              className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group`}
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
+          {testimonials.map((testimonial, index) => <Card key={index} className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group`} style={{
+          animationDelay: `${index * 200}ms`
+        }}>
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <Quote className={`w-8 h-8 mr-3 ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-medium'} transition-transform duration-300 group-hover:scale-110`} />
                   <div className="flex">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className={`w-5 h-5 fill-current ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-medium'} transition-all duration-300 hover:scale-110`}
-                        style={{ animationDelay: `${i * 100}ms` }}
-                      />
-                    ))}
+                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className={`w-5 h-5 fill-current ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-medium'} transition-all duration-300 hover:scale-110`} style={{
+                  animationDelay: `${i * 100}ms`
+                }} />)}
                   </div>
                 </div>
                 <p className={`mb-4 leading-relaxed italic ${testimonial.color === 'purple-medium' || testimonial.color === 'sage-dark' ? 'text-white' : 'text-purple-dark'} transition-all duration-300 group-hover:text-opacity-90`}>
@@ -76,8 +61,7 @@ const TestimonialsSection = () => {
                   — {testimonial.name}
                 </p>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <div className="mt-16 text-center animate-fade-in delay-1000">
@@ -89,24 +73,20 @@ const TestimonialsSection = () => {
               Join hundreds of others who have found peace, clarity, and freedom through our work together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-purple-medium hover:bg-purple-dark text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-              >
+              <button onClick={() => document.getElementById('contact')?.scrollIntoView({
+              behavior: 'smooth'
+            })} className="bg-purple-medium hover:bg-purple-dark text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Book Your Session
               </button>
-              <button 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-purple-medium text-purple-dark hover:bg-purple-very-light px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105"
-              >
+              <button onClick={() => document.getElementById('contact')?.scrollIntoView({
+              behavior: 'smooth'
+            })} className="border-2 border-purple-medium text-purple-dark hover:bg-purple-very-light px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105">
                 Ask a Question
               </button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TestimonialsSection;
