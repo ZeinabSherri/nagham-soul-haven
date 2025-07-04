@@ -33,65 +33,77 @@ const TestimonialsSection = () => {
     return colors[color as keyof typeof colors] || colors["soft-lavender"];
   };
 
-  return <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  return (
+    <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple mb-6">
+        {/* Left-aligned title */}
+        <div className="mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
             What Clients Say
           </h2>
-          <p className="text-xl text-vibrant-purple max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-vibrant-purple mt-4 max-w-3xl">
             Real stories from real people who have experienced deep healing and transformation.
           </p>
-          <div className="w-24 h-1 bg-vibrant-purple mx-auto rounded-full mt-6"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => <Card key={index} className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group`} style={{
-          animationDelay: `${index * 200}ms`
-        }}>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {testimonials.map((testimonial, index) => (
+            <Card 
+              key={index} 
+              className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group`} 
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <Quote className={`w-8 h-8 mr-3 ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-transform duration-300 group-hover:scale-110`} />
+                  <Quote className={`w-6 h-6 mr-3 ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-transform duration-300 group-hover:scale-110`} />
                   <div className="flex">
-                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className={`w-5 h-5 fill-current ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-all duration-300 hover:scale-110`} style={{
-                  animationDelay: `${i * 100}ms`
-                }} />)}
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star 
+                        key={i} 
+                        className={`w-4 h-4 fill-current ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-all duration-300 hover:scale-110`} 
+                        style={{ animationDelay: `${i * 100}ms` }} 
+                      />
+                    ))}
                   </div>
                 </div>
-                <p className={`mb-4 leading-relaxed italic ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-deep-purple'} transition-all duration-300 group-hover:text-opacity-90`}>
+                <p className={`mb-4 leading-relaxed italic text-sm ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-deep-purple'} transition-all duration-300 group-hover:text-opacity-90`}>
                   "{testimonial.text}"
                 </p>
-                <p className={`font-semibold ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-deep-purple'} transition-all duration-300`}>
+                <p className={`font-semibold text-sm ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-deep-purple'} transition-all duration-300`}>
                   — {testimonial.name}
                 </p>
               </CardContent>
-            </Card>)}
+            </Card>
+          ))}
         </div>
 
-        <div className="mt-16 text-center animate-fade-in delay-1000">
-          <div className="bg-light-lavender-pink rounded-2xl p-8 border-2 border-soft-lavender max-w-4xl mx-auto hover:shadow-lg transition-all duration-500 hover:scale-105">
-            <h3 className="text-2xl font-bold text-deep-purple mb-4">
+        <div className="text-center">
+          <div className="bg-light-lavender-pink rounded-xl p-6 border-2 border-soft-lavender max-w-4xl mx-auto hover:shadow-lg transition-all duration-500">
+            <h3 className="text-xl font-bold text-deep-purple mb-4">
               Ready to Start Your Healing Journey?
             </h3>
-            <p className="text-vibrant-purple mb-6 text-lg">
+            <p className="text-vibrant-purple mb-6">
               Join hundreds of others who have found peace, clarity, and freedom through our work together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button onClick={() => document.getElementById('contact')?.scrollIntoView({
-              behavior: 'smooth'
-            })} className="bg-vibrant-purple hover:bg-deep-purple text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <button 
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
+                className="bg-vibrant-purple hover:bg-deep-purple text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
                 Book Your Session
               </button>
-              <button onClick={() => document.getElementById('contact')?.scrollIntoView({
-              behavior: 'smooth'
-            })} className="border-2 border-vibrant-purple text-deep-purple hover:bg-light-lavender-pink px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+              <button 
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
+                className="border-2 border-vibrant-purple text-deep-purple hover:bg-light-lavender-pink px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105"
+              >
                 Ask a Question
               </button>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default TestimonialsSection;

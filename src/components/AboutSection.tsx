@@ -7,6 +7,13 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
+        {/* Left-aligned title */}
+        <div className="mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
+            About me
+          </h2>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Portrait Photo */}
           <div className="flex justify-center items-center lg:justify-center">
@@ -23,11 +30,6 @@ const AboutSection = () => {
 
           {/* Right Column - Text Content */}
           <div className="space-y-6">
-            {/* Main Heading */}
-            <h2 className="text-4xl md:text-5xl font-bold text-deep-purple">
-              About me
-            </h2>
-
             {/* Subtitle with roles/titles */}
             <h3 className="text-xl md:text-2xl font-semibold text-vibrant-purple">
               Therapist | Subconscious Guide | Energy Healer

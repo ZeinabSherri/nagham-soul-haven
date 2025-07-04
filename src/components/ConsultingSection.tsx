@@ -5,13 +5,14 @@ import { Check, Star, Heart, Sparkles } from 'lucide-react';
 
 const ConsultingSection = () => {
   return (
-    <section id="consulting" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="consulting" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple mb-6">
+        {/* Left-aligned title */}
+        <div className="mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
             What Makes My Work Different?
           </h2>
-          <p className="text-xl text-dark-olive leading-relaxed max-w-4xl mx-auto">
+          <p className="text-lg text-dark-olive mt-4 max-w-4xl">
             Why work with me? Because this isn't cookie-cutter coaching or talk therapy. 
             It's deep, personal, and integrative.
           </p>
@@ -86,7 +87,7 @@ const ConsultingSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <Button className="bg-deep-purple hover:bg-vibrant-purple text-white px-12 py-4 rounded-lg text-lg font-bold transition-all duration-300 hover:shadow-lg transform hover:scale-105">
             Start Your Transformation Journey
           </Button>
