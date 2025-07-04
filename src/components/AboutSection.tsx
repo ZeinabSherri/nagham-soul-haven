@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Leaf, Heart, Brain, Sparkles } from 'lucide-react';
-
 const AboutSection = () => {
-  return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-cream">
+  return <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-purple-dark mb-6">
@@ -25,11 +22,7 @@ const AboutSection = () => {
           <div className="flex justify-center animate-scale-in delay-200">
             <div className="relative">
               <div className="aspect-[4/5] w-full max-w-md rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
-                <img 
-                  src="/lovable-uploads/8e92d398-8495-4988-a303-5fb8be016750.png" 
-                  alt="Nagham Rasbieh - Professional Therapist and Healer" 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
+                <img src="/lovable-uploads/8e92d398-8495-4988-a303-5fb8be016750.png" alt="Nagham Rasbieh - Professional Therapist and Healer" className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -right-4 bg-purple-dark text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
@@ -82,8 +75,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
