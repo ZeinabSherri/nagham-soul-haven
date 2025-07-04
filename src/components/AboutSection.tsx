@@ -9,13 +9,13 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Portrait Photo */}
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-center items-center lg:justify-center">
             <div className="relative">
               <div className="aspect-[4/5] w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
                 <img 
                   src="/lovable-uploads/8e92d398-8495-4988-a303-5fb8be016750.png" 
                   alt="Nagham Rasbieh - Professional Therapist and Healer" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>
