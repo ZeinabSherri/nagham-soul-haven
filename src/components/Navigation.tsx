@@ -24,16 +24,11 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-soft-lavender shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center space-x-3">
-            <LogoProcessor 
-              originalImageUrl="/lovable-uploads/96c45d35-a86f-45f2-bb90-1fdb7c1455c1.png"
-              onProcessed={handleLogoProcessed}
-              className="h-10 w-auto"
-            />
-            <div className="text-2xl font-light text-deep-purple">
-              Nagham Rasbieh
-            </div>
-          </div>
+          <LogoProcessor 
+            originalImageUrl="/lovable-uploads/96c45d35-a86f-45f2-bb90-1fdb7c1455c1.png"
+            onProcessed={handleLogoProcessed}
+            className="h-10 w-auto"
+          />
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
