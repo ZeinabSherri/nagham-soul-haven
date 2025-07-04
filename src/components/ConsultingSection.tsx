@@ -1,22 +1,15 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, MessageCircle, Clock, Users, Star } from 'lucide-react';
-
 const ConsultingSection = () => {
-  return (
-    <section id="consulting" className="py-20 px-4 sm:px-6 lg:px-8 bg-cream">
+  return <section id="consulting" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image */}
           <div className="relative animate-scale-in">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
-              <img 
-                src="/lovable-uploads/c4b0d2fc-4a47-4b54-9288-4d88a56e4554.png" 
-                alt="Professional Therapy and Consultation Space" 
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-              />
+              <img src="/lovable-uploads/c4b0d2fc-4a47-4b54-9288-4d88a56e4554.png" alt="Professional Therapy and Consultation Space" className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
             </div>
             {/* Floating elements for visual interest - removed animations from icons */}
             <div className="absolute -top-4 -right-4 bg-purple-dark text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
@@ -104,8 +97,6 @@ const ConsultingSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ConsultingSection;
