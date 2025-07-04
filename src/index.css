@@ -39,8 +39,8 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    /* Updated custom color palette based on your provided colors */
-    --deep-purple: 273 56% 32%;
+    /* Brand colors using exact hex values converted to HSL */
+    --deep-purple: 275 61% 32%;
     --light-olive: 76 39% 68%;
     --creamy-beige: 52 73% 92%;
     --vibrant-purple: 303 61% 43%;
@@ -107,31 +107,48 @@ All colors MUST be HSL.
   }
 }
 
-/* Custom utility classes for the new color palette */
+/* Custom utility classes for the brand color palette using exact hex values */
 @layer utilities {
-  .bg-deep-purple { background-color: hsl(var(--deep-purple)); }
-  .bg-light-olive { background-color: hsl(var(--light-olive)); }
-  .bg-creamy-beige { background-color: hsl(var(--creamy-beige)); }
-  .bg-vibrant-purple { background-color: hsl(var(--vibrant-purple)); }
-  .bg-light-lavender-pink { background-color: hsl(var(--light-lavender-pink)); }
-  .bg-soft-lavender { background-color: hsl(var(--soft-lavender)); }
-  .bg-dark-olive { background-color: hsl(var(--dark-olive)); }
+  .bg-deep-purple { background-color: #562383; }
+  .bg-light-olive { background-color: #c6d48a; }
+  .bg-creamy-beige { background-color: #f9f1dc; }
+  .bg-vibrant-purple { background-color: #a3399c; }
+  .bg-light-lavender-pink { background-color: #f7e3fc; }
+  .bg-soft-lavender { background-color: #d8c8f4; }
+  .bg-dark-olive { background-color: #657024; }
   
-  .text-deep-purple { color: hsl(var(--deep-purple)); }
-  .text-light-olive { color: hsl(var(--light-olive)); }
-  .text-creamy-beige { color: hsl(var(--creamy-beige)); }
-  .text-vibrant-purple { color: hsl(var(--vibrant-purple)); }
-  .text-light-lavender-pink { color: hsl(var(--light-lavender-pink)); }
-  .text-soft-lavender { color: hsl(var(--soft-lavender)); }
-  .text-dark-olive { color: hsl(var(--dark-olive)); }
+  .text-deep-purple { color: #562383; }
+  .text-light-olive { color: #c6d48a; }
+  .text-creamy-beige { color: #f9f1dc; }
+  .text-vibrant-purple { color: #a3399c; }
+  .text-light-lavender-pink { color: #f7e3fc; }
+  .text-soft-lavender { color: #d8c8f4; }
+  .text-dark-olive { color: #657024; }
   
-  .border-deep-purple { border-color: hsl(var(--deep-purple)); }
-  .border-light-olive { border-color: hsl(var(--light-olive)); }
-  .border-creamy-beige { border-color: hsl(var(--creamy-beige)); }
-  .border-vibrant-purple { border-color: hsl(var(--vibrant-purple)); }
-  .border-light-lavender-pink { border-color: hsl(var(--light-lavender-pink)); }
-  .border-soft-lavender { border-color: hsl(var(--soft-lavender)); }
-  .border-dark-olive { border-color: hsl(var(--dark-olive)); }
+  .border-deep-purple { border-color: #562383; }
+  .border-light-olive { border-color: #c6d48a; }
+  .border-creamy-beige { border-color: #f9f1dc; }
+  .border-vibrant-purple { border-color: #a3399c; }
+  .border-light-lavender-pink { border-color: #f7e3fc; }
+  .border-soft-lavender { border-color: #d8c8f4; }
+  .border-dark-olive { border-color: #657024; }
+
+  /* Hover states using exact hex values */
+  .hover\:bg-deep-purple:hover { background-color: #562383; }
+  .hover\:bg-light-olive:hover { background-color: #c6d48a; }
+  .hover\:bg-creamy-beige:hover { background-color: #f9f1dc; }
+  .hover\:bg-vibrant-purple:hover { background-color: #a3399c; }
+  .hover\:bg-light-lavender-pink:hover { background-color: #f7e3fc; }
+  .hover\:bg-soft-lavender:hover { background-color: #d8c8f4; }
+  .hover\:bg-dark-olive:hover { background-color: #657024; }
+
+  .hover\:text-deep-purple:hover { color: #562383; }
+  .hover\:text-light-olive:hover { color: #c6d48a; }
+  .hover\:text-creamy-beige:hover { color: #f9f1dc; }
+  .hover\:text-vibrant-purple:hover { color: #a3399c; }
+  .hover\:text-light-lavender-pink:hover { color: #f7e3fc; }
+  .hover\:text-soft-lavender:hover { color: #d8c8f4; }
+  .hover\:text-dark-olive:hover { color: #657024; }
 
   /* Animation delay utilities */
   .delay-100 { animation-delay: 100ms; }

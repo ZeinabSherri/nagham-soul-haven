@@ -63,14 +63,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// New custom color palette
-				'deep-purple': 'hsl(var(--deep-purple))',
-				'light-olive': 'hsl(var(--light-olive))',
-				'creamy-beige': 'hsl(var(--creamy-beige))',
-				'vibrant-purple': 'hsl(var(--vibrant-purple))',
-				'light-lavender-pink': 'hsl(var(--light-lavender-pink))',
-				'soft-lavender': 'hsl(var(--soft-lavender))',
-				'dark-olive': 'hsl(var(--dark-olive))'
+				// Brand colors using exact hex values
+				'deep-purple': '#562383',
+				'light-olive': '#c6d48a',
+				'creamy-beige': '#f9f1dc',
+				'vibrant-purple': '#a3399c',
+				'light-lavender-pink': '#f7e3fc',
+				'soft-lavender': '#d8c8f4',
+				'dark-olive': '#657024'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
