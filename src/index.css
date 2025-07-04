@@ -40,13 +40,13 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     /* Updated custom color palette based on your provided colors */
-    --cream: 45 86% 92%;
-    --purple-dark: 280 65% 35%;
-    --purple-medium: 280 45% 60%;
-    --purple-light: 300 50% 85%;
-    --purple-very-light: 300 50% 92%;
-    --sage-light: 75 30% 75%;
-    --sage-dark: 75 40% 55%;
+    --deep-purple: 273 56% 32%;
+    --light-olive: 76 39% 68%;
+    --creamy-beige: 52 73% 92%;
+    --vibrant-purple: 303 61% 43%;
+    --light-lavender-pink: 297 84% 94%;
+    --soft-lavender: 261 62% 87%;
+    --dark-olive: 76 58% 27%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -110,26 +110,29 @@ All colors MUST be HSL.
 
 /* Custom utility classes for the new color palette */
 @layer utilities {
-  .bg-cream { background-color: hsl(var(--cream)); }
-  .bg-purple-dark { background-color: hsl(var(--purple-dark)); }
-  .bg-purple-medium { background-color: hsl(var(--purple-medium)); }
-  .bg-purple-light { background-color: hsl(var(--purple-light)); }
-  .bg-purple-very-light { background-color: hsl(var(--purple-very-light)); }
-  .bg-sage-light { background-color: hsl(var(--sage-light)); }
-  .bg-sage-dark { background-color: hsl(var(--sage-dark)); }
+  .bg-deep-purple { background-color: hsl(var(--deep-purple)); }
+  .bg-light-olive { background-color: hsl(var(--light-olive)); }
+  .bg-creamy-beige { background-color: hsl(var(--creamy-beige)); }
+  .bg-vibrant-purple { background-color: hsl(var(--vibrant-purple)); }
+  .bg-light-lavender-pink { background-color: hsl(var(--light-lavender-pink)); }
+  .bg-soft-lavender { background-color: hsl(var(--soft-lavender)); }
+  .bg-dark-olive { background-color: hsl(var(--dark-olive)); }
   
-  .text-cream { color: hsl(var(--cream)); }
-  .text-purple-dark { color: hsl(var(--purple-dark)); }
-  .text-purple-medium { color: hsl(var(--purple-medium)); }
-  .text-purple-light { color: hsl(var(--purple-light)); }
-  .text-sage-light { color: hsl(var(--sage-light)); }
-  .text-sage-dark { color: hsl(var(--sage-dark)); }
+  .text-deep-purple { color: hsl(var(--deep-purple)); }
+  .text-light-olive { color: hsl(var(--light-olive)); }
+  .text-creamy-beige { color: hsl(var(--creamy-beige)); }
+  .text-vibrant-purple { color: hsl(var(--vibrant-purple)); }
+  .text-light-lavender-pink { color: hsl(var(--light-lavender-pink)); }
+  .text-soft-lavender { color: hsl(var(--soft-lavender)); }
+  .text-dark-olive { color: hsl(var(--dark-olive)); }
   
-  .border-purple-dark { border-color: hsl(var(--purple-dark)); }
-  .border-purple-medium { border-color: hsl(var(--purple-medium)); }
-  .border-purple-light { border-color: hsl(var(--purple-light)); }
-  .border-sage-light { border-color: hsl(var(--sage-light)); }
-  .border-sage-dark { border-color: hsl(var(--sage-dark)); }
+  .border-deep-purple { border-color: hsl(var(--deep-purple)); }
+  .border-light-olive { border-color: hsl(var(--light-olive)); }
+  .border-creamy-beige { border-color: hsl(var(--creamy-beige)); }
+  .border-vibrant-purple { border-color: hsl(var(--vibrant-purple)); }
+  .border-light-lavender-pink { border-color: hsl(var(--light-lavender-pink)); }
+  .border-soft-lavender { border-color: hsl(var(--soft-lavender)); }
+  .border-dark-olive { border-color: hsl(var(--dark-olive)); }
 
   /* Animation delay utilities */
   .delay-100 { animation-delay: 100ms; }
