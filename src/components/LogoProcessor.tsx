@@ -48,7 +48,7 @@ const LogoProcessor: React.FC<LogoProcessorProps> = ({ originalImageUrl, onProce
   if (isProcessing) {
     return (
       <div className={`flex items-center justify-center ${className}`}>
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cream"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-vibrant-purple"></div>
       </div>
     );
   }

@@ -25,7 +25,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <LogoProcessor 
-            originalImageUrl="/lovable-uploads/96c45d35-a86f-45f2-bb90-1fdb7c1455c1.png"
+            originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png"
             onProcessed={handleLogoProcessed}
             className="h-10 w-auto"
           />
