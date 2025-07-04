@@ -1,10 +1,13 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
 import LogoProcessor from './LogoProcessor';
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [logoUrl, setLogoUrl] = useState<string>('');
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -14,13 +17,20 @@ const Navigation = () => {
     }
     setIsOpen(false);
   };
+
   const handleLogoProcessed = (processedUrl: string) => {
     setLogoUrl(processedUrl);
   };
-  return <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-soft-lavender shadow-sm">
+
+  return (
+    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-soft-lavender shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <LogoProcessor originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png" onProcessed={handleLogoProcessed} className="h-16 w-auto" />
+          <LogoProcessor 
+            originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png" 
+            onProcessed={handleLogoProcessed} 
+            className="h-20 w-auto" 
+          />
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
@@ -81,6 +91,8 @@ const Navigation = () => {
             </Button>
           </div>}
       </div>
-    </nav>;
+    </nav>
+  );
 };
+
 export default Navigation;
