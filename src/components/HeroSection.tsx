@@ -17,7 +17,7 @@ const HeroSection = () => {
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=2000&q=80')"
+        backgroundImage: "url('/lovable-uploads/9b32dbbe-02c5-418a-b0c1-9fe944e8b0c2.png')"
       }}></div>
       
       {/* Color Overlay */}
