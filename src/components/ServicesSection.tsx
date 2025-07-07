@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -50,11 +49,8 @@ const ServicesSection = () => {
     }
   ];
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleBookNow = () => {
+    window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
 
   return (
@@ -109,7 +105,7 @@ const ServicesSection = () => {
                   
                   {/* Call-to-Action Button */}
                   <Button 
-                    onClick={scrollToContact}
+                    onClick={handleBookNow}
                     size="sm"
                     className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300"
                   >

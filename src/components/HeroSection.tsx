@@ -14,7 +14,7 @@ const HeroSection = () => {
   };
 
   const handleCalendlyClick = () => {
-    window.open('https://calendly.com/nagham-rasbieh', '_blank');
+    window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
 
   return (
