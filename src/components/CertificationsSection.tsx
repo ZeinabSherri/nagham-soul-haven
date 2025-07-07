@@ -1,69 +1,49 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Award, Star, Shield, Heart, Calendar } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const CertificationsSection = () => {
   const certifications = [
     {
-      org: "ABH",
-      title: "American Board of Hypnotherapy",
-      credential: "Certified Hypnotherapist",
-      description: "Professional certification in clinical hypnotherapy practices",
-      year: "2020",
-      icon: Award
+      title: "Hypnotherapy",
+      org: "American Board of Hypnotherapy (ABH)",
     },
     {
-      org: "ABNLP",
-      title: "American Board of NLP",
-      credential: "Certified NLP Practitioner",
-      description: "Advanced training in Neuro-Linguistic Programming techniques",
-      year: "2019",
-      icon: Star
+      title: "NLP",
+      org: "American Board of NLP (ABNLP)",
     },
     {
-      org: "TLT®",
       title: "Time Line Therapy®",
-      credential: "Certified Practitioner",
-      description: "Specialized training in Timeline Therapy methodology",
-      year: "2021",
-      icon: Shield
+      org: "TLT® Association",
     },
     {
+      title: "Hypnosis & Mind-Body Healing",
       org: "ICBCH",
-      title: "International Board of Certified Hypnotherapists",
-      credential: "Board Certified Hypnotherapist",
-      description: "International certification in hypnotherapy practice",
-      year: "2020",
-      icon: Heart
     }
   ];
 
   const additionalTrainings = [
-    { name: "Reiki Master Teacher", year: "2018" },
-    { name: "Access Bars Practitioner", year: "2019" },
-    { name: "Past Life Regression Therapist", year: "2020" },
-    { name: "Laughter Yoga Leader", year: "2018" },
-    { name: "Meditation Teacher", year: "2017" },
-    { name: "Energy Healing Practitioner", year: "2019" }
+    "Access Bars",
+    "Reiki",
+    "Pranic Healing",
+    "Past Life Regression",
+    "CBT foundations",
+    "Laughter Yoga",
+    "Transcendental Meditation"
   ];
 
   return (
     <section id="certifications" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Left-aligned Section Header */}
+        {/* Section Header */}
         <div className="mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
-            Certifications
+            Verified Certifications
           </h2>
-          <p className="text-lg text-dark-olive mt-4 max-w-3xl">
-            Professional credentials reflecting years of dedicated study and commitment to providing 
-            the highest quality healing services.
-          </p>
         </div>
 
-        {/* Certificate Wall Image - Redesigned */}
+        {/* Certificate Wall Image */}
         <div className="mb-12 flex justify-center animate-fade-in delay-300">
           <div className="relative max-w-3xl w-full">
             <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-gray-100">
@@ -81,109 +61,61 @@ const CertificationsSection = () => {
           </div>
         </div>
 
-        {/* Primary Certifications Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {certifications.map((cert, index) => {
-            const IconComponent = cert.icon;
-            return (
-              <Card 
-                key={index} 
-                className="bg-white border-2 border-gray-200 shadow-md hover:shadow-lg hover:border-vibrant-purple transition-all duration-300 transform hover:scale-105 group cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${600 + index * 100}ms` }}
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4">
-                    <IconComponent className="w-12 h-12 mx-auto mb-3 text-deep-purple" />
-                    <Badge 
-                      variant="secondary" 
-                      className="bg-vibrant-purple text-white text-xs font-semibold px-3 py-1"
-                    >
+        {/* Two Column Layout */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-12">
+          {/* Left Column - International Certifications */}
+          <div className="animate-fade-in delay-500">
+            <h3 className="text-2xl font-bold mb-8 text-deep-purple">
+              Internationally Certified Practitioner in:
+            </h3>
+            <div className="space-y-6">
+              {certifications.map((cert, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-start space-x-4 animate-fade-in"
+                  style={{ animationDelay: `${700 + index * 100}ms` }}
+                >
+                  <Check className="w-6 h-6 text-vibrant-purple mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-lg text-deep-purple mb-1">
+                      {cert.title}
+                    </h4>
+                    <p className="text-dark-olive">
                       {cert.org}
-                    </Badge>
+                    </p>
                   </div>
-                  
-                  <h3 className="font-bold text-base mb-2 leading-tight text-deep-purple">
-                    {cert.title}
-                  </h3>
-                  
-                  <p className="text-sm font-medium mb-3 text-dark-olive">
-                    {cert.credential}
-                  </p>
-                  
-                  <p className="text-xs mb-3 leading-relaxed text-dark-olive">
-                    {cert.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-center text-xs text-vibrant-purple">
-                    <Calendar className="w-3 h-3 mr-1" />
-                    <span>{cert.year}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        {/* Additional Specialized Trainings */}
-        <div className="bg-creamy-beige rounded-xl p-6 border-2 border-light-olive mb-12 animate-fade-in delay-1000">
-          <h3 className="text-xl font-bold mb-6 text-left text-deep-purple">
-            Additional Specialized Trainings
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {additionalTrainings.map((training, index) => (
-              <div 
-                key={index} 
-                className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-vibrant-purple hover:shadow-md transition-shadow duration-300 animate-fade-in"
-                style={{ animationDelay: `${1200 + index * 50}ms` }}
-              >
-                <div className="flex justify-between items-start">
-                  <span className="font-medium text-sm leading-tight text-deep-purple">
-                    {training.name}
-                  </span>
-                  <span className="text-xs ml-2 flex-shrink-0 text-dark-olive">
-                    {training.year}
+          {/* Right Column - Additional Trainings */}
+          <div className="animate-fade-in delay-700">
+            <h3 className="text-2xl font-bold mb-8 text-deep-purple">
+              Also trained in:
+            </h3>
+            <div className="space-y-4">
+              {additionalTrainings.map((training, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-center space-x-4 animate-fade-in"
+                  style={{ animationDelay: `${900 + index * 50}ms` }}
+                >
+                  <Check className="w-5 h-5 text-vibrant-purple flex-shrink-0" />
+                  <span className="text-lg text-dark-olive">
+                    {training}
                   </span>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Perfect for You Section */}
-        <div className="bg-light-lavender-pink rounded-xl p-6 border-2 border-soft-lavender animate-fade-in delay-1400">
-          <h3 className="text-xl font-bold mb-6 text-left text-deep-purple">
-            Perfect for You If...
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6 text-left">
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-deep-purple text-sm">You're ready to release what's been holding you back</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-deep-purple text-sm">You want to feel more calm and grounded in your body</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-deep-purple text-sm">You're seeking deeper self-understanding and clarity</p>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-deep-purple text-sm">You're open to exploring both mind and energy healing</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-deep-purple text-sm">You want to break free from limiting patterns and beliefs</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-vibrant-purple rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-deep-purple text-sm">You're committed to your personal growth and healing journey</p>
-              </div>
-            </div>
-          </div>
+        {/* Closing Statement */}
+        <div className="bg-creamy-beige rounded-xl p-8 text-center animate-fade-in delay-1200">
+          <p className="text-xl italic text-deep-purple font-medium leading-relaxed">
+            "These are more than just titles. They reflect the depth, care, and responsibility I bring into every session."
+          </p>
         </div>
       </div>
     </section>
