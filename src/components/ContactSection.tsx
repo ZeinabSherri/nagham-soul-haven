@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,7 +25,7 @@ const ContactSection = () => {
   };
 
   const handleCalendlyClick = () => {
-    window.open('https://calendly.com/nagham-rasbieh', '_blank');
+    window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
 
   const handleWhatsAppClick = () => {
