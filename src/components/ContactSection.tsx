@@ -14,7 +14,9 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    const subject = encodeURIComponent('New Message from Website');
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    window.location.href = `mailto:Hello@naghamthecoach?subject=${subject}&body=${body}`;
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -135,7 +137,7 @@ const ContactSection = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <Mail className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">hello@naghamsoul.com</span>
+                    <span className="text-deep-purple">Hello@naghamthecoach</span>
                   </div>
                   <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={handleWhatsAppClick}>
                     <Phone className="w-6 h-6 text-vibrant-purple" />
