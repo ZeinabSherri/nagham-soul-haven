@@ -13,6 +13,10 @@ const HeroSection = () => {
     }
   };
 
+  const handleCalendlyClick = () => {
+    window.open('https://calendly.com/nagham-rasbieh', '_blank');
+  };
+
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Texture Image */}
@@ -107,7 +111,7 @@ const HeroSection = () => {
                     </div>
                   </div>
                   
-                  <Button onClick={() => scrollToSection('consulting')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-2200">
+                  <Button onClick={handleCalendlyClick} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-2200">
                     Book Your Session
                   </Button>
                 </div>
