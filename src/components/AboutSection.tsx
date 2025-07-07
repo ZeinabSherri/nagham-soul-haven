@@ -4,6 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
 
 const AboutSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -87,6 +96,7 @@ const AboutSection = () => {
             {/* Call-to-action Button */}
             <div className="pt-6 animate-fade-in delay-2500">
               <Button 
+                onClick={() => scrollToSection('contact')}
                 size="lg"
                 className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200"
               >
