@@ -1,29 +1,28 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Clock, Users, Video, Home, Heart, Star, Sparkles, Leaf, Shield, Zap } from 'lucide-react';
+import { Clock, Users, Video, Home, Heart, Star, Sparkles } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
     {
       title: "1:1 Healing Sessions",
       description: "Personalized sessions combining multiple modalities for deep transformation.",
-      duration: "90 min",
+      duration: "60 min",
       format: "Online & In-Person",
       icon: Users
     },
     {
       title: "Hypnotherapy",
       description: "Access your subconscious mind to release limiting beliefs and create positive change.",
-      duration: "60-90 min",
+      duration: "60 min",
       format: "Online & In-Person",
       icon: Clock
     },
     {
       title: "NLP & Time Line Therapy®",
       description: "Powerful techniques to reframe experiences and release emotional blocks.",
-      duration: "90 min",
+      duration: "60 min",
       format: "Online & In-Person",
       icon: Video
     },
@@ -44,30 +43,9 @@ const ServicesSection = () => {
     {
       title: "Past Life Regression",
       description: "Explore past lives to understand current patterns and release blocks.",
-      duration: "2 hours",
-      format: "Online & In-Person",
-      icon: Star
-    },
-    {
-      title: "Pranic Healing",
-      description: "Supports physical recovery by using prana to remove energetic congestion and stimulate the body's self-repair process.",
       duration: "60 min",
       format: "Online & In-Person",
-      icon: Zap
-    },
-    {
-      title: "Access Energetic Facelift",
-      description: "A gentle, non-invasive energetic process that lifts the face and rejuvenates the body.",
-      duration: "90 min",
-      format: "Online & In-Person",
-      icon: Sparkles
-    },
-    {
-      title: "Consciousness Services",
-      description: "Access the field of consciousness within through Vedic and Maharishi technologies to awaken clarity and healing.",
-      duration: "60-90 min",
-      format: "Online & In-Person",
-      icon: Leaf
+      icon: Star
     }
   ];
 
