@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -54,7 +55,7 @@ const ContactSection = () => {
                 <Calendar className="w-6 h-6 mr-3 text-vibrant-purple" />
                 Book Your Healing Session
               </CardTitle>
-              <p className="text-dark-olive">Schedule your personalized healing session directly through my calendar</p>
+              <p className="text-dark-olive">Book a Free 15-min Intro Call</p>
             </CardHeader>
             <CardContent className="text-center">
               <div className="bg-gray-50 rounded-xl p-8 border border-deep-purple/10">
