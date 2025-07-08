@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Check } from 'lucide-react';
+import { Check, Award } from 'lucide-react';
 
 const CertificationsSection = () => {
   const certifications = [
@@ -38,7 +38,6 @@ const CertificationsSection = () => {
   "SuperRelationships Specialist"
 ];
 
-
   return (
     <section id="certifications" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -47,6 +46,37 @@ const CertificationsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
             Verified Certifications
           </h2>
+        </div>
+
+        {/* Official Recognition Highlight */}
+        <div className="mb-12 animate-fade-in delay-200">
+          <div className="bg-gradient-to-r from-vibrant-purple/10 to-deep-purple/10 p-8 rounded-2xl border-2 border-vibrant-purple/20">
+            <div className="flex items-center mb-4">
+              <Award className="w-8 h-8 text-vibrant-purple mr-3" />
+              <h3 className="text-2xl font-bold text-deep-purple">
+                Official Clinical Hypnotherapist Recognition
+              </h3>
+            </div>
+            <p className="text-lg font-semibold text-deep-purple mb-4">
+              Officially recognized as a Clinical Hypnotherapist by:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <span className="text-3xl">🌀</span>
+                <div>
+                  <p className="font-semibold text-dark-olive">Lebanese Syndicate of Hypnotherapists</p>
+                  <p className="text-sm text-gray-600">(LSH)</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <span className="text-3xl">📜</span>
+                <div>
+                  <p className="font-semibold text-dark-olive">American Board of Hypnotherapy</p>
+                  <p className="text-sm text-gray-600">(ABH)</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Certificate Wall Image */}

@@ -44,48 +44,69 @@ const AboutSection = () => {
               Therapist | Subconscious Guide | Energy Healer
             </h3>
 
+            {/* Official Recognition Section */}
+            <div className="bg-creamy-beige p-6 rounded-xl border-l-4 border-vibrant-purple animate-fade-in delay-800">
+              <p className="text-lg font-semibold text-deep-purple mb-3">
+                I'm officially a Clinical Hypnotherapist, recognized by both:
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-3">
+                  <span className="text-2xl">🌀</span>
+                  <span className="text-lg text-dark-olive font-medium">
+                    The Lebanese Syndicate of Hypnotherapists (LSH)
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-2xl">📜</span>
+                  <span className="text-lg text-dark-olive font-medium">
+                    The American Board of Hypnotherapy (ABH)
+                  </span>
+                </div>
+              </div>
+            </div>
+
             {/* Italic tagline */}
-            <p className="text-lg text-deep-purple italic animate-fade-in delay-900">
+            <p className="text-lg text-deep-purple italic animate-fade-in delay-1000">
               Helping you reconnect with your truth and find peace from the inside out.
             </p>
 
             {/* Descriptive paragraphs */}
             <div className="space-y-4">
-              <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1100">
+              <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">
                 I'm <span className="font-semibold text-deep-purple">Nagham Rasbieh</span>, a certified subconscious healing practitioner blending science-backed tools and spiritual depth. My approach is gentle, rooted in emotional safety, and designed to bring real results in fewer sessions.
               </p>
               
-              <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1300">
+              <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1400">
                 I work with children, teens, mothers, and adults using NLP, hypnotherapy, energy work, and consciousness-based healing. My goal is to help you reconnect with your truth, regulate your nervous system, and experience peace from the inside out.
               </p>
             </div>
 
             {/* My Approach Subheading */}
-            <h4 className="text-2xl font-bold text-deep-purple mt-8 animate-fade-in delay-1500">
+            <h4 className="text-2xl font-bold text-deep-purple mt-8 animate-fade-in delay-1600">
               My Approach
             </h4>
 
             {/* Bullet list */}
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3 animate-fade-in delay-1700">
+              <li className="flex items-start space-x-3 animate-fade-in delay-1800">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   Blend scientific tools like NLP, hypnotherapy, and CBT with intuitive healing methods
                 </span>
               </li>
-              <li className="flex items-start space-x-3 animate-fade-in delay-1900">
+              <li className="flex items-start space-x-3 animate-fade-in delay-2000">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   Create emotionally safe spaces for healing and transformation
                 </span>
               </li>
-              <li className="flex items-start space-x-3 animate-fade-in delay-2100">
+              <li className="flex items-start space-x-3 animate-fade-in delay-2200">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   Focus on nervous system regulation and inner peace
                 </span>
               </li>
-              <li className="flex items-start space-x-3 animate-fade-in delay-2300">
+              <li className="flex items-start space-x-3 animate-fade-in delay-2400">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
                 <span className="text-lg text-gray-700">
                   Tailor each session to your unique needs and healing journey
@@ -94,7 +115,7 @@ const AboutSection = () => {
             </ul>
 
             {/* Call-to-action Button */}
-            <div className="pt-6 animate-fade-in delay-2500">
+            <div className="pt-6 animate-fade-in delay-2600">
               <Button 
                 onClick={() => scrollToSection('contact')}
                 size="lg"
