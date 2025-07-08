@@ -60,6 +60,17 @@ const AboutSection = () => {
               </p>
             </div>
 
+            {/* Clinical Hypnotherapist Recognition */}
+            <div className="bg-creamy-beige p-6 rounded-lg animate-fade-in delay-1500">
+              <p className="text-lg text-gray-700 leading-relaxed mb-3">
+                I'm officially a <span className="font-semibold text-deep-purple">Clinical Hypnotherapist</span>, recognized by both:
+              </p>
+              <ul className="space-y-2 ml-4">
+                <li className="text-lg text-dark-olive">• The Lebanese Syndicate of Hypnotherapists (LSH)</li>
+                <li className="text-lg text-dark-olive">• The American Board of Hypnotherapy (ABH)</li>
+              </ul>
+            </div>
+
             {/* My Approach Subheading */}
             <h4 className="text-2xl font-bold text-deep-purple mt-8 animate-fade-in delay-1600">
               My Approach
