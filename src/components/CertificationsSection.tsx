@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Award } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const CertificationsSection = () => {
   const certifications = [
@@ -11,7 +11,7 @@ const CertificationsSection = () => {
     },
     {
       title: "NLP",
-      org: "American Board of NLP (ABNLP)",
+      org: "Neurologist Programming",
     },
     {
       title: "Time Line Therapy®",
@@ -23,20 +23,15 @@ const CertificationsSection = () => {
     }
   ];
 
- const additionalTrainings = [
-  "Access Bars® Practitioner & Facilitator",
-  "Master Reiki",
-  "Pranic Healing",
-  "Access Face Lift Practitioner",
-  "Certified Trainer",
-  "Intuitive Healing",
-  "Space Clearing & Recharging",
-  "Consciousness Advisor",
-  "Master CBT Specialist from ICBCH (not Hypnosis & Mind…)",
-  "Sexual Agility Specialist",
-  "Past-life Regression Specialist",
-  "SuperRelationships Specialist"
-];
+  const additionalTrainings = [
+    "Access Bars",
+    "Reiki",
+    "Pranic Healing",
+    "Past Life Regression",
+    "CBT foundations",
+    "Laughter Yoga",
+    "Transcendental Meditation"
+  ];
 
   return (
     <section id="certifications" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
