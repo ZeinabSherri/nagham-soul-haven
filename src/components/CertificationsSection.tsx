@@ -48,31 +48,31 @@ const CertificationsSection = () => {
           </h2>
         </div>
 
-        {/* Official Recognition Highlight */}
+        {/* Official Recognition Highlight - Improved */}
         <div className="mb-12 animate-fade-in delay-200">
           <div className="bg-gradient-to-r from-vibrant-purple/10 to-deep-purple/10 p-8 rounded-2xl border-2 border-vibrant-purple/20">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-6">
               <Award className="w-8 h-8 text-vibrant-purple mr-3" />
               <h3 className="text-2xl font-bold text-deep-purple">
                 Official Clinical Hypnotherapist Recognition
               </h3>
             </div>
-            <p className="text-lg font-semibold text-deep-purple mb-4">
-              Officially recognized as a Clinical Hypnotherapist by:
+            <p className="text-base font-medium text-deep-purple mb-6 leading-relaxed">
+              I'm officially a Clinical Hypnotherapist, recognized by both:
             </p>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <span className="text-3xl">🌀</span>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex items-center space-x-4 bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <span className="text-2xl text-vibrant-purple flex-shrink-0">🌀</span>
                 <div>
-                  <p className="font-semibold text-dark-olive">Lebanese Syndicate of Hypnotherapists</p>
-                  <p className="text-sm text-gray-600">(LSH)</p>
+                  <p className="font-semibold text-dark-olive text-base">The Lebanese Syndicate of Hypnotherapists</p>
+                  <p className="text-sm text-gray-600 mt-1">(LSH)</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <span className="text-3xl">📜</span>
+              <div className="flex items-center space-x-4 bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <span className="text-2xl text-vibrant-purple flex-shrink-0">📜</span>
                 <div>
-                  <p className="font-semibold text-dark-olive">American Board of Hypnotherapy</p>
-                  <p className="text-sm text-gray-600">(ABH)</p>
+                  <p className="font-semibold text-dark-olive text-base">The American Board of Hypnotherapy</p>
+                  <p className="text-sm text-gray-600 mt-1">(ABH)</p>
                 </div>
               </div>
             </div>
