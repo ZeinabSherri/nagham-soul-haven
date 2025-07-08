@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Clock, Users, Video, Home, Heart, Star, Sparkles } from 'lucide-react';
+import { Clock, Users, Video, Home, Heart, Star, Sparkles, Zap, Eye } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
@@ -46,11 +46,32 @@ const ServicesSection = () => {
       duration: "60 min",
       format: "Online & In-Person",
       icon: Star
+    },
+    {
+      title: "Pranic Healing",
+      description: "Supports physical recovery by using prana to remove energetic congestion and stimulate the body's self-repair process.",
+      duration: "60 min",
+      format: "Online & In-Person",
+      icon: Zap
+    },
+    {
+      title: "Access Energetic Facelift",
+      description: "A gentle, non-invasive energetic process that lifts the face and rejuvenates the body.",
+      duration: "60 min",
+      format: "Online & In-Person",
+      icon: Sparkles
+    },
+    {
+      title: "Consciousness Services",
+      description: "Access the field of consciousness within through Vedic and Maharishi technologies to awaken clarity and healing.",
+      duration: "60 min",
+      format: "Online & In-Person",
+      icon: Eye
     }
   ];
 
   const handleBookNow = () => {
-    window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
+    window.open('https://calendly.com/hello-naghamthecoach/hypnotherapy', '_blank');
   };
 
   return (
