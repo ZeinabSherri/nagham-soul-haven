@@ -6,20 +6,20 @@ import { Check } from 'lucide-react';
 const CertificationsSection = () => {
   const certifications = [
     {
-      title: "Hypnotherapy",
-      org: "American Board of Hypnotherapy (ABH)",
+      title: "Clinical Hypnotherapy",
+      // org: "American Board of Hypnotherapy (ABH)",
     },
     {
-      title: "NLP",
-      org: "Neurologist Programming",
+      title: "Neurologist Programming ( NLP)",
+      // org: "American Board of NLP (ABNLP)",
     },
     {
       title: "Time Line Therapy®",
       org: "TLT® Association",
     },
     {
-      title: "Hypnosis & Mind-Body Healing",
-      org: "ICBCH",
+      title: "Cognitive-Behavioral Therapy Specialist (CBT)",
+      org: "International Certification Board of Coaches And Hypnotist",
     }
   ];
 
