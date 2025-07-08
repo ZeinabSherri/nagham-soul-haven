@@ -7,11 +7,11 @@ const CertificationsSection = () => {
   const certifications = [
     {
       title: "Clinical Hypnotherapy",
-      // org: "American Board of Hypnotherapy (ABH)",
+       org: "American Board of Hypnotherapy (ABH)",
     },
     {
       title: "Neurologist Programming ( NLP)",
-      // org: "American Board of NLP (ABNLP)",
+       org: "American Board of NLP (ABNLP)",
     },
     {
       title: "Time Line Therapy®",
