@@ -29,7 +29,7 @@ const AboutSection = () => {
             <div className="relative">
               <div className="aspect-[4/5] w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="/lovable-uploads/8e92d398-8495-4988-a303-5fb8be016750.png" 
+                  src="/lovable-uploads/db5706f5-c5c7-4f16-a926-bffed5e0fae7.png" 
                   alt="Nagham Rasbieh - Professional Therapist and Healer" 
                   className="w-full h-full object-cover object-center"
                 />
