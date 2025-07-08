@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,68 +11,77 @@ const ServicesSection = () => {
       description: "Personalized sessions combining multiple modalities for deep transformation.",
       duration: "60 min",
       format: "Online & In-Person",
-      icon: Users
+      icon: Users,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
     },
     {
       title: "Hypnotherapy",
       description: "Access your subconscious mind to release limiting beliefs and create positive change.",
       duration: "60 min",
       format: "Online & In-Person",
-      icon: Clock
+      icon: Clock,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
     },
     {
       title: "NLP & Time Line Therapy®",
       description: "Powerful techniques to reframe experiences and release emotional blocks.",
       duration: "60 min",
       format: "Online & In-Person",
-      icon: Video
+      icon: Video,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/nlp-neuro-linguistic-programming"
     },
     {
       title: "Access Bars",
       description: "Gentle touch technique to release mental and emotional blocks.",
       duration: "60 min",
       format: "In-Person Only",
-      icon: Home
+      icon: Home,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/time-line-therapy"
     },
     {
       title: "Reiki Healing",
       description: "Energy healing to balance chakras and promote deep relaxation.",
       duration: "60 min",
       format: "Online & In-Person",
-      icon: Heart
+      icon: Heart,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/reiki-pranic-healing"
     },
     {
       title: "Past Life Regression",
       description: "Explore past lives to understand current patterns and release blocks.",
       duration: "60 min",
       format: "Online & In-Person",
-      icon: Star
+      icon: Star,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/past-life-regression"
     },
     {
       title: "Pranic Healing",
       description: "Supports physical recovery by using prana to remove energetic congestion and stimulate the body's self-repair process.",
       duration: "60 min",
       format: "Online & In-Person",
-      icon: Zap
+      icon: Zap,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
     },
     {
       title: "Access Energetic Facelift",
       description: "A gentle, non-invasive energetic process that lifts the face and rejuvenates the body.",
       duration: "60 min",
       format: "Online & In-Person",
-      icon: Sparkles
+      icon: Sparkles,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
     },
     {
       title: "Consciousness Services",
       description: "Access the field of consciousness within through Vedic and Maharishi technologies to awaken clarity and healing.",
       duration: "60 min",
       format: "Online & In-Person",
-      icon: Eye
+      icon: Eye,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
     }
   ];
 
-  const handleBookNow = () => {
-    window.open('https://calendly.com/hello-naghamthecoach/hypnotherapy', '_blank');
+  const handleBookNow = (bookingLink: string) => {
+    window.open(bookingLink, '_blank');
   };
 
   return (
@@ -126,7 +136,7 @@ const ServicesSection = () => {
                   
                   {/* Call-to-Action Button */}
                   <Button 
-                    onClick={handleBookNow}
+                    onClick={() => handleBookNow(service.bookingLink)}
                     size="sm"
                     className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300"
                   >
