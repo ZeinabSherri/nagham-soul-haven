@@ -24,14 +24,18 @@ const CertificationsSection = () => {
   ];
 
   const additionalTrainings = [
-    "Access Bars",
-    "Reiki",
+    " Access Bars® Practitioner & Facilitator",
+    "Master Reiki",
     "Pranic Healing",
-    "Past Life Regression",
-    "CBT foundations",
-    "Laughter Yoga",
-    "Transcendental Meditation"
-  ];
+    "Access Face Lift Practitioner",
+    "Certified Trainer",
+    "Intuitive Healing",
+    "Space Clearing & Recharging",
+    "Consciousness Advisor",
+    "Sexual Agility Specialist",
+    "Past-life Regression Specialist",
+    "SuperRelationships Specialist"
+];
 
   return (
     <section id="certifications" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
