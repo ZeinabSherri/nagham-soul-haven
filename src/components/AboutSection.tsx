@@ -44,27 +44,6 @@ const AboutSection = () => {
               Therapist | Subconscious Guide | Energy Healer
             </h3>
 
-            {/* Official Recognition Section - Improved */}
-            <div className="bg-gradient-to-r from-creamy-beige to-light-lavender-pink/30 p-6 rounded-xl border-l-4 border-vibrant-purple animate-fade-in delay-800">
-              <p className="text-base font-medium text-deep-purple mb-4 leading-relaxed">
-                I'm officially a Clinical Hypnotherapist, recognized by both:
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <span className="text-xl text-vibrant-purple">🌀</span>
-                  <span className="text-base text-dark-olive font-medium">
-                    The Lebanese Syndicate of Hypnotherapists (LSH)
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-xl text-vibrant-purple">📜</span>
-                  <span className="text-base text-dark-olive font-medium">
-                    The American Board of Hypnotherapy (ABH)
-                  </span>
-                </div>
-              </div>
-            </div>
-
             {/* Italic tagline */}
             <p className="text-lg text-deep-purple italic animate-fade-in delay-1000">
               Helping you reconnect with your truth and find peace from the inside out.

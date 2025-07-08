@@ -48,6 +48,39 @@ const CertificationsSection = () => {
           </h2>
         </div>
 
+        {/* Official Hypnotherapist ID Images */}
+        <div className="mb-12 animate-fade-in delay-200">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* LSH ID Image */}
+            <div className="text-center">
+              <div className="bg-white rounded-lg shadow-md border border-gray-200 p-4 mb-4">
+                <img 
+                  src="/lovable-uploads/80cc333c-c44f-4b3d-90b2-857d22c7531a.png" 
+                  alt="Lebanese Syndicate of Hypnotherapists (LSH) Official ID" 
+                  className="w-full max-w-[300px] mx-auto rounded-lg"
+                />
+              </div>
+              <p className="text-sm font-medium text-dark-olive">
+                Recognized by the Lebanese Syndicate of Hypnotherapists (LSH)
+              </p>
+            </div>
+
+            {/* ABH ID Image */}
+            <div className="text-center">
+              <div className="bg-white rounded-lg shadow-md border border-gray-200 p-4 mb-4">
+                <img 
+                  src="/lovable-uploads/96c45d35-a86f-45f2-bb90-1fdb7c1455c1.png" 
+                  alt="American Board of Hypnotherapy (ABH) Official ID" 
+                  className="w-full max-w-[300px] mx-auto rounded-lg"
+                />
+              </div>
+              <p className="text-sm font-medium text-dark-olive">
+                Certified by the American Board of Hypnotherapy (ABH)
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Official Recognition Highlight - Improved */}
         <div className="mb-12 animate-fade-in delay-200">
           <div className="bg-gradient-to-r from-vibrant-purple/10 to-deep-purple/10 p-8 rounded-2xl border-2 border-vibrant-purple/20">
