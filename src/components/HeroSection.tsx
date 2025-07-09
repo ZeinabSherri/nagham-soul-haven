@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
@@ -41,7 +40,7 @@ const HeroSection = () => {
             <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">Hi, I'm Nagham. I help you release what's been silently weighing you down, so you can feel calm in your body, clear in your mind, and free in your life.                                      Whether you're overwhelmed, stuck, or simply longing to feel more like you again, this is where healing begins.</p>
 
             {/* Title for key points */}
-            <h2 className="text-2xl md:text-3xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400">
+            <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-xl">
               Take your first step toward emotional freedom and inner peace today.
             </h2>
 
@@ -49,15 +48,16 @@ const HeroSection = () => {
             <div className="mb-12 space-y-4">
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-500">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Subconscious healing</span>
+                <span>Transformational Subconscious Healing</span>
               </div>
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-700">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Nervous system regulation</span>
+                <span>Nervous System Regulation &amp; Emotional Safety
+              </span>
               </div>
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-900">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Deep emotional shifts</span>
+                <span>Deep, Lasting Emotional Shifts</span>
               </div>
             </div>
 
@@ -66,9 +66,7 @@ const HeroSection = () => {
               <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Begin Your Healing
               </Button>
-              <Button onClick={() => scrollToSection('contact')} variant="outline" className="border-2 border-deep-purple text-deep-purple backdrop-blur-sm px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 bg-white/80 hover:bg-vibrant-purple hover:text-creamy-beige hover:scale-105">
-                Let's Talk
-              </Button>
+              <Button onClick={() => scrollToSection('contact')} variant="outline" className="border-2 border-deep-purple text-deep-purple backdrop-blur-sm px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 bg-white/80 hover:bg-vibrant-purple hover:text-creamy-beige hover:scale-105">Free call</Button>
             </div>
           </div>
 
