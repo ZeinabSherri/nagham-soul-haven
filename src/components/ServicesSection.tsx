@@ -8,7 +8,7 @@ const ServicesSection = () => {
   const services = [
     {
       title: "1:1 Healing Sessions",
-      description: "Personalized sessions combining multiple modalities for deep transformation.",
+      description: "One-on-one sessions combining powerful approaches for lasting transformation.",
       duration: "60 min",
       format: "Online & In-Person",
       icon: Users,
@@ -23,9 +23,9 @@ const ServicesSection = () => {
       bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
     },
     {
-      title: "NLP & Time Line Therapy®",
-      description: "Powerful techniques to reframe experiences and release emotional blocks.",
-      duration: "60 min",
+      title: "Time Line Therapy®",
+      description: "Release stored emotions, heal old wounds, and rewire your inner timeline for lasting change.",
+      duration: "90 min",
       format: "Online & In-Person",
       icon: Video,
       bookingLink: "https://calendly.com/hello-naghamthecoach/nlp-neuro-linguistic-programming"
@@ -42,14 +42,14 @@ const ServicesSection = () => {
       title: "Reiki Healing",
       description: "Energy healing to balance chakras and promote deep relaxation.",
       duration: "60 min",
-      format: "Online & In-Person",
+      format: "In-Person",
       icon: Heart,
       bookingLink: "https://calendly.com/hello-naghamthecoach/reiki-pranic-healing"
     },
     {
       title: "Past Life Regression",
-      description: "Explore past lives to understand current patterns and release blocks.",
-      duration: "60 min",
+      description: "Explore past lives to uncover the roots of current patterns and release what’s holding you back.",
+      duration: "2 hr",
       format: "Online & In-Person",
       icon: Star,
       bookingLink: "https://calendly.com/hello-naghamthecoach/past-life-regression"
