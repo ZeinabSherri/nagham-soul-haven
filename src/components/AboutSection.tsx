@@ -41,7 +41,7 @@ const AboutSection = () => {
             {/* Descriptive paragraphs */}
             <div className="space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">
-                I'm <span className="font-semibold text-deep-purple">Nagham Rasbieh</span>,an internationally certified Master Coach and therapist, specializing in conscious and unconscious transformation.
+                I'm <span className="font-semibold text-deep-purple">Nagham Rasbieh</span>,an internationally certified Master Coach and Therapist, specializing in conscious and unconscious transformation.
 I integrate neuroscience-based coaching, clinical hypnotherapy, NLP, consciousness work, and energy healing to support children, teens, mothers, and adults on their healing journey.</p>
  <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">
 My goal is simple: to help you reconnect with your truth, regulate your nervous system, and experience deep peace from the inside out.
