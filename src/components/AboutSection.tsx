@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
+
 const AboutSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -10,7 +12,9 @@ const AboutSection = () => {
       });
     }
   };
-  return <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+
+  return (
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12 animate-fade-in">
@@ -24,7 +28,11 @@ const AboutSection = () => {
           <div className="flex justify-center items-center lg:justify-center animate-fade-in delay-300">
             <div className="relative">
               <div className="aspect-[4/5] w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/db5706f5-c5c7-4f16-a926-bffed5e0fae7.png" alt="Nagham Rasbieh - Professional Therapist and Healer" className="w-full h-full object-cover object-center" />
+                <img 
+                  src="/lovable-uploads/db5706f5-c5c7-4f16-a926-bffed5e0fae7.png" 
+                  alt="Nagham Rasbieh - Professional Therapist and Healer" 
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
             </div>
           </div>
@@ -32,30 +40,32 @@ const AboutSection = () => {
           {/* Right Column - Text Content */}
           <div className="space-y-6 animate-fade-in delay-500">
             {/* Subtitle with roles/titles */}
-            <h3 className="text-xl md:text-2xl font-semibold text-vibrant-purple animate-fade-in delay-700">Mental Health Therapist | Consciousness Advisor | Energy Healer
-          </h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-vibrant-purple animate-fade-in delay-700">
+              Therapist | Subconscious Guide | Energy Healer
+            </h3>
 
             {/* Italic tagline */}
-            <p className="text-lg text-deep-purple italic animate-fade-in delay-1000">Helping you reconnect with your truth and find peace from the inside out.</p>
+            <p className="text-lg text-deep-purple italic animate-fade-in delay-1000">
+              Helping you reconnect with your truth and find peace from the inside out.
+            </p>
 
             {/* Descriptive paragraphs */}
             <div className="space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">
-                I'm <span className="font-semibold text-deep-purple">Nagham Rasbieh</span>,an internationally certified Master Coach and therapist, specializing in conscious and unconscious transformation.
-I integrate neuroscience-based coaching, clinical hypnotherapy, NLP, consciousness work, and energy healing to support children, teens, mothers, and adults on their healing journey.
-
-My goal is simple: to help you reconnect with your truth, regulate your nervous system, and experience deep peace from the inside out.
+                I'm <span className="font-semibold text-deep-purple">Nagham Rasbieh</span>, a certified subconscious healing practitioner blending science-backed tools and spiritual depth. My approach is gentle, rooted in emotional safety, and designed to bring real results in fewer sessions.
               </p>
               
-              
+              <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1400">
+                I work with children, teens, mothers, and adults using NLP, hypnotherapy, energy work, and consciousness-based healing. My goal is to help you reconnect with your truth, regulate your nervous system, and experience peace from the inside out.
+              </p>
 
               {/* Clinical Hypnotherapist Recognition */}
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1500">
                 I'm officially a <span className="font-semibold text-deep-purple">Clinical Hypnotherapist</span>, recognized by both:
               </p>
               <ul className="space-y-2 ml-4 animate-fade-in delay-1500">
-                <li className="text-lg text-gray-700">• The American Board of Hypnotherapy (ABH)</li>
                 <li className="text-lg text-gray-700">• The Lebanese Syndicate of Hypnotherapists (LSH)</li>
+                <li className="text-lg text-gray-700">• The American Board of Hypnotherapy (ABH)</li>
               </ul>
             </div>
 
@@ -94,13 +104,19 @@ My goal is simple: to help you reconnect with your truth, regulate your nervous 
 
             {/* Call-to-action Button */}
             <div className="pt-6 animate-fade-in delay-2600">
-              <Button onClick={() => scrollToSection('contact')} size="lg" className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200">
+              <Button 
+                onClick={() => scrollToSection('contact')}
+                size="lg"
+                className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200"
+              >
                 Let's Connect
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AboutSection;
