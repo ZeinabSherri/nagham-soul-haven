@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from 'lucide-react';
-
 const TestimonialsSection = () => {
   const testimonials = [{
     name: "Zeinab",
@@ -10,7 +9,7 @@ const TestimonialsSection = () => {
     color: "soft-lavender"
   }, {
     name: "Maya",
-    text: "I finally feel safe in my body after years of anxiety. Nagham hold space like no one else.",
+    text: "I finally feel safe in my body after years of anxiety. She held space for everything.",
     rating: 5,
     color: "light-olive"
   }, {
@@ -19,7 +18,6 @@ const TestimonialsSection = () => {
     rating: 5,
     color: "light-lavender-pink"
   }];
-
   const getColorClasses = (color: string) => {
     const colors = {
       "soft-lavender": "bg-soft-lavender border-soft-lavender text-deep-purple",
@@ -31,13 +29,10 @@ const TestimonialsSection = () => {
     };
     return colors[color as keyof typeof colors] || colors["soft-lavender"];
   };
-
   const handleBookSession = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-
-  return (
-    <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+  return <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12 animate-fade-in">
@@ -50,23 +45,16 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
-              className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group`} 
-              style={{ animationDelay: `${400 + index * 200}ms` }}
-            >
+          {testimonials.map((testimonial, index) => <Card key={index} className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group`} style={{
+          animationDelay: `${400 + index * 200}ms`
+        }}>
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <Quote className={`w-6 h-6 mr-3 ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-transform duration-300 group-hover:scale-110`} />
                   <div className="flex">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className={`w-4 h-4 fill-current ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-all duration-300 hover:scale-110`} 
-                        style={{ animationDelay: `${i * 100}ms` }} 
-                      />
-                    ))}
+                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className={`w-4 h-4 fill-current ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-all duration-300 hover:scale-110`} style={{
+                  animationDelay: `${i * 100}ms`
+                }} />)}
                   </div>
                 </div>
                 <p className={`mb-4 leading-relaxed italic text-sm ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-deep-purple'} transition-all duration-300 group-hover:text-opacity-90`}>
@@ -76,8 +64,7 @@ const TestimonialsSection = () => {
                   — {testimonial.name}
                 </p>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <div className="text-center animate-fade-in delay-1000">
@@ -85,28 +72,20 @@ const TestimonialsSection = () => {
             <h3 className="text-xl font-bold text-deep-purple mb-4 animate-fade-in delay-1200">
               Ready to Start Your Healing Journey?
             </h3>
-            <p className="text-vibrant-purple mb-6 animate-fade-in delay-1400">
-              Join hundreds of others who have found peace, clarity, and freedom through our work together.
-            </p>
+            <p className="text-vibrant-purple mb-6 animate-fade-in delay-1400">Join hundreds of others who have found peace, clarity, and freedom through our work together, curious what’s possible for you?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={handleBookSession}
-                className="bg-vibrant-purple hover:bg-deep-purple text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-1600"
-              >
+              <button onClick={handleBookSession} className="bg-vibrant-purple hover:bg-deep-purple text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-1600">
                 Book Your Session
               </button>
-              <button 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
-                className="border-2 border-vibrant-purple text-deep-purple hover:bg-light-lavender-pink px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 animate-fade-in delay-1800"
-              >
+              <button onClick={() => document.getElementById('contact')?.scrollIntoView({
+              behavior: 'smooth'
+            })} className="border-2 border-vibrant-purple text-deep-purple hover:bg-light-lavender-pink px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 animate-fade-in delay-1800">
                 Ask a Question
               </button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TestimonialsSection;
