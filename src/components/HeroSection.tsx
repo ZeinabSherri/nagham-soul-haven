@@ -37,9 +37,7 @@ const HeroSection = () => {
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">I’m Nagham — your guide in healing.
-I help you release what’s heavy, reconnect with yourself, and rise into who you were always meant to be.
-          </p>
+            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">I’m Nagham — your guide in healing. I help you Release what’s heavy, Reconnect with yourself, and Rise into who you were always meant to be.</p>
 
             {/* Title for key points */}
             <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-base">In our work together, I bring:</h2>
@@ -81,9 +79,7 @@ I help you release what’s heavy, reconnect with yourself, and rise into who yo
                   <h3 className="text-3xl font-bold text-deep-purple mb-6 animate-fade-in delay-1200">
                     Ready to Begin?
                   </h3>
-                  <p className="text-vibrant-purple text-lg mb-8 leading-relaxed animate-fade-in delay-1400">
-                    Start your journey to inner peace and emotional freedom today.
-                  </p>
+                  <p className="text-vibrant-purple text-lg mb-8 leading-relaxed animate-fade-in delay-1400">Start your journey to Inner peace and Emotional freedom today.</p>
                   
                   {/* Feature icons */}
                   <div className="grid grid-cols-3 gap-6 mb-8">
