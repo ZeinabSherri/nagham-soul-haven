@@ -10,7 +10,7 @@ const CertificationsSection = () => {
        org: "American Board of Hypnotherapy (ABH)",
     },
     {
-      title: "Neurologist Programming ( NLP)",
+      title: "Neuro-Linguistic Programming ( NLP)",
        org: "American Board of NLP (ABNLP)",
     },
     {
