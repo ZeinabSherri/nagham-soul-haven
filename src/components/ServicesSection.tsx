@@ -148,12 +148,12 @@ const ServicesSection = () => {
           })}
         </div>
 
-        {/* What Makes My Work Different - Compact */}
+        {/* What Makes My Work Different - All 4 points in one row */}
         <div className="bg-creamy-beige rounded-xl p-6 border border-vibrant-purple/20 animate-fade-in delay-1600">
           <h3 className="text-xl font-bold text-deep-purple mb-4 text-left">
             What Makes My Work Different
           </h3>
-          <div className="grid md:grid-cols-3 gap-4 text-sm">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
             <div className="animate-fade-in delay-1800">
               <h4 className="font-semibold text-deep-purple mb-2">Integrative Approach</h4>
               <p className="text-dark-olive">Combining multiple healing modalities for comprehensive transformation</p>
@@ -165,9 +165,10 @@ const ServicesSection = () => {
             <div className="animate-fade-in delay-2200">
               <h4 className="font-semibold text-deep-purple mb-2">Safe & Lasting Results</h4>
               <p className="text-dark-olive">Creating lasting change in a supportive, non-judgmental environment</p>
-            </div> <div className="animate-fade-in delay-2400">
+            </div>
+            <div className="animate-fade-in delay-2400">
               <h4 className="font-semibold text-deep-purple mb-2">⁠Rooted in Consciousness</h4>
-              <p className="text-dark-olive">We go to the root, helping you access the awareness within where true healing begins.</p>
+              <p className="text-dark-olive">We go to the root, helping you access the awareness within where true healing begins.</p>
             </div>
           </div>
         </div>
