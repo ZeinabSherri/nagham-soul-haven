@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
+
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -10,14 +12,17 @@ const HeroSection = () => {
       });
     }
   };
+
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-  return <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
+
+  return (
+    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Texture Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
-    }}></div>
+        backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
+      }}></div>
       
       {/* Semi-transparent Overlay */}
       <div className="absolute inset-0 bg-creamy-beige/45"></div>
@@ -32,12 +37,12 @@ const HeroSection = () => {
           {/* Left side - Content */}
           <div className="text-left">
             {/* Main Headline with improved spacing and animation */}
-            <h2 className="text-4xl lg:text-7xl font-bold text-deep-purple mb-8 leading-tight md:text-5xl my-[20px] animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-deep-purple mb-8 leading-none animate-fade-in whitespace-nowrap">
               Start Feeling Safe, Seen & Connected Again
             </h2>
             
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">Hi, I'm Nagham. I help you release what's been silently weighing you down, so you can feel calm in your body, clear in your mind, and free in your life.                                      Whether you're overwhelmed, stuck, or simply longing to feel more like you again, this is where healing begins.</p>
+            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">Hi, I'm Nagham. I help you release what's been silently weighing you down, so you can feel calm in your body, clear in your mind, and free in your life. Whether you're overwhelmed, stuck, or simply longing to feel more like you again, this is where healing begins.</p>
 
             {/* Title for key points */}
             <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-lg">
@@ -52,12 +57,11 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-700">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Nervous System Regulation &amp; Emotional Safety
-              </span>
+                <span>Nervous System Regulation & Emotional Safety</span>
               </div>
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-900">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Deep, Lasting Emotional Shifts</span>
+                <span>Deep, Lasting Emotional Shifts</span>
               </div>
             </div>
 
@@ -117,6 +121,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
