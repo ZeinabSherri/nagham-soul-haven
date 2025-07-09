@@ -32,31 +32,32 @@ const HeroSection = () => {
           {/* Left side - Content */}
           <div className="text-left">
             {/* Main Headline with improved spacing and animation */}
-            <h1 className="text-4xl lg:text-7xl font-bold text-deep-purple mb-8 leading-tight my-[20px] animate-fade-in md:text-4xl">
+            <h2 className="text-4xl lg:text-7xl font-bold text-deep-purple mb-8 leading-tight md:text-5xl my-[20px] animate-fade-in">
               Start Feeling Safe, Seen & Connected Again
-            </h1>
+            </h2>
             
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">I’m Nagham.
-I help you release what your body holds, what your mind replays, and what your soul is finally ready to let go of.
-          </p>
+            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">Hi, I'm Nagham. I help you release what's been silently weighing you down, so you can feel calm in your body, clear in your mind, and free in your life.                                      Whether you're overwhelmed, stuck, or simply longing to feel more like you again, this is where healing begins.</p>
 
             {/* Title for key points */}
-            <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-base">What I bring into your healing space:</h2>
+            <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-lg">
+              Take your first step toward emotional freedom and inner peace today.
+            </h2>
 
             {/* Key points list */}
             <div className="mb-12 space-y-4">
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-500">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Transformational Healing</span>
+                <span>Transformational Subconscious Healing</span>
               </div>
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-700">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Nervous System Reset &amp; Trauma Release</span>
+                <span>Nervous System Regulation &amp; Emotional Safety
+              </span>
               </div>
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-900">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Deep Emotional Rewiring</span>
+                <span>Deep, Lasting Emotional Shifts</span>
               </div>
             </div>
 
@@ -65,7 +66,7 @@ I help you release what your body holds, what your mind replays, and what your s
               <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Begin Your Healing
               </Button>
-              <Button onClick={() => scrollToSection('contact')} variant="outline" className="border-2 border-deep-purple text-deep-purple backdrop-blur-sm px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 bg-white/80 hover:bg-vibrant-purple hover:text-creamy-beige hover:scale-105">Book 15min Free Call</Button>
+              <Button onClick={() => scrollToSection('contact')} variant="outline" className="border-2 border-deep-purple text-deep-purple backdrop-blur-sm px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 bg-white/80 hover:bg-vibrant-purple hover:text-creamy-beige hover:scale-105">Free call</Button>
             </div>
           </div>
 
