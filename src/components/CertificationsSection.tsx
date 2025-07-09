@@ -19,7 +19,7 @@ const CertificationsSection = () => {
     },
     {
       title: "Cognitive-Behavioral Therapy Specialist (CBT)",
-      org: "International Certification Board of Coaches And Hypnotist",
+      org: "International Certification Board of Coaches And Hypnotist (ICBCH)",
     }
   ];
 
