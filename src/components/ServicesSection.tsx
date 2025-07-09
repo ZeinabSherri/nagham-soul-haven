@@ -23,7 +23,7 @@ const ServicesSection = () => {
       bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
     },
     {
-      title: "NLP & Time Line Therapy®",
+      title: "Time Line Therapy®",
       description: "Powerful techniques to reframe experiences and release emotional blocks.",
       duration: "60 min",
       format: "Online & In-Person",
@@ -105,10 +105,10 @@ const ServicesSection = () => {
             return (
               <Card 
                 key={index} 
-                className="bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in h-80 flex flex-col"
+                className="bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"
                 style={{ animationDelay: `${400 + index * 200}ms` }}
               >
-                <CardContent className="p-6 flex flex-col h-full">
+                <CardContent className="p-6">
                   {/* Icon */}
                   <div className="w-12 h-12 bg-vibrant-purple rounded-full flex items-center justify-center mb-4">
                     <IconComponent className="w-6 h-6 text-white" />
@@ -120,7 +120,7 @@ const ServicesSection = () => {
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-sm text-dark-olive leading-relaxed mb-4 flex-grow">
+                  <p className="text-sm text-dark-olive leading-relaxed mb-4">
                     {service.description}
                   </p>
                   
@@ -138,7 +138,7 @@ const ServicesSection = () => {
                   <Button 
                     onClick={() => handleBookNow(service.bookingLink)}
                     size="sm"
-                    className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300 mt-auto"
+                    className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300"
                   >
                     Book Now
                   </Button>
