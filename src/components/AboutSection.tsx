@@ -47,17 +47,15 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, NLP, consciousne
 My goal is simple: to help you reconnect with your truth, regulate your nervous system, and experience deep peace from the inside out.
               </p>
               
-              <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1400">
-                I work with children, teens, mothers, and adults using NLP, hypnotherapy, energy work, and consciousness-based healing. My goal is to help you reconnect with your truth, regulate your nervous system, and experience peace from the inside out.
-              </p>
+              
 
               {/* Clinical Hypnotherapist Recognition */}
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1500">
                 I'm officially a <span className="font-semibold text-deep-purple">Clinical Hypnotherapist</span>, recognized by both:
               </p>
               <ul className="space-y-2 ml-4 animate-fade-in delay-1500">
-                <li className="text-lg text-gray-700">• The Lebanese Syndicate of Hypnotherapists (LSH)</li>
                 <li className="text-lg text-gray-700">• The American Board of Hypnotherapy (ABH)</li>
+                <li className="text-lg text-gray-700">• The Lebanese Syndicate of Hypnotherapists (LSH)</li>
               </ul>
             </div>
 
