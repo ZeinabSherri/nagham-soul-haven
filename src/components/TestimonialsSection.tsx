@@ -10,7 +10,7 @@ const TestimonialsSection = () => {
     color: "soft-lavender"
   }, {
     name: "Maya",
-    text: "I finally feel safe in my body after years of anxiety. She held space for everything.",
+    text: "I finally feel safe in my body after years of anxiety. Nagham hold space like no one else.",
     rating: 5,
     color: "light-olive"
   }, {
