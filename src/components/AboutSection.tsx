@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
@@ -36,14 +37,14 @@ const AboutSection = () => {
           </h3>
 
             {/* Italic tagline */}
-            <p className="text-lg text-deep-purple italic animate-fade-in delay-1000">Helping you reconnect with your truth and find peace from the inside out.</p>
+            <p className="text-lg text-deep-purple italic animate-fade-in delay-1000">Helping you reconnect with your truth and find peace from the inside out.</p>
 
             {/* Descriptive paragraphs */}
             <div className="space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">
                 I'm <span className="font-semibold text-deep-purple">Nagham Rasbieh</span>,an internationally certified Master Coach and Therapist, specializing in conscious and unconscious transformation.
 I integrate neuroscience-based coaching, clinical hypnotherapy, NLP, consciousness work, and energy healing to support children, teens, mothers, and adults on their healing journey.</p>
- <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">My Goal is simple: to help you reconnect with your truth, regulate your nervous system, and experience deep peace from the inside out.</p>
+ <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">My Goal is simple: to help you reconnect with your truth, regulate your nervous system, and experience deep peace from the inside out.</p>
               
               
 
@@ -52,9 +53,9 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, NLP, consciousne
                 I'm officially a <span className="font-semibold text-deep-purple">Clinical Hypnotherapist</span>, recognized by:
               </p>
               <ul className="space-y-2 ml-4 animate-fade-in delay-1500">
-                <li className="text-lg text-gray-700">• The American Board of Hypnotherapy (ABH)</li>
-                <li className="text-lg text-gray-700">• The International Certification Board of Coaches & Hypnotists(ICBC)</li>
-                <li className="text-lg text-gray-700">• The Lebanese Syndicate of Hypnotherapists (LSH)</li>
+                <li className="text-lg text-gray-700 font-bold">• The American Board of Hypnotherapy (ABH)</li>
+                <li className="text-lg text-gray-700 font-bold">• The International Certification Board of Coaches & Hypnotists(ICBC)</li>
+                <li className="text-lg text-gray-700 font-bold">• The Lebanese Syndicate of Hypnotherapists (LSH)</li>
                 
               </ul>
             </div>
