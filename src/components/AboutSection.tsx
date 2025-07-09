@@ -56,8 +56,9 @@ My goal is simple: to help you reconnect with your truth, regulate your nervous 
                 I'm officially a <span className="font-semibold text-deep-purple">Clinical Hypnotherapist</span>, recognized by both:
               </p>
               <ul className="space-y-2 ml-4 animate-fade-in delay-1500">
-                <li className="text-lg text-gray-700">• The Lebanese Syndicate of Hypnotherapists (LSH)</li>
                 <li className="text-lg text-gray-700">• The American Board of Hypnotherapy (ABH)</li>
+                <li className="text-lg text-gray-700">• The Lebanese Syndicate of Hypnotherapists (LSH)</li>
+                <li className="text-lg text-gray-700">• The International Certification Board of Coaches & Hypnotists</li>
               </ul>
             </div>
 
