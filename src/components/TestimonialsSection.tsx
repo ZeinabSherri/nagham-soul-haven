@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from 'lucide-react';
+
 const TestimonialsSection = () => {
   const testimonials = [{
     name: "Zeinab",
@@ -8,7 +9,7 @@ const TestimonialsSection = () => {
     rating: 5,
     color: "soft-lavender"
   }, {
-    name: "Maya",
+    name: "Maya", 
     text: "I finally feel safe in my body after years of anxiety. She held space for everything.",
     rating: 5,
     color: "light-olive"
@@ -18,6 +19,7 @@ const TestimonialsSection = () => {
     rating: 5,
     color: "light-lavender-pink"
   }];
+
   const getColorClasses = (color: string) => {
     const colors = {
       "soft-lavender": "bg-soft-lavender border-soft-lavender text-deep-purple",
@@ -29,9 +31,11 @@ const TestimonialsSection = () => {
     };
     return colors[color as keyof typeof colors] || colors["soft-lavender"];
   };
+
   const handleBookSession = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
+
   return <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Left-aligned title */}
@@ -70,8 +74,7 @@ const TestimonialsSection = () => {
         <div className="text-center animate-fade-in delay-1000">
           <div className="bg-light-lavender-pink rounded-xl p-6 border-2 border-soft-lavender max-w-4xl mx-auto hover:shadow-lg transition-all duration-500">
             <h3 className="text-xl font-bold text-deep-purple mb-4 animate-fade-in delay-1200">Ready to Start Your Transformation?</h3>
-            <p className="text-vibrant-purple mb-6 animate-fade-in delay-1400">Join hundreds of others who have found peace, clarity, and freedom through our work together.
-Curious what’s possible for you?</p>
+            <p className="text-vibrant-purple mb-6 animate-fade-in delay-1400">Join hundreds of others who have found peace, clarity, and freedom through our work together. Curious what's possible for you?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button onClick={handleBookSession} className="bg-vibrant-purple hover:bg-deep-purple text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-1600">
                 Book Your Session
@@ -87,4 +90,5 @@ Curious what’s possible for you?</p>
       </div>
     </section>;
 };
+
 export default TestimonialsSection;
