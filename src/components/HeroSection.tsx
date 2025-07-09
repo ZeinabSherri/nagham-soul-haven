@@ -32,7 +32,7 @@ const HeroSection = () => {
           {/* Left side - Content */}
           <div className="text-left">
             {/* Main Headline with improved spacing and animation */}
-            <h1 className="text-4xl lg:text-7xl font-bold text-deep-purple mb-8 leading-tight my-[20px] animate-fade-in md:text-4xl">
+            <h1 className="text-4xl lg:text-7xl font-bold text-deep-purple mb-8 leading-tight my-[20px] animate-fade-in md:text-xl">
               Start Feeling Safe, Seen & Connected Again
             </h1>
             
