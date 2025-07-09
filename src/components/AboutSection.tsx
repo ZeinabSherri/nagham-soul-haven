@@ -47,9 +47,7 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, NLP, consciousne
 My goal is simple: to help you reconnect with your truth, regulate your nervous system, and experience deep peace from the inside out.
               </p>
               
-              <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1400">
-                I work with children, teens, mothers, and adults using NLP, hypnotherapy, energy work, and consciousness-based healing. My goal is to help you reconnect with your truth, regulate your nervous system, and experience peace from the inside out.
-              </p>
+              
 
               {/* Clinical Hypnotherapist Recognition */}
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1500">
