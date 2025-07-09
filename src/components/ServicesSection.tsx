@@ -117,9 +117,7 @@ const ServicesSection = () => {
                   </div>
                   
                   {/* Call-to-Action Button */}
-                  <Button onClick={() => handleBookNow(service.bookingLink)} size="sm" className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300 mt-auto">
-                    Book Now
-                  </Button>
+                  <Button onClick={() => handleBookNow(service.bookingLink)} size="sm" className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300 mt-auto">Book Now</Button>
                 </CardContent>
               </Card>;
         })}
