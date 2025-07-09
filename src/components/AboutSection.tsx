@@ -51,7 +51,7 @@ My goal is simple: to help you reconnect with your truth, regulate your nervous 
 
               {/* Clinical Hypnotherapist Recognition */}
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1500">
-                I'm officially a <span className="font-semibold text-deep-purple">Clinical Hypnotherapist</span>, recognized by both:
+                I'm officially a <span className="font-semibold text-deep-purple">Clinical Hypnotherapist</span>, recognized by:
               </p>
               <ul className="space-y-2 ml-4 animate-fade-in delay-1500">
                 <li className="text-lg text-gray-700">• The American Board of Hypnotherapy (ABH)</li>
