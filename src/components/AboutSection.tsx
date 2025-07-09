@@ -24,7 +24,7 @@ const AboutSection = () => {
           <div className="flex justify-center items-center lg:justify-center animate-fade-in delay-300">
             <div className="relative">
               <div className="aspect-[4/5] w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
-                <img src="/lovable-uploads/Nagham Photo 2.jpg" alt="Nagham Rasbieh - Professional Therapist and Healer" className="w-full h-full object-cover object-center" />
+                <img src="/lovable-uploads/db5706f5-c5c7-4f16-a926-bffed5e0fae7.png" alt="Nagham Rasbieh - Professional Therapist and Healer" className="w-full h-full object-center object-contain" />
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@ My goal is simple: to help you reconnect with your truth, regulate your nervous 
                 I'm officially a <span className="font-semibold text-deep-purple">Clinical Hypnotherapist</span>, recognized by both:
               </p>
               <ul className="space-y-2 ml-4 animate-fade-in delay-1500">
-                <li className="text-lg text-gray-700">• The American Board of Hypnotherapy (ABH)</li>
+                <li className="text-lg text-gray-700 rounded-none">• The American Board of Hypnotherapy (ABH)</li>
                 <li className="text-lg text-gray-700">• The Lebanese Syndicate of Hypnotherapists (LSH)</li>
                 <li className="text-lg text-gray-700">• The International Certification Board of Coaches & Hypnotists</li>
               </ul>
