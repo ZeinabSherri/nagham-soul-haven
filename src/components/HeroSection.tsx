@@ -40,7 +40,7 @@ const HeroSection = () => {
             <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">I’m Nagham — your guide in healing. I help you Release what’s heavy, Reconnect with yourself, and Rise into who you were always meant to be.</p>
 
             {/* Title for key points */}
-            <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-base">In our work together, I bring:</h2>
+            <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-lg">In our work together, I bring:</h2>
 
             {/* Key points list */}
             <div className="mb-12 space-y-4">
