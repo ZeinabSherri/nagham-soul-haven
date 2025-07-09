@@ -36,14 +36,15 @@ const AboutSection = () => {
           </h3>
 
             {/* Italic tagline */}
-            <p className="text-lg text-deep-purple italic animate-fade-in delay-1000">
-              Helping you reconnect with your truth and find peace from the inside out.
-            </p>
+            <p className="text-lg text-deep-purple italic animate-fade-in delay-1000">Helping you reconnect with your truth and find peace from the inside out.</p>
 
             {/* Descriptive paragraphs */}
             <div className="space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">
-                I'm <span className="font-semibold text-deep-purple">Nagham Rasbieh</span>, a certified subconscious healing practitioner blending science-backed tools and spiritual depth. My approach is gentle, rooted in emotional safety, and designed to bring real results in fewer sessions.
+                I'm <span className="font-semibold text-deep-purple">Nagham Rasbieh</span>,an internationally certified Master Coach and therapist, specializing in conscious and unconscious transformation.
+I integrate neuroscience-based coaching, clinical hypnotherapy, NLP, consciousness work, and energy healing to support children, teens, mothers, and adults on their healing journey.
+
+My goal is simple: to help you reconnect with your truth, regulate your nervous system, and experience deep peace from the inside out.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1400">
