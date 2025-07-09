@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
@@ -37,7 +38,12 @@ const HeroSection = () => {
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">Hi, I’m Nagham. I help you release what’s been silently weighing you down, so you can feel calm in your body, clear in your mind, and free in your life.                                      Whether you’re overwhelmed, stuck, or simply longing to feel more like you again, this is where healing begins.</p>
+            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">Hi, I'm Nagham. I help you release what's been silently weighing you down, so you can feel calm in your body, clear in your mind, and free in your life.                                      Whether you're overwhelmed, stuck, or simply longing to feel more like you again, this is where healing begins.</p>
+
+            {/* Title for key points */}
+            <h2 className="text-2xl md:text-3xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400">
+              Take your first step toward emotional freedom and inner peace today.
+            </h2>
 
             {/* Key points list */}
             <div className="mb-12 space-y-4">
