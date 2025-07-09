@@ -68,21 +68,16 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, NLP, consciousne
             <ul className="space-y-3">
               <li className="flex items-start space-x-3 animate-fade-in delay-1800">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
-                <span className="text-lg text-gray-700">
-                  Blend scientific tools like NLP, hypnotherapy, and CBT with intuitive healing methods
-                </span>
+                <span className="text-lg text-gray-700"> Blend evidence-based practices like NLP, hypnotherapy, and CBT with intuitive and consciousness-driven healing</span>
               </li>
               <li className="flex items-start space-x-3 animate-fade-in delay-2000">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
-                <span className="text-lg text-gray-700">
-                  Create emotionally safe spaces for healing and transformation
-                </span>
+                <span className="text-lg text-gray-700">Create a safe space where real change happens
+              </span>
               </li>
               <li className="flex items-start space-x-3 animate-fade-in delay-2200">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
-                <span className="text-lg text-gray-700">
-                  Focus on nervous system regulation and inner peace
-                </span>
+                <span className="text-lg text-gray-700">Calm the nervous system to restore inner peace</span>
               </li>
               <li className="flex items-start space-x-3 animate-fade-in delay-2400">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
