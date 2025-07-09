@@ -1,76 +1,91 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, Users, Video, Home, Heart, Star, Sparkles, Zap, Eye } from 'lucide-react';
+
 const ServicesSection = () => {
-  const services = [{
-    title: "1:1 Healing Sessions",
-    description: "Personalized sessions combining multiple modalities for deep transformation.",
-    duration: "60 min",
-    format: "Online & In-Person",
-    icon: Users,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
-  }, {
-    title: "Hypnotherapy",
-    description: "Access your subconscious mind to release limiting beliefs and create positive change.",
-    duration: "60 min",
-    format: "Online & In-Person",
-    icon: Clock,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
-  }, {
-    title: "NLP & Time Line Therapy®",
-    description: "Powerful techniques to reframe experiences and release emotional blocks.",
-    duration: "60 min",
-    format: "Online & In-Person",
-    icon: Video,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/nlp-neuro-linguistic-programming"
-  }, {
-    title: "Access Bars",
-    description: "Gentle touch technique to release mental and emotional blocks.",
-    duration: "60 min",
-    format: "In-Person Only",
-    icon: Home,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/time-line-therapy"
-  }, {
-    title: "Reiki Healing",
-    description: "Energy healing to balance chakras and promote deep relaxation.",
-    duration: "60 min",
-    format: "Online & In-Person",
-    icon: Heart,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/reiki-pranic-healing"
-  }, {
-    title: "Past Life Regression",
-    description: "Explore past lives to understand current patterns and release blocks.",
-    duration: "60 min",
-    format: "Online & In-Person",
-    icon: Star,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/past-life-regression"
-  }, {
-    title: "Pranic Healing",
-    description: "Supports physical recovery by using prana to remove energetic congestion and stimulate the body's self-repair process.",
-    duration: "60 min",
-    format: "Online & In-Person",
-    icon: Zap,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
-  }, {
-    title: "Access Energetic Facelift",
-    description: "A gentle, non-invasive energetic process that lifts the face and rejuvenates the body.",
-    duration: "60 min",
-    format: "Online & In-Person",
-    icon: Sparkles,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
-  }, {
-    title: "Consciousness Services",
-    description: "Access the field of consciousness within through Vedic and Maharishi technologies to awaken clarity and healing.",
-    duration: "60 min",
-    format: "Online & In-Person",
-    icon: Eye,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
-  }];
+  const services = [
+    {
+      title: "1:1 Healing Sessions",
+      description: "Personalized sessions combining multiple modalities for deep transformation.",
+      duration: "60 min",
+      format: "Online & In-Person",
+      icon: Users,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
+    },
+    {
+      title: "Hypnotherapy",
+      description: "Access your subconscious mind to release limiting beliefs and create positive change.",
+      duration: "60 min",
+      format: "Online & In-Person",
+      icon: Clock,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
+    },
+    {
+      title: "NLP & Time Line Therapy®",
+      description: "Powerful techniques to reframe experiences and release emotional blocks.",
+      duration: "60 min",
+      format: "Online & In-Person",
+      icon: Video,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/nlp-neuro-linguistic-programming"
+    },
+    {
+      title: "Access Bars",
+      description: "Gentle touch technique to release mental and emotional blocks.",
+      duration: "60 min",
+      format: "In-Person Only",
+      icon: Home,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/time-line-therapy"
+    },
+    {
+      title: "Reiki Healing",
+      description: "Energy healing to balance chakras and promote deep relaxation.",
+      duration: "60 min",
+      format: "Online & In-Person",
+      icon: Heart,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/reiki-pranic-healing"
+    },
+    {
+      title: "Past Life Regression",
+      description: "Explore past lives to understand current patterns and release blocks.",
+      duration: "60 min",
+      format: "Online & In-Person",
+      icon: Star,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/past-life-regression"
+    },
+    {
+      title: "Pranic Healing",
+      description: "Supports physical recovery by using prana to remove energetic congestion and stimulate the body's self-repair process.",
+      duration: "60 min",
+      format: "Online & In-Person",
+      icon: Zap,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
+    },
+    {
+      title: "Access Energetic Facelift",
+      description: "A gentle, non-invasive energetic process that lifts the face and rejuvenates the body.",
+      duration: "60 min",
+      format: "Online & In-Person",
+      icon: Sparkles,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
+    },
+    {
+      title: "Consciousness Services",
+      description: "Access the field of consciousness within through Vedic and Maharishi technologies to awaken clarity and healing.",
+      duration: "60 min",
+      format: "Online & In-Person",
+      icon: Eye,
+      bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
+    }
+  ];
+
   const handleBookNow = (bookingLink: string) => {
     window.open(bookingLink, '_blank');
   };
-  return <section id="services" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+
+  return (
+    <section id="services" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12 animate-fade-in">
@@ -86,10 +101,13 @@ const ServicesSection = () => {
         {/* Compact 3-column grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => {
-          const IconComponent = service.icon;
-          return <Card key={index} className="bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in" style={{
-            animationDelay: `${400 + index * 200}ms`
-          }}>
+            const IconComponent = service.icon;
+            return (
+              <Card 
+                key={index} 
+                className="bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"
+                style={{ animationDelay: `${400 + index * 200}ms` }}
+              >
                 <CardContent className="p-6">
                   {/* Icon */}
                   <div className="w-12 h-12 bg-vibrant-purple rounded-full flex items-center justify-center mb-4">
@@ -117,12 +135,17 @@ const ServicesSection = () => {
                   </div>
                   
                   {/* Call-to-Action Button */}
-                  <Button onClick={() => handleBookNow(service.bookingLink)} size="sm" className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300">
+                  <Button 
+                    onClick={() => handleBookNow(service.bookingLink)}
+                    size="sm"
+                    className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300"
+                  >
                     Book Now
                   </Button>
                 </CardContent>
-              </Card>;
-        })}
+              </Card>
+            );
+          })}
         </div>
 
         {/* What Makes My Work Different - Compact */}
@@ -133,19 +156,24 @@ const ServicesSection = () => {
           <div className="grid md:grid-cols-3 gap-4 text-sm">
             <div className="animate-fade-in delay-1800">
               <h4 className="font-semibold text-deep-purple mb-2">Integrative Approach</h4>
-              <p className="text-dark-olive">Blending science-backed and energetic healing methods for deep, whole-person transformation.</p>
+              <p className="text-dark-olive">Combining multiple healing modalities for comprehensive transformation</p>
             </div>
             <div className="animate-fade-in delay-2000">
-              <h4 className="font-semibold text-deep-purple mb-2">Client-Focused Customization</h4>
-              <p className="text-dark-olive">Every session is tailored to your unique needs and healing journey</p>
+              <h4 className="font-semibold text-deep-purple mb-2">Client-Centered Customization</h4>
+              <p className="text-dark-olive">Each session is intuitively tailored to your unique energy, needs, and healing path.</p>
             </div>
             <div className="animate-fade-in delay-2200">
-              <h4 className="font-semibold text-deep-purple mb-2">Safe & Deep Results</h4>
+              <h4 className="font-semibold text-deep-purple mb-2">Safe & Lasting Results</h4>
               <p className="text-dark-olive">Creating lasting change in a supportive, non-judgmental environment</p>
+            </div> <div className="animate-fade-in delay-2400">
+              <h4 className="font-semibold text-deep-purple mb-2">⁠Rooted in Consciousness</h4>
+              <p className="text-dark-olive">We go to the root, helping you access the awareness within where true healing begins.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ServicesSection;
