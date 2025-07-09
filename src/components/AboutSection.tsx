@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
-
 const AboutSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -12,9 +10,7 @@ const AboutSection = () => {
       });
     }
   };
-
-  return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  return <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12 animate-fade-in">
@@ -28,11 +24,7 @@ const AboutSection = () => {
           <div className="flex justify-center items-center lg:justify-center animate-fade-in delay-300">
             <div className="relative">
               <div className="aspect-[4/5] w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src="/lovable-uploads/db5706f5-c5c7-4f16-a926-bffed5e0fae7.png" 
-                  alt="Nagham Rasbieh - Professional Therapist and Healer" 
-                  className="w-full h-full object-cover object-center"
-                />
+                <img src="/lovable-uploads/db5706f5-c5c7-4f16-a926-bffed5e0fae7.png" alt="Nagham Rasbieh - Professional Therapist and Healer" className="w-full h-full object-cover object-center" />
               </div>
             </div>
           </div>
@@ -40,9 +32,8 @@ const AboutSection = () => {
           {/* Right Column - Text Content */}
           <div className="space-y-6 animate-fade-in delay-500">
             {/* Subtitle with roles/titles */}
-            <h3 className="text-xl md:text-2xl font-semibold text-vibrant-purple animate-fade-in delay-700">
-              Therapist | Subconscious Guide | Energy Healer
-            </h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-vibrant-purple animate-fade-in delay-700">Mental Health Therapist | Consciousness Advisor | Energy Healer
+          </h3>
 
             {/* Italic tagline */}
             <p className="text-lg text-deep-purple italic animate-fade-in delay-1000">
@@ -104,19 +95,13 @@ const AboutSection = () => {
 
             {/* Call-to-action Button */}
             <div className="pt-6 animate-fade-in delay-2600">
-              <Button 
-                onClick={() => scrollToSection('contact')}
-                size="lg"
-                className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200"
-              >
+              <Button onClick={() => scrollToSection('contact')} size="lg" className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200">
                 Let's Connect
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
