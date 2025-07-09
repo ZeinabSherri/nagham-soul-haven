@@ -32,32 +32,31 @@ const HeroSection = () => {
           {/* Left side - Content */}
           <div className="text-left">
             {/* Main Headline with improved spacing and animation */}
-            <h1 className="text-4xl lg:text-7xl font-bold text-deep-purple mb-8 leading-tight md:text-5xl my-[20px] animate-fade-in">
+            <h1 className="text-4xl lg:text-7xl font-bold text-deep-purple mb-8 leading-tight my-[20px] animate-fade-in md:text-4xl">
               Start Feeling Safe, Seen & Connected Again
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">Hi, I'm Nagham. I help you release what's been silently weighing you down, so you can feel calm in your body, clear in your mind, and free in your life. </p>
+            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed font-light animate-fade-in delay-300">I’m Nagham — your guide in healing.
+I help you release what’s heavy, reconnect with yourself, and rise into who you were always meant to be.
+          </p>
 
             {/* Title for key points */}
-            <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-lg">
-              Take your first step toward emotional freedom and inner peace today.
-            </h2>
+            <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-base">In our work together, I bring:</h2>
 
             {/* Key points list */}
             <div className="mb-12 space-y-4">
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-500">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Transformational Subconscious Healing</span>
+                <span>Transformational Healing</span>
               </div>
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-700">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Nervous System Regulation &amp; Emotional Safety
-              </span>
+                <span> Nervous System Reset &amp; Trauma Release</span>
               </div>
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-900">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Deep, Lasting Emotional Shifts</span>
+                <span>Deep Emotional Rewiring</span>
               </div>
             </div>
 
