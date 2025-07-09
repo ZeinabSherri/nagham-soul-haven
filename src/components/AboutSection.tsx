@@ -24,7 +24,7 @@ const AboutSection = () => {
           <div className="flex justify-center items-center lg:justify-center animate-fade-in delay-300">
             <div className="relative">
               <div className="aspect-[4/5] w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
-                <img alt="Nagham Rasbieh - Professional Therapist and Healer" className="w-full h-full object-center object-cover" src="/lovable-uploads/74954204-958f-485c-bdec-7479a258e6c8.jpg" />
+                <img alt="Nagham Rasbieh - Professional Therapist and Healer" src="/lovable-uploads/74954204-958f-485c-bdec-7479a258e6c8.jpg" className="w-full h-full object-center object-contain" />
               </div>
             </div>
           </div>
