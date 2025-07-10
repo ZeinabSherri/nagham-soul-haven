@@ -63,7 +63,9 @@ const HeroSection = () => {
 
             {/* Call-to-Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in delay-1100">
-              <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Begin Your Transformational</Button>
+              <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                Begin Your Transformation
+              </Button>
               <Button onClick={() => scrollToSection('contact')} variant="outline" className="border-2 border-deep-purple text-deep-purple backdrop-blur-sm px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 bg-white/80 hover:bg-vibrant-purple hover:text-creamy-beige hover:scale-105">Book Your 15 min Free Call</Button>
             </div>
           </div>
@@ -88,13 +90,13 @@ const HeroSection = () => {
                       <div className="w-16 h-16 bg-light-olive rounded-full flex items-center justify-center mb-3 shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <Heart className="w-8 h-8 text-deep-purple" />
                       </div>
-                      <p className="text-deep-purple text-sm">Healing</p>
+                      <p className="text-deep-purple text-sm">Safety</p>
                     </div>
                     <div className="flex flex-col items-center animate-fade-in delay-1800 hover:scale-110 transition-transform duration-300">
                       <div className="w-16 h-16 bg-light-olive rounded-full flex items-center justify-center mb-3 shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <Shield className="w-8 h-8 text-deep-purple" />
                       </div>
-                      <p className="text-deep-purple text-sm">Safety</p>
+                      <p className="text-deep-purple text-sm">Healing</p>
                     </div>
                     <div className="flex flex-col items-center animate-fade-in delay-2000 hover:scale-110 transition-transform duration-300">
                       <div className="w-16 h-16 bg-light-olive rounded-full flex items-center justify-center mb-3 shadow-lg hover:shadow-xl transition-shadow duration-300">
