@@ -1,25 +1,17 @@
-
 import React from 'react';
 import { Instagram, Youtube, Heart } from 'lucide-react';
 import LogoProcessor from './LogoProcessor';
-
 const Footer = () => {
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/9613633483', '_blank');
   };
-
-  return (
-    <footer className="bg-white border-t border-deep-purple/10 text-deep-purple py-12 px-4 sm:px-6 lg:px-8 animate-fade-in">
+  return <footer className="bg-white border-t border-deep-purple/10 text-deep-purple py-12 px-4 sm:px-6 lg:px-8 animate-fade-in">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <LogoProcessor
-              originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png"
-              onProcessed={(processedUrl) => {
-                console.log('Footer logo processed:', processedUrl);
-              }}
-              className="h-24 w-auto"
-            />
+            <LogoProcessor originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png" onProcessed={processedUrl => {
+            console.log('Footer logo processed:', processedUrl);
+          }} className="h-24 w-auto" />
           </div>
           <h3 className="text-2xl font-bold mb-2 text-deep-purple">Nagham Rasbieh</h3>
           <p className="text-dark-olive text-lg">Emotional Healing • Mind-Body Transformation • Energy Clearing</p>
@@ -34,7 +26,7 @@ const Footer = () => {
             </a>
             <a href="https://www.tiktok.com/@naghamthecoach" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-deep-purple hover:text-black transition-colors duration-300 transform hover:scale-105">
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-1.183-.11c-3.516 0-6.368 2.852-6.368 6.367 0 3.516 2.852 6.368 6.368 6.368 3.516 0 6.368-2.852 6.368-6.368V7.749a8.636 8.636 0 0 0 4.1 1.039v-3.445a4.792 4.792 0 0 1-.952-.187Z"/>
+                <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-1.183-.11c-3.516 0-6.368 2.852-6.368 6.367 0 3.516 2.852 6.368 6.368 6.368 3.516 0 6.368-2.852 6.368-6.368V7.749a8.636 8.636 0 0 0 4.1 1.039v-3.445a4.792 4.792 0 0 1-.952-.187Z" />
               </svg>
               <span className="font-medium">TikTok</span>
             </a>
@@ -48,12 +40,7 @@ const Footer = () => {
               <Youtube className="w-6 h-6" />
               <span className="font-medium">YouTube</span>
             </a>
-            <div className="flex items-center space-x-2 text-deep-purple hover:text-vibrant-purple transition-colors duration-300 cursor-pointer transform hover:scale-105">
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M21.8 8.001c0-1.3-.6-2.5-1.6-3.3-.9-.7-2.2-1.1-3.4-1.1H7.2c-1.2 0-2.5.4-3.4 1.1-1 .8-1.6 2-1.6 3.3v7.998c0 1.3.6 2.5 1.6 3.3.9.7 2.2 1.1 3.4 1.1h9.6c1.2 0 2.5-.4 3.4-1.1 1-.8 1.6-2 1.6-3.3V8.001zM12 16c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm5.5-7.5c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z" />
-              </svg>
-              <span className="font-medium">Newsletter</span>
-            </div>
+            
           </div>
         </div>
 
@@ -67,8 +54,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
