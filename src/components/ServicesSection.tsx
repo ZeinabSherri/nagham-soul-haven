@@ -1,11 +1,13 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, Users, Video, Home, Heart, Star, Sparkles, Zap, Eye } from 'lucide-react';
+
 const ServicesSection = () => {
   const services = [{
     title: "1:1 Healing Sessions",
-    description: "One-on-one sessions combining powerful approaches for lasting transformation.",
+    description: "One-on-one sessions combining powerful approaches for lasting transformation.",
     duration: "60 min",
     format: "Online & In-Person",
     icon: Users,
@@ -19,7 +21,7 @@ const ServicesSection = () => {
     bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
   }, {
     title: "Time Line Therapy®",
-    description: "Release stored emotions, heal old wounds, and rewire your inner timeline for lasting change.",
+    description: "Release stored emotions, heal old wounds, and rewire your inner timeline for lasting change.",
     duration: "90 min",
     format: "Online & In-Person",
     icon: Video,
@@ -40,7 +42,7 @@ const ServicesSection = () => {
     bookingLink: "https://calendly.com/hello-naghamthecoach/reiki-pranic-healing"
   }, {
     title: "Past Life Regression",
-    description: "Explore past lives to uncover the roots of current patterns and release what's holding you back.",
+    description: "Explore past lives to uncover the roots of current patterns and release what's holding you back.",
     duration: "2 hr",
     format: "Online & In-Person",
     icon: Star,
@@ -61,20 +63,23 @@ const ServicesSection = () => {
     bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
   }, {
     title: "Consciousness Services",
-    description: "Access the field of consciousness within to realize your full potential, using Maharishi Technologies.",
+    description: "Access the field of consciousness within to realize your full potential, using Maharishi Technologies.",
     duration: "30 min",
     format: "Online & In-Person",
     icon: Eye,
     bookingLink: "https://calendly.com/hello-naghamthecoach/30min"
   }];
+
   const handleBookNow = (bookingLink: string) => {
     window.open(bookingLink, '_blank');
   };
-  return <section id="services" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+
+  return (
+    <section id="services" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* Left-aligned title */}
+        {/* Left-aligned title with specific ID */}
         <div className="mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
+          <h2 id="services-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
             My Services
           </h2>
           <p className="text-lg text-dark-olive mt-4 max-w-3xl animate-fade-in delay-200">
@@ -86,10 +91,11 @@ const ServicesSection = () => {
         {/* Compact 3-column grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => {
-          const IconComponent = service.icon;
-          return <Card key={index} className="bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in h-80 flex flex-col" style={{
-            animationDelay: `${400 + index * 200}ms`
-          }}>
+            const IconComponent = service.icon;
+            return (
+              <Card key={index} className="bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in h-80 flex flex-col" style={{
+                animationDelay: `${400 + index * 200}ms`
+              }}>
                 <CardContent className="p-6 flex flex-col h-full">
                   {/* Icon */}
                   <div className="w-12 h-12 bg-vibrant-purple rounded-full flex items-center justify-center mb-4">
@@ -121,8 +127,9 @@ const ServicesSection = () => {
                     {index === 0 ? "Book Free 30 min Call" : "Book Now"}
                   </Button>
                 </CardContent>
-              </Card>;
-        })}
+              </Card>
+            );
+          })}
         </div>
 
         {/* What Makes My Work Different - All 4 points in one row */}
@@ -148,6 +155,8 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ServicesSection;

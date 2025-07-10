@@ -5,22 +5,21 @@ import { Check } from 'lucide-react';
 
 const CertificationsSection = () => {
   const certifications = [
-      {
+    {
       title: "Time Line Therapy®",
       org: "TLT® Association",
     },
     {
       title: "Clinical Hypnotherapy",
-       org: "American Board of Hypnotherapy (ABH)",
+      org: "American Board of Hypnotherapy (ABH)",
     },
     {
-      title: "Neuro-Linguistic Programming ( NLP)",
-       org: "American Board of NLP (ABNLP)",
+      title: "Neuro-Linguistic Programming ( NLP)",
+      org: "American Board of NLP (ABNLP)",
     },
-  
     {
       title: "Cognitive-Behavioral Therapy Specialist (CBT)",
-      org: "International Certification Board of Coaches And Hypnotist (ICBCH)",
+      org: "International Certification Board of Coaches And Hypnotist (ICBCH)",
     }
   ];
 
@@ -36,7 +35,7 @@ const CertificationsSection = () => {
     "Sexual Agility Specialist",
     "Past-life Regression Specialist",
     "SuperRelationships Specialist"
-];
+  ];
 
   return (
     <section id="certifications" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
@@ -70,7 +69,7 @@ const CertificationsSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
           {/* Left Column - International Certifications */}
           <div className="animate-fade-in delay-500">
-            <h3 className="text-2xl font-bold mb-8 text-deep-purple">
+            <h3 id="international-certifications" className="text-2xl font-bold mb-8 text-deep-purple">
               Internationally Certified Practitioner in:
             </h3>
             <div className="space-y-6">
@@ -97,7 +96,7 @@ const CertificationsSection = () => {
           {/* Right Column - Additional Trainings */}
           <div className="animate-fade-in delay-700">
             <h3 className="text-2xl font-bold mb-8 text-deep-purple">
-              Additionally Certified in:
+              Additionally Certified in:
             </h3>
             <div className="space-y-4">
               {additionalTrainings.map((training, index) => (

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -34,7 +35,8 @@ const ContactSection = () => {
     window.open('https://wa.me/9613633483', '_blank');
   };
 
-  return <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  return (
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div id="ways-to-start" className="mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-6">
@@ -49,7 +51,7 @@ const ContactSection = () => {
             <CardHeader className="text-center">
               <CardTitle className="text-2xl font-bold text-deep-purple flex items-center justify-center">
                 <Calendar className="w-6 h-6 mr-3 text-vibrant-purple" />
-Book Your Session Today
+                Book Your Session Today
               </CardTitle>
               <p className="text-dark-olive">Book a Free 15-min Call</p>
             </CardHeader>
@@ -72,8 +74,8 @@ Book Your Session Today
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <Card className="bg-white border-2 border-deep-purple/20 shadow-lg animate-fade-in delay-600">
+          {/* Contact Form with specific ID */}
+          <Card id="contact-form" className="bg-white border-2 border-deep-purple/20 shadow-lg animate-fade-in delay-600">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-deep-purple">
                 Get in Touch
@@ -117,7 +119,7 @@ Book Your Session Today
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">Lebanon: Dawhet el Hoss, Lebanon (Online sessions available worldwide) 
+                    <span className="text-deep-purple">Lebanon: Dawhet el Hoss, Lebanon (Online sessions available worldwide) 
 UAE: Dubai South - Pulse Beach Front - A124</span>
                   </div>
                 </div>
@@ -165,7 +167,8 @@ UAE: Dubai South - Pulse Beach Front - A124</span>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default ContactSection;
