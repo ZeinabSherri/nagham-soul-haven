@@ -48,7 +48,7 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Right side - Bullet List, Visual element, and CTAs */}
+          {/* Right side - Bullet List and Ready to Begin Card */}
           <div className="flex flex-col space-y-8">
             {/* Key points list - moved to right side */}
             <div className="p-6 bg-white/30 backdrop-blur-sm rounded-2xl border border-white/40 shadow-lg animate-fade-in delay-400">
@@ -76,7 +76,7 @@ const HeroSection = () => {
             </div>
 
             {/* Ready to Begin section */}
-            <div className="flex justify-center lg:justify-end animate-scale-in delay-1000">
+            <div className="flex justify-center lg:justify-start animate-scale-in delay-1000">
               <div className="relative">
                 {/* Background glow */}
                 <div className="absolute inset-0 bg-vibrant-purple/20 rounded-3xl blur-3xl transform rotate-6 animate-pulse"></div>
