@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
@@ -13,7 +14,7 @@ const HeroSection = () => {
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-  return <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
+  return <section className="pt-40 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Texture Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
@@ -32,7 +33,7 @@ const HeroSection = () => {
           {/* Left side - Content */}
           <div className="text-left">
             {/* Main Headline with improved spacing and animation */}
-            <h1 className="text-4xl lg:text-7xl font-bold text-deep-purple mb-8 leading-tight my-[20px] animate-fade-in md:text-xl">
+            <h1 className="text-3xl lg:text-5xl font-bold text-deep-purple mb-8 leading-tight my-[20px] animate-fade-in">
               Start Feeling Safe, Seen & Connected Again
             </h1>
             
