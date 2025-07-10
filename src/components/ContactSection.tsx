@@ -23,7 +23,7 @@ const ContactSection = () => {
     });
   };
   const handleCalendlyClick = () => {
-    window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
+    window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/9613633483', '_blank');
@@ -112,7 +112,7 @@ const ContactSection = () => {
                   </div>
                   <div className="flex items-center space-x-4">
                     <Phone className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">+971 50 66 070 34</span>
+                    <span className="text-deep-purple">+971506607034</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-vibrant-purple" />
@@ -120,9 +120,7 @@ const ContactSection = () => {
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">UAE: Dubai South - Pulse Beach Front - A124
-
-(Online sessions available worldwide)</span>
+                    <span className="text-deep-purple">UAE: Dubai South - Pulse Beach Front - A124</span>
                   </div>
                 </div>
               </CardContent>
