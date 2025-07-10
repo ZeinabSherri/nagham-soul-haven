@@ -37,21 +37,21 @@ const Navigation = () => {
           />
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-12 flex-1 justify-center ml-8">
-            <button onClick={() => scrollToSection('about')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">
+          <div className="hidden md:flex space-x-6 flex-1 justify-center ml-8">
+            <button onClick={() => scrollToSection('about')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple whitespace-nowrap">
               About Me
             </button>
-            <button onClick={() => scrollToSection('services')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">
+            <button onClick={() => scrollToSection('services')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
               Services
             </button>
-            <button onClick={() => scrollToSection('consulting')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">What's Unique</button>
-            <button onClick={() => scrollToSection('certifications')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">
+            <button onClick={() => scrollToSection('consulting')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple whitespace-nowrap">What's Unique</button>
+            <button onClick={() => scrollToSection('certifications')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
               Certifications
             </button>
-            <button onClick={() => scrollToSection('testimonials')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">
+            <button onClick={() => scrollToSection('testimonials')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
               Testimonials
             </button>
-            <button onClick={() => scrollToSection('ways-to-start')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">
+            <button onClick={() => scrollToSection('ways-to-start')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
               Contact
             </button>
           </div>
