@@ -32,7 +32,7 @@ const ServicesSection = () => {
     duration: "60 min",
     format: "In-Person",
     icon: Home,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/access-bars-or-access-facelift"
+    bookingLink: "https://calendly.com/hello-naghamthecoach/time-line-therapy"
   }, {
     title: "Reiki Healing",
     description: "Energy healing to balance chakras and promote deep relaxation.",
@@ -67,7 +67,7 @@ const ServicesSection = () => {
     duration: "30 min",
     format: "Online & In-Person",
     icon: Eye,
-    bookingLink: "https://lb.oneconsciousness.org/"
+    bookingLink: "http://lb.oneconsciousness.org/naghamrasbieh"
   }];
 
   const handleBookNow = (bookingLink: string) => {
