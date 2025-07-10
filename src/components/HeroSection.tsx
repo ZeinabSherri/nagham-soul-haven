@@ -34,7 +34,7 @@ const HeroSection = () => {
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-start min-h-[75vh]">
-          {/* Left side - Main Content */}
+          {/* Left side - Main Content and Buttons */}
           <div className="text-left">
             {/* Main Headline */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-deep-purple mb-8 leading-tight animate-fade-in">
@@ -46,6 +46,12 @@ const HeroSection = () => {
               I'm Nagham, Your Guide to Transformation.<br />
               I help you <strong>Release</strong> what's heavy, <strong>Reconnect</strong> with yourself, & <strong>Rise</strong> into who you were always meant to be.
             </p>
+
+            {/* Call-to-Action Buttons - moved to left side */}
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-1100">
+              <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Begin Your Transformation</Button>
+              <Button onClick={() => scrollToSection('contact')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Book Your 15 min Free Call</Button>
+            </div>
           </div>
 
           {/* Right side - Bullet List and Ready to Begin Card */}
@@ -67,12 +73,6 @@ const HeroSection = () => {
                   <span className="font-medium">Nervous System Reset & Trauma Release</span>
                 </div>
               </div>
-            </div>
-
-            {/* Call-to-Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-1100">
-              <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Begin Your Transformation</Button>
-              <Button onClick={() => scrollToSection('contact')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Book Your 15 min Free Call</Button>
             </div>
 
             {/* Ready to Begin section */}
