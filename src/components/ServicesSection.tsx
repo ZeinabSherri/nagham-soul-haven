@@ -67,7 +67,7 @@ const ServicesSection = () => {
     duration: "30 min",
     format: "Online & In-Person",
     icon: Eye,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/30min"
+    bookingLink: "https://lb.oneconsciousness.org/"
   }];
 
   const handleBookNow = (bookingLink: string) => {
