@@ -36,7 +36,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[75vh]">
           {/* Left side - Content */}
           <div className="text-left">
-            {/* Main Headline */}
+            {/* Main Headline with smaller size and proper spacing */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-deep-purple mb-8 leading-tight animate-fade-in">
               Start Feeling Safe, Seen & Connected Again
             </h1>
@@ -47,23 +47,24 @@ const HeroSection = () => {
               I help you <strong>Release</strong> what's heavy, <strong>Reconnect</strong> with yourself, & <strong>Rise</strong> into who you were always meant to be.
             </p>
 
-            {/* Key points list - moved up and styled prominently */}
-            <div className="mb-10 p-6 bg-white/30 backdrop-blur-sm rounded-2xl border border-white/40 shadow-lg animate-fade-in delay-400">
-              <h2 className="text-xl font-semibold text-deep-purple mb-6 text-center lg:text-left">In our work together, I bring:</h2>
-              <div className="space-y-4">
-                <div className="flex items-center text-dark-olive text-lg animate-fade-in delay-500">
-                  <span className="text-vibrant-purple mr-4 text-2xl font-bold">•</span>
-                  <span className="font-medium">Transformational Healing</span>
-                </div>
-                <div className="flex items-center text-dark-olive text-lg animate-fade-in delay-700">
-                  <span className="text-vibrant-purple mr-4 text-2xl font-bold">•</span>
-                  <span className="font-medium">Deep Emotional Rewiring</span>
-                </div>
-                <div className="flex items-center text-dark-olive text-lg animate-fade-in delay-900">
-                  <span className="text-vibrant-purple mr-4 text-2xl font-bold">•</span>
-                  <span className="font-medium">Nervous System Reset & Trauma Release</span>
-                </div>
+            {/* Title for key points */}
+            <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-lg">In our work together, I bring:</h2>
+
+            {/* Key points list */}
+            <div className="mb-12 space-y-4">
+              <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-500">
+                <span className="text-vibrant-purple mr-4 text-xl">•</span>
+                <span>Transformational Healing</span>
               </div>
+              <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-900">
+                <span className="text-vibrant-purple mr-4 text-xl">•</span>
+                <span>Deep Emotional Rewiring</span>
+              </div>
+              <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-700">
+                <span className="text-vibrant-purple mr-4 text-xl">•</span>
+                <span> Nervous System Reset &amp; Trauma Release</span>
+              </div>
+              
             </div>
 
             {/* Call-to-Action Buttons */}
