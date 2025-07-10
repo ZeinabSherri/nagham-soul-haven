@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, Users, Video, Home, Heart, Star, Sparkles, Zap, Eye } from 'lucide-react';
-
 const ServicesSection = () => {
   const services = [{
     title: "1:1 Healing Sessions",
@@ -13,7 +12,7 @@ const ServicesSection = () => {
     bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
   }, {
     title: "Hypnotherapy",
-    description: "Access your subconscious mind to release limiting beliefs and create positive change.",
+    description: "Access your unconscious mind to release limiting beliefs and create positive change.",
     duration: "60 min",
     format: "Online & In-Person",
     icon: Clock,
@@ -68,11 +67,9 @@ const ServicesSection = () => {
     icon: Eye,
     bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
   }];
-
   const handleBookNow = (bookingLink: string) => {
     window.open(bookingLink, '_blank');
   };
-
   return <section id="services" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Left-aligned title */}
@@ -121,7 +118,7 @@ const ServicesSection = () => {
                   
                   {/* Call-to-Action Button */}
                   <Button onClick={() => handleBookNow(service.bookingLink)} size="sm" className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300 mt-auto">
-                    {index === 8 ? "Book Free 30 min Call" : "Book Now"}
+                    {index === 0 ? "Book Free 30 min Call" : "Book Now"}
                   </Button>
                 </CardContent>
               </Card>;
@@ -153,5 +150,4 @@ const ServicesSection = () => {
       </div>
     </section>;
 };
-
 export default ServicesSection;
