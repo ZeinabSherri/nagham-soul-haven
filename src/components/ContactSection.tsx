@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,31 +11,25 @@ const ContactSection = () => {
     email: '',
     message: ''
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent('New Message from Website');
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
     window.location.href = `mailto:Hello@naghamthecoach?subject=${subject}&body=${body}`;
   };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/9613633483', '_blank');
   };
-
-  return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  return <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div id="ways-to-start" className="mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-6">
@@ -114,12 +107,16 @@ const ContactSection = () => {
                   </div>
                   <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={handleWhatsAppClick}>
                     <Phone className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">+961 3 633 483</span>
+                    <span className="text-deep-purple">+961 3 633 483
++971506607034</span>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <MapPin className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">Lebanon: Dawhet el Hoss, Lebanon (Online sessions available worldwide) 
-UAE: Dubai South - Pulse Beach Front - A124</span>
+                  <div className="flex items-start space-x-4">
+                    <MapPin className="w-6 h-6 text-vibrant-purple mt-1" />
+                    <div className="text-deep-purple">
+                      <div className="mb-2">Lebanon: Dawhet el Hoss, Lebanon</div>
+                      <div className="mb-2">UAE: Dubai South - Pulse Beach Front - A124</div>
+                      <div className="text-sm text-dark-olive">(Online sessions available worldwide)</div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -166,8 +163,7 @@ UAE: Dubai South - Pulse Beach Front - A124</span>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 
 export default ContactSection;
