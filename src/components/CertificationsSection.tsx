@@ -6,10 +6,6 @@ import { Check } from 'lucide-react';
 const CertificationsSection = () => {
   const certifications = [
     {
-      title: "Time Line Therapy®",
-      org: "TLT® Association",
-    },
-    {
       title: "Clinical Hypnotherapy",
        org: "American Board of Hypnotherapy (ABH)",
     },
@@ -17,7 +13,10 @@ const CertificationsSection = () => {
       title: "Neuro-Linguistic Programming ( NLP)",
        org: "American Board of NLP (ABNLP)",
     },
-    
+    {
+      title: "Time Line Therapy®",
+      org: "TLT® Association",
+    },
     {
       title: "Cognitive-Behavioral Therapy Specialist (CBT)",
       org: "International Certification Board of Coaches And Hypnotist (ICBCH)",
@@ -97,7 +96,7 @@ const CertificationsSection = () => {
           {/* Right Column - Additional Trainings */}
           <div className="animate-fade-in delay-700">
             <h3 className="text-2xl font-bold mb-8 text-deep-purple">
-              Also trained in:
+              Additionally Certified in:
             </h3>
             <div className="space-y-4">
               {additionalTrainings.map((training, index) => (
