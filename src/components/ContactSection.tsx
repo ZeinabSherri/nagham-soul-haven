@@ -53,6 +53,14 @@ const ContactSection = () => {
               <p className="text-dark-olive">Book a Free 15-min Call</p>
             </CardHeader>
             <CardContent className="text-center">
+              <div className="mb-6">
+                <Button 
+                  onClick={handleCalendlyClick} 
+                  className="bg-vibrant-purple hover:bg-deep-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  Book a Call Now
+                </Button>
+              </div>
               <div className="bg-gray-50 rounded-xl p-8 border border-deep-purple/10">
                 <div className="text-6xl mb-4">✨</div>
                 <h3 className="text-xl font-semibold text-deep-purple mb-4">Online Booking Calendar</h3>
@@ -65,14 +73,6 @@ const ContactSection = () => {
                 >
                   View Available Times
                 </Button>
-                <div className="mb-4">
-                  <Button 
-                    onClick={handleCalendlyClick} 
-                    className="bg-vibrant-purple hover:bg-deep-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-                  >
-                    Book a Call Now
-                  </Button>
-                </div>
                 <p className="text-sm text-dark-olive">
                   Sessions available online and in-person • Flexible scheduling • Instant confirmation
                 </p>
