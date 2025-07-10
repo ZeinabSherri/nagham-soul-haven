@@ -4,31 +4,38 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube } from 'lucide-react';
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent('New Message from Website');
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
     window.location.href = `mailto:Hello@naghamthecoach?subject=${subject}&body=${body}`;
   };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
+
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
   };
+
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/9613633483', '_blank');
   };
-  return <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+
+  return (
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div id="ways-to-start" className="mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-6">How to Start</h2>
@@ -52,17 +59,29 @@ const ContactSection = () => {
                 <p className="text-dark-olive mb-6">
                   Click below to view available times and book your session instantly
                 </p>
-                <Button onClick={handleCalendlyClick} className="bg-deep-purple hover:bg-vibrant-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                <Button 
+                  onClick={handleCalendlyClick} 
+                  className="bg-deep-purple hover:bg-vibrant-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4"
+                >
                   View Available Times
                 </Button>
-                <p className="text-sm text-dark-olive mt-4">
+                <div className="mb-4">
+                  <Button 
+                    onClick={handleCalendlyClick} 
+                    className="bg-vibrant-purple hover:bg-deep-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  >
+                    Book a Call Now
+                  </Button>
+                </div>
+                <p className="text-sm text-dark-olive">
                   Sessions available online and in-person • Flexible scheduling • Instant confirmation
                 </p>
               </div>
             </CardContent>
           </Card>
         </div>
-      <div id="sc"></div>{/*to nav */}
+        <div id="sc"></div>{/*to nav */}
+        
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form with specific ID */}
           <Card id="contact-form" className="bg-white border-2 border-deep-purple/20 shadow-lg animate-fade-in delay-600">
@@ -150,6 +169,8 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ContactSection;
