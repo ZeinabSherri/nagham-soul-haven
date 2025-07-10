@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube } from 'lucide-react';
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -109,9 +110,13 @@ const ContactSection = () => {
                     <span className="text-deep-purple">+961 3 633 483
 +971506607034</span>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <MapPin className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">Lebanon: Dawhet el Hoss, Lebanon (Online sessions available worldwide) </span>
+                  <div className="flex items-start space-x-4">
+                    <MapPin className="w-6 h-6 text-vibrant-purple mt-1" />
+                    <div className="text-deep-purple">
+                      <div className="mb-2">Lebanon: Dawhet el Hoss, Lebanon</div>
+                      <div className="mb-2">UAE: Dubai South - Pulse Beach Front - A124</div>
+                      <div className="text-sm text-dark-olive">(Online sessions available worldwide)</div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -160,4 +165,5 @@ const ContactSection = () => {
       </div>
     </section>;
 };
+
 export default ContactSection;
