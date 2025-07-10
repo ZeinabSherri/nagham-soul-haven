@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -113,8 +114,11 @@ const ContactSection = () => {
                   </div>
                   <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={handleWhatsAppClick}>
                     <Phone className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">+961 3 633 483
-+971506607034</span>
+                    <span className="text-deep-purple">+961 3 633 483</span>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <Phone className="w-6 h-6 text-vibrant-purple" />
+                    <span className="text-deep-purple">+971506607034</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-vibrant-purple" />
