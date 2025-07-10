@@ -75,14 +75,21 @@ const TestimonialsSection = () => {
         <div className="text-center animate-fade-in delay-1000">
           <div className="bg-light-lavender-pink rounded-xl p-6 border-2 border-soft-lavender max-w-4xl mx-auto hover:shadow-lg transition-all duration-500">
             <h3 className="text-xl font-bold text-deep-purple mb-4 animate-fade-in delay-1200">Ready to Start Your Transformation?</h3>
-            <p className="text-vibrant-purple mb-6 animate-fade-in delay-1400">Join hundreds of others who have found peace, clarity, and freedom through our work together.<br/>Curious what's possible for you?</p>
+            <p className="text-vibrant-purple mb-6 animate-fade-in delay-1400">Join hundreds of others who have found peace, clarity, and freedom through our work together.<br/>
+            Curious what's possible for you?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button onClick={handleBookSession} className="bg-vibrant-purple hover:bg-deep-purple text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-1600">
                 Book Your Session
               </button>
-              <button onClick={() => document.getElementById('contact')?.scrollIntoView({
-              behavior: 'smooth'
-            })} className="border-2 border-vibrant-purple text-deep-purple hover:bg-light-lavender-pink px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 animate-fade-in delay-1800">
+              <button onClick={() => {
+                const contactSection = document.getElementById('contact');
+                const getInTouchSection = contactSection?.querySelector('h3');
+                if (getInTouchSection) {
+                  getInTouchSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }} className="border-2 border-vibrant-purple text-deep-purple hover:bg-light-lavender-pink px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 animate-fade-in delay-1800">
                 Ask a Question
               </button>
             </div>
