@@ -112,7 +112,7 @@ const ContactSection = () => {
                   </div>
                   <div className="flex items-center space-x-4">
                     <Phone className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">+971 506 607 034</span>
+                    <span className="text-deep-purple">+971 50 66 070 34</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-vibrant-purple" />
@@ -120,7 +120,8 @@ const ContactSection = () => {
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">UAE: Dubai South - Pulse Beach Front - A124</span>
+                    <span className="text-deep-purple">UAE: Dubai South - Pulse Beach Front - A124
+(Online sessions available worldwide)</span>
                   </div>
                 </div>
               </CardContent>
