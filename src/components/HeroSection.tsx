@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
@@ -83,7 +82,7 @@ const HeroSection = () => {
                   <h3 className="text-3xl font-bold text-deep-purple mb-6 animate-fade-in delay-1200">
                     Ready to Begin?
                   </h3>
-                  <p className="text-vibrant-purple text-lg mb-8 leading-relaxed animate-fade-in delay-1400">Start your journey to Inner Peace and Emotional Freedom today.</p>
+                  <p className="text-vibrant-purple text-lg mb-8 leading-relaxed animate-fade-in delay-1400">Start your Journey to Inner Peace and Emotional Freedom Today.</p>
                   
                   {/* Feature icons */}
                   <div className="grid grid-cols-3 gap-6 mb-8">
