@@ -121,6 +121,7 @@ const ContactSection = () => {
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-vibrant-purple" />
                     <span className="text-deep-purple">UAE: Dubai South - Pulse Beach Front - A124
+
 (Online sessions available worldwide)</span>
                   </div>
                 </div>
