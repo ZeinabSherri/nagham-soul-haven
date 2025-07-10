@@ -81,7 +81,7 @@ const TestimonialsSection = () => {
                 Book Your Session
               </button>
               <button onClick={() => {
-                const getInTouchSection = document.getElementById('contact-form');
+                const getInTouchSection = document.getElementById('sc');
                 if (getInTouchSection) {
                   getInTouchSection.scrollIntoView({ behavior: 'smooth' });
                 }
