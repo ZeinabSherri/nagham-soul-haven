@@ -5,7 +5,7 @@ import { Check, Star, Heart, Sparkles } from 'lucide-react';
 
 const ConsultingSection = () => {
   const handleStartTransformation = () => {
-    window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
+    window.open('http://lb.oneconsciousness.org/naghamrasbieh', '_blank');
   };
 
   // Define paired bullet points for perfect alignment
