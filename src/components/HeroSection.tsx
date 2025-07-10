@@ -56,14 +56,15 @@ const HeroSection = () => {
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
                 <span>Transformational Healing</span>
               </div>
-              <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-700">
-                <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span> Nervous System Reset &amp; Trauma Release</span>
-              </div>
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-900">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
                 <span>Deep Emotional Rewiring</span>
               </div>
+              <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-700">
+                <span className="text-vibrant-purple mr-4 text-xl">•</span>
+                <span> Nervous System Reset &amp; Trauma Release</span>
+              </div>
+              
             </div>
 
             {/* Call-to-Action Buttons */}
