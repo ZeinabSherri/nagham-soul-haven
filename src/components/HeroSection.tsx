@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
@@ -103,7 +102,7 @@ const HeroSection = () => {
                       <div className="w-16 h-16 bg-light-olive rounded-full flex items-center justify-center mb-3 shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <Sparkles className="w-8 h-8 text-deep-purple" />
                       </div>
-                      <p className="text-deep-purple text-sm">Transform</p>
+                      <p className="text-deep-purple text-sm">Transformation</p>
                     </div>
                   </div>
                   
