@@ -42,7 +42,7 @@ const HeroSection = () => {
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed animate-fade-in delay-300 font-normal">
+            <p className="text-xl md:text-xl text-vibrant-purple mb-10 leading-relaxed animate-fade-in delay-300 font-normal">
               I'm Nagham, Your Guide to Transformation.<br />
               I help you <strong>Release</strong> what's heavy, <strong>Reconnect</strong> with yourself, & <strong>Rise</strong> into who you were always meant to be.
             </p>
