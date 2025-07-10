@@ -52,7 +52,7 @@ const CertificationsSection = () => {
           <div className="relative max-w-3xl w-full">
             <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-gray-100">
               <img 
-                src="/lovable-uploads/b84e3626-0d98-484b-81e7-ee27351bbe3e.png" 
+                src="/lovable-uploads/place.jpg" 
                 alt="Wall of Professional Certifications and Credentials" 
                 className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
               />
