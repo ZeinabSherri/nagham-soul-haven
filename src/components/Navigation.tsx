@@ -37,7 +37,7 @@ const Navigation = () => {
           />
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-12 flex-1 justify-center ml-8">
             <button onClick={() => scrollToSection('about')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-4 py-2 rounded-full hover:bg-vibrant-purple">
               About Me
             </button>
