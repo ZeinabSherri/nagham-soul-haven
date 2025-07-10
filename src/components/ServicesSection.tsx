@@ -60,7 +60,7 @@ const ServicesSection = () => {
     duration: "60 min",
     format: "In-Person",
     icon: Sparkles,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
+    bookingLink: "https://calendly.com/hello-naghamthecoach/access-bars-or-access-facelift"
   }, {
     title: "Consciousness Services",
     description: "Access the field of consciousness within to realize your full potential, using Maharishi Technologies.",
