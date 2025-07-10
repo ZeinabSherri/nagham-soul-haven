@@ -138,7 +138,7 @@ const ServicesSection = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
             <div className="animate-fade-in delay-1800">
               <h4 className="font-semibold text-deep-purple mb-2">Integrative Approach</h4>
-              <p className="text-dark-olive">Combining multiple healing modalities for comprehensive transformation</p>
+              <p className="text-dark-olive">Combining multiple healing modalities for comprehensive transformation.</p>
             </div>
             <div className="animate-fade-in delay-2000">
               <h4 className="font-semibold text-deep-purple mb-2">Client-Centered Customization</h4>
@@ -146,7 +146,7 @@ const ServicesSection = () => {
             </div>
             <div className="animate-fade-in delay-2200">
               <h4 className="font-semibold text-deep-purple mb-2">Safe & Lasting Results</h4>
-              <p className="text-dark-olive">Creating lasting change in a supportive, non-judgmental environment</p>
+              <p className="text-dark-olive">Creating lasting change in a supportive, non-judgmental environment.</p>
             </div>
             <div className="animate-fade-in delay-2400">
               <h4 className="font-semibold text-deep-purple mb-2">⁠Rooted in Consciousness</h4>
