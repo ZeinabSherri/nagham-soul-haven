@@ -15,7 +15,7 @@ const CertificationsSection = () => {
     title: "Cognitive-Behavioral Therapy Specialist (CBT)",
     org: "International Certification Board of Coaches And Hypnotist (ICBCH)"
   }];
-  const additionalTrainings = [" Access Bars® Practitioner & Facilitator", "Master Reiki", "Pranic Healing", "Access Face Lift Practitioner", "Certified Trainer", "Intuitive Healing", "Space Clearing & Recharging", "Consciousness Advisor", "Sexual Agility Specialist", "Past-life Regression Specialist", "SuperRelationships Specialist"];
+  const additionalTrainings = [" Access Bars® Practitioner & Facilitator", "Master Reiki", "Pranic Healing", "Access FaceLift® Practitioner", "Certified Trainer", "Intuitive Healing", "Space Clearing & Recharging", "Consciousness Advisor", "Sexual Agility Specialist", "Past-life Regression Specialist", "SuperRelationships Specialist"];
   return <section id="certifications" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
