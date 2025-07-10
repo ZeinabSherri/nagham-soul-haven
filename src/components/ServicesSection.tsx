@@ -6,7 +6,7 @@ import { Clock, Users, Video, Home, Heart, Star, Sparkles, Zap, Eye } from 'luci
 
 const ServicesSection = () => {
   const services = [{
-    title: "1:1 Healing Sessions",
+    title: "1:1 Private Coaching Session",
     description: "One-on-one sessions combining powerful approaches for lasting transformation.",
     duration: "60 min",
     format: "Online & In-Person",
