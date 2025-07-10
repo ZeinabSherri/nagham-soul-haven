@@ -38,7 +38,10 @@ const HeroSection = () => {
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed animate-fade-in delay-300 font-normal">I'm Nagham, Your Guide to Transformation. I help you <strong>Release</strong> what's heavy, <strong>Reconnect</strong> with yourself, and <strong>Rise</strong> into who you were always meant to be.</p>
+            <p className="text-xl md:text-2xl text-vibrant-purple mb-10 leading-relaxed animate-fade-in delay-300 font-normal">
+              I'm Nagham, Your Guide to Transformation.<br />
+              I help you <strong>Release</strong> what's heavy, <strong>Reconnect</strong> with yourself, and <strong>Rise</strong> into who you were always meant to be.
+            </p>
 
             {/* Title for key points */}
             <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-lg">In our work together, I bring:</h2>
