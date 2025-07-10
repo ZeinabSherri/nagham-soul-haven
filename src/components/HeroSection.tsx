@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
@@ -32,7 +33,7 @@ const HeroSection = () => {
           {/* Left side - Content */}
           <div className="text-left">
             {/* Main Headline with improved spacing and animation */}
-            <h1 className="text-3xl lg:text-5xl font-bold text-deep-purple mb-8 leading-tight my-[20px] animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-deep-purple mb-8 leading-tight my-[20px] animate-fade-in">
               Start Feeling Safe, Seen & Connected Again
             </h1>
             
