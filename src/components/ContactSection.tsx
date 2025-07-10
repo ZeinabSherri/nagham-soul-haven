@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -118,7 +117,10 @@ const ContactSection = () => {
                     <MapPin className="w-6 h-6 text-vibrant-purple mt-1" />
                     <div className="text-deep-purple">
                       <div className="mb-2">Lebanon: Dawhet el Hoss, Lebanon</div>
-                      <div className="mb-2">UAE: Dubai South - Pulse Beach Front - A124</div>
+                      <div className="flex items-start space-x-4 mb-2">
+                        <MapPin className="w-6 h-6 text-vibrant-purple mt-1" />
+                        <div>UAE: Dubai South - Pulse Beach Front - A124</div>
+                      </div>
                       <div className="text-sm text-dark-olive">(Online sessions available worldwide)</div>
                     </div>
                   </div>
