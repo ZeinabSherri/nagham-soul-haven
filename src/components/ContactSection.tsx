@@ -28,7 +28,7 @@ const ContactSection = () => {
   };
 
   const handleCalendlyClick = () => {
-    window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
+    window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
   };
 
   const handleWhatsAppClick = () => {
