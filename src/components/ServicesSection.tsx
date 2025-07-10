@@ -40,7 +40,7 @@ const ServicesSection = () => {
     bookingLink: "https://calendly.com/hello-naghamthecoach/reiki-pranic-healing"
   }, {
     title: "Past Life Regression",
-    description: "Explore past lives to uncover the roots of current patterns and release what’s holding you back.",
+    description: "Explore past lives to uncover the roots of current patterns and release what's holding you back.",
     duration: "2 hr",
     format: "Online & In-Person",
     icon: Star,
@@ -117,7 +117,9 @@ const ServicesSection = () => {
                   </div>
                   
                   {/* Call-to-Action Button */}
-                  <Button onClick={() => handleBookNow(service.bookingLink)} size="sm" className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300 mt-auto">Book Now</Button>
+                  <Button onClick={() => handleBookNow(service.bookingLink)} size="sm" className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300 mt-auto">
+                    {index === 0 ? "Book Free 30 min Call" : "Book Now"}
+                  </Button>
                 </CardContent>
               </Card>;
         })}
