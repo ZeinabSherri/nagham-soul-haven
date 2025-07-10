@@ -51,7 +51,7 @@ I integrate neuroscience-based coaching, clinical hypnotherapy,Neuro-Linguistic 
               </p>
               <ul className="space-y-2 ml-4 animate-fade-in delay-1500">
                 <li className="text-lg text-gray-700 font-bold">• The American Board of Hypnotherapy (ABH)</li>
-                <li className="text-lg text-gray-700 font-bold">• The International Certification Board of Coaches & Hypnotists (ICBCH)</li>
+                <li className="text-lg text-gray-700 font-bold">• The International Certification Board of Coaches & Hypnotists(ICBCH)</li>
                 <li className="text-lg text-gray-700 font-bold">• The Lebanese Syndicate of Hypnotherapists (LSH)</li>
                 
               </ul>
