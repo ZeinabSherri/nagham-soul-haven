@@ -13,7 +13,7 @@ const Footer = () => {
             console.log('Footer logo processed:', processedUrl);
           }} className="h-24 w-auto" />
           </div>
-          <h3 className="text-2xl font-bold mb-2 text-deep-purple">Nagham Rasbieh</h3>
+          <h3 className="text-2xl font-bold mb-2 text-deep-purple">Nagham The Coach</h3>
           <p className="text-dark-olive text-lg">Emotional Healing • Mind-Body Transformation • Energy Clearing</p>
         </div>
 
