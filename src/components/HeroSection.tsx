@@ -67,7 +67,7 @@ const HeroSection = () => {
               <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Begin Your Transformation
               </Button>
-              <Button onClick={() => scrollToSection('contact')} variant="outline" className="border-2 border-deep-purple text-deep-purple backdrop-blur-sm px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 bg-white/80 hover:bg-vibrant-purple hover:text-creamy-beige hover:scale-105">Book Your 15 min Free Call</Button>
+              <Button onClick={() => scrollToSection('contact')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Book Your 15 min Free Call</Button>
             </div>
           </div>
 
