@@ -41,10 +41,9 @@ const ContactSection = () => {
             <CardHeader className="text-center">
               <CardTitle className="text-2xl font-bold text-deep-purple flex items-center justify-center">
                 <Calendar className="w-6 h-6 mr-3 text-vibrant-purple" />
-                Book Your Session Today
+                Book a Free 15-min Call
               </CardTitle>
-              <p className="text-dark-olive">
-            </p>
+              <p className="text-dark-olive">Book a Free 15-min Call</p>
             </CardHeader>
             <CardContent className="text-center">
               <div className="bg-gray-50 rounded-xl p-8 border border-deep-purple/10">
