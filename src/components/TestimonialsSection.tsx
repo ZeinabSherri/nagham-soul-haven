@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
   };
 
   const handleBookSession = () => {
-    window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
+    window.opehttp:'https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call, '_blank');
   };
 
   return <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
