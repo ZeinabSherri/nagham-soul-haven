@@ -20,7 +20,7 @@ const Navigation = () => {
   };
 
   const handleBookSession = () => {
-    window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
+    window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
   };
 
   const handleLogoProcessed = (processedUrl: string) => {
@@ -34,7 +34,7 @@ const Navigation = () => {
           <LogoProcessor 
             originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png" 
             onProcessed={handleLogoProcessed} 
-            className="h-40 w-auto" 
+            className="h-32 w-auto" 
           />
           
           {/* Desktop Navigation */}
