@@ -43,7 +43,8 @@ const ContactSection = () => {
                 <Calendar className="w-6 h-6 mr-3 text-vibrant-purple" />
                 Book Your Session Today
               </CardTitle>
-              <p className="text-dark-olive">Book a Free 15-min Call</p>
+              <p className="text-dark-olive">
+            </p>
             </CardHeader>
             <CardContent className="text-center">
               <div className="bg-gray-50 rounded-xl p-8 border border-deep-purple/10">
