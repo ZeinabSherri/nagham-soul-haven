@@ -4,37 +4,43 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube } from 'lucide-react';
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent('New Message from Website');
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
     window.location.href = `mailto:Hello@naghamthecoach?subject=${subject}&body=${body}`;
   };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
+
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
+
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/9613633483', '_blank');
   };
+
   return <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-6">
             Ways to Start
           </h2>
-          <p className="text-xl text-dark-olive max-w-3xl leading-relaxed">Take the first step toward healing. I’m here to support you every step of the way.</p>
+          <p className="text-xl text-dark-olive max-w-3xl leading-relaxed">Take the first step toward healing. I'm here to support you every step of the way.</p>
         </div>
 
         {/* Booking Calendar Section */}
@@ -133,6 +139,11 @@ UAE: Dubai South - Pulse Beach Front - A124</span>
                   <a href="https://www.youtube.com/@NaghamTheCoach" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white transition-colors duration-300 transform hover:scale-110">
                     <Youtube className="w-6 h-6" />
                   </a>
+                  <a href="https://www.tiktok.com/@naghamthecoach" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center text-white transition-colors duration-300 transform hover:scale-110">
+                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5.16 20.5a6.33 6.33 0 0 0 10.86-4.43V7.83a8.25 8.25 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.2-.26Z"/>
+                    </svg>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -156,4 +167,5 @@ UAE: Dubai South - Pulse Beach Front - A124</span>
       </div>
     </section>;
 };
+
 export default ContactSection;
