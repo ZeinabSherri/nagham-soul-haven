@@ -5,7 +5,7 @@ import { Star, Quote } from 'lucide-react';
 
 const TestimonialsSection = () => {
   const testimonials = [{
-    name: "Zeinab",
+    name: "Mark",
     text: "I tried years of therapy. One session with Nagham shifted something I didn't even know was stuck.",
     rating: 5,
     color: "soft-lavender"
