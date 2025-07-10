@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,7 +5,7 @@ import { Clock, Users, Video, Home, Heart, Star, Sparkles, Zap, Eye } from 'luci
 const ServicesSection = () => {
   const services = [{
     title: "1:1 Healing Sessions",
-    description: "One-on-one sessions combining powerful approaches for lasting transformation.",
+    description: "One-on-one sessions combining powerful approaches for lasting transformation.",
     duration: "60 min",
     format: "Online & In-Person",
     icon: Users,
@@ -20,7 +19,7 @@ const ServicesSection = () => {
     bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
   }, {
     title: "Time Line Therapy®",
-    description: "Release stored emotions, heal old wounds, and rewire your inner timeline for lasting change.",
+    description: "Release stored emotions, heal old wounds, and rewire your inner timeline for lasting change.",
     duration: "90 min",
     format: "Online & In-Person",
     icon: Video,
@@ -41,7 +40,7 @@ const ServicesSection = () => {
     bookingLink: "https://calendly.com/hello-naghamthecoach/reiki-pranic-healing"
   }, {
     title: "Past Life Regression",
-    description: "Explore past lives to uncover the roots of current patterns and release what's holding you back.",
+    description: "Explore past lives to uncover the roots of current patterns and release what's holding you back.",
     duration: "2 hr",
     format: "Online & In-Person",
     icon: Star,
@@ -62,7 +61,7 @@ const ServicesSection = () => {
     bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
   }, {
     title: "Consciousness Services",
-    description: "Access the field of consciousness within through Vedic and Maharishi technologies to awaken clarity and healing.",
+    description: "Access the field of consciousness within to realize your full potential, using Maharishi Technologies.",
     duration: "30 min",
     format: "Online & In-Person",
     icon: Eye,
@@ -119,7 +118,7 @@ const ServicesSection = () => {
                   
                   {/* Call-to-Action Button */}
                   <Button onClick={() => handleBookNow(service.bookingLink)} size="sm" className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300 mt-auto">
-                    {service.title === "Consciousness Services" ? "Book Free 30 min Call" : "Book Now"}
+                    {index === 0 ? "Book Free 30 min Call" : "Book Now"}
                   </Button>
                 </CardContent>
               </Card>;
