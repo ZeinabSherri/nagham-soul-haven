@@ -49,7 +49,7 @@ const ContactSection = () => {
             <CardHeader className="text-center">
               <CardTitle className="text-2xl font-bold text-deep-purple flex items-center justify-center">
                 <Calendar className="w-6 h-6 mr-3 text-vibrant-purple" />
-                Book Your Healing Session
+Book Your Session Today
               </CardTitle>
               <p className="text-dark-olive">Book a Free 15-min Intro Call</p>
             </CardHeader>
