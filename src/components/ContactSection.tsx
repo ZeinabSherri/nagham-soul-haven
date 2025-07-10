@@ -106,11 +106,13 @@ const ContactSection = () => {
                   </div>
                   <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={handleWhatsAppClick}>
                     <Phone className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">+961 3 633 483</span>
+                    <span className="text-deep-purple">+961 3 633 483
++971506607034</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">Dawhet el Hoss, Lebanon (Online sessions available worldwide)</span>
+                    <span className="text-deep-purple">Lebanon: Dawhet el Hoss, Lebanon (Online sessions available worldwide) 
+UAE: Dubai South - Pulse Beach Front - A124</span>
                   </div>
                 </div>
               </CardContent>
