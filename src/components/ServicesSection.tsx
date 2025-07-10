@@ -5,7 +5,7 @@ import { Clock, Users, Video, Home, Heart, Star, Sparkles, Zap, Eye } from 'luci
 const ServicesSection = () => {
   const services = [{
     title: "1:1 Healing Sessions",
-    description: "Session :One-on-one sessions combining powerful approaches for lasting transformation.",
+    description: "One-on-one sessions combining powerful approaches for lasting transformation.",
     duration: "60 min",
     format: "Online & In-Person",
     icon: Users,
@@ -20,7 +20,7 @@ const ServicesSection = () => {
   }, {
     title: "Time Line Therapy®",
     description: "Release stored emotions, heal old wounds, and rewire your inner timeline for lasting change.",
-    duration: "60 min",
+    duration: "90 min",
     format: "Online & In-Person",
     icon: Video,
     bookingLink: "https://calendly.com/hello-naghamthecoach/nlp-neuro-linguistic-programming"
@@ -35,7 +35,7 @@ const ServicesSection = () => {
     title: "Reiki Healing",
     description: "Energy healing to balance chakras and promote deep relaxation.",
     duration: "60 min",
-    format: "Online & In-Person",
+    format: "In-Person",
     icon: Heart,
     bookingLink: "https://calendly.com/hello-naghamthecoach/reiki-pranic-healing"
   }, {
@@ -56,7 +56,7 @@ const ServicesSection = () => {
     title: "Access Energetic Facelift",
     description: "A gentle, non-invasive energetic process that lifts the face and rejuvenates the body.",
     duration: "60 min",
-    format: "Online & In-Person",
+    format: "In-Person",
     icon: Sparkles,
     bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
   }, {
