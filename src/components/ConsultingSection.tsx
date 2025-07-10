@@ -1,15 +1,11 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, Star, Heart, Sparkles } from 'lucide-react';
-
 const ConsultingSection = () => {
   const handleStartTransformation = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-
-  return (
-    <section id="consulting" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+  return <section id="consulting" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12">
@@ -86,13 +82,9 @@ const ConsultingSection = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <Button onClick={handleStartTransformation} className="bg-deep-purple hover:bg-vibrant-purple text-white px-12 py-4 rounded-lg text-lg font-bold transition-all duration-300 hover:shadow-lg transform hover:scale-105">
-            Start Your Transformation Journey
-          </Button>
+          <Button onClick={handleStartTransformation} className="bg-deep-purple hover:bg-vibrant-purple text-white px-12 py-4 rounded-lg text-lg font-bold transition-all duration-300 hover:shadow-lg transform hover:scale-105">Start Your Transformational Journey</Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ConsultingSection;
