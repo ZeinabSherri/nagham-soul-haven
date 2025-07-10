@@ -47,8 +47,8 @@ const HeroSection = () => {
               I help you <strong>Release</strong> what's heavy, <strong>Reconnect</strong> with yourself, & <strong>Rise</strong> into who you were always meant to be.
             </p>
 
-            {/* Call-to-Action Buttons - moved to left side */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-1100">
+            {/* Call-to-Action Buttons - positioned directly under the subheadline */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in delay-1100">
               <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Begin Your Transformation</Button>
               <Button onClick={() => scrollToSection('contact')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Book Your 15 min Free Call</Button>
             </div>
@@ -56,7 +56,7 @@ const HeroSection = () => {
 
           {/* Right side - Bullet List and Ready to Begin Card */}
           <div className="flex flex-col space-y-8">
-            {/* Key points list - moved to right side */}
+            {/* Key points list - positioned on right side */}
             <div className="p-6 bg-white/30 backdrop-blur-sm rounded-2xl border border-white/40 shadow-lg animate-fade-in delay-400">
               <h2 className="text-xl font-semibold text-deep-purple mb-6 text-center lg:text-left">In our work together, I bring:</h2>
               <div className="space-y-4">
