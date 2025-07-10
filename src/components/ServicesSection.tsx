@@ -9,7 +9,7 @@ const ServicesSection = () => {
     duration: "60 min",
     format: "Online & In-Person",
     icon: Users,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
+    bookingLink: "https://calendly.com/hello-naghamthecoach/new-healing-session"
   }, {
     title: "Hypnotherapy",
     description: "Access your unconscious mind to release limiting beliefs and create positive change.",
@@ -51,7 +51,7 @@ const ServicesSection = () => {
     duration: "60 min",
     format: "Online & In-Person",
     icon: Zap,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
+    bookingLink: "https://calendly.com/hello-naghamthecoach/reiki-pranic-healing"
   }, {
     title: "Access Energetic Facelift",
     description: "A gentle, non-invasive energetic process that lifts the face and rejuvenates the body.",
@@ -62,10 +62,10 @@ const ServicesSection = () => {
   }, {
     title: "Consciousness Services",
     description: "Access the field of consciousness within through Vedic and Maharishi technologies to awaken clarity and healing.",
-    duration: "60 min",
+    duration: "30 min",
     format: "Online & In-Person",
     icon: Eye,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/hypnotherapy"
+    bookingLink: "https://calendly.com/hello-naghamthecoach/30min"
   }];
   const handleBookNow = (bookingLink: string) => {
     window.open(bookingLink, '_blank');
