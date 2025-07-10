@@ -124,7 +124,7 @@ const ServicesSection = () => {
                   
                   {/* Call-to-Action Button */}
                   <Button onClick={() => handleBookNow(service.bookingLink)} size="sm" className="w-full bg-deep-purple hover:bg-vibrant-purple text-white text-sm font-medium transition-all duration-300 mt-auto">
-                    {index === 0 ? "Book Free 30 min Call" : "Book Now"}
+                    {service.title === "Consciousness Services" ? "Book Free 30 min Call" : "Book Now"}
                   </Button>
                 </CardContent>
               </Card>
