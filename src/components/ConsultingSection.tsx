@@ -19,7 +19,7 @@ const ConsultingSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto items-start">
           {/* Left Column - Key Points */}
-          <div className="space-y-6 flex flex-col">
+          <div className="space-y-8 flex flex-col">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0 w-6 h-6 bg-vibrant-purple rounded-full flex items-center justify-center mt-1">
                 <Check className="w-4 h-4 text-white" />
@@ -51,7 +51,7 @@ const ConsultingSection = () => {
           </div>
 
           {/* Right Column - Key Points */}
-          <div className="space-y-6 flex flex-col justify-start">
+          <div className="space-y-8 flex flex-col">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0 w-6 h-6 bg-vibrant-purple rounded-full flex items-center justify-center mt-1">
                 <Sparkles className="w-4 h-4 text-white" />
