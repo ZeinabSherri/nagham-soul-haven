@@ -112,7 +112,7 @@ const ContactSection = () => {
                   </div>
                   <div className="flex items-center space-x-4">
                     <Phone className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">+971506607034</span>
+                    <span className="text-deep-purple">+971 506 607 034</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-vibrant-purple" />
