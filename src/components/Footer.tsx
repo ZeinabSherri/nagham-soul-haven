@@ -17,7 +17,7 @@ const Footer = () => {
               onProcessed={(processedUrl) => {
                 console.log('Footer logo processed:', processedUrl);
               }}
-              className="h-16 w-auto"
+              className="h-24 w-auto"
             />
           </div>
           <h3 className="text-2xl font-bold mb-2 text-deep-purple">Nagham Rasbieh</h3>
