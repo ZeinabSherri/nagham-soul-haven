@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from 'lucide-react';
@@ -10,7 +11,7 @@ const TestimonialsSection = () => {
     color: "soft-lavender"
   }, {
     name: "Maya", 
-    text: "I finally feel safe in my body after years of anxiety. Nagham gave me space to bring all my fears, and somehow, it felt okay to just be me.",
+    text: "I finally feel safe in my body after years of anxiety. Nagham gave me space to bring all my fears, and somehow, it felt okay to just be me.",
     rating: 5,
     color: "light-olive"
   }, {
@@ -81,9 +82,9 @@ const TestimonialsSection = () => {
                 Book Your Session
               </button>
               <button onClick={() => {
-                const getInTouchSection = document.getElementById('get-in-touch');
-                if (getInTouchSection) {
-                  getInTouchSection.scrollIntoView({ behavior: 'smooth' });
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }} className="border-2 border-vibrant-purple text-deep-purple hover:bg-light-lavender-pink px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 animate-fade-in delay-1800">
                 Ask a Question
