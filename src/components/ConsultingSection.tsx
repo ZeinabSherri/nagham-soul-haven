@@ -1,21 +1,23 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, Star, Heart, Sparkles } from 'lucide-react';
+
 const ConsultingSection = () => {
   const handleStartTransformation = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-  return <section id="consulting" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+
+  return (
+    <section id="consulting" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">Why Work With Me?</h2>
-          <p className="text-lg text-dark-olive mt-4 max-w-4xl">Because this isn’t cookie-cutter coaching or talk therapy. It’s deep, personal, and integrative.
-
-        </p>
+          <p className="text-lg text-dark-olive mt-4 max-w-4xl">Because this isn't cookie-cutter coaching or talk therapy. It's deep, personal, and integrative.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto items-start">
           {/* Left Column - Key Points */}
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
@@ -66,7 +68,7 @@ const ConsultingSection = () => {
               </div>
               <p className="text-lg text-deep-purple leading-relaxed">
                 <span className="font-semibold">Customized to you</span> — 
-                I don’t follow scripts; I follow you.
+                I don't follow scripts; I follow you.
               </p>
             </div>
 
@@ -89,6 +91,8 @@ const ConsultingSection = () => {
           </Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ConsultingSection;
