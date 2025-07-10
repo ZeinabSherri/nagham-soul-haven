@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <h3 className="text-2xl font-bold mb-2 text-deep-purple">Nagham Rasbieh</h3>
-          <p className="text-dark-olive text-lg">Emotional Healing • Subconscious Transformation • Energy Clearing</p>
+          <p className="text-dark-olive text-lg">Emotional Healing • Mind-Body Transformation • Energy Clearing</p>
         </div>
 
         <div className="text-center mb-8">
