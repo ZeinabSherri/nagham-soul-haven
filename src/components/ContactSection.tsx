@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -40,7 +41,7 @@ const ContactSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-6">
             Ways to Start
           </h2>
-          <p className="text-xl text-dark-olive max-w-3xl leading-relaxed">Take the first step toward healing. I'm here to support you every step of the way.</p>
+          <p className="text-xl text-dark-olive max-w-3xl leading-relaxed">Take the first step toward healing. I'm here to support you every step of the way.</p>
         </div>
 
         {/* Booking Calendar Section */}
@@ -55,7 +56,7 @@ Book Your Session Today
             </CardHeader>
             <CardContent className="text-center">
               <div className="bg-gray-50 rounded-xl p-8 border border-deep-purple/10">
-                <div className="text-6xl mb-4">📅</div>
+                <div className="text-6xl mb-4">✨</div>
                 <h3 className="text-xl font-semibold text-deep-purple mb-4">Online Booking Calendar</h3>
                 <p className="text-dark-olive mb-6">
                   Click below to view available times and book your session instantly
