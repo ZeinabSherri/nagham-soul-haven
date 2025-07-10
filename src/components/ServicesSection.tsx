@@ -28,7 +28,7 @@ const ServicesSection = () => {
     title: "Access Bars",
     description: "Gentle touch technique to release mental and emotional blocks.",
     duration: "60 min",
-    format: "In-Person Only",
+    format: "In-Person",
     icon: Home,
     bookingLink: "https://calendly.com/hello-naghamthecoach/time-line-therapy"
   }, {
