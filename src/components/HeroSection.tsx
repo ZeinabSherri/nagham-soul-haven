@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
+
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,14 +12,17 @@ const HeroSection = () => {
       });
     }
   };
+
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-  return <section className="pt-40 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
+
+  return (
+    <section className="pt-52 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Texture Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
-    }}></div>
+        backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
+      }}></div>
       
       {/* Semi-transparent Overlay */}
       <div className="absolute inset-0 bg-creamy-beige/45"></div>
@@ -32,8 +36,8 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[75vh]">
           {/* Left side - Content */}
           <div className="text-left">
-            {/* Main Headline with improved spacing and animation */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-deep-purple mb-8 leading-tight my-[20px] animate-fade-in">
+            {/* Main Headline with smaller size and proper spacing */}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-deep-purple mb-8 leading-tight animate-fade-in">
               Start Feeling Safe, Seen & Connected Again
             </h1>
             
@@ -114,6 +118,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
