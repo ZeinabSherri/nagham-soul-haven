@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube } from 'lucide-react';
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -125,6 +126,9 @@ const ContactSection = () => {
                     <MapPin className="w-6 h-6 text-vibrant-purple" />
                     <span className="text-deep-purple">UAE: Dubai South - Pulse Beach Front - A124</span>
                   </div>
+                  <div className="ml-10">
+                    <span className="text-deep-purple text-sm">(Online sessions available worldwide)</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -159,4 +163,5 @@ const ContactSection = () => {
       </div>
     </section>;
 };
+
 export default ContactSection;
