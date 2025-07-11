@@ -35,7 +35,7 @@ const HeroSection = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-deep-purple mb-3 leading-tight animate-fade-in">Start Feeling Safe, Seen & Connected Again</h1>
             
             {/* Subheadline */}
-            <p className="text-base text-vibrant-purple mb-3 leading-relaxed animate-fade-in delay-300 font-normal">
+            <p className="text-vibrant-purple mb-3 leading-relaxed animate-fade-in delay-300 font-normal text-lg">
               I'm Nagham, Your Guide to Transformation.<br />
               I help you <strong>Release</strong> what's heavy, <strong>Reconnect</strong> with yourself, & <strong>Rise</strong> into who you were always meant to be.
             </p>
