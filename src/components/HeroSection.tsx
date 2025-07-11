@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
@@ -44,7 +45,7 @@ const HeroSection = () => {
 
             
             {/* Title for key points */}
-            <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-base">In our work together, I bring:</h2>
+            <h2 className="text-2xl font-semibold text-deep-purple mb-3 animate-fade-in delay-400 md:text-base">In our work together, I bring:</h2>
 
             {/* Key points list */}
             <div className="mb-12 space-y-2">
