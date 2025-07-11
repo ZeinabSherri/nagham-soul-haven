@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
@@ -6,7 +7,13 @@ const AboutSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({
+      // Calculate the offset to account for the fixed header
+      const headerHeight = 120; // Approximate height of the fixed navigation
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
         behavior: 'smooth'
       });
     }
@@ -42,7 +49,7 @@ const AboutSection = () => {
             <div className="space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">
                 I'm <span className="font-semibold text-deep-purple">Nagham Rasbieh, an Internationally Certified Master Coach and Therapist</span>, specializing in conscious and unconscious transformation.
-I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic Programming (NLP), consciousness work, and energy healing to support children, teens, mothers, and adults on their healing journey.</p>
+I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic Programming (NLP), consciousness work, and energy healing to support children, teens, mothers, and adults on their healing journey.</p>
  <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">My Goal is simple: to help you reconnect with your truth, regulate your nervous system, and experience deep peace from the inside out.</p>
               
               
@@ -77,7 +84,7 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic
               </li>
               <li className="flex items-start space-x-3 animate-fade-in delay-2200">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
-                <span className="text-lg text-gray-700">Calm the nervous system to restore inner peace</span>
+                <span className="text-lg text-gray-700">Calm the nervous system to restore inner peace</span>
               </li>
               <li className="flex items-start space-x-3 animate-fade-in delay-2400">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
@@ -89,7 +96,7 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic
 
             {/* Call-to-action Button */}
             <div className="pt-6 animate-fade-in delay-2600">
-              <Button onClick={() => scrollToSection('contact')} size="lg" className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200">
+              <Button onClick={() => scrollToSection('contact-form')} size="lg" className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200">
                 Let's Connect
               </Button>
             </div>
