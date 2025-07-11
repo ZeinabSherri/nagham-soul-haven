@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
@@ -38,17 +39,16 @@ const HeroSection = () => {
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl text-vibrant-purple mb-10 leading-relaxed animate-fade-in delay-300 font-normal md:text-lg">
+            <p className="text-xl text-vibrant-purple mb-6 leading-relaxed animate-fade-in delay-300 font-normal md:text-lg">
               I'm Nagham, Your Guide to Transformation.<br />
               I help you <strong>Release</strong> what's heavy, <strong>Reconnect</strong> with yourself, & <strong>Rise</strong> into who you were always meant to be.
             </p>
 
-            
             {/* Title for key points */}
             <h2 className="text-2xl font-semibold text-deep-purple mb-3 animate-fade-in delay-400 md:text-base">In our work together, I bring:</h2>
 
             {/* Key points list */}
-            <div className="mb-12 space-y-2">
+            <div className="mb-8 space-y-2">
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-500">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
                 <span className="text-sm">Transformational Healing</span>
@@ -61,9 +61,9 @@ const HeroSection = () => {
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
                 <span className="text-sm"> Nervous System Reset &amp; Trauma Release</span>
               </div>
-              
             </div>
-            {/* Call-to-Action Buttons - moved above "In our work together" */}
+
+            {/* Call-to-Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in delay-1100">
               <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Begin Your Transformation</Button>
               <Button onClick={() => scrollToSection('contact')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Book Your 15 min Free Call</Button>
@@ -119,3 +119,4 @@ const HeroSection = () => {
     </section>;
 };
 export default HeroSection;
+
