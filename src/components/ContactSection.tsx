@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -88,10 +87,10 @@ const ContactSection = () => {
         <div id="sc"></div>{/*to nav */}
         
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form with Get in Touch heading */}
+          {/* Contact Form with specific ID */}
           <Card id="contact-form" className="bg-white border-2 border-deep-purple/20 shadow-lg animate-fade-in delay-600">
             <CardHeader>
-              <CardTitle id="get-in-touch-title" className="text-2xl font-bold text-deep-purple" style={{ scrollMarginTop: '140px' }}>
+              <CardTitle className="text-2xl font-bold text-deep-purple" style={{ scrollMarginTop: '120px' }}>
                 Get in Touch
               </CardTitle>
               <p className="text-dark-olive">
