@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
+
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,9 +11,11 @@ const HeroSection = () => {
       });
     }
   };
+
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
+
   return <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Texture Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
@@ -104,7 +106,7 @@ const HeroSection = () => {
                     </div>
                   </div>
                   
-                  <Button onClick={handleCalendlyClick} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-2200">
+                  <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-2200">
                     Book Your Session
                   </Button>
                 </div>
@@ -115,4 +117,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;
