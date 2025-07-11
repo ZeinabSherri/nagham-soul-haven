@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -79,7 +78,7 @@ const ServicesSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Left-aligned title with specific ID */}
         <div className="mb-12 animate-fade-in">
-          <h2 id="services-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left" style={{ scrollMarginTop: '120px' }}>
+          <h2 id="services-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left" style={{ scrollMarginTop: '140px' }}>
             My Services
           </h2>
           <p className="text-lg text-dark-olive mt-4 max-w-3xl animate-fade-in delay-200">

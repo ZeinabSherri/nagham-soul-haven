@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -91,7 +90,7 @@ const ContactSection = () => {
           {/* Contact Form with specific ID */}
           <Card id="contact-form" className="bg-white border-2 border-deep-purple/20 shadow-lg animate-fade-in delay-600">
             <CardHeader>
-              <CardTitle id="get-in-touch-title" className="text-2xl font-bold text-deep-purple" style={{ scrollMarginTop: '180px' }}>
+              <CardTitle id="get-in-touch-title" className="text-2xl font-bold text-deep-purple" style={{ scrollMarginTop: '140px' }}>
                 Get in Touch
               </CardTitle>
               <p className="text-dark-olive">
@@ -172,8 +171,6 @@ const ContactSection = () => {
                 </div>
               </CardContent>
             </Card>
-
-            
           </div>
         </div>
       </div>

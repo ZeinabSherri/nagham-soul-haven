@@ -8,12 +8,18 @@ export const scrollToSection = (sectionId: string, offset: number = 120) => {
     return;
   }
 
+  // Apply custom offset for specific sections that need precise title visibility
+  let customOffset = offset;
+  if (sectionId === 'services-title' || sectionId === 'certifications-title' || sectionId === 'get-in-touch-title') {
+    customOffset = 140; // Extra offset for these specific sections to ensure titles are fully visible
+  }
+
   // Calculate the element's position relative to the document
   const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-  console.log(`Element position: ${elementPosition}, offset: ${offset}`);
+  console.log(`Element position: ${elementPosition}, offset: ${customOffset}`);
   
   // Subtract the offset to account for fixed header
-  const offsetPosition = elementPosition - offset;
+  const offsetPosition = elementPosition - customOffset;
 
   window.scrollTo({
     top: offsetPosition,
