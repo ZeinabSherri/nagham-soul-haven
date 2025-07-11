@@ -88,10 +88,10 @@ const ContactSection = () => {
         <div id="sc"></div>{/*to nav */}
         
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form with specific ID */}
+          {/* Contact Form with Get in Touch heading */}
           <Card id="contact-form" className="bg-white border-2 border-deep-purple/20 shadow-lg animate-fade-in delay-600">
             <CardHeader>
-              <CardTitle id="get-in-touch-title" className="text-2xl font-bold text-deep-purple" style={{ scrollMarginTop: '120px' }}>
+              <CardTitle id="get-in-touch-title" className="text-2xl font-bold text-deep-purple" style={{ scrollMarginTop: '140px' }}>
                 Get in Touch
               </CardTitle>
               <p className="text-dark-olive">
