@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
@@ -30,30 +31,30 @@ const HeroSection = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center min-h-[75vh]">
           {/* Left side - Content */}
-          <div className="text-left my-[30px]">
+          <div className="text-left my-[50px]">
             {/* Main Headline with smaller size and proper spacing */}
-            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-deep-purple mb-4 leading-tight animate-fade-in">Start Feeling Safe, Seen & Connected Again</h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-deep-purple mb-3 leading-tight animate-fade-in">Start Feeling Safe, Seen & Connected Again</h1>
             
             {/* Subheadline */}
-            <p className="text-lg text-vibrant-purple mb-4 leading-relaxed animate-fade-in delay-300 font-normal md:text-base">
+            <p className="text-base text-vibrant-purple mb-3 leading-relaxed animate-fade-in delay-300 font-normal">
               I'm Nagham, Your Guide to Transformation.<br />
               I help you <strong>Release</strong> what's heavy, <strong>Reconnect</strong> with yourself, & <strong>Rise</strong> into who you were always meant to be.
             </p>
 
             {/* Title for key points */}
-            <h2 className="text-lg font-semibold text-deep-purple mb-1 animate-fade-in delay-400 md:text-sm">In our work together, I bring:</h2>
+            <h2 className="text-sm font-semibold text-deep-purple mb-1 animate-fade-in delay-400">In our work together, I bring:</h2>
 
             {/* Key points list */}
-            <div className="mb-4 space-y-1">
-              <div className="flex items-center text-deep-purple text-base animate-fade-in delay-500">
+            <div className="mb-3 space-y-1">
+              <div className="flex items-center text-deep-purple animate-fade-in delay-500">
                 <span className="text-vibrant-purple mr-3 text-lg">•</span>
                 <span className="text-xs">Transformational Healing</span>
               </div>
-              <div className="flex items-center text-deep-purple text-base animate-fade-in delay-900">
+              <div className="flex items-center text-deep-purple animate-fade-in delay-900">
                 <span className="text-vibrant-purple mr-3 text-lg">•</span>
                 <span className="text-xs">Deep Emotional Rewiring</span>
               </div>
-              <div className="flex items-center text-deep-purple text-base animate-fade-in delay-700">
+              <div className="flex items-center text-deep-purple animate-fade-in delay-700">
                 <span className="text-vibrant-purple mr-3 text-lg">•</span>
                 <span className="text-xs"> Nervous System Reset &amp; Trauma Release</span>
               </div>
