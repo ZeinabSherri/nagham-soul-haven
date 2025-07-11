@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube } from 'lucide-react';
-
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -61,7 +60,7 @@ const ContactSection = () => {
                 <p className="text-dark-olive mb-6">
                   Click below to view available times and book your session instantly
                 </p>
-                <Button onClick={handleBookSessionClick} className="bg-deep-purple hover:bg-vibrant-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4">Book 60 min session</Button>
+                <Button onClick={handleBookSessionClick} className="bg-deep-purple hover:bg-vibrant-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4">Book a session</Button>
                 <p className="text-sm text-dark-olive">
                   Sessions available online and in-person • Flexible scheduling • Instant confirmation
                 </p>
@@ -163,5 +162,4 @@ const ContactSection = () => {
       </div>
     </section>;
 };
-
 export default ContactSection;
