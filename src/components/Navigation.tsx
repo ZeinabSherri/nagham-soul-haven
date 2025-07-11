@@ -50,7 +50,7 @@ const Navigation = () => {
             <button onClick={() => handleScrollToSection('testimonials')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
               Testimonials
             </button>
-            <button onClick={() => handleScrollToSection('contact-title')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
+            <button onClick={() => handleScrollToSection('get-in-touch-title')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
               Contact
             </button>
           </div>
@@ -96,7 +96,7 @@ const Navigation = () => {
             <button onClick={() => handleScrollToSection('testimonials')} className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left">
               Testimonials
             </button>
-            <button onClick={() => handleScrollToSection('contact-title')} className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left">
+            <button onClick={() => handleScrollToSection('get-in-touch-title')} className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left">
               Contact
             </button>
             <Button 
