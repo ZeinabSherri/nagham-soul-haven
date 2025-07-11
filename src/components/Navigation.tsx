@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
@@ -46,7 +45,7 @@ const Navigation = () => {
               About 
             </button>
             <button 
-              onClick={() => handleScrollToSection('services-title')} 
+              onClick={() => handleScrollToSection('services-section')} 
               className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple"
             >
               Services
@@ -107,7 +106,7 @@ const Navigation = () => {
               About Me
             </button>
             <button 
-              onClick={() => handleScrollToSection('services-title')} 
+              onClick={() => handleScrollToSection('services-section')} 
               className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left"
             >
               Services
