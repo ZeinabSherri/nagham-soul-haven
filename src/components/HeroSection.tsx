@@ -47,7 +47,7 @@ const HeroSection = () => {
             <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-base">In our work together, I bring:</h2>
 
             {/* Key points list */}
-            <div className="mb-12 space-y-4">
+            <div className="mb-12 space-y-2">
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-500">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
                 <span className="text-sm">Transformational Healing</span>
