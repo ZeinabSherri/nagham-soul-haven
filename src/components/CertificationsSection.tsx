@@ -22,7 +22,7 @@ const CertificationsSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-12 animate-fade-in">
-          <h2 id="certifications-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left" style={{ scrollMarginTop: '180px' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-4" style={{ scrollMarginTop: '120px' }}>
             Verified Certifications
           </h2>
         </div>
@@ -45,7 +45,7 @@ const CertificationsSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
           {/* Left Column - International Certifications */}
           <div className="animate-fade-in delay-500">
-            <h3 id="international-certifications" className="text-2xl font-bold mb-8 text-deep-purple" style={{ scrollMarginTop: '180px' }}>
+            <h3 id="certifications-title" className="text-2xl font-bold mb-8 text-deep-purple" style={{ scrollMarginTop: '120px' }}>
               Internationally Certified Master Practitioner in:
             </h3>
             <div className="space-y-6">
