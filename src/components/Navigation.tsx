@@ -15,6 +15,7 @@ const Navigation = () => {
   }, []);
 
   const handleScrollToSection = (sectionId: string) => {
+    console.log(`Navigation: Scrolling to ${sectionId}`);
     scrollToSection(sectionId);
     setIsOpen(false);
   };
@@ -46,7 +47,7 @@ const Navigation = () => {
               About 
             </button>
             <button 
-              onClick={() => handleScrollToSection('services-title')} 
+              onClick={() => handleScrollToSection('services-section')} 
               className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple"
             >
               Services
@@ -58,7 +59,7 @@ const Navigation = () => {
               What's Unique
             </button>
             <button 
-              onClick={() => handleScrollToSection('international-certifications')} 
+              onClick={() => handleScrollToSection('certifications-section')} 
               className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple"
             >
               Certifications
@@ -70,7 +71,7 @@ const Navigation = () => {
               Testimonials
             </button>
             <button 
-              onClick={() => handleScrollToSection('contact-form')} 
+              onClick={() => handleScrollToSection('contact-section')} 
               className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple"
             >
               Contact
@@ -107,7 +108,7 @@ const Navigation = () => {
               About Me
             </button>
             <button 
-              onClick={() => handleScrollToSection('services-title')} 
+              onClick={() => handleScrollToSection('services-section')} 
               className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left"
             >
               Services
@@ -119,7 +120,7 @@ const Navigation = () => {
               What Makes My Work Different?
             </button>
             <button 
-              onClick={() => handleScrollToSection('international-certifications')} 
+              onClick={() => handleScrollToSection('certifications-section')} 
               className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left"
             >
               Certifications
@@ -131,7 +132,7 @@ const Navigation = () => {
               Testimonials
             </button>
             <button 
-              onClick={() => handleScrollToSection('contact-form')} 
+              onClick={() => handleScrollToSection('contact-section')} 
               className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left"
             >
               Contact

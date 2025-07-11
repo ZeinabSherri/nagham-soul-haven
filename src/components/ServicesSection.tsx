@@ -75,11 +75,11 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="services-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Left-aligned title with specific ID */}
         <div className="mb-12 animate-fade-in">
-          <h2 id="services-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
+          <h2 id="services-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left" style={{ scrollMarginTop: '120px' }}>
             My Services
           </h2>
           <p className="text-lg text-dark-olive mt-4 max-w-3xl animate-fade-in delay-200">
