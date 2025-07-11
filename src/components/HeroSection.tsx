@@ -41,21 +41,21 @@ const HeroSection = () => {
             </p>
 
             {/* Title for key points */}
-            <h2 className="text-sm font-semibold text-deep-purple mb-1 animate-fade-in delay-400">In our work together, I bring:</h2>
+            <h2 className="font-semibold text-deep-purple mb-1 animate-fade-in delay-400 text-base">In our work together, I bring:</h2>
 
             {/* Key points list */}
             <div className="mb-3 space-y-1">
               <div className="flex items-center text-deep-purple animate-fade-in delay-500">
                 <span className="text-vibrant-purple mr-3 text-lg">•</span>
-                <span className="text-xs">Transformational Healing</span>
+                <span className="text-sm">Transformational Healing</span>
               </div>
               <div className="flex items-center text-deep-purple animate-fade-in delay-900">
                 <span className="text-vibrant-purple mr-3 text-lg">•</span>
-                <span className="text-xs">Deep Emotional Rewiring</span>
+                <span className="text-sm">Deep Emotional Rewiring</span>
               </div>
               <div className="flex items-center text-deep-purple animate-fade-in delay-700">
                 <span className="text-vibrant-purple mr-3 text-lg">•</span>
-                <span className="text-xs"> Nervous System Reset &amp; Trauma Release</span>
+                <span className="text-sm"> Nervous System Reset &amp; Trauma Release</span>
               </div>
             </div>
 
