@@ -2,24 +2,11 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
+import { scrollToSection } from '../utils/scrollUtils';
 
 const AboutSection = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      // Calculate the offset to account for the fixed header
-      const headerHeight = 120; // Approximate height of the fixed navigation
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  return <section id="about-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  return (
+    <section id="about-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12 animate-fade-in">
@@ -96,14 +83,19 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic
 
             {/* Call-to-action Button */}
             <div className="pt-6 animate-fade-in delay-2600">
-              <Button onClick={() => scrollToSection('contact-form')} size="lg" className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200">
+              <Button 
+                onClick={() => scrollToSection('contact-form')} 
+                size="lg" 
+                className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200"
+              >
                 Let's Connect
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default AboutSection;
