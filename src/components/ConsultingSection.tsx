@@ -5,7 +5,10 @@ import { Check, Star, Heart, Sparkles } from 'lucide-react';
 
 const ConsultingSection = () => {
   const handleStartTransformation = () => {
-    window.open('http://lb.oneconsciousness.org/naghamrasbieh', '_blank');
+    const bookingSection = document.getElementById('ways-to-start');
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   // Define paired bullet points for perfect alignment
