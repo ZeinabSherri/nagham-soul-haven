@@ -1,11 +1,9 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube } from 'lucide-react';
-import { scrollToSection } from '@/utils/scrollUtils';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -33,11 +31,13 @@ const ContactSection = () => {
   };
 
   const handleBookSessionClick = () => {
-    scrollToSection('services-title');
-  };
-
-  const handlePhoneClick = (sectionId: string) => {
-    scrollToSection(sectionId);
+    const element = document.getElementById('services');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   };
 
   const handleWhatsAppClick = () => {
@@ -125,13 +125,13 @@ const ContactSection = () => {
                     <Mail className="w-6 h-6 text-vibrant-purple" />
                     <span className="text-deep-purple">Hello@naghamthecoach</span>
                   </div>
-                  <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={() => handlePhoneClick('services-title')}>
+                  <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={handleWhatsAppClick}>
                     <Phone className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">+961 3 633 483 (View Services)</span>
+                    <span className="text-deep-purple">+961 3 633 483</span>
                   </div>
-                  <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={() => handlePhoneClick('about-section')}>
+                  <div className="flex items-center space-x-4">
                     <Phone className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">+971506607034 (About Me)</span>
+                    <span className="text-deep-purple">+971506607034</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="w-6 h-6 text-vibrant-purple" />
