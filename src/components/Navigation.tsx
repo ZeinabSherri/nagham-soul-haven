@@ -10,6 +10,7 @@ const Navigation = () => {
   const [logoUrl, setLogoUrl] = useState<string>('');
 
   const handleScrollToSection = (sectionId: string) => {
+    console.log(`Navigation: Scrolling to section ${sectionId}`);
     scrollToSection(sectionId);
     setIsOpen(false);
   };
@@ -40,17 +41,26 @@ const Navigation = () => {
             >
               About 
             </button>
-            <button onClick={() => handleScrollToSection('services-title')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
+            <button 
+              onClick={() => handleScrollToSection('services-title')} 
+              className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple"
+            >
               Services
             </button>
             <button onClick={() => handleScrollToSection('consulting')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple whitespace-nowrap">What's Unique</button>
-            <button onClick={() => handleScrollToSection('certifications-title')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
+            <button 
+              onClick={() => handleScrollToSection('certifications-title')} 
+              className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple"
+            >
               Certifications
             </button>
             <button onClick={() => handleScrollToSection('testimonials')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
               Testimonials
             </button>
-            <button onClick={() => handleScrollToSection('get-in-touch-title')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
+            <button 
+              onClick={() => handleScrollToSection('get-in-touch-title')} 
+              className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple"
+            >
               Contact
             </button>
           </div>
@@ -84,19 +94,28 @@ const Navigation = () => {
             >
               About Me
             </button>
-            <button onClick={() => handleScrollToSection('services-title')} className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left">
+            <button 
+              onClick={() => handleScrollToSection('services-title')} 
+              className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left"
+            >
               Services
             </button>
             <button onClick={() => handleScrollToSection('consulting')} className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left">
               What Makes My Work Different?
             </button>
-            <button onClick={() => handleScrollToSection('certifications-title')} className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left">
+            <button 
+              onClick={() => handleScrollToSection('certifications-title')} 
+              className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left"
+            >
               Certifications
             </button>
             <button onClick={() => handleScrollToSection('testimonials')} className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left">
               Testimonials
             </button>
-            <button onClick={() => handleScrollToSection('get-in-touch-title')} className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left">
+            <button 
+              onClick={() => handleScrollToSection('get-in-touch-title')} 
+              className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-2 rounded-full hover:bg-vibrant-purple w-full text-left"
+            >
               Contact
             </button>
             <Button 
