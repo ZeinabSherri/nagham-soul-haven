@@ -32,7 +32,7 @@ const ServicesSection = () => {
     duration: "60 min",
     format: "In-Person",
     icon: Home,
-    bookingLink: "https://calendly.com/hello-naghamthecoach/time-line-therapy"
+    bookingLink: "https://calendly.com/hello-naghamthecoach/access-bars-or-access-facelift"
   }, {
     title: "Reiki Healing",
     description: "Energy healing to balance chakras and promote deep relaxation.",
