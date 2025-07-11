@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
+
 const AboutSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -10,7 +11,8 @@ const AboutSection = () => {
       });
     }
   };
-  return <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+
+  return <section id="about-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12 animate-fade-in">
@@ -96,4 +98,5 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic
       </div>
     </section>;
 };
+
 export default AboutSection;
