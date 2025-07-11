@@ -34,7 +34,7 @@ const Navigation = () => {
           <LogoProcessor 
             originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png" 
             onProcessed={handleLogoProcessed} 
-            className="h-32 w-auto" 
+            className="h-36 w-auto" 
           />
           
           {/* Desktop Navigation */}
