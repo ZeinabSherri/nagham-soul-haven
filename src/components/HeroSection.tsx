@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
-
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -12,17 +10,14 @@ const HeroSection = () => {
       });
     }
   };
-
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-
-  return (
-    <section className="pt-52 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
+  return <section className="pt-52 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Texture Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
-      }}></div>
+      backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
+    }}></div>
       
       {/* Semi-transparent Overlay */}
       <div className="absolute inset-0 bg-creamy-beige/45"></div>
@@ -42,28 +37,28 @@ const HeroSection = () => {
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl md:text-xl text-vibrant-purple mb-10 leading-relaxed animate-fade-in delay-300 font-normal">
+            <p className="text-xl text-vibrant-purple mb-10 leading-relaxed animate-fade-in delay-300 font-normal md:text-lg">
               I'm Nagham, Your Guide to Transformation.<br />
               I help you <strong>Release</strong> what's heavy, <strong>Reconnect</strong> with yourself, & <strong>Rise</strong> into who you were always meant to be.
             </p>
 
             
             {/* Title for key points */}
-            <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-lg">In our work together, I bring:</h2>
+            <h2 className="text-2xl font-semibold text-deep-purple mb-6 animate-fade-in delay-400 md:text-base">In our work together, I bring:</h2>
 
             {/* Key points list */}
             <div className="mb-12 space-y-4">
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-500">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Transformational Healing</span>
+                <span className="text-sm">Transformational Healing</span>
               </div>
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-900">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span>Deep Emotional Rewiring</span>
+                <span className="text-sm">Deep Emotional Rewiring</span>
               </div>
               <div className="flex items-center text-deep-purple text-lg animate-fade-in delay-700">
                 <span className="text-vibrant-purple mr-4 text-xl">•</span>
-                <span> Nervous System Reset &amp; Trauma Release</span>
+                <span className="text-sm"> Nervous System Reset &amp; Trauma Release</span>
               </div>
               
             </div>
@@ -120,8 +115,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
