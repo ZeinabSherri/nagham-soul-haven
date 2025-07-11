@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from 'lucide-react';
@@ -18,11 +17,13 @@ const CertificationsSection = () => {
     org: "International Certification Board of Coaches And Hypnotist (ICBCH)"
   }];
   const additionalTrainings = [" Access Bars® Practitioner & Facilitator", "Master Reiki", "Pranic Healing", "Access FaceLift® Practitioner", "Certified Trainer", "Intuitive Healing", "Space Clearing & Recharging", "Consciousness Advisor", "Sexual Agility Specialist", "Past-life Regression Specialist", "SuperRelationships Specialist"];
-  return <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+  
+  return (
+    <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-4" style={{ scrollMarginTop: '120px' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-4">
             Verified Certifications
           </h2>
         </div>
@@ -45,13 +46,14 @@ const CertificationsSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
           {/* Left Column - International Certifications */}
           <div className="animate-fade-in delay-500">
-            <h3 id="certifications-title" className="text-2xl font-bold mb-8 text-deep-purple" style={{ scrollMarginTop: '120px' }}>
+            <h3 id="certifications-title" className="text-2xl font-bold mb-8 text-deep-purple">
               Internationally Certified Master Practitioner in:
             </h3>
             <div className="space-y-6">
-              {certifications.map((cert, index) => <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{
-              animationDelay: `${700 + index * 100}ms`
-            }}>
+              {certifications.map((cert, index) => (
+                <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{
+                  animationDelay: `${700 + index * 100}ms`
+                }}>
                   <Check className="w-6 h-6 text-vibrant-purple mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-lg text-deep-purple mb-1">
@@ -61,7 +63,8 @@ const CertificationsSection = () => {
                       {cert.org}
                     </p>
                   </div>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -71,14 +74,16 @@ const CertificationsSection = () => {
               Additionally Certified in:
             </h3>
             <div className="space-y-4">
-              {additionalTrainings.map((training, index) => <div key={index} className="flex items-center space-x-4 animate-fade-in" style={{
-              animationDelay: `${900 + index * 50}ms`
-            }}>
+              {additionalTrainings.map((training, index) => (
+                <div key={index} className="flex items-center space-x-4 animate-fade-in" style={{
+                  animationDelay: `${900 + index * 50}ms`
+                }}>
                   <Check className="w-5 h-5 text-vibrant-purple flex-shrink-0" />
                   <span className="text-lg text-dark-olive">
                     {training}
                   </span>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -90,7 +95,8 @@ const CertificationsSection = () => {
           </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default CertificationsSection;

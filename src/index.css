@@ -105,6 +105,13 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* CSS scroll-margin-top for navigation anchor targets */
+  #services-title, 
+  #get-in-touch-title, 
+  #certifications-title {
+    scroll-margin-top: 140px;
+  }
 }
 
 /* Custom utility classes for the brand color palette using exact hex values */
