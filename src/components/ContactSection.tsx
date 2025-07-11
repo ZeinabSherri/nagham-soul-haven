@@ -49,7 +49,7 @@ const ContactSection = () => {
     <section id="contact-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div id="ways-to-start" className="mb-16 animate-fade-in">
-          <h2 id="contact-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-6" style={{ scrollMarginTop: '120px' }}>
+          <h2 id="contact-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-6" style={{ scrollMarginTop: '180px' }}>
             How to Start
           </h2>
           <p className="text-xl text-dark-olive max-w-3xl leading-relaxed">Take the first step toward healing. I'm here to support you every step of the way.</p>
@@ -91,7 +91,7 @@ const ContactSection = () => {
           {/* Contact Form with specific ID */}
           <Card id="contact-form" className="bg-white border-2 border-deep-purple/20 shadow-lg animate-fade-in delay-600">
             <CardHeader>
-              <CardTitle id="get-in-touch-title" className="text-2xl font-bold text-deep-purple" style={{ scrollMarginTop: '120px' }}>
+              <CardTitle id="get-in-touch-title" className="text-2xl font-bold text-deep-purple" style={{ scrollMarginTop: '180px' }}>
                 Get in Touch
               </CardTitle>
               <p className="text-dark-olive">
