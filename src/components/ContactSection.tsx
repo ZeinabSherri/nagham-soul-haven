@@ -34,7 +34,7 @@ const ContactSection = () => {
 
   const handleBookSessionClick = () => {
     console.log('ContactSection: Scrolling to services section');
-    const element = document.getElementById('services');
+    const element = document.getElementById('services-section');
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth',
