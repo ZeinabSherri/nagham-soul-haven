@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -11,21 +12,39 @@ const ContactSection = () => {
     email: '',
     message: ''
   });
+  const { toast } = useToast();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent('New Message from Website');
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:Hello@naghamthecoach?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hello@naghamthecoach?subject=${subject}&body=${body}`;
+    
+    // Show success toast
+    toast({
+      title: "Message Sent Successfully!",
+      description: "Thank you for reaching out. Your message has been sent and I'll get back to you soon.",
+    });
+
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
   };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
+
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
   };
+
   const handleBookSessionClick = () => {
     const element = document.getElementById('services');
     if (element) {
@@ -35,12 +54,15 @@ const ContactSection = () => {
       });
     }
   };
+
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/9613633483', '_blank');
   };
+
   const handleWhatsAppClicks = () => {
     window.open('https://wa.me/971506607034', '_blank');
-  }; 
+  };
+
   return <section id="contact-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in">
@@ -99,13 +121,13 @@ const ContactSection = () => {
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <Input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleInputChange} className="bg-white border-deep-purple/30 focus:border-vibrant-purple" />
+                  <Input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleInputChange} className="bg-white border-deep-purple/30 focus:border-vibrant-purple" required />
                 </div>
                 <div>
-                  <Input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleInputChange} className="bg-white border-deep-purple/30 focus:border-vibrant-purple" />
+                  <Input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleInputChange} className="bg-white border-deep-purple/30 focus:border-vibrant-purple" required />
                 </div>
                 <div>
-                  <Textarea name="message" placeholder="Tell me a bit about what you're looking for..." value={formData.message} onChange={handleInputChange} className="bg-white border-deep-purple/30 focus:border-vibrant-purple min-h-32" />
+                  <Textarea name="message" placeholder="Tell me a bit about what you're looking for..." value={formData.message} onChange={handleInputChange} className="bg-white border-deep-purple/30 focus:border-vibrant-purple min-h-32" required />
                 </div>
                 <Button type="submit" className="w-full bg-deep-purple hover:bg-vibrant-purple text-white py-3 rounded-full font-semibold transition-all duration-300">
                   Send Message
