@@ -1,8 +1,11 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
+
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
+    console.log(`HeroSection: Scrolling to ${sectionId}`);
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({
@@ -10,14 +13,28 @@ const HeroSection = () => {
       });
     }
   };
+
   const handleCalendlyClick = () => {
+    console.log('HeroSection: Opening Calendly booking page');
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-  return <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
+
+  const handleServicesClick = () => {
+    console.log('HeroSection: Scrolling to services section');
+    scrollToSection('services-title');
+  };
+
+  const handleContactClick = () => {
+    console.log('HeroSection: Scrolling to contact section');
+    scrollToSection('get-in-touch-title');
+  };
+
+  return (
+    <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Texture Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
-    }}></div>
+        backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
+      }}></div>
       
       {/* Semi-transparent Overlay */}
       <div className="absolute inset-0 bg-creamy-beige/45"></div>
@@ -61,10 +78,19 @@ const HeroSection = () => {
 
             {/* Call-to-Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 mb-6 animate-fade-in delay-1100">
-              <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-3 rounded-lg text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Begin Your Transformation</Button>
-              <Button onClick={() => scrollToSection('contact')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-3 rounded-lg text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">Book Your 15 min Free Call</Button>
+              <Button 
+                onClick={handleServicesClick} 
+                className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-3 rounded-lg text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 touch-manipulation"
+              >
+                Begin Your Transformation
+              </Button>
+              <Button 
+                onClick={handleContactClick} 
+                className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-3 rounded-lg text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 touch-manipulation"
+              >
+                Book Your 15 min Free Call
+              </Button>
             </div>
-
           </div>
 
           {/* Right side - Visual element */}
@@ -103,7 +129,10 @@ const HeroSection = () => {
                     </div>
                   </div>
                   
-                  <Button onClick={() => scrollToSection('services')} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-2200">
+                  <Button 
+                    onClick={handleServicesClick} 
+                    className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-2200 touch-manipulation"
+                  >
                     Book Your Session
                   </Button>
                 </div>
@@ -112,6 +141,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;

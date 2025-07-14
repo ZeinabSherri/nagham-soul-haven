@@ -24,39 +24,62 @@ export const scrollToSection = (sectionId: string, offset: number = 120) => {
   const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
   console.log(`Element position: ${elementPosition}, offset: ${customOffset}`);
   
-  // Subtract the offset to account for fixed header
-  const offsetPosition = elementPosition - customOffset;
-
-  // First attempt: Use native browser scrolling with CSS scroll-margin-top
-  element.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
-
-  // Fallback correction after a brief delay to ensure proper positioning
-  setTimeout(() => {
-    const currentScroll = window.pageYOffset;
-    const targetScroll = elementPosition - customOffset;
-    const scrollDifference = Math.abs(currentScroll - targetScroll);
+  // Mobile-optimized scrolling with better performance
+  const isMobile = window.innerWidth < 768;
+  const targetPosition = elementPosition - customOffset;
+  
+  if (isMobile) {
+    // Use a more immediate scroll for mobile to prevent iOS scroll issues
+    console.log('Mobile device detected: Using optimized scroll behavior');
     
-    console.log(`Post-scroll check: current=${currentScroll}, target=${targetScroll}, difference=${scrollDifference}`);
+    // Disable scroll restoration temporarily on mobile
+    if ('scrollRestoration' in history) {
+      const originalScrollRestoration = history.scrollRestoration;
+      history.scrollRestoration = 'manual';
+      
+      setTimeout(() => {
+        history.scrollRestoration = originalScrollRestoration;
+      }, 1000);
+    }
     
-    // Apply correction if the scroll position is significantly off
-    if (scrollDifference > 10) {
-      console.log(`Applying scroll correction for ${sectionId}`);
+    // Use requestAnimationFrame for smoother mobile scrolling
+    requestAnimationFrame(() => {
       window.scrollTo({
-        top: targetScroll,
+        top: targetPosition,
         behavior: 'smooth'
       });
-    }
-  }, 300); // Allow time for initial scroll to complete
+    });
+  } else {
+    // Standard desktop scrolling
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
 
-  console.log(`Scrolled to position: ${offsetPosition}`);
+    // Fallback correction after a brief delay to ensure proper positioning
+    setTimeout(() => {
+      const currentScroll = window.pageYOffset;
+      const scrollDifference = Math.abs(currentScroll - targetPosition);
+      
+      console.log(`Post-scroll check: current=${currentScroll}, target=${targetPosition}, difference=${scrollDifference}`);
+      
+      // Apply correction if the scroll position is significantly off
+      if (scrollDifference > 10) {
+        console.log(`Applying scroll correction for ${sectionId}`);
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 300);
+  }
+
+  console.log(`Scrolled to position: ${targetPosition}`);
 };
 
-// Global handler for all internal anchor links
+// Enhanced global handler for all internal anchor links with mobile optimization
 export const initializeScrollBehavior = () => {
-  console.log('Initializing scroll behavior');
+  console.log('Initializing scroll behavior with mobile optimization');
   
   // Handle all anchor links that start with #
   document.addEventListener('click', (event) => {
@@ -72,4 +95,27 @@ export const initializeScrollBehavior = () => {
       scrollToSection(scrollTarget);
     }
   });
+
+  // Add touch event handling for better mobile experience
+  let touchStartY = 0;
+  
+  document.addEventListener('touchstart', (event) => {
+    touchStartY = event.touches[0].clientY;
+  }, { passive: true });
+
+  document.addEventListener('touchend', (event) => {
+    const touchEndY = event.changedTouches[0].clientY;
+    const touchDistance = Math.abs(touchEndY - touchStartY);
+    
+    // If it's a tap (short distance), ensure smooth scrolling works
+    if (touchDistance < 10) {
+      const target = event.target as HTMLElement;
+      const button = target.closest('button');
+      
+      if (button && button.onclick) {
+        event.preventDefault();
+        button.click();
+      }
+    }
+  }, { passive: false });
 };
