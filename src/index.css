@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @tailwind base;
 @tailwind components;
@@ -20,12 +21,12 @@
 
 /* Mobile-specific reset for perfect title positioning */
 @media (max-width: 767px) {
-  /* Reset all scroll margins and spacing for mobile navigation */
+  /* Complete reset of all scroll margins and spacing for mobile navigation */
   .scroll-margin-top {
     scroll-margin-top: 0 !important;
   }
   
-  /* Ensure section titles have no interfering margins on mobile */
+  /* Force section titles to have zero top spacing on mobile */
   #about-title,
   #consulting-title,
   #services-title,
@@ -36,17 +37,23 @@
     padding-top: 0 !important;
   }
   
-  /* Remove any container padding that interferes with mobile scroll */
+  /* Remove any container interference with mobile scroll */
   #about-section,
   #consulting-section,
   #services-section,
   #certifications-section,
   #testimonials-section {
     padding-top: 0 !important;
+    margin-top: 0 !important;
   }
   
-  /* Ensure no extra spacing affects mobile scroll positioning */
+  /* Global mobile section reset */
   section {
+    scroll-margin-top: 0 !important;
+  }
+  
+  /* Reset any heading margins that could interfere */
+  h1, h2, h3, h4, h5, h6 {
     scroll-margin-top: 0 !important;
   }
 }
