@@ -77,7 +77,7 @@ const ServicesSection = () => {
           <h2 id="services-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
             My Services
           </h2>
-          <p className="text-lg text-dark-olive mt-4 max-w-3xl animate-fade-in delay-200">Each healing session is uniquely designed for you, combining ancient wisdom with modern therapeutic techniques for profound transformation.</p>
+          <p className="text-lg text-dark-olive mt-4 animate-fade-in delay-200">Each healing session is uniquely designed for you, combining ancient wisdom with modern therapeutic techniques for profound transformation.</p>
         </div>
 
         {/* Compact 3-column grid */}
