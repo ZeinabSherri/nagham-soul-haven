@@ -37,6 +37,9 @@ const ContactSection = () => {
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/9613633483', '_blank');
   };
+  const handleWhatsAppClicks = () => {
+    window.open('https://wa.me/971506607034', '_blank');
+  }; 
   return <section id="contact-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in">
@@ -124,7 +127,7 @@ SERVICE you need instantly</p>
                     <Phone className="w-6 h-6 text-vibrant-purple" />
                     <span className="text-deep-purple">+961 3 633 483</span>
                   </div>
-                  <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={handleWhatsAppClick}>
+                  <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={handleWhatsAppClicks}>
                     <Phone className="w-6 h-6 text-vibrant-purple" />
                     <span className="text-deep-purple">+971 50 660 70 34</span>
                   </div>
