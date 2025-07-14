@@ -1,4 +1,3 @@
-
 export const scrollToSection = (titleId: string) => {
   console.log(`Attempting to scroll to title: ${titleId}`);
   
@@ -8,107 +7,92 @@ export const scrollToSection = (titleId: string) => {
     return;
   }
 
-  // Get actual header height for precise calculations
-  const header = document.querySelector('nav');
-  const actualHeaderHeight = header ? header.offsetHeight : 120;
-  console.log(`Actual header height: ${actualHeaderHeight}px`);
-
-  // Calculate the element's position relative to the document
-  const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-  
-  // Mobile-specific offset calculation for perfect alignment
+  // Mobile-specific offset calculation for precise positioning
   const isMobile = window.innerWidth < 768;
-  let targetPosition;
-  
+  console.log(`Device type: ${isMobile ? 'Mobile' : 'Desktop'}`);
+
   if (isMobile) {
-    // On mobile, we want the title to be exactly at the top of the viewport
-    // Position it flush with the header bottom edge with zero gap
-    targetPosition = elementPosition - actualHeaderHeight;
-    console.log(`Mobile: Element position: ${elementPosition}, header: ${actualHeaderHeight}, target: ${targetPosition}`);
-  } else {
-    // Desktop positioning remains unchanged
-    targetPosition = elementPosition - actualHeaderHeight;
-    console.log(`Desktop: Element position: ${elementPosition}, target: ${targetPosition}`);
-  }
-  
-  // Mobile-optimized scrolling with enhanced precision
-  const scrollDelay = isMobile ? 300 : 50;
-  
-  setTimeout(() => {
-    if (isMobile) {
-      console.log('Mobile device detected: Using pixel-perfect scroll behavior');
+    console.log('Mobile device: Using scrollIntoView for perfect top alignment');
+    
+    // Get header height for mobile offset calculation
+    const header = document.querySelector('nav');
+    const headerHeight = header ? header.offsetHeight : 100;
+    console.log(`Mobile header height: ${headerHeight}px`);
+    
+    // Use scrollIntoView to get the element to the top
+    element.scrollIntoView({ 
+      behavior: 'smooth', 
+      block: 'start',
+      inline: 'nearest'
+    });
+    
+    // Apply correction after scroll completes to account for sticky header
+    setTimeout(() => {
+      const elementRect = element.getBoundingClientRect();
+      const currentTop = elementRect.top;
       
-      // Disable scroll restoration temporarily on mobile
-      if ('scrollRestoration' in history) {
-        const originalScrollRestoration = history.scrollRestoration;
-        history.scrollRestoration = 'manual';
+      console.log(`Mobile: Element top after scrollIntoView: ${currentTop}px, header height: ${headerHeight}px`);
+      
+      // If the element is hidden behind header or not at the perfect position
+      if (Math.abs(currentTop - headerHeight) > 1) {
+        const currentScroll = window.pageYOffset;
+        const adjustment = currentTop - headerHeight;
+        const targetScroll = currentScroll + adjustment;
         
+        console.log(`Mobile: Applying correction scroll to ${targetScroll}`);
+        window.scrollTo({
+          top: targetScroll,
+          behavior: 'auto' // Use instant for precision
+        });
+        
+        // Final verification
         setTimeout(() => {
-          history.scrollRestoration = originalScrollRestoration;
-        }, 1000);
+          const finalRect = element.getBoundingClientRect();
+          const finalTop = finalRect.top;
+          console.log(`Mobile: Final element position: ${finalTop}px from top`);
+          
+          if (Math.abs(finalTop - headerHeight) > 2) {
+            const finalAdjustment = finalTop - headerHeight;
+            window.scrollTo({
+              top: window.pageYOffset + finalAdjustment,
+              behavior: 'auto'
+            });
+            console.log(`Mobile: Final pixel-perfect adjustment applied`);
+          }
+        }, 100);
       }
+    }, 600); // Wait for smooth scroll to complete
+    
+  } else {
+    // Desktop behavior remains unchanged - it's already perfect
+    const header = document.querySelector('nav');
+    const actualHeaderHeight = header ? header.offsetHeight : 120;
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const targetPosition = elementPosition - actualHeaderHeight;
+    
+    console.log(`Desktop: Scrolling to position ${targetPosition}`);
+    
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+
+    // Desktop fallback correction (unchanged)
+    setTimeout(() => {
+      const currentScroll = window.pageYOffset;
+      const scrollDifference = Math.abs(currentScroll - targetPosition);
       
-      // Use requestAnimationFrame for smoother mobile scrolling
-      requestAnimationFrame(() => {
+      if (scrollDifference > 5) {
+        console.log(`Desktop: Applying scroll correction`);
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
         });
-        
-        // Enhanced mobile verification with aggressive correction
-        setTimeout(() => {
-          const currentScroll = window.pageYOffset;
-          const scrollDifference = Math.abs(currentScroll - targetPosition);
-          
-          if (scrollDifference > 2) { // More strict tolerance for mobile
-            console.log(`Mobile: First correction for ${titleId}, difference: ${scrollDifference}px`);
-            window.scrollTo({
-              top: targetPosition,
-              behavior: 'auto' // Use instant scroll for precision
-            });
-            
-            // Final verification with pixel-perfect correction
-            setTimeout(() => {
-              const finalScroll = window.pageYOffset;
-              const finalDifference = Math.abs(finalScroll - targetPosition);
-              
-              if (finalDifference > 1) { // Pixel-perfect tolerance
-                console.log(`Mobile: Final pixel-perfect correction for ${titleId}`);
-                window.scrollTo({
-                  top: targetPosition,
-                  behavior: 'auto'
-                });
-              }
-            }, 100);
-          }
-        }, 300);
-      });
-    } else {
-      // Desktop scrolling remains unchanged - it's already perfect
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
+      }
+    }, 500);
+  }
 
-      // Desktop fallback correction (unchanged)
-      setTimeout(() => {
-        const currentScroll = window.pageYOffset;
-        const scrollDifference = Math.abs(currentScroll - targetPosition);
-        
-        console.log(`Desktop post-scroll check: current=${currentScroll}, target=${targetPosition}, difference=${scrollDifference}`);
-        
-        if (scrollDifference > 5) {
-          console.log(`Desktop: Applying scroll correction for ${titleId}`);
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      }, 500);
-    }
-  }, scrollDelay);
-
-  console.log(`Scrolled to title position: ${targetPosition}`);
+  console.log(`Scroll initiated for ${titleId}`);
 };
 
 // Enhanced global handler for all internal anchor links with mobile optimization

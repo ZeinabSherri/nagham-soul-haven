@@ -18,13 +18,14 @@
   scroll-margin-top: var(--header-height);
 }
 
-/* Mobile-specific scroll margin for pixel-perfect alignment */
+/* Mobile-specific reset for perfect title positioning */
 @media (max-width: 767px) {
+  /* Reset all scroll margins and spacing for mobile navigation */
   .scroll-margin-top {
     scroll-margin-top: 0 !important;
   }
   
-  /* Ensure section titles are perfectly aligned on mobile with zero gaps */
+  /* Ensure section titles have no interfering margins on mobile */
   #about-title,
   #consulting-title,
   #services-title,
@@ -33,22 +34,20 @@
     scroll-margin-top: 0 !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
-    position: relative;
-    z-index: 1;
   }
   
-  /* Remove any unwanted spacing above section titles on mobile */
+  /* Remove any container padding that interferes with mobile scroll */
   #about-section,
   #consulting-section,
   #services-section,
   #certifications-section,
   #testimonials-section {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
   
-  /* Ensure section containers don't add extra spacing on mobile */
+  /* Ensure no extra spacing affects mobile scroll positioning */
   section {
-    scroll-margin-top: 0;
+    scroll-margin-top: 0 !important;
   }
 }
 
