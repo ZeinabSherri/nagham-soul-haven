@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
 import { scrollToSection } from '../utils/scrollUtils';
-
 const AboutSection = () => {
-  return (
-    <section id="about-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  return <section id="about-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12 animate-fade-in">
@@ -18,7 +15,7 @@ const AboutSection = () => {
           <div className="flex justify-center items-center lg:justify-center animate-fade-in delay-300">
             <div className="relative">
               <div className="aspect-[4/5] w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
-                <img alt="Nagham Rasbieh - Professional Therapist and Healer" src="/lovable-uploads/74954204-958f-485c-bdec-7479a258e6c8.jpg" className="w-full h-full object-center object-contain" />
+                <img alt="Nagham Rasbieh - Professional Therapist and Healer" className="w-full h-full object-center object-contain" src="/lovable-uploads/2403300f-e082-4573-93ac-849c73996313.png" />
               </div>
             </div>
           </div>
@@ -83,19 +80,13 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic
 
             {/* Call-to-action Button */}
             <div className="pt-6 animate-fade-in delay-2600">
-              <Button 
-                onClick={() => scrollToSection('contact-form')} 
-                size="lg" 
-                className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200"
-              >
+              <Button onClick={() => scrollToSection('contact-form')} size="lg" className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200">
                 Let's Connect
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
