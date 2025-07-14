@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @tailwind base;
 @tailwind components;
@@ -17,6 +16,24 @@
 /* Perfect scroll alignment for section titles */
 .scroll-margin-top {
   scroll-margin-top: var(--header-height);
+}
+
+/* Mobile-specific scroll margin for precise alignment */
+@media (max-width: 767px) {
+  .scroll-margin-top {
+    scroll-margin-top: calc(var(--header-height) + 2px);
+  }
+  
+  /* Ensure section titles are never hidden on mobile */
+  #about-title,
+  #consulting-title,
+  #services-title,
+  #certifications-title,
+  #testimonials-title {
+    scroll-margin-top: calc(var(--header-height) + 2px);
+    position: relative;
+    z-index: 1;
+  }
 }
 
 @layer base {

@@ -1,4 +1,3 @@
-
 export const scrollToSection = (titleId: string) => {
   console.log(`Attempting to scroll to title: ${titleId}`);
   
@@ -16,16 +15,23 @@ export const scrollToSection = (titleId: string) => {
   // Calculate the element's position relative to the document
   const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
   
-  // Perfect alignment: title at the very top of viewport (just below header)
-  const targetPosition = elementPosition - actualHeaderHeight;
+  // Mobile-specific offset calculation for perfect alignment
+  const isMobile = window.innerWidth < 768;
+  let targetPosition;
   
-  console.log(`Element position: ${elementPosition}, target: ${targetPosition}`);
+  if (isMobile) {
+    // On mobile, add a small additional offset to ensure title is fully visible and flush at top
+    // This accounts for any mobile browser UI quirks and ensures perfect positioning
+    targetPosition = elementPosition - actualHeaderHeight - 2; // 2px buffer for perfect alignment
+    console.log(`Mobile: Element position: ${elementPosition}, header: ${actualHeaderHeight}, target: ${targetPosition}`);
+  } else {
+    // Desktop positioning remains unchanged
+    targetPosition = elementPosition - actualHeaderHeight;
+    console.log(`Desktop: Element position: ${elementPosition}, target: ${targetPosition}`);
+  }
   
   // Mobile-optimized scrolling with enhanced menu handling
-  const isMobile = window.innerWidth < 768;
-  
-  // Add delay for mobile to ensure menu closes first
-  const scrollDelay = isMobile ? 250 : 50;
+  const scrollDelay = isMobile ? 300 : 50; // Slightly longer delay for mobile menu close
   
   setTimeout(() => {
     if (isMobile) {
@@ -48,35 +54,48 @@ export const scrollToSection = (titleId: string) => {
           behavior: 'smooth'
         });
         
-        // Additional verification for mobile to ensure perfect positioning
+        // Enhanced mobile verification with multiple correction attempts
         setTimeout(() => {
           const currentScroll = window.pageYOffset;
           const scrollDifference = Math.abs(currentScroll - targetPosition);
           
-          if (scrollDifference > 10) {
-            console.log(`Mobile: Applying final position correction for ${titleId}`);
+          if (scrollDifference > 5) {
+            console.log(`Mobile: First correction for ${titleId}, difference: ${scrollDifference}px`);
             window.scrollTo({
               top: targetPosition,
               behavior: 'smooth'
             });
+            
+            // Final verification for stubborn mobile browsers
+            setTimeout(() => {
+              const finalScroll = window.pageYOffset;
+              const finalDifference = Math.abs(finalScroll - targetPosition);
+              
+              if (finalDifference > 3) {
+                console.log(`Mobile: Final correction for ${titleId}`);
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: 'auto' // Use instant scroll for final correction
+                });
+              }
+            }, 300);
           }
-        }, 400);
+        }, 500);
       });
     } else {
-      // Desktop scrolling with precise positioning
+      // Desktop scrolling remains unchanged - it's already perfect
       window.scrollTo({
         top: targetPosition,
         behavior: 'smooth'
       });
 
-      // Enhanced fallback correction for desktop
+      // Desktop fallback correction (unchanged)
       setTimeout(() => {
         const currentScroll = window.pageYOffset;
         const scrollDifference = Math.abs(currentScroll - targetPosition);
         
         console.log(`Desktop post-scroll check: current=${currentScroll}, target=${targetPosition}, difference=${scrollDifference}`);
         
-        // Apply correction if the scroll position is off
         if (scrollDifference > 5) {
           console.log(`Desktop: Applying scroll correction for ${titleId}`);
           window.scrollTo({
@@ -110,7 +129,7 @@ export const initializeScrollBehavior = () => {
     }
   });
 
-  // Add touch event handling for better mobile experience
+  // Enhanced touch event handling for better mobile experience
   let touchStartY = 0;
   
   document.addEventListener('touchstart', (event) => {
