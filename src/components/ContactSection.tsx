@@ -70,7 +70,7 @@ const ContactSection = () => {
                 <p className="text-dark-olive mb-6">
                   Click below to view available times and book your session instantly
                 </p>
-                <Button onClick={handleBookSessionClick} className="bg-deep-purple hover:bg-vibrant-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4">Book a session</Button>
+                <Button onClick={handleBookSessionClick} className="bg-deep-purple hover:bg-vibrant-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4">Book a Session</Button>
                 <p className="text-sm text-dark-olive">
                   Sessions available online and in-person • Flexible scheduling • Instant confirmation
                 </p>
