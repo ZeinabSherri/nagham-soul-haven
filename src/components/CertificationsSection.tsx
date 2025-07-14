@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Check } from 'lucide-react';
 
 const CertificationsSection = () => {
@@ -55,7 +56,7 @@ const CertificationsSection = () => {
             <h3 id="certifications-title" className="text-2xl font-bold mb-8 text-deep-purple">
               Internationally Certified Master Practitioner in:
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-6 mb-8">
               {certifications.map((cert, index) => (
                 <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{
                   animationDelay: `${700 + index * 100}ms`
@@ -69,15 +70,33 @@ const CertificationsSection = () => {
                       {cert.org}
                     </p>
                   </div>
-                  {cert.logo && (
-                    <img 
-                      src={cert.logo} 
-                      alt={`${cert.title} certification logo`}
-                      className="w-12 h-12 object-contain flex-shrink-0"
-                    />
-                  )}
                 </div>
               ))}
+            </div>
+
+            {/* Certificate Logos Carousel */}
+            <div className="animate-fade-in delay-1000">
+              <Carousel className="w-full max-w-sm mx-auto">
+                <CarouselContent>
+                  {certifications.map((cert, index) => (
+                    <CarouselItem key={index} className="basis-1/2">
+                      <div className="p-4">
+                        <Card className="border-2 border-soft-lavender hover:border-vibrant-purple transition-colors duration-300">
+                          <CardContent className="flex aspect-square items-center justify-center p-6">
+                            <img 
+                              src={cert.logo} 
+                              alt={`${cert.title} certification logo`}
+                              className="w-full h-full object-contain"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
           </div>
 
