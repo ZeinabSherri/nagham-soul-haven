@@ -1,9 +1,10 @@
-export const scrollToSection = (sectionId: string, offset: number = 120) => {
-  console.log(`Attempting to scroll to section: ${sectionId}`);
+
+export const scrollToSection = (titleId: string) => {
+  console.log(`Attempting to scroll to title: ${titleId}`);
   
-  const element = document.getElementById(sectionId);
+  const element = document.getElementById(titleId);
   if (!element) {
-    console.warn(`Element with ID "${sectionId}" not found`);
+    console.warn(`Element with ID "${titleId}" not found`);
     return;
   }
 
@@ -12,30 +13,23 @@ export const scrollToSection = (sectionId: string, offset: number = 120) => {
   const actualHeaderHeight = header ? header.offsetHeight : 120;
   console.log(`Actual header height: ${actualHeaderHeight}px`);
 
-  // Apply custom offset for section titles to ensure they're visible
-  let customOffset = actualHeaderHeight + 30; // Add 30px padding for better visibility
-  
-  // Special handling for section titles to ensure proper positioning
-  if (sectionId.includes('-section') || sectionId === 'consulting') {
-    customOffset = actualHeaderHeight + 40; // Extra padding for section titles
-    console.log(`Using enhanced offset of ${customOffset}px for section title: ${sectionId}`);
-  }
-
   // Calculate the element's position relative to the document
   const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-  console.log(`Element position: ${elementPosition}, offset: ${customOffset}`);
+  
+  // Perfect alignment: title at the very top of viewport (just below header)
+  const targetPosition = elementPosition - actualHeaderHeight;
+  
+  console.log(`Element position: ${elementPosition}, target: ${targetPosition}`);
   
   // Mobile-optimized scrolling with enhanced menu handling
   const isMobile = window.innerWidth < 768;
-  const targetPosition = elementPosition - customOffset;
   
-  // Add delay for mobile to ensure menu closes first and smooth navigation
-  const scrollDelay = isMobile ? 200 : 50;
+  // Add delay for mobile to ensure menu closes first
+  const scrollDelay = isMobile ? 250 : 50;
   
   setTimeout(() => {
     if (isMobile) {
-      // Enhanced mobile scroll behavior for better section title targeting
-      console.log('Mobile device detected: Using optimized scroll behavior for section titles');
+      console.log('Mobile device detected: Using optimized scroll behavior');
       
       // Disable scroll restoration temporarily on mobile
       if ('scrollRestoration' in history) {
@@ -47,35 +41,35 @@ export const scrollToSection = (sectionId: string, offset: number = 120) => {
         }, 1000);
       }
       
-      // Use requestAnimationFrame for smoother mobile scrolling to section titles
+      // Use requestAnimationFrame for smoother mobile scrolling
       requestAnimationFrame(() => {
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
         });
         
-        // Additional verification for mobile to ensure section title is visible
+        // Additional verification for mobile to ensure perfect positioning
         setTimeout(() => {
           const currentScroll = window.pageYOffset;
           const scrollDifference = Math.abs(currentScroll - targetPosition);
           
-          if (scrollDifference > 15) {
-            console.log(`Mobile: Applying final position correction for section title ${sectionId}`);
+          if (scrollDifference > 10) {
+            console.log(`Mobile: Applying final position correction for ${titleId}`);
             window.scrollTo({
               top: targetPosition,
               behavior: 'smooth'
             });
           }
-        }, 300);
+        }, 400);
       });
     } else {
-      // Desktop scrolling with section title focus
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+      // Desktop scrolling with precise positioning
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
       });
 
-      // Enhanced fallback correction for section titles
+      // Enhanced fallback correction for desktop
       setTimeout(() => {
         const currentScroll = window.pageYOffset;
         const scrollDifference = Math.abs(currentScroll - targetPosition);
@@ -83,18 +77,18 @@ export const scrollToSection = (sectionId: string, offset: number = 120) => {
         console.log(`Desktop post-scroll check: current=${currentScroll}, target=${targetPosition}, difference=${scrollDifference}`);
         
         // Apply correction if the scroll position is off
-        if (scrollDifference > 10) {
-          console.log(`Desktop: Applying scroll correction for section title ${sectionId}`);
+        if (scrollDifference > 5) {
+          console.log(`Desktop: Applying scroll correction for ${titleId}`);
           window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
           });
         }
-      }, 400);
+      }, 500);
     }
   }, scrollDelay);
 
-  console.log(`Scrolled to section title position: ${targetPosition}`);
+  console.log(`Scrolled to title position: ${targetPosition}`);
 };
 
 // Enhanced global handler for all internal anchor links with mobile optimization

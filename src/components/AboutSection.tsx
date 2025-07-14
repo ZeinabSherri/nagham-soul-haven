@@ -2,12 +2,16 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
 import { scrollToSection } from '../utils/scrollUtils';
+
 const AboutSection = () => {
-  return <section id="about-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  return (
+    <section id="about-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Left-aligned title */}
+        {/* Left-aligned title with semantic ID */}
         <div className="mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">About Me</h2>
+          <h2 id="about-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left scroll-margin-top">
+            About Me
+          </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -87,6 +91,8 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AboutSection;

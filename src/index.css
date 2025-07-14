@@ -1,99 +1,87 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+:root {
+  --header-height: 120px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 100px;
+  }
+}
+
+/* Perfect scroll alignment for section titles */
+.scroll-margin-top {
+  scroll-margin-top: var(--header-height);
+}
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 280 65% 45%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 300 20% 92%;
-    --secondary-foreground: 280 65% 25%;
-
-    --muted: 300 20% 95%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 300 20% 92%;
-    --accent-foreground: 280 65% 25%;
-
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 300 15% 88%;
-    --input: 300 15% 88%;
-    --ring: 280 65% 45%;
-
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
     --radius: 0.5rem;
 
-    /* Brand colors using exact hex values converted to HSL */
-    --deep-purple: 275 61% 32%;
-    --light-olive: 76 39% 68%;
-    --creamy-beige: 52 73% 92%;
-    --vibrant-purple: 303 61% 43%;
-    --light-lavender-pink: 297 84% 94%;
-    --soft-lavender: 261 62% 87%;
-    --dark-olive: 76 58% 27%;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom color palette */
+    --deep-purple: 267 40% 29%;
+    --vibrant-purple: 287 66% 43%;
+    --soft-lavender: 287 36% 91%;
+    --light-lavender-pink: 321 31% 92%;
+    --creamy-beige: 49 31% 91%;
+    --light-olive: 87 14% 87%;
+    --dark-olive: 87 14% 53%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 280 65% 60%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 
@@ -101,77 +89,117 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
   }
+}
 
-  /* CSS scroll-margin-top for navigation anchor targets */
-  #services-title, 
-  #get-in-touch-title, 
-  #certifications-title {
-    scroll-margin-top: 140px;
+/* Custom color classes */
+.text-deep-purple { color: hsl(var(--deep-purple)); }
+.bg-deep-purple { background-color: hsl(var(--deep-purple)); }
+.border-deep-purple { border-color: hsl(var(--deep-purple)); }
+
+.text-vibrant-purple { color: hsl(var(--vibrant-purple)); }
+.bg-vibrant-purple { background-color: hsl(var(--vibrant-purple)); }
+.border-vibrant-purple { border-color: hsl(var(--vibrant-purple)); }
+
+.text-soft-lavender { color: hsl(var(--soft-lavender)); }
+.bg-soft-lavender { background-color: hsl(var(--soft-lavender)); }
+.border-soft-lavender { border-color: hsl(var(--soft-lavender)); }
+
+.text-light-lavender-pink { color: hsl(var(--light-lavender-pink)); }
+.bg-light-lavender-pink { background-color: hsl(var(--light-lavender-pink)); }
+.border-light-lavender-pink { border-color: hsl(var(--light-lavender-pink)); }
+
+.text-creamy-beige { color: hsl(var(--creamy-beige)); }
+.bg-creamy-beige { background-color: hsl(var(--creamy-beige)); }
+.border-creamy-beige { border-color: hsl(var(--creamy-beige)); }
+
+.text-light-olive { color: hsl(var(--light-olive)); }
+.bg-light-olive { background-color: hsl(var(--light-olive)); }
+.border-light-olive { border-color: hsl(var(--light-olive)); }
+
+.text-dark-olive { color: hsl(var(--dark-olive)); }
+.bg-dark-olive { background-color: hsl(var(--dark-olive)); }
+.border-dark-olive { border-color: hsl(var(--dark-olive)); }
+
+/* Hover variants */
+.hover\:bg-deep-purple\/90:hover { background-color: hsl(var(--deep-purple) / 0.9); }
+.hover\:bg-vibrant-purple:hover { background-color: hsl(var(--vibrant-purple)); }
+
+/* Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Custom utility classes for the brand color palette using exact hex values */
-@layer utilities {
-  .bg-deep-purple { background-color: #562383; }
-  .bg-light-olive { background-color: #c6d48a; }
-  .bg-creamy-beige { background-color: #f9f1dc; }
-  .bg-vibrant-purple { background-color: #a3399c; }
-  .bg-light-lavender-pink { background-color: #f7e3fc; }
-  .bg-soft-lavender { background-color: #d8c8f4; }
-  .bg-dark-olive { background-color: #657024; }
-  
-  .text-deep-purple { color: #562383; }
-  .text-light-olive { color: #c6d48a; }
-  .text-creamy-beige { color: #f9f1dc; }
-  .text-vibrant-purple { color: #a3399c; }
-  .text-light-lavender-pink { color: #f7e3fc; }
-  .text-soft-lavender { color: #d8c8f4; }
-  .text-dark-olive { color: #657024; }
-  
-  .border-deep-purple { border-color: #562383; }
-  .border-light-olive { border-color: #c6d48a; }
-  .border-creamy-beige { border-color: #f9f1dc; }
-  .border-vibrant-purple { border-color: #a3399c; }
-  .border-light-lavender-pink { border-color: #f7e3fc; }
-  .border-soft-lavender { border-color: #d8c8f4; }
-  .border-dark-olive { border-color: #657024; }
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+  opacity: 0;
+}
 
-  /* Hover states using exact hex values */
-  .hover\:bg-deep-purple:hover { background-color: #562383; }
-  .hover\:bg-light-olive:hover { background-color: #c6d48a; }
-  .hover\:bg-creamy-beige:hover { background-color: #f9f1dc; }
-  .hover\:bg-vibrant-purple:hover { background-color: #a3399c; }
-  .hover\:bg-light-lavender-pink:hover { background-color: #f7e3fc; }
-  .hover\:bg-soft-lavender:hover { background-color: #d8c8f4; }
-  .hover\:bg-dark-olive:hover { background-color: #657024; }
+/* Animation delays */
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1200 { animation-delay: 1200ms; }
+.delay-1400 { animation-delay: 1400ms; }
+.delay-1500 { animation-delay: 1500ms; }
+.delay-1600 { animation-delay: 1600ms; }
+.delay-1800 { animation-delay: 1800ms; }
+.delay-2000 { animation-delay: 2000ms; }
+.delay-2200 { animation-delay: 2200ms; }
+.delay-2400 { animation-delay: 2400ms; }
+.delay-2600 { animation-delay: 2600ms; }
 
-  .hover\:text-deep-purple:hover { color: #562383; }
-  .hover\:text-light-olive:hover { color: #c6d48a; }
-  .hover\:text-creamy-beige:hover { color: #f9f1dc; }
-  .hover\:text-vibrant-purple:hover { color: #a3399c; }
-  .hover\:text-light-lavender-pink:hover { color: #f7e3fc; }
-  .hover\:text-soft-lavender:hover { color: #d8c8f4; }
-  .hover\:text-dark-olive:hover { color: #657024; }
+/* WhatsApp Button styles */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  animation: float 3s ease-in-out infinite;
+}
 
-  /* Animation delay utilities */
-  .delay-100 { animation-delay: 100ms; }
-  .delay-200 { animation-delay: 200ms; }
-  .delay-300 { animation-delay: 300ms; }
-  .delay-400 { animation-delay: 400ms; }
-  .delay-500 { animation-delay: 500ms; }
-  .delay-600 { animation-delay: 600ms; }
-  .delay-700 { animation-delay: 700ms; }
-  .delay-800 { animation-delay: 800ms; }
-  .delay-900 { animation-delay: 900ms; }
-  .delay-1000 { animation-delay: 1000ms; }
-  .delay-1100 { animation-delay: 1100ms; }
-  .delay-1200 { animation-delay: 1200ms; }
-  .delay-1300 { animation-delay: 1300ms; }
-  .delay-1400 { animation-delay: 1400ms; }
-  .delay-1500 { animation-delay: 1500ms; }
-  .delay-1600 { animation-delay: 1600ms; }
+.whatsapp-button:hover {
+  background-color: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-button {
+    bottom: 15px;
+    right: 15px;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
 }

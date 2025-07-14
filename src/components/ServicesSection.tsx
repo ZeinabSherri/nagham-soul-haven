@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, Users, Video, Home, Heart, Star, Sparkles, Zap, Eye } from 'lucide-react';
+
 const ServicesSection = () => {
   const services = [{
     title: "1:1 Private Coaching Session",
@@ -67,14 +69,17 @@ const ServicesSection = () => {
     icon: Eye,
     bookingLink: "http://lb.oneconsciousness.org/naghamrasbieh"
   }];
+
   const handleBookNow = (bookingLink: string) => {
     window.open(bookingLink, '_blank');
   };
-  return <section id="services-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+
+  return (
+    <section id="services-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* Left-aligned title with specific ID directly on the heading */}
+        {/* Left-aligned title with semantic ID */}
         <div className="mb-12 animate-fade-in">
-          <h2 id="services-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
+          <h2 id="services-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left scroll-margin-top">
             My Services
           </h2>
           <p className="text-lg text-dark-olive mt-4 animate-fade-in delay-200">Each healing session is uniquely designed for you, combining ancient wisdom with modern therapeutic techniques for profound transformation.</p>
@@ -145,6 +150,8 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ServicesSection;

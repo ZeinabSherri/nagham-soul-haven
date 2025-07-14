@@ -10,7 +10,7 @@ const TestimonialsSection = () => {
     color: "soft-lavender"
   }, {
     name: "Maya", 
-    text: "I finally feel safe in my body after years of anxiety. Nagham gave me space to bring all my fears, and somehow, it felt okay to just be me.",
+    text: "I finally feel safe in my body after years of anxiety. Nagham gave me space to bring all my fears, and somehow, it felt okay to just be me.",
     rating: 5,
     color: "light-olive"
   }, {
@@ -36,11 +36,12 @@ const TestimonialsSection = () => {
     window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
   };
 
-  return <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+  return (
+    <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Left-aligned title */}
+        {/* Left-aligned title with semantic ID */}
         <div className="mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
+          <h2 id="testimonials-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left scroll-margin-top">
             What Clients Say
           </h2>
           <p className="text-lg text-vibrant-purple mt-4 max-w-3xl animate-fade-in delay-200">
@@ -92,7 +93,8 @@ const TestimonialsSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default TestimonialsSection;

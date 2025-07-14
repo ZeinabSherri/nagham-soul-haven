@@ -28,9 +28,9 @@ const CertificationsSection = () => {
   return (
     <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
+        {/* Section Header with semantic ID */}
         <div className="mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-4">
+          <h2 id="certifications-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-4 scroll-margin-top">
             Verified Certifications
           </h2>
         </div>
@@ -53,7 +53,7 @@ const CertificationsSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
           {/* Left Column - International Certifications */}
           <div className="animate-fade-in delay-500">
-            <h3 id="certifications-title" className="text-2xl font-bold mb-8 text-deep-purple">
+            <h3 className="text-2xl font-bold mb-8 text-deep-purple">
               Internationally Certified Master Practitioner in:
             </h3>
             <div className="space-y-6 mb-8">
