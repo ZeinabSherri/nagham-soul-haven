@@ -1,47 +1,30 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube } from 'lucide-react';
-import { toast } from "sonner";
-
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent('New Message from Website');
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:hello@naghamthecoach.com?subject=${subject}&body=${body}`;
-    
-    // Show success message
-    toast.success("Your message was sent successfully! We'll get back to you soon.");
-    
-    // Clear form
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    window.location.href = `mailto:Hello@naghamthecoach?subject=${subject}&body=${body}`;
   };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
   };
-
   const handleBookSessionClick = () => {
     const element = document.getElementById('services');
     if (element) {
@@ -51,15 +34,12 @@ const ContactSection = () => {
       });
     }
   };
-
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/9613633483', '_blank');
   };
-
   const handleWhatsAppClicks = () => {
     window.open('https://wa.me/971506607034', '_blank');
-  };
-
+  }; 
   return <section id="contact-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in">
@@ -79,7 +59,7 @@ const ContactSection = () => {
                 <Calendar className="w-6 h-6 mr-3 text-vibrant-purple" />
                 Book a Free 15-min Call
               </CardTitle>
-              
+              <p className="text-dark-olive">Book a Free 15-min Call</p>
             </CardHeader>
             <CardContent className="text-center">
               <div className="mb-6">
@@ -90,8 +70,10 @@ const ContactSection = () => {
               <div className="bg-gray-50 rounded-xl p-8 border border-deep-purple/10">
                 <div className="text-6xl mb-4">✨</div>
                 <h3 className="text-xl font-semibold text-deep-purple mb-4">Online Booking Calendar</h3>
-                <p className="text-dark-olive mb-6">Click below to view available times and book your session for the 
-<strong>SERVICE</strong> you need instantly</p>
+      
+                  <p className="text-dark-olive mb-6 leading-relaxed animate-fade-in delay-1200">
+                Click below to view available times and book your session for the  <span className="font-semibold text-deep-olive">SERVICE</span>you need instantly</p>
+                
                 <Button onClick={handleBookSessionClick} className="bg-deep-purple hover:bg-vibrant-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4">Book a Session</Button>
                 <p className="text-sm text-dark-olive">
                   Sessions available online and in-person • Flexible scheduling • Instant confirmation
@@ -141,7 +123,7 @@ const ContactSection = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <Mail className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">hello@naghamthecoach.com</span>
+                    <span className="text-deep-purple">Hello@naghamthecoach</span>
                   </div>
                   <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={handleWhatsAppClick}>
                     <Phone className="w-6 h-6 text-vibrant-purple" />
@@ -194,5 +176,4 @@ const ContactSection = () => {
       </div>
     </section>;
 };
-
 export default ContactSection;
