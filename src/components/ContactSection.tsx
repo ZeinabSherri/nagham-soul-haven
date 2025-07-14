@@ -70,10 +70,8 @@ const ContactSection = () => {
               <div className="bg-gray-50 rounded-xl p-8 border border-deep-purple/10">
                 <div className="text-6xl mb-4">✨</div>
                 <h3 className="text-xl font-semibold text-deep-purple mb-4">Online Booking Calendar</h3>
-      
-                  <p className="text-dark-olive mb-6 leading-relaxed animate-fade-in delay-1200">
-                Click below to view available times and book your session for the  <span className="font-semibold text-deep-olive">SERVICE</span>you need instantly</p>
-                
+                <p className="text-dark-olive mb-6">Click below to view available times and book your session for the 
+ SERVICE  you need instantly</p>
                 <Button onClick={handleBookSessionClick} className="bg-deep-purple hover:bg-vibrant-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4">Book a Session</Button>
                 <p className="text-sm text-dark-olive">
                   Sessions available online and in-person • Flexible scheduling • Instant confirmation
