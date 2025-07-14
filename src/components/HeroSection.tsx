@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
-
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,11 +10,9 @@ const HeroSection = () => {
       });
     }
   };
-
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-
   return <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Texture Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
@@ -44,21 +41,21 @@ const HeroSection = () => {
             </p>
 
             {/* Title for key points */}
-            <h2 className="font-semibold text-deep-purple mb-1 animate-fade-in delay-400 text-base">In our work together, I bring:</h2>
+            <h2 className="text-deep-purple mb-1 animate-fade-in delay-400 text-base font-bold">Together, we achieve this through: </h2>
 
             {/* Key points list */}
             <div className="mb-3 space-y-1">
               <div className="flex items-center text-deep-purple animate-fade-in delay-500">
                 <span className="text-vibrant-purple mr-3 text-lg">•</span>
-                <span className="text-sm">Transformational Healing</span>
+                <span className="text-sm font-bold">Transformational Healing</span>
               </div>
               <div className="flex items-center text-deep-purple animate-fade-in delay-900">
                 <span className="text-vibrant-purple mr-3 text-lg">•</span>
-                <span className="text-sm">Deep Emotional Rewiring</span>
+                <span className="text-sm font-bold">Deep Emotional Rewiring</span>
               </div>
               <div className="flex items-center text-deep-purple animate-fade-in delay-700">
                 <span className="text-vibrant-purple mr-3 text-lg">•</span>
-                <span className="text-sm"> Nervous System Reset &amp; Trauma Release</span>
+                <span className="text-sm font-bold">Nervous System Reset &amp; Trauma Release </span>
               </div>
             </div>
 
@@ -117,5 +114,4 @@ const HeroSection = () => {
       </div>
     </section>;
 };
-
 export default HeroSection;
