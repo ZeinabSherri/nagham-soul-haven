@@ -16,7 +16,7 @@ const ConsultingSection = () => {
     {
       left: {
         icon: Check,
-        title: "Certified from ABH, ABNLP, TLT®, and ICBCH",
+        title: "Certified from ABH, ABNLP, TLT® Association, and ICBCH",
         description: "Accredited credentials you can trust, backed by years of professional training."
       },
       right: {
