@@ -56,7 +56,7 @@ const ConsultingSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">Why Work With Me?</h2>
+          <h2 id="consulting-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left">Why Work With Me?</h2>
           <p className="text-lg text-dark-olive mt-4 max-w-4xl">Because this isn't cookie-cutter coaching or talk therapy. It's deep, personal, and integrative.</p>
         </div>
 

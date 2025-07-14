@@ -7,7 +7,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">About Me</h2>
+          <h2 id="about-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left">About Me</h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
