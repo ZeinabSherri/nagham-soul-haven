@@ -1,22 +1,31 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from 'lucide-react';
+
 const CertificationsSection = () => {
   const certifications = [{
     title: "Time Line Therapy®",
-    org: "TLT® Association"
+    org: "TLT® Association",
+    logo: "/lovable-uploads/83d5f222-8dd4-4a0b-b14f-93065557e489.png"
   }, {
     title: "Clinical Hypnotherapy",
-    org: "American Board of Hypnotherapy (ABH)"
+    org: "American Board of Hypnotherapy (ABH)",
+    logo: "/lovable-uploads/84ad1457-3c87-408c-9ce8-27d48a253d66.png"
   }, {
     title: "Neuro-Linguistic Programming ( NLP)",
-    org: "American Board of NLP (ABNLP)"
+    org: "American Board of NLP (ABNLP)",
+    logo: "/lovable-uploads/6961dfd4-de35-4e03-be6a-7c198a412632.png"
   }, {
     title: "Cognitive-Behavioral Therapy Specialist (CBT)",
-    org: "International Certification Board of Coaches And Hypnotist (ICBCH)"
+    org: "International Certification Board of Coaches And Hypnotist (ICBCH)",
+    logo: "/lovable-uploads/0174fa00-b417-456f-a192-b363fbe2842b.png"
   }];
-  const additionalTrainings = [" Access Bars® Practitioner & Facilitator", "Master Reiki", "Master Choa Kok Sui’s Pranic Healing", "Access FaceLift® Practitioner", "Certified Trainer", "Intuitive Healing", "Space Clearing & Recharging", "Consciousness Advisor", "Sexual Agility Specialist", "Past-life Regression Specialist", "SuperRelationships Specialist", "Money Reiki", "Laughter Yoga Leader"];
-  return <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+
+  const additionalTrainings = [" Access Bars® Practitioner & Facilitator", "Master Reiki", "Master Choa Kok Sui's Pranic Healing", "Access FaceLift® Practitioner", "Certified Trainer", "Intuitive Healing", "Space Clearing & Recharging", "Consciousness Advisor", "Sexual Agility Specialist", "Past-life Regression Specialist", "SuperRelationships Specialist", "Money Reiki", "Laughter Yoga Leader"];
+
+  return (
+    <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-12 animate-fade-in">
@@ -47,11 +56,12 @@ const CertificationsSection = () => {
               Internationally Certified Master Practitioner in:
             </h3>
             <div className="space-y-6">
-              {certifications.map((cert, index) => <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{
-              animationDelay: `${700 + index * 100}ms`
-            }}>
+              {certifications.map((cert, index) => (
+                <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{
+                  animationDelay: `${700 + index * 100}ms`
+                }}>
                   <Check className="w-6 h-6 text-vibrant-purple mt-1 flex-shrink-0" />
-                  <div>
+                  <div className="flex-1">
                     <h4 className="font-semibold text-lg text-deep-purple mb-1">
                       {cert.title}
                     </h4>
@@ -59,7 +69,15 @@ const CertificationsSection = () => {
                       {cert.org}
                     </p>
                   </div>
-                </div>)}
+                  {cert.logo && (
+                    <img 
+                      src={cert.logo} 
+                      alt={`${cert.title} certification logo`}
+                      className="w-12 h-12 object-contain flex-shrink-0"
+                    />
+                  )}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -67,14 +85,16 @@ const CertificationsSection = () => {
           <div className="animate-fade-in delay-700">
             <h3 className="text-2xl font-bold mb-8 text-deep-purple">Additional Certifications:</h3>
             <div className="space-y-4">
-              {additionalTrainings.map((training, index) => <div key={index} className="flex items-center space-x-4 animate-fade-in" style={{
-              animationDelay: `${900 + index * 50}ms`
-            }}>
+              {additionalTrainings.map((training, index) => (
+                <div key={index} className="flex items-center space-x-4 animate-fade-in" style={{
+                  animationDelay: `${900 + index * 50}ms`
+                }}>
                   <Check className="w-5 h-5 text-vibrant-purple flex-shrink-0" />
                   <span className="text-lg text-dark-olive">
                     {training}
                   </span>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -86,6 +106,8 @@ const CertificationsSection = () => {
           </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default CertificationsSection;
