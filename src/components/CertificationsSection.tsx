@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -27,9 +28,9 @@ const CertificationsSection = () => {
   return (
     <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header with specific ID for navigation */}
+        {/* Section Header */}
         <div className="mb-12 animate-fade-in">
-          <h2 id="certifications-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-4 scroll-mt-32">
+          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-4">
             Verified Certifications
           </h2>
         </div>

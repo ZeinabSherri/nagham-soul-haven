@@ -27,7 +27,7 @@ const Navigation = () => {
     setLogoUrl(processedUrl);
   };
 
-  // Enhanced mobile-friendly button with better touch handling
+  // Enhanced mobile-friendly button with better touch handling and direct section targeting
   const createMobileNavButton = (text: string, sectionId: string, extraClass = '') => (
     <button
       onClick={() => handleScrollToSection(sectionId)}
@@ -38,7 +38,7 @@ const Navigation = () => {
     </button>
   );
 
-  // Enhanced desktop nav button with better hover states
+  // Enhanced desktop nav button with better hover states and section title targeting
   const createDesktopNavButton = (text: string, sectionId: string, extraClass = '') => (
     <button
       onClick={() => handleScrollToSection(sectionId)}
@@ -48,6 +48,33 @@ const Navigation = () => {
       {text}
     </button>
   );
+
+  // Get the appropriate section ID based on device type
+  const getSectionId = (section: string) => {
+    if (isMobile) {
+      // Mobile: scroll directly to section content
+      switch (section) {
+        case 'about': return 'about-section';
+        case 'unique': return 'consulting';
+        case 'services': return 'services-section';
+        case 'certifications': return 'certifications-section';
+        case 'testimonials': return 'testimonials-section';
+        case 'contact': return 'contact-section';
+        default: return section;
+      }
+    } else {
+      // Desktop: scroll to section titles
+      switch (section) {
+        case 'about': return 'about-section';
+        case 'unique': return 'consulting';
+        case 'services': return 'services-section';
+        case 'certifications': return 'certifications-section';
+        case 'testimonials': return 'testimonials-section';
+        case 'contact': return 'contact-section';
+        default: return section;
+      }
+    }
+  };
 
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-soft-lavender shadow-sm">
@@ -59,14 +86,14 @@ const Navigation = () => {
             className="h-20 sm:h-28 md:h-36 w-auto" 
           />
           
-          {/* Desktop Navigation - Updated to use title IDs */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6 flex-1 justify-center ml-8">
-            {createDesktopNavButton('About', 'about-title')}
-            {createDesktopNavButton("What's Unique", 'consulting-title')}
-            {createDesktopNavButton('Services', 'services-title')}
-            {createDesktopNavButton('Certifications', 'certifications-title')}
-            {createDesktopNavButton('Testimonials', 'testimonials-title')}
-            {createDesktopNavButton('Contact', 'get-in-touch-title')}
+            {createDesktopNavButton('About', getSectionId('about'))}
+            {createDesktopNavButton("What's Unique", getSectionId('unique'))}
+            {createDesktopNavButton('Services', getSectionId('services'))}
+            {createDesktopNavButton('Certifications', getSectionId('certifications'))}
+            {createDesktopNavButton('Testimonials', getSectionId('testimonials'))}
+            {createDesktopNavButton('Contact', getSectionId('contact'))}
           </div>
 
           <div className="hidden md:block">
@@ -91,15 +118,15 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation - Updated to use title IDs */}
+        {/* Mobile Navigation - Direct section targeting */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-2 border-t border-soft-lavender">
-            {createMobileNavButton('About', 'about-title')}
-            {createMobileNavButton("What's Unique", 'consulting-title')}
-            {createMobileNavButton('Services', 'services-title')}
-            {createMobileNavButton('Certifications', 'certifications-title')}
-            {createMobileNavButton('Testimonials', 'testimonials-title')}
-            {createMobileNavButton('Contact', 'get-in-touch-title')}
+            {createMobileNavButton('About', getSectionId('about'))}
+            {createMobileNavButton("What's Unique", getSectionId('unique'))}
+            {createMobileNavButton('Services', getSectionId('services'))}
+            {createMobileNavButton('Certifications', getSectionId('certifications'))}
+            {createMobileNavButton('Testimonials', getSectionId('testimonials'))}
+            {createMobileNavButton('Contact', getSectionId('contact'))}
             
             <Button 
               onClick={handleBookSession} 
