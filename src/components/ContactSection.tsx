@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Calendar, Instagram, Facebook, Youtube } from 'lucide-react';
+import { Phone, Mail, MapPin, Calendar } from 'lucide-react';
 
 const ContactSection = () => {
   const handleBookSession = () => {
@@ -74,22 +75,6 @@ const ContactSection = () => {
               </Button>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Social Media Links */}
-        <div className="text-center animate-fade-in delay-400">
-          <h3 className="text-2xl font-bold text-deep-purple mb-4">Follow Me</h3>
-          <div className="flex justify-center space-x-6">
-            <a href="https://www.instagram.com/naghamthecoach/" target="_blank" rel="noopener noreferrer" className="text-vibrant-purple hover:text-deep-purple transition-colors">
-              <Instagram className="w-8 h-8" />
-            </a>
-            <a href="https://www.facebook.com/naghamthecoach" target="_blank" rel="noopener noreferrer" className="text-vibrant-purple hover:text-deep-purple transition-colors">
-              <Facebook className="w-8 h-8" />
-            </a>
-            <a href="https://www.youtube.com/@naghamrasbieh" target="_blank" rel="noopener noreferrer" className="text-vibrant-purple hover:text-deep-purple transition-colors">
-              <Youtube className="w-8 h-8" />
-            </a>
-          </div>
         </div>
       </div>
     </section>
