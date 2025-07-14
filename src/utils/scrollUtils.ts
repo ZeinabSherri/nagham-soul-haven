@@ -1,4 +1,5 @@
-export const scrollToSection = (sectionId: string, offset: number = 120) => {
+
+export const scrollToSection = (sectionId: string) => {
   console.log(`Attempting to scroll to section: ${sectionId}`);
   
   const element = document.getElementById(sectionId);
@@ -12,94 +13,63 @@ export const scrollToSection = (sectionId: string, offset: number = 120) => {
   const actualHeaderHeight = header ? header.offsetHeight : 120;
   console.log(`Actual header height: ${actualHeaderHeight}px`);
 
-  // Apply custom offset for section titles to ensure they're visible
-  let customOffset = actualHeaderHeight + 30; // Add 30px padding for better visibility
+  // Calculate precise offset for perfect title positioning
+  const offset = actualHeaderHeight + 8; // Small buffer for perfect alignment
   
-  // Special handling for section titles to ensure proper positioning
-  if (sectionId.includes('-section') || sectionId === 'consulting') {
-    customOffset = actualHeaderHeight + 40; // Extra padding for section titles
-    console.log(`Using enhanced offset of ${customOffset}px for section title: ${sectionId}`);
-  }
+  console.log(`Scrolling to ${sectionId} with offset: ${offset}px`);
 
-  // Calculate the element's position relative to the document
-  const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-  console.log(`Element position: ${elementPosition}, offset: ${customOffset}`);
-  
   // Mobile-optimized scrolling with enhanced menu handling
   const isMobile = window.innerWidth < 768;
-  const targetPosition = elementPosition - customOffset;
   
-  // Add delay for mobile to ensure menu closes first and smooth navigation
-  const scrollDelay = isMobile ? 200 : 50;
+  // Calculate the element's position relative to the document
+  const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+  const targetPosition = elementPosition - offset;
+  
+  // Add delay for mobile to ensure menu closes first
+  const scrollDelay = isMobile ? 100 : 0;
   
   setTimeout(() => {
-    if (isMobile) {
-      // Enhanced mobile scroll behavior for better section title targeting
-      console.log('Mobile device detected: Using optimized scroll behavior for section titles');
+    // Disable scroll restoration temporarily for smoother navigation
+    if ('scrollRestoration' in history) {
+      const originalScrollRestoration = history.scrollRestoration;
+      history.scrollRestoration = 'manual';
       
-      // Disable scroll restoration temporarily on mobile
-      if ('scrollRestoration' in history) {
-        const originalScrollRestoration = history.scrollRestoration;
-        history.scrollRestoration = 'manual';
-        
-        setTimeout(() => {
-          history.scrollRestoration = originalScrollRestoration;
-        }, 1000);
-      }
+      setTimeout(() => {
+        history.scrollRestoration = originalScrollRestoration;
+      }, 1000);
+    }
+    
+    // Primary scroll action
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+    
+    // Correction mechanism to ensure perfect positioning
+    setTimeout(() => {
+      const currentScroll = window.pageYOffset;
+      const scrollDifference = Math.abs(currentScroll - targetPosition);
       
-      // Use requestAnimationFrame for smoother mobile scrolling to section titles
-      requestAnimationFrame(() => {
+      console.log(`Post-scroll check: current=${currentScroll}, target=${targetPosition}, difference=${scrollDifference}`);
+      
+      // Apply correction if the scroll position is off by more than 5px
+      if (scrollDifference > 5) {
+        console.log(`Applying scroll correction for ${sectionId}`);
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
         });
-        
-        // Additional verification for mobile to ensure section title is visible
-        setTimeout(() => {
-          const currentScroll = window.pageYOffset;
-          const scrollDifference = Math.abs(currentScroll - targetPosition);
-          
-          if (scrollDifference > 15) {
-            console.log(`Mobile: Applying final position correction for section title ${sectionId}`);
-            window.scrollTo({
-              top: targetPosition,
-              behavior: 'smooth'
-            });
-          }
-        }, 300);
-      });
-    } else {
-      // Desktop scrolling with section title focus
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-
-      // Enhanced fallback correction for section titles
-      setTimeout(() => {
-        const currentScroll = window.pageYOffset;
-        const scrollDifference = Math.abs(currentScroll - targetPosition);
-        
-        console.log(`Desktop post-scroll check: current=${currentScroll}, target=${targetPosition}, difference=${scrollDifference}`);
-        
-        // Apply correction if the scroll position is off
-        if (scrollDifference > 10) {
-          console.log(`Desktop: Applying scroll correction for section title ${sectionId}`);
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      }, 400);
-    }
+      }
+    }, isMobile ? 600 : 400);
+    
   }, scrollDelay);
 
-  console.log(`Scrolled to section title position: ${targetPosition}`);
+  console.log(`Scrolled to position: ${targetPosition}`);
 };
 
-// Enhanced global handler for all internal anchor links with mobile optimization
+// Enhanced global handler for all internal anchor links
 export const initializeScrollBehavior = () => {
-  console.log('Initializing scroll behavior with mobile optimization');
+  console.log('Initializing enhanced scroll behavior');
   
   // Handle all anchor links that start with #
   document.addEventListener('click', (event) => {
@@ -116,7 +86,7 @@ export const initializeScrollBehavior = () => {
     }
   });
 
-  // Add touch event handling for better mobile experience
+  // Enhanced touch event handling for mobile
   let touchStartY = 0;
   
   document.addEventListener('touchstart', (event) => {

@@ -54,9 +54,9 @@ const ConsultingSection = () => {
   return (
     <section id="consulting" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* Left-aligned title */}
+        {/* Left-aligned title with specific ID for navigation */}
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">Why Work With Me?</h2>
+          <h2 id="consulting-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left scroll-mt-32">Why Work With Me?</h2>
           <p className="text-lg text-dark-olive mt-4 max-w-4xl">Because this isn't cookie-cutter coaching or talk therapy. It's deep, personal, and integrative.</p>
         </div>
 
