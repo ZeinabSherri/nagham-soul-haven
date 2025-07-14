@@ -1,3 +1,4 @@
+
 export const scrollToSection = (titleId: string) => {
   console.log(`Attempting to scroll to title: ${titleId}`);
   
@@ -20,9 +21,9 @@ export const scrollToSection = (titleId: string) => {
   let targetPosition;
   
   if (isMobile) {
-    // On mobile, add a small additional offset to ensure title is fully visible and flush at top
-    // This accounts for any mobile browser UI quirks and ensures perfect positioning
-    targetPosition = elementPosition - actualHeaderHeight - 2; // 2px buffer for perfect alignment
+    // On mobile, we want the title to be exactly at the top of the viewport
+    // Position it flush with the header bottom edge with zero gap
+    targetPosition = elementPosition - actualHeaderHeight;
     console.log(`Mobile: Element position: ${elementPosition}, header: ${actualHeaderHeight}, target: ${targetPosition}`);
   } else {
     // Desktop positioning remains unchanged
@@ -30,12 +31,12 @@ export const scrollToSection = (titleId: string) => {
     console.log(`Desktop: Element position: ${elementPosition}, target: ${targetPosition}`);
   }
   
-  // Mobile-optimized scrolling with enhanced menu handling
-  const scrollDelay = isMobile ? 300 : 50; // Slightly longer delay for mobile menu close
+  // Mobile-optimized scrolling with enhanced precision
+  const scrollDelay = isMobile ? 300 : 50;
   
   setTimeout(() => {
     if (isMobile) {
-      console.log('Mobile device detected: Using optimized scroll behavior');
+      console.log('Mobile device detected: Using pixel-perfect scroll behavior');
       
       // Disable scroll restoration temporarily on mobile
       if ('scrollRestoration' in history) {
@@ -54,33 +55,33 @@ export const scrollToSection = (titleId: string) => {
           behavior: 'smooth'
         });
         
-        // Enhanced mobile verification with multiple correction attempts
+        // Enhanced mobile verification with aggressive correction
         setTimeout(() => {
           const currentScroll = window.pageYOffset;
           const scrollDifference = Math.abs(currentScroll - targetPosition);
           
-          if (scrollDifference > 5) {
+          if (scrollDifference > 2) { // More strict tolerance for mobile
             console.log(`Mobile: First correction for ${titleId}, difference: ${scrollDifference}px`);
             window.scrollTo({
               top: targetPosition,
-              behavior: 'smooth'
+              behavior: 'auto' // Use instant scroll for precision
             });
             
-            // Final verification for stubborn mobile browsers
+            // Final verification with pixel-perfect correction
             setTimeout(() => {
               const finalScroll = window.pageYOffset;
               const finalDifference = Math.abs(finalScroll - targetPosition);
               
-              if (finalDifference > 3) {
-                console.log(`Mobile: Final correction for ${titleId}`);
+              if (finalDifference > 1) { // Pixel-perfect tolerance
+                console.log(`Mobile: Final pixel-perfect correction for ${titleId}`);
                 window.scrollTo({
                   top: targetPosition,
-                  behavior: 'auto' // Use instant scroll for final correction
+                  behavior: 'auto'
                 });
               }
-            }, 300);
+            }, 100);
           }
-        }, 500);
+        }, 300);
       });
     } else {
       // Desktop scrolling remains unchanged - it's already perfect

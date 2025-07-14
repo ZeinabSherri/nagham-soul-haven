@@ -18,21 +18,37 @@
   scroll-margin-top: var(--header-height);
 }
 
-/* Mobile-specific scroll margin for precise alignment */
+/* Mobile-specific scroll margin for pixel-perfect alignment */
 @media (max-width: 767px) {
   .scroll-margin-top {
-    scroll-margin-top: calc(var(--header-height) + 2px);
+    scroll-margin-top: 0 !important;
   }
   
-  /* Ensure section titles are never hidden on mobile */
+  /* Ensure section titles are perfectly aligned on mobile with zero gaps */
   #about-title,
   #consulting-title,
   #services-title,
   #certifications-title,
   #testimonials-title {
-    scroll-margin-top: calc(var(--header-height) + 2px);
+    scroll-margin-top: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
     position: relative;
     z-index: 1;
+  }
+  
+  /* Remove any unwanted spacing above section titles on mobile */
+  #about-section,
+  #consulting-section,
+  #services-section,
+  #certifications-section,
+  #testimonials-section {
+    padding-top: 0;
+  }
+  
+  /* Ensure section containers don't add extra spacing on mobile */
+  section {
+    scroll-margin-top: 0;
   }
 }
 
