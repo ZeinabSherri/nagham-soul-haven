@@ -54,7 +54,7 @@ const HeroSection = () => {
             <h2 className="text-deep-purple mb-1 animate-fade-in delay-400 text-base font-bold my-[20px]">Together, we achieve this through: </h2>
 
             {/* Key points list */}
-            <div className="mb-3 space-y-1">
+            <div className="mb-3 space-y-1 my-[20px]">
               <div className="flex items-center text-deep-purple animate-fade-in delay-500">
                 <span className="text-vibrant-purple mr-3 text-lg">•</span>
                 <span className="text-sm font-bold">Transformational Healing</span>
