@@ -58,7 +58,7 @@ const Navigation = () => {
         case 'unique': return 'consulting';
         case 'services': return 'services-section';
         case 'certifications': return 'certifications-section';
-        case 'testimonials': return 'testimonials-section';
+        case 'testimonials': return 'testimonials';
         case 'contact': return 'contact-section';
         default: return section;
       }
