@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
-
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     console.log(`HeroSection: Scrolling to ${sectionId}`);
@@ -13,28 +11,23 @@ const HeroSection = () => {
       });
     }
   };
-
   const handleCalendlyClick = () => {
     console.log('HeroSection: Opening Calendly booking page');
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-
   const handleServicesClick = () => {
     console.log('HeroSection: Scrolling to services section');
     scrollToSection('services-title');
   };
-
   const handleContactClick = () => {
     console.log('HeroSection: Scrolling to contact section');
     scrollToSection('get-in-touch-title');
   };
-
-  return (
-    <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
+  return <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Texture Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
-      }}></div>
+      backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
+    }}></div>
       
       {/* Semi-transparent Overlay */}
       <div className="absolute inset-0 bg-creamy-beige/45"></div>
@@ -52,13 +45,13 @@ const HeroSection = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-deep-purple mb-3 leading-tight animate-fade-in">Start Feeling Safe, Seen & Connected <br /><span>Again</span></h1>
             
             {/* Subheadline */}
-            <p className="text-vibrant-purple mb-3 leading-relaxed animate-fade-in delay-300 font-normal text-lg">
+            <p className="text-vibrant-purple mb-3 leading-relaxed animate-fade-in delay-300 font-normal text-lg my-[30px]">
               I'm Nagham, Your Guide to Transformation.<br />
               I help you <strong>Release</strong> what's heavy, <strong>Reconnect</strong> with yourself, & <strong>Rise</strong> into who you were always meant to be.
             </p>
 
             {/* Title for key points */}
-            <h2 className="text-deep-purple mb-1 animate-fade-in delay-400 text-base font-bold">Together, we achieve this through: </h2>
+            <h2 className="text-deep-purple mb-1 animate-fade-in delay-400 text-base font-bold my-[20px]">Together, we achieve this through: </h2>
 
             {/* Key points list */}
             <div className="mb-3 space-y-1">
@@ -78,16 +71,10 @@ const HeroSection = () => {
 
             {/* Call-to-Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 mb-6 animate-fade-in delay-1100">
-              <Button 
-                onClick={handleServicesClick} 
-                className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-3 rounded-lg text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 touch-manipulation"
-              >
+              <Button onClick={handleServicesClick} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-3 rounded-lg text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 touch-manipulation">
                 Begin Your Transformation
               </Button>
-              <Button 
-                onClick={handleContactClick} 
-                className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-3 rounded-lg text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 touch-manipulation"
-              >
+              <Button onClick={handleContactClick} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-3 rounded-lg text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 touch-manipulation">
                 Book Your 15 min Free Call
               </Button>
             </div>
@@ -129,10 +116,7 @@ const HeroSection = () => {
                     </div>
                   </div>
                   
-                  <Button 
-                    onClick={handleServicesClick} 
-                    className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-2200 touch-manipulation"
-                  >
+                  <Button onClick={handleServicesClick} className="bg-vibrant-purple hover:bg-deep-purple text-creamy-beige px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-2200 touch-manipulation">
                     Book Your Session
                   </Button>
                 </div>
@@ -141,8 +125,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
