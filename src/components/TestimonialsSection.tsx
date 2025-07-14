@@ -38,9 +38,9 @@ const TestimonialsSection = () => {
 
   return <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Left-aligned title */}
+        {/* Left-aligned title with semantic ID */}
         <div className="mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
+          <h2 id="testimonials-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left scroll-mt-32">
             What Clients Say
           </h2>
           <p className="text-lg text-vibrant-purple mt-4 max-w-3xl animate-fade-in delay-200">

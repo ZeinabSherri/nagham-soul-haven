@@ -2,12 +2,16 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check } from 'lucide-react';
 import { scrollToSection } from '../utils/scrollUtils';
+
 const AboutSection = () => {
-  return <section id="about-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  return (
+    <section id="about-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Left-aligned title */}
+        {/* Left-aligned title with semantic ID */}
         <div className="mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">About Me</h2>
+          <h2 id="about-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left scroll-mt-32">
+            About Me
+          </h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -15,7 +19,11 @@ const AboutSection = () => {
           <div className="flex justify-center items-center lg:justify-center animate-fade-in delay-300">
             <div className="relative">
               <div className="aspect-[4/5] w-full max-w-md rounded-2xl overflow-hidden shadow-lg">
-                <img alt="Nagham Rasbieh - Professional Therapist and Healer" className="w-full h-full object-center object-contain" src="/lovable-uploads/2403300f-e082-4573-93ac-849c73996313.png" />
+                <img 
+                  src="/lovable-uploads/2403300f-e082-4573-93ac-849c73996313.png" 
+                  alt="Nagham Rasbieh - Professional Therapist and Healer" 
+                  className="w-full h-full object-center object-contain" 
+                />
               </div>
             </div>
           </div>
@@ -23,21 +31,25 @@ const AboutSection = () => {
           {/* Right Column - Text Content */}
           <div className="space-y-6 animate-fade-in delay-500">
             {/* Subtitle with roles/titles */}
-            <h3 className="text-xl md:text-2xl font-semibold text-vibrant-purple animate-fade-in delay-700">Mental Health Therapist | Consciousness Advisor | Energy Healer
-          </h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-vibrant-purple animate-fade-in delay-700">
+              Mental Health Therapist | Consciousness Advisor | Energy Healer
+            </h3>
 
             {/* Italic tagline */}
-            <p className="text-lg text-deep-purple italic animate-fade-in delay-1000">Helping you reconnect with your truth and find peace from the inside out.</p>
+            <p className="text-lg text-deep-purple italic animate-fade-in delay-1000">
+              Helping you reconnect with your truth and find peace from the inside out.
+            </p>
 
             {/* Descriptive paragraphs */}
             <div className="space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">
                 I'm <span className="font-semibold text-deep-purple">Nagham Rasbieh, an Internationally Certified Master Coach and Therapist</span>, specializing in conscious and unconscious transformation.
-I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic Programming (NLP), consciousness work, and energy healing to support children, teens, mothers, and adults on their healing journey.</p>
- <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">My Goal is simple: to help you reconnect with your truth, regulate your nervous system, and experience deep peace from the inside out.</p>
+                I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic Programming (NLP), consciousness work, and energy healing to support children, teens, mothers, and adults on their healing journey.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1200">
+                My Goal is simple: to help you reconnect with your truth, regulate your nervous system, and experience deep peace from the inside out.
+              </p>
               
-              
-
               {/* Clinical Hypnotherapist Recognition */}
               <p className="text-lg text-gray-700 leading-relaxed animate-fade-in delay-1500">
                 I'm officially a <span className="font-semibold text-deep-purple">Clinical Hypnotherapist</span>, recognized by:
@@ -46,7 +58,6 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic
                 <li className="text-lg text-gray-700 font-bold">• The American Board of Hypnotherapy (ABH)</li>
                 <li className="text-lg text-gray-700 font-bold">• The International Certification Board of Coaches & Hypnotists(ICBCH)</li>
                 <li className="text-lg text-gray-700 font-bold">• The Lebanese Syndicate of Hypnotherapists (LSH)</li>
-                
               </ul>
             </div>
 
@@ -63,8 +74,7 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic
               </li>
               <li className="flex items-start space-x-3 animate-fade-in delay-2000">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
-                <span className="text-lg text-gray-700">Create a safe space where real change happens
-              </span>
+                <span className="text-lg text-gray-700">Create a safe space where real change happens</span>
               </li>
               <li className="flex items-start space-x-3 animate-fade-in delay-2200">
                 <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
@@ -80,13 +90,19 @@ I integrate neuroscience-based coaching, clinical hypnotherapy, Neuro-Linguistic
 
             {/* Call-to-action Button */}
             <div className="pt-6 animate-fade-in delay-2600">
-              <Button onClick={() => scrollToSection('contact-form')} size="lg" className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200">
+              <Button 
+                onClick={() => scrollToSection('contact-form')} 
+                size="lg" 
+                className="bg-deep-purple hover:bg-deep-purple/90 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200"
+              >
                 Let's Connect
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AboutSection;
