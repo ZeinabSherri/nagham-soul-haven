@@ -27,10 +27,10 @@ const Navigation = () => {
             <button onClick={() => handleScrollToSection('about-section')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple whitespace-nowrap">
               About 
             </button>
+            <button onClick={() => handleScrollToSection('consulting')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple whitespace-nowrap">What's Unique</button>
             <button onClick={() => handleScrollToSection('services-title')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
               Services
             </button>
-            <button onClick={() => handleScrollToSection('consulting')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple whitespace-nowrap">What's Unique</button>
             <button onClick={() => handleScrollToSection('certifications-title')} className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple">
               Certifications
             </button>
