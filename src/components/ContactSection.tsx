@@ -4,27 +4,43 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube } from 'lucide-react';
+import { toast } from "sonner";
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent('New Message from Website');
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
     window.location.href = `mailto:Hello@naghamthecoach?subject=${subject}&body=${body}`;
+    
+    // Show success message
+    toast.success("Your message was sent successfully! We'll get back to you soon.");
+    
+    // Clear form
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
   };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
+
   const handleCalendlyClick = () => {
     window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
   };
+
   const handleBookSessionClick = () => {
     const element = document.getElementById('services');
     if (element) {
@@ -34,12 +50,15 @@ const ContactSection = () => {
       });
     }
   };
+
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/9613633483', '_blank');
   };
+
   const handleWhatsAppClicks = () => {
     window.open('https://wa.me/971506607034', '_blank');
   };
+
   return <section id="contact-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in">
@@ -174,4 +193,5 @@ const ContactSection = () => {
       </div>
     </section>;
 };
+
 export default ContactSection;
