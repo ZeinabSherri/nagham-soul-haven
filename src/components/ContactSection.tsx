@@ -39,7 +39,7 @@ const ContactSection = () => {
   };
   const handleWhatsAppClicks = () => {
     window.open('https://wa.me/971506607034', '_blank');
-  }; 
+  };
   return <section id="contact-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in">
@@ -59,7 +59,7 @@ const ContactSection = () => {
                 <Calendar className="w-6 h-6 mr-3 text-vibrant-purple" />
                 Book a Free 15-min Call
               </CardTitle>
-              <p className="text-dark-olive">Book a Free 15-min Call</p>
+              
             </CardHeader>
             <CardContent className="text-center">
               <div className="mb-6">
@@ -70,7 +70,8 @@ const ContactSection = () => {
               <div className="bg-gray-50 rounded-xl p-8 border border-deep-purple/10">
                 <div className="text-6xl mb-4">✨</div>
                 <h3 className="text-xl font-semibold text-deep-purple mb-4">Online Booking Calendar</h3>
-                <p className="text-dark-olive mb-6">Click below to view available times and book your session for the  SERVICE  you need instantly</p>
+                <p className="text-dark-olive mb-6">Click below to view available times and book your session for the 
+SERVICE you need instantly</p>
                 <Button onClick={handleBookSessionClick} className="bg-deep-purple hover:bg-vibrant-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4">Book a Session</Button>
                 <p className="text-sm text-dark-olive">
                   Sessions available online and in-person • Flexible scheduling • Instant confirmation
