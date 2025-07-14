@@ -35,20 +35,6 @@ const CertificationsSection = () => {
           </h2>
         </div>
 
-        {/* Certificate Wall Image */}
-        <div className="mb-12 flex justify-center animate-fade-in delay-300">
-          <div className="relative max-w-3xl w-full">
-            <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-gray-100">
-              <img src="/lovable-uploads/place.jpg" alt="Wall of Professional Certifications and Credentials" className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-            <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-md border border-white/20">
-              <p className="font-semibold text-deep-purple text-sm">Professional Certifications Display</p>
-              <p className="text-xs text-dark-olive">Years of dedicated training and education</p>
-            </div>
-          </div>
-        </div>
-
         {/* Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
           {/* Left Column - International Certifications */}
@@ -114,6 +100,20 @@ const CertificationsSection = () => {
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Certificate Wall Image - Moved Below Text Content */}
+        <div className="mb-12 flex justify-center animate-fade-in delay-300">
+          <div className="relative max-w-3xl w-full">
+            <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-gray-100">
+              <img src="/lovable-uploads/place.jpg" alt="Wall of Professional Certifications and Credentials" className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-md border border-white/20">
+              <p className="font-semibold text-deep-purple text-sm">Professional Certifications Display</p>
+              <p className="text-xs text-dark-olive">Years of dedicated training and education</p>
             </div>
           </div>
         </div>
