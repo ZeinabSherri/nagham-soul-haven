@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, Users, Video, Home, Heart, Star, Sparkles, Zap, Eye } from 'lucide-react';
-
 const ServicesSection = () => {
   const services = [{
     title: "1:1 Private Coaching Session",
@@ -68,33 +67,26 @@ const ServicesSection = () => {
     icon: Eye,
     bookingLink: "http://lb.oneconsciousness.org/naghamrasbieh"
   }];
-
   const handleBookNow = (bookingLink: string) => {
     window.open(bookingLink, '_blank');
   };
-
-  return (
-    <section id="services-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+  return <section id="services-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Left-aligned title with specific ID directly on the heading */}
         <div className="mb-12 animate-fade-in">
           <h2 id="services-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
             My Services
           </h2>
-          <p className="text-lg text-dark-olive mt-4 max-w-3xl animate-fade-in delay-200">
-            Each healing session is uniquely designed for you, combining ancient wisdom 
-            with modern therapeutic techniques for profound transformation.
-          </p>
+          <p className="text-lg text-dark-olive mt-4 max-w-3xl animate-fade-in delay-200">Each healing session is uniquely designed for you, combining ancient wisdom with modern therapeutic techniques for profound transformation.</p>
         </div>
 
         {/* Compact 3-column grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <Card key={index} className="bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in h-80 flex flex-col" style={{
-                animationDelay: `${400 + index * 200}ms`
-              }}>
+          const IconComponent = service.icon;
+          return <Card key={index} className="bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in h-80 flex flex-col" style={{
+            animationDelay: `${400 + index * 200}ms`
+          }}>
                 <CardContent className="p-6 flex flex-col h-full">
                   {/* Icon */}
                   <div className="w-12 h-12 bg-vibrant-purple rounded-full flex items-center justify-center mb-4">
@@ -126,9 +118,8 @@ const ServicesSection = () => {
                     {service.title === "Consciousness Services" ? "Book Free 30 min Call" : "Book Now"}
                   </Button>
                 </CardContent>
-              </Card>
-            );
-          })}
+              </Card>;
+        })}
         </div>
 
         {/* What Makes My Work Different - All 4 points in one row */}
@@ -154,8 +145,6 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ServicesSection;
