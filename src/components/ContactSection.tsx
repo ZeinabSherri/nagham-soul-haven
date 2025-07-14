@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,7 +18,7 @@ const ContactSection = () => {
     e.preventDefault();
     const subject = encodeURIComponent('New Message from Website');
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:Hello@naghamthecoach?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hello@naghamthecoach.com?subject=${subject}&body=${body}`;
     
     // Show success message
     toast.success("Your message was sent successfully! We'll get back to you soon.");
@@ -140,7 +141,7 @@ const ContactSection = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <Mail className="w-6 h-6 text-vibrant-purple" />
-                    <span className="text-deep-purple">Hello@naghamthecoach</span>
+                    <span className="text-deep-purple">hello@naghamthecoach.com</span>
                   </div>
                   <div className="flex items-center space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors" onClick={handleWhatsAppClick}>
                     <Phone className="w-6 h-6 text-vibrant-purple" />
