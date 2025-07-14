@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Brain2, Sparkles, Users, Baby, Clock } from 'lucide-react';
+import { Heart, Brain, Sparkles, Users, Baby, Clock } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [{
@@ -12,7 +12,7 @@ const ServicesSection = () => {
     price: "$150 / session",
     color: "soft-lavender"
   }, {
-    title: "Couples Therapy",
+    title: "Couples Therapy", 
     description: "Strengthen your relationship with guided communication and conflict resolution techniques.",
     icon: Users,
     details: ["Communication", "Conflict Resolution", "Intimacy", "Pre-Marital Counseling"],
@@ -28,7 +28,7 @@ const ServicesSection = () => {
   }, {
     title: "Consciousness Coaching",
     description: "Unlock your full potential and live a more conscious, fulfilling life.",
-    icon: Brain2,
+    icon: Brain,
     details: ["Personal Growth", "Mindfulness", "Spiritual Development", "Goal Setting"],
     price: "$170 / session",
     color: "vibrant-purple"
