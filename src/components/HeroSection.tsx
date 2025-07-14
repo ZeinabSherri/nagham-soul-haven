@@ -40,7 +40,7 @@ const HeroSection = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center min-h-[75vh]">
           {/* Left side - Content */}
-          <div className="text-left my-[70px]">
+          <div className="text-left my-[90px]">
             {/* Main Headline with smaller size and proper spacing */}
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-deep-purple mb-3 leading-tight animate-fade-in">Start Feeling Safe, Seen & Connected <br /><span>Again</span></h1>
             
