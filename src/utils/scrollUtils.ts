@@ -1,22 +1,19 @@
-// src/utils/scrollUtils.ts
+// scrollUtils.ts (REPLACEMENT CODE)
 
-export const scrollToSection = (sectionId: string) => {
+export const scrollToSection = (sectionId: string, offset: number = 0) => {
   const element = document.getElementById(sectionId);
   if (!element) return;
 
-  // Scroll so the heading is exactly at the top
-  const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+  // Calculate the element's position relative to the document
+  const header = document.querySelector('nav');
+  const headerHeight = header ? header.offsetHeight : 0;
+
+  // scrollMarginTop on title in JSX will do the rest for responsiveness
+  // We only use header height here, no extra space.
+  const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - headerHeight - offset;
 
   window.scrollTo({
-    top: elementPosition,
+    top: targetPosition,
     behavior: 'smooth'
   });
-
-  // Fallback correction (some browsers need a second scroll)
-  setTimeout(() => {
-    const currentScroll = window.pageYOffset;
-    if (Math.abs(currentScroll - elementPosition) > 10) {
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
-    }
-  }, 400);
 };
