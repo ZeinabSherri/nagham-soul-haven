@@ -18,13 +18,14 @@ const Navigation = () => {
   const handleBookSession = () => {
     console.log('Navigation: Opening Calendly booking page');
     window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
+    setIsOpen(false); // Close mobile menu after action
   };
 
   const handleLogoProcessed = (processedUrl: string) => {
     setLogoUrl(processedUrl);
   };
 
-  // Enhanced mobile-friendly button with better touch handling
+  // Enhanced mobile-friendly button with better touch handling and consistent behavior
   const createMobileNavButton = (text: string, sectionId: string, extraClass = '') => (
     <button
       onClick={() => handleScrollToSection(sectionId)}
@@ -88,12 +89,12 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Enhanced with proper section targeting */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-2 border-t border-soft-lavender">
             {createMobileNavButton('About', 'about-section')}
+            {createMobileNavButton("What's Unique", 'consulting')}
             {createMobileNavButton('Services', 'services-title')}
-            {createMobileNavButton('What Makes My Work Different?', 'consulting')}
             {createMobileNavButton('Certifications', 'certifications-title')}
             {createMobileNavButton('Testimonials', 'testimonials')}
             {createMobileNavButton('Contact', 'get-in-touch-title')}

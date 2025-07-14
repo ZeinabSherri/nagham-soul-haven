@@ -24,55 +24,60 @@ export const scrollToSection = (sectionId: string, offset: number = 120) => {
   const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
   console.log(`Element position: ${elementPosition}, offset: ${customOffset}`);
   
-  // Mobile-optimized scrolling with better performance
+  // Mobile-optimized scrolling with better performance and menu handling
   const isMobile = window.innerWidth < 768;
   const targetPosition = elementPosition - customOffset;
   
-  if (isMobile) {
-    // Use a more immediate scroll for mobile to prevent iOS scroll issues
-    console.log('Mobile device detected: Using optimized scroll behavior');
-    
-    // Disable scroll restoration temporarily on mobile
-    if ('scrollRestoration' in history) {
-      const originalScrollRestoration = history.scrollRestoration;
-      history.scrollRestoration = 'manual';
+  // Add small delay for mobile to ensure menu closes first
+  const scrollDelay = isMobile ? 150 : 0;
+  
+  setTimeout(() => {
+    if (isMobile) {
+      // Use a more immediate scroll for mobile to prevent iOS scroll issues
+      console.log('Mobile device detected: Using optimized scroll behavior');
       
-      setTimeout(() => {
-        history.scrollRestoration = originalScrollRestoration;
-      }, 1000);
-    }
-    
-    // Use requestAnimationFrame for smoother mobile scrolling
-    requestAnimationFrame(() => {
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    });
-  } else {
-    // Standard desktop scrolling
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-
-    // Fallback correction after a brief delay to ensure proper positioning
-    setTimeout(() => {
-      const currentScroll = window.pageYOffset;
-      const scrollDifference = Math.abs(currentScroll - targetPosition);
+      // Disable scroll restoration temporarily on mobile
+      if ('scrollRestoration' in history) {
+        const originalScrollRestoration = history.scrollRestoration;
+        history.scrollRestoration = 'manual';
+        
+        setTimeout(() => {
+          history.scrollRestoration = originalScrollRestoration;
+        }, 1000);
+      }
       
-      console.log(`Post-scroll check: current=${currentScroll}, target=${targetPosition}, difference=${scrollDifference}`);
-      
-      // Apply correction if the scroll position is significantly off
-      if (scrollDifference > 10) {
-        console.log(`Applying scroll correction for ${sectionId}`);
+      // Use requestAnimationFrame for smoother mobile scrolling
+      requestAnimationFrame(() => {
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
         });
-      }
-    }, 300);
-  }
+      });
+    } else {
+      // Standard desktop scrolling
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+
+      // Fallback correction after a brief delay to ensure proper positioning
+      setTimeout(() => {
+        const currentScroll = window.pageYOffset;
+        const scrollDifference = Math.abs(currentScroll - targetPosition);
+        
+        console.log(`Post-scroll check: current=${currentScroll}, target=${targetPosition}, difference=${scrollDifference}`);
+        
+        // Apply correction if the scroll position is significantly off
+        if (scrollDifference > 10) {
+          console.log(`Applying scroll correction for ${sectionId}`);
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 300);
+    }
+  }, scrollDelay);
 
   console.log(`Scrolled to position: ${targetPosition}`);
 };
