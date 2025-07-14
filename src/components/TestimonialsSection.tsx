@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Left-aligned title */}
         <div className="mb-12 animate-fade-in">
-          <h2 id="testimonials-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
+          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left">
             What Clients Say
           </h2>
           <p className="text-lg text-vibrant-purple mt-4 max-w-3xl animate-fade-in delay-200">
