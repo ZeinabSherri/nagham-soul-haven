@@ -30,7 +30,7 @@ const CertificationsSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-12 animate-fade-in">
-          <h2 id="certifications-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-4">
+          <h2  id="certifications-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-4">
             Verified Certifications
           </h2>
         </div>
