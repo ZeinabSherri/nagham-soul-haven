@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube } from 'lucide-react';
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -71,7 +72,7 @@ const ContactSection = () => {
                 <div className="text-6xl mb-4">✨</div>
                 <h3 className="text-xl font-semibold text-deep-purple mb-4">Online Booking Calendar</h3>
                 <p className="text-dark-olive mb-6">Click below to view available times and book your session for the 
-SERVICE you need instantly</p>
+<span className="font-bold">SERVICE</span> you need instantly</p>
                 <Button onClick={handleBookSessionClick} className="bg-deep-purple hover:bg-vibrant-purple text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 mb-4">Book a Session</Button>
                 <p className="text-sm text-dark-olive">
                   Sessions available online and in-person • Flexible scheduling • Instant confirmation
@@ -174,4 +175,5 @@ SERVICE you need instantly</p>
       </div>
     </section>;
 };
+
 export default ContactSection;
