@@ -27,39 +27,54 @@ const Navigation = () => {
     setLogoUrl(processedUrl);
   };
 
-  // Navigation items with semantic title IDs
-  const navItems = [
-    { text: 'About', titleId: 'about-title' },
-    { text: "What's Unique", titleId: 'consulting-title' },
-    { text: 'Services', titleId: 'services-title' },
-    { text: 'Certifications', titleId: 'certifications-title' },
-    { text: 'Testimonials', titleId: 'testimonials-title' },
-    { text: 'Contact', titleId: 'get-in-touch-title' }
-  ];
-
-  // Enhanced mobile-friendly button with perfect touch handling
-  const createMobileNavButton = (text: string, titleId: string) => (
+  // Enhanced mobile-friendly button with better touch handling and direct section targeting
+  const createMobileNavButton = (text: string, sectionId: string, extraClass = '') => (
     <button
-      onClick={() => handleScrollToSection(titleId)}
-      data-scroll-to={titleId}
-      className="block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-3 rounded-full hover:bg-vibrant-purple w-full text-left touch-manipulation"
+      onClick={() => handleScrollToSection(sectionId)}
+      className={`block text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-105 px-4 py-3 rounded-full hover:bg-vibrant-purple w-full text-left touch-manipulation ${extraClass}`}
       style={{ WebkitTapHighlightColor: 'rgba(163, 57, 156, 0.3)' }}
     >
       {text}
     </button>
   );
 
-  // Enhanced desktop nav button with perfect hover states
-  const createDesktopNavButton = (text: string, titleId: string) => (
+  // Enhanced desktop nav button with better hover states and section title targeting
+  const createDesktopNavButton = (text: string, sectionId: string, extraClass = '') => (
     <button
-      onClick={() => handleScrollToSection(titleId)}
-      data-scroll-to={titleId}
-      className="text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple whitespace-nowrap touch-manipulation"
+      onClick={() => handleScrollToSection(sectionId)}
+      className={`text-vibrant-purple hover:text-white font-medium hover:font-bold transition-all duration-300 hover:scale-110 px-3 py-2 rounded-full hover:bg-vibrant-purple whitespace-nowrap touch-manipulation ${extraClass}`}
       style={{ WebkitTapHighlightColor: 'rgba(163, 57, 156, 0.3)' }}
     >
       {text}
     </button>
   );
+
+  // Get the appropriate section ID based on device type
+  const getSectionId = (section: string) => {
+    if (isMobile) {
+      // Mobile: scroll directly to section content
+      switch (section) {
+        case 'about': return 'about-section';
+        case 'unique': return 'consulting';
+        case 'services': return 'services-section';
+        case 'certifications': return 'certifications-section';
+        case 'testimonials': return 'testimonials-section';
+        case 'contact': return 'contact-section';
+        default: return section;
+      }
+    } else {
+      // Desktop: scroll to section titles
+      switch (section) {
+        case 'about': return 'about-section';
+        case 'unique': return 'consulting';
+        case 'services': return 'services-section';
+        case 'certifications': return 'certifications-section';
+        case 'testimonials': return 'testimonials-section';
+        case 'contact': return 'contact-section';
+        default: return section;
+      }
+    }
+  };
 
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-soft-lavender shadow-sm">
@@ -73,11 +88,12 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6 flex-1 justify-center ml-8">
-            {navItems.map((item, index) => (
-              <React.Fragment key={index}>
-                {createDesktopNavButton(item.text, item.titleId)}
-              </React.Fragment>
-            ))}
+            {createDesktopNavButton('About', getSectionId('about'))}
+            {createDesktopNavButton("What's Unique", getSectionId('unique'))}
+            {createDesktopNavButton('Services', getSectionId('services'))}
+            {createDesktopNavButton('Certifications', getSectionId('certifications'))}
+            {createDesktopNavButton('Testimonials', getSectionId('testimonials'))}
+            {createDesktopNavButton('Contact', getSectionId('contact'))}
           </div>
 
           <div className="hidden md:block">
@@ -102,14 +118,15 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Direct section targeting */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-2 border-t border-soft-lavender">
-            {navItems.map((item, index) => (
-              <React.Fragment key={index}>
-                {createMobileNavButton(item.text, item.titleId)}
-              </React.Fragment>
-            ))}
+            {createMobileNavButton('About', getSectionId('about'))}
+            {createMobileNavButton("What's Unique", getSectionId('unique'))}
+            {createMobileNavButton('Services', getSectionId('services'))}
+            {createMobileNavButton('Certifications', getSectionId('certifications'))}
+            {createMobileNavButton('Testimonials', getSectionId('testimonials'))}
+            {createMobileNavButton('Contact', getSectionId('contact'))}
             
             <Button 
               onClick={handleBookSession} 

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -9,7 +10,7 @@ const CertificationsSection = () => {
     org: "TLT® Association",
     logo: "/lovable-uploads/83d5f222-8dd4-4a0b-b14f-93065557e489.png"
   }, {
-    title: "Clinical Hypnotherapy", 
+    title: "Clinical Hypnotherapy",
     org: "American Board of Hypnotherapy (ABH)",
     logo: "/lovable-uploads/84ad1457-3c87-408c-9ce8-27d48a253d66.png"
   }, {
@@ -27,9 +28,9 @@ const CertificationsSection = () => {
   return (
     <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header with semantic ID */}
+        {/* Section Header */}
         <div className="mb-12 animate-fade-in">
-          <h2 id="certifications-title" className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-4 scroll-mt-32">
+          <h2 className="text-4xl md:text-5xl font-bold text-deep-purple text-left mb-4">
             Verified Certifications
           </h2>
         </div>
@@ -52,7 +53,7 @@ const CertificationsSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
           {/* Left Column - International Certifications */}
           <div className="animate-fade-in delay-500">
-            <h3 className="text-2xl font-bold mb-8 text-deep-purple">
+            <h3 id="certifications-title" className="text-2xl font-bold mb-8 text-deep-purple">
               Internationally Certified Master Practitioner in:
             </h3>
             <div className="space-y-6 mb-8">
