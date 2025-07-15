@@ -81,7 +81,7 @@ const TestimonialsSection = () => {
               <button onClick={handleBookSession} className="bg-vibrant-purple hover:bg-deep-purple text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-1600">
                 Book Your Session
               </button>
-             <button onClick={() => {
+              <button onClick={() => {
                 const getInTouchSection = document.getElementById('get-in-touch-title');
                 if (getInTouchSection) {
                   getInTouchSection.scrollIntoView({ behavior: 'smooth' });
