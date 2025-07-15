@@ -32,11 +32,17 @@ const TestimonialsSection = () => {
     return colors[color as keyof typeof colors] || colors["soft-lavender"];
   };
 
+  // const handleBookSession = () => {
+  //   console.log('TestimonialsSection: Scrolling to services section');
+  //   scrollToSection('services-title');
+  // };
+const TestimonialsSection = () => {
   const handleBookSession = () => {
-    console.log('TestimonialsSection: Scrolling to services section');
-    scrollToSection('services-title');
+    const bookingSection = document.getElementById('services-section');
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
-
   return (
     <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
