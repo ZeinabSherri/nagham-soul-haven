@@ -18,8 +18,8 @@ const Navigation = () => {
   };
 
   const handleBookSession = () => {
-    console.log('Navigation: Scrolling to services section');
-    window.open('services-title');
+        console.log('HeroSection: Scrolling to services section');
+    scrollToSection('services-title');
     setIsOpen(false); // Close mobile menu after action
   };
 
