@@ -2,11 +2,13 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Check, Star, Heart, Sparkles } from 'lucide-react';
-import { scrollToSection } from '@/utils/scrollUtils';
 
 const ConsultingSection = () => {
   const handleStartTransformation = () => {
-    scrollToSection('services-title');
+    const bookingSection = document.getElementById('services-section');
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   // Define paired bullet points for perfect alignment

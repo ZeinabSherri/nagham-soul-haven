@@ -34,7 +34,10 @@ const TestimonialsSection = () => {
   };
 
   const handleBookSession = () => {
-    scrollToSection('services-title');
+    const bookingSection = document.getElementById('services-section');
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const handleServicesClick = () => {
