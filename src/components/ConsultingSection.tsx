@@ -5,7 +5,7 @@ import { Check, Star, Heart, Sparkles } from 'lucide-react';
 
 const ConsultingSection = () => {
   const handleStartTransformation = () => {
-    const bookingSection = document.getElementById('ways-to-start');
+    const bookingSection = document.getElementById('services-section');
     if (bookingSection) {
       bookingSection.scrollIntoView({ behavior: 'smooth' });
     }
