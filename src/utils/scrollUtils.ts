@@ -11,48 +11,26 @@ export const scrollToSection = (titleId: string) => {
   console.log(`Device type: ${isMobile ? 'Mobile' : 'Desktop'}`);
 
   if (isMobile) {
-    console.log('Mobile device: Positioning title flush with top of viewport');
-    
-    // Get the current scroll position and element position
-    const elementRect = element.getBoundingClientRect();
-    const currentScrollY = window.pageYOffset;
-    const elementTop = elementRect.top + currentScrollY;
-    
-    console.log(`Mobile: Element absolute top: ${elementTop}px, scrolling to make it flush with viewport top`);
-    
-    // Scroll to make the title flush with the top of the viewport
+    // Mobile behaviour - ensure title appears just under the fixed nav
+    const header = document.querySelector('nav');
+    const headerHeight = header ? header.offsetHeight : 100;
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const targetPosition = elementPosition - headerHeight;
+
     window.scrollTo({
-      top: elementTop,
-      behavior: 'smooth'
+      top: targetPosition,
+      behavior: 'smooth',
     });
-    
-    // Precision correction after scroll completes to ensure perfect alignment
+
+    // Fallback correction for mobile
     setTimeout(() => {
-      const newRect = element.getBoundingClientRect();
-      const actualTop = newRect.top;
-      
-      console.log(`Mobile verification: Element top after scroll: ${actualTop}px`);
-      
-      // If the element is not exactly at the top (allowing 2px tolerance), apply correction
-      if (Math.abs(actualTop) > 2) {
-        const correction = actualTop;
-        const correctedScrollY = window.pageYOffset + correction;
-        
-        console.log(`Mobile: Applying precision correction: ${correction}px, new scroll: ${correctedScrollY}px`);
-        
-        window.scrollTo({
-          top: correctedScrollY,
-          behavior: 'auto' // Instant for precision
-        });
-        
-        // Final verification
-        setTimeout(() => {
-          const finalRect = element.getBoundingClientRect();
-          console.log(`Mobile: Final position: ${finalRect.top}px from top (target: 0px)`);
-        }, 50);
+      const currentScroll = window.pageYOffset;
+      const diff = Math.abs(currentScroll - targetPosition);
+      if (diff > 5) {
+        window.scrollTo({ top: targetPosition, behavior: 'auto' });
       }
-    }, 700); // Wait for smooth scroll animation
-    
+    }, 500);
+
   } else {
     // Desktop behavior remains unchanged - it's already perfect
     const header = document.querySelector('nav');

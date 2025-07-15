@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube, Facebook } from 'lucide-react';
+import { scrollToSection } from '@/utils/scrollUtils';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -34,13 +35,7 @@ const ContactSection = () => {
 
   const handleBookSessionClick = () => {
     console.log('ContactSection: Scrolling to services section');
-    const element = document.getElementById('services-section');
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
+    scrollToSection('services-title');
   };
 
   const handleWhatsAppClick = () => {
