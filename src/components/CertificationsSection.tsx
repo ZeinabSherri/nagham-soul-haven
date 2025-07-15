@@ -101,9 +101,7 @@ const CertificationsSection = () => {
             <div className="bg-light-olive p-6 rounded-xl">
               <div className="flex items-center mb-6">
                 <Check className="w-6 h-6 text-vibrant-purple mr-3" />
-                <h3 className="text-xl font-bold text-deep-purple">
-                  Additional Specialized Trainings
-                </h3>
+                <h3 className="text-xl font-bold text-deep-purple">Additional Specialized Certifications</h3>
               </div>
               <div className="grid sm:grid-cols-2 gap-2">
                 {additionalTrainings.map((training, index) => <div key={index} className="flex items-center space-x-2 p-2 bg-white/70 rounded-md">
