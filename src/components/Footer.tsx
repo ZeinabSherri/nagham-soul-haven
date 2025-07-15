@@ -37,6 +37,14 @@ const Footer = () => {
               <Instagram className="w-6 h-6" />
             </a>
             <a 
+              href="https://www.facebook.com/nagham.rasbieh" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center space-x-2 text-deep-purple hover:text-blue-600 transition-colors duration-300 transform hover:scale-105"
+            >
+              <Facebook className="w-6 h-6" />
+            </a>
+            <a 
               href="https://www.tiktok.com/@naghamthecoach" 
               target="_blank" 
               rel="noopener noreferrer" 
@@ -46,14 +54,7 @@ const Footer = () => {
                 <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-1.183-.11c-3.516 0-6.368 2.852-6.368 6.367 0 3.516 2.852 6.368 6.368 6.368 3.516 0 6.368-2.852 6.368-6.368V7.749a8.636 8.636 0 0 0 4.1 1.039v-3.445a4.792 4.792 0 0 1-.952-.187Z" />
               </svg>
             </a>
-            <a 
-              href="https://www.facebook.com/nagham.rasbieh" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center space-x-2 text-deep-purple hover:text-blue-600 transition-colors duration-300 transform hover:scale-105"
-            >
-              <Facebook className="w-6 h-6" />
-            </a>
+            
             <a 
               href="https://www.youtube.com/@NaghamTheCoach" 
               target="_blank" 
