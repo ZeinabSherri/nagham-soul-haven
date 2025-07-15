@@ -1,16 +1,9 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
+import { scrollToSection } from '@/utils/scrollUtils';
+
 const HeroSection = () => {
-  const scrollToSection = (sectionId: string) => {
-    console.log(`HeroSection: Scrolling to ${sectionId}`);
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  };
   const handleCalendlyClick = () => {
     console.log('HeroSection: Opening Calendly booking page');
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
