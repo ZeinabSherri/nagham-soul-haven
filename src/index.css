@@ -9,7 +9,7 @@
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 100px;
+    --header-height: 80px;
   }
 }
 
@@ -18,9 +18,9 @@
   scroll-margin-top: var(--header-height);
 }
 
-/* Mobile-specific: Remove any scroll margins to allow precise positioning */
+/* Mobile-specific: Remove scroll margins for precise JavaScript control */
 @media (max-width: 767px) {
-  /* Reset all scroll margins on mobile for precise control */
+  /* Reset all scroll margins on mobile for precise JavaScript control */
   #about-title,
   #consulting-title,
   #services-title,
@@ -31,6 +31,13 @@
   
   .scroll-margin-top {
     scroll-margin-top: 0 !important;
+  }
+}
+
+/* Ensure no horizontal overflow on mobile */
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
   }
 }
 
