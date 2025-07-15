@@ -21,7 +21,7 @@ const HeroSection = () => {
   };
   const handleContactClick = () => {
     console.log('HeroSection: Scrolling to contact section');
-    scrollToSection('contact-title');
+    scrollToSection('get-in-touch-title');
   };
   return <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Texture Image */}

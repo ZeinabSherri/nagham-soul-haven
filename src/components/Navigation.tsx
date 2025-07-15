@@ -18,8 +18,8 @@ const Navigation = () => {
   };
 
   const handleBookSession = () => {
-    console.log('Navigation: Opening Calendly booking page');
-    window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
+    console.log('Navigation: Scrolling to services section');
+    window.open('services-title');
     setIsOpen(false); // Close mobile menu after action
   };
 
