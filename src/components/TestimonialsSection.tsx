@@ -33,7 +33,8 @@ const TestimonialsSection = () => {
   };
 
   const handleBookSession = () => {
-    window.open('https://calendly.com/hello-naghamthecoach/book-a-free-15-min-call', '_blank');
+    console.log('tetimonialsSection: Scrolling to services section');
+    scrollToSection('services-title');
   };
 
   return (
