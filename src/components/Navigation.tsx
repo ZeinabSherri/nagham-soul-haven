@@ -52,12 +52,15 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-soft-lavender shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <LogoProcessor 
-            originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png" 
-            onProcessed={handleLogoProcessed} 
-            className="h-20 sm:h-28 md:h-36 w-auto" 
-          />
+        <div className="flex justify-between items-center py-2 md:py-4">
+          {/* Mobile-centered logo with much smaller size */}
+          <div className="flex-1 md:flex-initial flex justify-center md:justify-start">
+            <LogoProcessor 
+              originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png" 
+              onProcessed={handleLogoProcessed} 
+              className="h-12 md:h-20 lg:h-28 xl:h-36 w-auto" 
+            />
+          </div>
           
           {/* Desktop Navigation - Direct title targeting */}
           <div className="hidden md:flex space-x-6 flex-1 justify-center ml-8">
@@ -78,8 +81,8 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button - positioned absolutely to right */}
+          <div className="md:hidden absolute right-4">
             <button 
               onClick={() => setIsOpen(!isOpen)} 
               className="text-vibrant-purple hover:text-deep-purple transition-colors p-2 touch-manipulation"
