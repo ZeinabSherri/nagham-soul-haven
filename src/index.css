@@ -18,20 +18,20 @@
   scroll-margin-top: var(--header-height);
 }
 
-/* Mobile-specific: Add comfortable margin above section titles */
+/* Mobile-specific: Complete reset for perfect title positioning at viewport top */
 @media (max-width: 767px) {
-  /* Reset default scroll margins to allow dynamic calculation */
+  /* Force all section titles to have zero scroll margin on mobile */
   .scroll-margin-top {
     scroll-margin-top: 0 !important;
   }
   
-  /* Add comfortable scroll margin for mobile section titles */
+  /* Reset all title spacing to ensure they can appear at exact top */
   #about-title,
   #consulting-title,
   #services-title,
   #certifications-title,
   #testimonials-title {
-    scroll-margin-top: 120px !important; /* header height + comfortable margin */
+    scroll-margin-top: 0 !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
@@ -51,12 +51,13 @@
     scroll-margin-top: 0 !important;
   }
   
-  /* Reset heading margins that could interfere with positioning */
+  /* Reset heading margins that could interfere with top positioning */
   h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 0 !important;
     margin-top: 0 !important;
   }
   
-  /* Ensure no global scroll behavior interferes */
+  /* Ensure no body scroll behavior interferes */
   html {
     scroll-padding-top: 0 !important;
   }
