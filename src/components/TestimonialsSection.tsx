@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from 'lucide-react';
+import { scrollToSection } from '@/utils/scrollUtils';
 
 const TestimonialsSection = () => {
   const testimonials = [{
@@ -39,10 +39,12 @@ const TestimonialsSection = () => {
       bookingSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   const handleServicesClick = () => {
-    console.log('HeroSection: Scrolling to services section');
-    scrollToSection('services-title');
+    console.log('TestimonialsSection: Scrolling to get in touch section');
+    scrollToSection('get-in-touch-title');
   };
+
   return (
     <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
