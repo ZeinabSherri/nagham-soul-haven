@@ -12,22 +12,27 @@ export const scrollToSection = (titleId: string) => {
   console.log(`Device type: ${isMobile ? 'Mobile' : 'Desktop'}`);
 
   if (isMobile) {
-    console.log('Mobile device: Positioning title just below fixed header');
+    console.log('Mobile device: Positioning title with comfortable margin from top');
     
     // Get the actual mobile header height
     const header = document.querySelector('nav');
     const actualHeaderHeight = header ? header.offsetHeight : 100;
-    console.log(`Mobile header height: ${actualHeaderHeight}px`);
+    
+    // Add a comfortable margin (20px) below the header for mobile
+    const comfortableMargin = 20;
+    const totalOffset = actualHeaderHeight + comfortableMargin;
+    
+    console.log(`Mobile header height: ${actualHeaderHeight}px, margin: ${comfortableMargin}px, total offset: ${totalOffset}px`);
     
     // Get the current scroll position and element position
     const elementRect = element.getBoundingClientRect();
     const currentScrollY = window.pageYOffset;
     const elementTop = elementRect.top + currentScrollY;
     
-    // Target position: element should be positioned just below the header
-    const targetScrollY = elementTop - actualHeaderHeight;
+    // Target position: element should be positioned below header + comfortable margin
+    const targetScrollY = elementTop - totalOffset;
     
-    console.log(`Mobile: Element absolute top: ${elementTop}px, header height: ${actualHeaderHeight}px, target scroll: ${targetScrollY}px`);
+    console.log(`Mobile: Element absolute top: ${elementTop}px, total offset: ${totalOffset}px, target scroll: ${targetScrollY}px`);
     
     // Smooth scroll to target position
     window.scrollTo({
@@ -39,7 +44,7 @@ export const scrollToSection = (titleId: string) => {
     setTimeout(() => {
       const newRect = element.getBoundingClientRect();
       const actualTop = newRect.top;
-      const expectedTop = actualHeaderHeight;
+      const expectedTop = totalOffset;
       
       console.log(`Mobile verification: Element top after scroll: ${actualTop}px, expected: ${expectedTop}px`);
       
