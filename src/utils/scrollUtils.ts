@@ -1,4 +1,3 @@
-
 export const scrollToSection = (titleId: string) => {
   console.log(`Attempting to scroll to title: ${titleId}`);
   
@@ -12,75 +11,79 @@ export const scrollToSection = (titleId: string) => {
   console.log(`Device type: ${isMobile ? 'Mobile' : 'Desktop'}`);
 
   if (isMobile) {
-    console.log('Mobile device: Positioning title directly below navbar with balanced margin');
+    console.log('Mobile device: Positioning title directly below navbar with precise calculation');
     
-    // Get the actual mobile navbar height dynamically
+    // Get the actual mobile navbar height dynamically at scroll time
     const navbar = document.querySelector('nav');
     const actualNavbarHeight = navbar ? navbar.offsetHeight : 100;
     
-    // Add a small visual margin below the navbar (8px for balance)
-    const visualMargin = 8;
+    // Add a small visual margin below the navbar for balance (matching desktop spacing)
+    const visualMargin = 12;
     const totalOffset = actualNavbarHeight + visualMargin;
     
-    console.log(`Mobile: Navbar height: ${actualNavbarHeight}px, total offset: ${totalOffset}px`);
+    console.log(`Mobile: Dynamic navbar height: ${actualNavbarHeight}px, total offset: ${totalOffset}px`);
     
-    // Calculate the exact scroll position
+    // Calculate the exact scroll position needed
     const elementRect = element.getBoundingClientRect();
     const currentScrollY = window.pageYOffset;
     const elementTop = elementRect.top + currentScrollY;
     const targetScrollPosition = elementTop - totalOffset;
     
-    console.log(`Mobile: Element absolute top: ${elementTop}px, scrolling to: ${targetScrollPosition}px`);
+    console.log(`Mobile: Element absolute top: ${elementTop}px, target scroll: ${targetScrollPosition}px`);
     
-    // Scroll to the calculated position
+    // Perform the initial scroll
     window.scrollTo({
-      top: targetScrollPosition,
+      top: Math.max(0, targetScrollPosition), // Ensure we don't scroll negative
       behavior: 'smooth'
     });
     
-    // Precision correction after scroll completes
+    // Apply precision correction after scroll animation completes
     setTimeout(() => {
       const newRect = element.getBoundingClientRect();
       const actualDistanceFromTop = newRect.top;
       const expectedDistance = totalOffset;
       
-      console.log(`Mobile verification: Element is ${actualDistanceFromTop}px from top (expected: ${expectedDistance}px)`);
+      console.log(`Mobile verification: Element is ${actualDistanceFromTop.toFixed(1)}px from top (expected: ${expectedDistance}px)`);
       
-      // If there's a significant difference, apply correction
-      if (Math.abs(actualDistanceFromTop - expectedDistance) > 3) {
+      // Apply correction if there's a significant difference (more than 2px)
+      if (Math.abs(actualDistanceFromTop - expectedDistance) > 2) {
         const correction = actualDistanceFromTop - expectedDistance;
         const correctedScrollY = window.pageYOffset + correction;
         
-        console.log(`Mobile: Applying precision correction: ${correction}px, new scroll: ${correctedScrollY}px`);
+        console.log(`Mobile: Applying precision correction: ${correction.toFixed(1)}px, final scroll: ${correctedScrollY}px`);
         
         window.scrollTo({
-          top: correctedScrollY,
-          behavior: 'auto' // Instant for precision
+          top: Math.max(0, correctedScrollY),
+          behavior: 'auto' // Instant correction for precision
         });
         
-        // Final verification
+        // Final verification log
         setTimeout(() => {
           const finalRect = element.getBoundingClientRect();
-          console.log(`Mobile: Final position: ${finalRect.top}px from top (target: ${expectedDistance}px)`);
+          console.log(`Mobile: Final position verified: ${finalRect.top.toFixed(1)}px from top`);
         }, 50);
+      } else {
+        console.log('Mobile: Scroll position is accurate, no correction needed');
       }
-    }, 700); // Wait for smooth scroll animation
+    }, 800); // Wait for smooth scroll animation to complete
     
   } else {
-    // Desktop behavior remains unchanged - it's already perfect
+    // Desktop behavior - keep exactly as it was (DO NOT CHANGE)
+    console.log('Desktop: Using existing perfect scroll logic');
+    
     const header = document.querySelector('nav');
     const actualHeaderHeight = header ? header.offsetHeight : 120;
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
     const targetPosition = elementPosition - actualHeaderHeight;
     
-    console.log(`Desktop: Scrolling to position ${targetPosition}`);
+    console.log(`Desktop: Header height: ${actualHeaderHeight}px, scrolling to position ${targetPosition}px`);
     
     window.scrollTo({
       top: targetPosition,
       behavior: 'smooth'
     });
 
-    // Desktop fallback correction (unchanged)
+    // Desktop fallback correction (keep existing logic unchanged)
     setTimeout(() => {
       const currentScroll = window.pageYOffset;
       const scrollDifference = Math.abs(currentScroll - targetPosition);
