@@ -99,7 +99,7 @@ const ContactSection = () => {
             </CardContent>
           </Card>
         </div>
-        <div id="sc"></div>{/*to nav */}
+        
         
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
