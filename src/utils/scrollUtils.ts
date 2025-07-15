@@ -1,3 +1,4 @@
+
 // src/utils/scrollUtils.ts
 
 export const scrollToSection = (titleId: string) => {
@@ -25,11 +26,6 @@ export const scrollToSection = (titleId: string) => {
   element.style.scrollMarginTop = `${headerHeight}px`;
 
   element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-};
-
-// You can leave the rest of your existing code below as is
-export const initializeScrollBehavior = () => {
-  // ... rest of your file unchanged ...
 };
 
 // Enhanced global handler for all internal anchor links with mobile optimization
