@@ -18,20 +18,19 @@
   scroll-margin-top: var(--header-height);
 }
 
-/* Mobile-specific scroll positioning for section titles */
+/* Mobile-specific: Remove any scroll margins to allow precise positioning */
 @media (max-width: 767px) {
-  /* Mobile section titles with comfortable margin from top */
+  /* Reset all scroll margins on mobile for precise control */
   #about-title,
   #consulting-title,
   #services-title,
   #certifications-title,
   #testimonials-title {
-    scroll-margin-top: 28px !important;
+    scroll-margin-top: 0 !important;
   }
   
-  /* Reset any conflicting mobile styles */
   .scroll-margin-top {
-    scroll-margin-top: 28px !important;
+    scroll-margin-top: 0 !important;
   }
 }
 
