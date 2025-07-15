@@ -103,7 +103,7 @@ const HeroSection = () => {
                       <p className="text-deep-purple text-xs">Safety</p>
                     </div>
                     <div className="flex flex-col items-center animate-fade-in delay-1800 hover:scale-110 transition-transform duration-300">
-                      <div className="w-12 h-12 bg-light-olive rounded-full flex items-center justify-center mb-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <div className="w-12 h-12 bg-light-olive rounded-full flex items-center justify-center mb-2 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#c6d48a]">
                         <Shield className="w-6 h-6 text-deep-purple" />
                       </div>
                       <p className="text-deep-purple text-xs">Healing</p>
