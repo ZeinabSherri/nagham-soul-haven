@@ -1,3 +1,4 @@
+
 export const scrollToSection = (titleId: string) => {
   console.log(`Attempting to scroll to title: ${titleId}`);
   
@@ -11,17 +12,22 @@ export const scrollToSection = (titleId: string) => {
   console.log(`Device type: ${isMobile ? 'Mobile' : 'Desktop'}`);
 
   if (isMobile) {
-    console.log('Mobile device: Positioning title exactly at top of viewport');
+    console.log('Mobile device: Positioning title just below fixed header');
+    
+    // Get the actual mobile header height
+    const header = document.querySelector('nav');
+    const actualHeaderHeight = header ? header.offsetHeight : 100;
+    console.log(`Mobile header height: ${actualHeaderHeight}px`);
     
     // Get the current scroll position and element position
     const elementRect = element.getBoundingClientRect();
     const currentScrollY = window.pageYOffset;
     const elementTop = elementRect.top + currentScrollY;
     
-    // Target position: element should be exactly at the top (0px from top)
-    const targetScrollY = elementTop;
+    // Target position: element should be positioned just below the header
+    const targetScrollY = elementTop - actualHeaderHeight;
     
-    console.log(`Mobile: Element absolute top: ${elementTop}px, target scroll: ${targetScrollY}px`);
+    console.log(`Mobile: Element absolute top: ${elementTop}px, header height: ${actualHeaderHeight}px, target scroll: ${targetScrollY}px`);
     
     // Smooth scroll to target position
     window.scrollTo({
@@ -33,12 +39,13 @@ export const scrollToSection = (titleId: string) => {
     setTimeout(() => {
       const newRect = element.getBoundingClientRect();
       const actualTop = newRect.top;
+      const expectedTop = actualHeaderHeight;
       
-      console.log(`Mobile verification: Element top after scroll: ${actualTop}px, expected: 0px`);
+      console.log(`Mobile verification: Element top after scroll: ${actualTop}px, expected: ${expectedTop}px`);
       
       // If position is off by more than 5px, apply correction
-      if (Math.abs(actualTop) > 5) {
-        const correction = actualTop;
+      if (Math.abs(actualTop - expectedTop) > 5) {
+        const correction = actualTop - expectedTop;
         const correctedScrollY = window.pageYOffset + correction;
         
         console.log(`Mobile: Applying precision correction: ${correction}px, new scroll: ${correctedScrollY}px`);
@@ -51,7 +58,7 @@ export const scrollToSection = (titleId: string) => {
         // Final verification
         setTimeout(() => {
           const finalRect = element.getBoundingClientRect();
-          console.log(`Mobile: Final position: ${finalRect.top}px from top`);
+          console.log(`Mobile: Final position: ${finalRect.top}px from top (should be ~${expectedTop}px)`);
         }, 50);
       }
     }, 700); // Wait for smooth scroll animation
