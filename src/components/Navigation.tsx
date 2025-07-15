@@ -13,14 +13,17 @@ const Navigation = () => {
 
   const handleScrollToSection = (titleId: string) => {
     console.log(`Navigation: Scrolling to title ${titleId}`);
-    scrollToSection(titleId);
-    setIsOpen(false); // Close mobile menu after navigation
+    // Close the mobile menu first so header height remains consistent
+    setIsOpen(false);
+    // Allow the menu to close before scrolling
+    setTimeout(() => scrollToSection(titleId), 50);
   };
 
   const handleBookSession = () => {
         console.log('HeroSection: Scrolling to services section');
-    scrollToSection('services-title');
-    setIsOpen(false); // Close mobile menu after action
+    // Close the mobile menu before scrolling
+    setIsOpen(false);
+    setTimeout(() => scrollToSection('services-title'), 50);
   };
 
   const handleLogoProcessed = (processedUrl: string) => {

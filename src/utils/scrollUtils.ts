@@ -7,8 +7,9 @@ export const scrollToSection = (titleId: string) => {
     return;
   }
 
-  const header = document.querySelector('nav');
-  const headerHeight = header ? header.clientHeight : 120;
+  const rootStyles = getComputedStyle(document.documentElement);
+  const headerHeightValue = rootStyles.getPropertyValue('--header-height');
+  const headerHeight = parseInt(headerHeightValue, 10) || 120;
 
   // Apply scroll margin dynamically so both desktop and mobile respect the nav height
   element.style.scrollMarginTop = `${headerHeight}px`;
