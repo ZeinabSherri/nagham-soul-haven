@@ -125,9 +125,7 @@ const CertificationsSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div className="mt-6 bg-white p-6 rounded-lg shadow-md border border-soft-lavender">
-              <p className="text-lg italic text-deep-purple font-medium mb-2">
-                "These certifications represent years of dedicated study and commitment to excellence in therapeutic practice."
-              </p>
+              <p className="text-lg italic text-deep-purple font-medium mb-2">&quot;These are more than just title. They reflect the depth, care, and responsibility I bring into every session.&quot;</p>
               <p className="text-dark-olive">
                 Each credential reflects the depth, care, and responsibility brought to every session.
               </p>
