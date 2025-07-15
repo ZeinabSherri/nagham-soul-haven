@@ -82,7 +82,7 @@ const TestimonialsSection = () => {
                 Book Your Session
               </button>
               <button onClick={() => {
-                const getInTouchSection = document.getElementById('contact-section');
+                const getInTouchSection = document.getElementById('get-in-touch-title');
                 if (getInTouchSection) {
                   getInTouchSection.scrollIntoView({ behavior: 'smooth' });
                 }
