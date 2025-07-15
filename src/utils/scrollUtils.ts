@@ -1,3 +1,5 @@
+// src/utils/scrollUtils.ts
+
 export const scrollToSection = (titleId: string) => {
   console.log(`Attempting to scroll to title: ${titleId}`);
 
@@ -7,13 +9,27 @@ export const scrollToSection = (titleId: string) => {
     return;
   }
 
-  const header = document.querySelector('nav');
-  const headerHeight = header ? header.clientHeight : 120;
+  // Default header height (desktop)
+  let headerHeight = 120;
+  // Use nav height if found
+  const nav = document.querySelector('nav');
+  if (nav) headerHeight = nav.clientHeight;
 
-  // Apply scroll margin dynamically so both desktop and mobile respect the nav height
+  // Mobile: set to 64px or your actual mobile header height
+  const isMobile = window.innerWidth < 768;
+  if (isMobile) {
+    headerHeight = 64; // Adjust if your mobile nav/header is different!
+  }
+
+  // Set scroll margin for smooth anchor positioning
   element.style.scrollMarginTop = `${headerHeight}px`;
 
   element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
+// You can leave the rest of your existing code below as is
+export const initializeScrollBehavior = () => {
+  // ... rest of your file unchanged ...
 };
 
 // Enhanced global handler for all internal anchor links with mobile optimization
