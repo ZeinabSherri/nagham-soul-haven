@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Check, Award } from 'lucide-react';
+
 const CertificationsSection = () => {
   const certifications = [{
     title: "Time Line Therapy®",
@@ -25,7 +26,8 @@ const CertificationsSection = () => {
     description: "Specialized CBT therapeutic approach"
   }];
   const additionalTrainings = ["Access Bars® Practitioner & Facilitator", "Master Reiki", "Master Choa Kok Sui's Pranic Healing", "Access FaceLift® Practitioner", "Certified Trainer", "Intuitive Healing", "Space Clearing & Recharging", "Consciousness Advisor", "Sexual Agility Specialist", "Past-life Regression Specialist", "SuperRelationships Specialist", "Money Reiki", "Laughter Yoga Leader"];
-  return <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+  return (
+    <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 animate-fade-in">
@@ -34,38 +36,46 @@ const CertificationsSection = () => {
         </div>
 
         {/* Main Content Layout */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-start overflow-x-hidden">
           {/* Certification Carousel */}
-          <div className="animate-fade-in delay-300">
-            <div className="bg-gradient-to-br from-soft-lavender to-light-lavender-pink p-8 rounded-2xl shadow-lg">
+          <div className="animate-fade-in delay-300 overflow-x-hidden">
+            <div className="bg-gradient-to-br from-soft-lavender to-light-lavender-pink p-8 rounded-2xl shadow-lg overflow-x-hidden">
               <h3 className="text-2xl font-semibold text-deep-purple mb-6 text-center">Internationally Certified Master Practitioner in:</h3>
               
-              <Carousel className="w-full max-w-md mx-auto">
-                <CarouselContent>
-                  {certifications.map((cert, index) => <CarouselItem key={index}>
-                      <Card className="border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300">
-                        <CardContent className="p-6">
-                          <div className="aspect-square flex items-center justify-center mb-4 bg-white rounded-lg p-4">
-                            <img src={cert.logo} alt={`${cert.title} certification from ${cert.org}`} className="w-full h-full object-contain" />
-                          </div>
-                          <div className="text-center">
-                            <h4 className="font-semibold text-deep-purple text-lg mb-2">
-                              {cert.title}
-                            </h4>
-                            <p className="text-dark-olive text-sm mb-2">
-                              {cert.org}
-                            </p>
-                            <p className="text-dark-olive text-xs italic">
-                              {cert.description}
-                            </p>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>)}
-                </CarouselContent>
-                <CarouselPrevious className="hidden sm:flex" />
-                <CarouselNext className="hidden sm:flex" />
-              </Carousel>
+              <div className="w-full max-w-md mx-auto overflow-x-hidden">
+                <Carousel className="w-full overflow-x-hidden">
+                  <CarouselContent className="overflow-x-hidden">
+                    {certifications.map((cert, index) => (
+                      <CarouselItem key={index} className="overflow-x-hidden">
+                        <Card className="border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-x-hidden">
+                          <CardContent className="p-6 overflow-x-hidden">
+                            <div className="aspect-square flex items-center justify-center mb-4 bg-white rounded-lg p-4 overflow-hidden">
+                              <img 
+                                src={cert.logo} 
+                                alt={`${cert.title} certification from ${cert.org}`} 
+                                className="w-full h-full object-contain max-w-full max-h-full" 
+                              />
+                            </div>
+                            <div className="text-center">
+                              <h4 className="font-semibold text-deep-purple text-lg mb-2 break-words">
+                                {cert.title}
+                              </h4>
+                              <p className="text-dark-olive text-sm mb-2 break-words">
+                                {cert.org}
+                              </p>
+                              <p className="text-dark-olive text-xs italic break-words">
+                                {cert.description}
+                              </p>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="hidden sm:flex" />
+                  <CarouselNext className="hidden sm:flex" />
+                </Carousel>
+              </div>
               
               {/* Mobile swipe indicator */}
               <p className="text-center text-dark-olive text-sm mt-4 sm:hidden">
@@ -75,60 +85,69 @@ const CertificationsSection = () => {
           </div>
 
           {/* Certification Lists */}
-          <div className="space-y-8 animate-fade-in delay-500">
+          <div className="space-y-8 animate-fade-in delay-500 overflow-x-hidden">
             {/* Main Certifications List */}
-            <div className="bg-creamy-beige p-6 rounded-xl">
+            <div className="bg-creamy-beige p-6 rounded-xl overflow-x-hidden">
               <div className="flex items-center mb-6">
-                <Award className="w-6 h-6 text-vibrant-purple mr-3" />
-                <h3 className="text-xl font-bold text-deep-purple">Internationally Certified Master Practitioner in:</h3>
+                <Award className="w-6 h-6 text-vibrant-purple mr-3 flex-shrink-0" />
+                <h3 className="text-xl font-bold text-deep-purple break-words">Internationally Certified Master Practitioner in:</h3>
               </div>
               <div className="space-y-4">
-                {certifications.map((cert, index) => <div key={index} className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm">
+                {certifications.map((cert, index) => (
+                  <div key={index} className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm overflow-x-hidden">
                     <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-deep-purple">
+                    <div className="min-w-0 flex-1">
+                      <h4 className="font-semibold text-deep-purple break-words">
                         {cert.title}
                       </h4>
-                      <p className="text-dark-olive text-sm">
+                      <p className="text-dark-olive text-sm break-words">
                         {cert.org}
                       </p>
                     </div>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Additional Trainings */}
-            <div className="bg-light-olive p-6 rounded-xl">
+            <div className="bg-light-olive p-6 rounded-xl overflow-x-hidden">
               <div className="flex items-center mb-6">
-                <Check className="w-6 h-6 text-vibrant-purple mr-3" />
-                <h3 className="text-xl font-bold text-deep-purple">Additional Specialized Certifications</h3>
+                <Check className="w-6 h-6 text-vibrant-purple mr-3 flex-shrink-0" />
+                <h3 className="text-xl font-bold text-deep-purple break-words">Additional Specialized Certifications</h3>
               </div>
               <div className="grid sm:grid-cols-2 gap-2">
-                {additionalTrainings.map((training, index) => <div key={index} className="flex items-center space-x-2 p-2 bg-white/70 rounded-md">
+                {additionalTrainings.map((training, index) => (
+                  <div key={index} className="flex items-center space-x-2 p-2 bg-white/70 rounded-md overflow-x-hidden">
                     <div className="w-2 h-2 bg-vibrant-purple rounded-full flex-shrink-0"></div>
-                    <span className="text-deep-purple text-sm font-medium">
+                    <span className="text-deep-purple text-sm font-medium break-words min-w-0">
                       {training}
                     </span>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
         {/* Certificate Wall Reference */}
-        <div className="mt-16 text-center animate-fade-in delay-700">
-          <div className="relative max-w-4xl mx-auto">
+        <div className="mt-16 text-center animate-fade-in delay-700 overflow-x-hidden">
+          <div className="relative max-w-4xl mx-auto overflow-x-hidden">
             <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-soft-lavender">
-              <img src="/lovable-uploads/place.jpg" alt="Professional certification display wall showing years of dedicated training and education in therapeutic practices" className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+              <img 
+                src="/lovable-uploads/place.jpg" 
+                alt="Professional certification display wall showing years of dedicated training and education in therapeutic practices" 
+                className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 max-w-full" 
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            <div className="mt-6 bg-white p-6 rounded-lg shadow-md border border-soft-lavender">
-              <p className="text-lg italic text-deep-purple font-medium mb-2">&quot;These are more than just title. They reflect the depth, care, and responsibility I bring into every session.&quot;</p>
-              
+            <div className="mt-6 bg-white p-6 rounded-lg shadow-md border border-soft-lavender overflow-x-hidden">
+              <p className="text-lg italic text-deep-purple font-medium mb-2 break-words">&quot;These are more than just title. They reflect the depth, care, and responsibility I bring into every session.&quot;</p>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default CertificationsSection;
