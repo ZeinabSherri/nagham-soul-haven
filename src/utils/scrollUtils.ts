@@ -11,20 +11,15 @@ export const scrollToSection = (titleId: string) => {
   console.log(`Device type: ${isMobile ? 'Mobile' : 'Desktop'}`);
 
   if (isMobile) {
-    console.log('Mobile device: Using precise top alignment');
+    console.log('Mobile device: Positioning title exactly at top of viewport');
     
-    // Get header height for mobile
-    const header = document.querySelector('nav');
-    const headerHeight = header ? header.offsetHeight : 100;
-    console.log(`Mobile header height: ${headerHeight}px`);
-    
-    // Calculate the element's position relative to the document
+    // Get the current scroll position and element position
     const elementRect = element.getBoundingClientRect();
     const currentScrollY = window.pageYOffset;
     const elementTop = elementRect.top + currentScrollY;
     
-    // Target position: element should be exactly at headerHeight from top
-    const targetScrollY = elementTop - headerHeight;
+    // Target position: element should be exactly at the top (0px from top)
+    const targetScrollY = elementTop;
     
     console.log(`Mobile: Element absolute top: ${elementTop}px, target scroll: ${targetScrollY}px`);
     
@@ -34,19 +29,19 @@ export const scrollToSection = (titleId: string) => {
       behavior: 'smooth'
     });
     
-    // Verification and correction after scroll completes
+    // Verification and precision correction after scroll completes
     setTimeout(() => {
       const newRect = element.getBoundingClientRect();
       const actualTop = newRect.top;
       
-      console.log(`Mobile verification: Element top after scroll: ${actualTop}px, expected: ${headerHeight}px`);
+      console.log(`Mobile verification: Element top after scroll: ${actualTop}px, expected: 0px`);
       
-      // If position is off by more than 2px, apply correction
-      if (Math.abs(actualTop - headerHeight) > 2) {
-        const correction = actualTop - headerHeight;
+      // If position is off by more than 5px, apply correction
+      if (Math.abs(actualTop) > 5) {
+        const correction = actualTop;
         const correctedScrollY = window.pageYOffset + correction;
         
-        console.log(`Mobile: Applying correction: ${correction}px, new scroll: ${correctedScrollY}px`);
+        console.log(`Mobile: Applying precision correction: ${correction}px, new scroll: ${correctedScrollY}px`);
         
         window.scrollTo({
           top: correctedScrollY,
