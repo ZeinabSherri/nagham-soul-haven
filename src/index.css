@@ -234,15 +234,3 @@
     font-size: 14px;
   }
 }
-/* src/index.css */
-
-@media (max-width: 767px) {
-  [id$="-title"] {
-    scroll-margin-top: 64px; /* Match headerHeight in JS */
-  }
-}
-@media (min-width: 768px) {
-  [id$="-title"] {
-    scroll-margin-top: 120px; /* Match desktop nav */
-  }
-}

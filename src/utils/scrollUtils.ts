@@ -1,6 +1,3 @@
-
-// src/utils/scrollUtils.ts
-
 export const scrollToSection = (titleId: string) => {
   console.log(`Attempting to scroll to title: ${titleId}`);
 
@@ -10,19 +7,11 @@ export const scrollToSection = (titleId: string) => {
     return;
   }
 
-  // Default header height (desktop)
-  let headerHeight = 120;
-  // Use nav height if found
-  const nav = document.querySelector('nav');
-  if (nav) headerHeight = nav.clientHeight;
+  const rootStyles = getComputedStyle(document.documentElement);
+  const headerHeightValue = rootStyles.getPropertyValue('--header-height');
+  const headerHeight = parseInt(headerHeightValue, 10) || 120;
 
-  // Mobile: set to 64px or your actual mobile header height
-  const isMobile = window.innerWidth < 768;
-  if (isMobile) {
-    headerHeight = 64; // Adjust if your mobile nav/header is different!
-  }
-
-  // Set scroll margin for smooth anchor positioning
+  // Apply scroll margin dynamically so both desktop and mobile respect the nav height
   element.style.scrollMarginTop = `${headerHeight}px`;
 
   element.scrollIntoView({ behavior: 'smooth', block: 'start' });
