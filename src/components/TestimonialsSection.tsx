@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
   };
 
   const handleBookSession = () => {
-    console.log('tetimonialsSection: Scrolling to services section');
+    console.log('TestimonialsSection: Scrolling to services section');
     scrollToSection('services-title');
   };
 
