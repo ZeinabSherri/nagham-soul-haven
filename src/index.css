@@ -18,9 +18,9 @@
   scroll-margin-top: var(--header-height);
 }
 
-/* Mobile-specific: Remove all scroll margins to allow precise JavaScript control */
+/* Mobile-specific: Remove any scroll margins to allow precise positioning */
 @media (max-width: 767px) {
-  /* Reset all scroll margins on mobile for precise JavaScript control */
+  /* Reset all scroll margins on mobile for precise control */
   #about-title,
   #consulting-title,
   #services-title,
