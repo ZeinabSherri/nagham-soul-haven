@@ -126,9 +126,7 @@ const CertificationsSection = () => {
             </div>
             <div className="mt-6 bg-white p-6 rounded-lg shadow-md border border-soft-lavender">
               <p className="text-lg italic text-deep-purple font-medium mb-2">&quot;These are more than just title. They reflect the depth, care, and responsibility I bring into every session.&quot;</p>
-              <p className="text-dark-olive">
-                Each credential reflects the depth, care, and responsibility brought to every session.
-              </p>
+              
             </div>
           </div>
         </div>
