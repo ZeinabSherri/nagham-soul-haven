@@ -42,7 +42,7 @@ const HeroSection = () => {
           {/* Left side - Content */}
           <div className="text-left my-[90px]">
             {/* Main Headline with smaller size and proper spacing */}
-            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-deep-purple mb-3 leading-tight animate-fade-in">Start Feeling Safe,<br /><span> Seen & Connected Again</span></h1>
+            <h1 className="text-2xl md:text-3xl xl:text-5xl text-deep-purple mb-3 leading-tight animate-fade-in font-bold lg:text-5xl">Start Feeling Safe,<br /><span> Seen & Connected Again</span></h1>
             
             {/* Subheadline */}
             <p className="text-vibrant-purple mb-3 leading-relaxed animate-fade-in delay-300 font-normal text-lg my-[30px]">
