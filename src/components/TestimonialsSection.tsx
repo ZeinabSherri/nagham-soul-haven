@@ -39,7 +39,12 @@ const TestimonialsSection = () => {
       bookingSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
+const handleQuestionSession = () => {
+  const getInTouchSection = document.getElementById('get-in-touch-title');
+   if (getInTouchSection) {
+      getInTouchSection.scrollIntoView({ behavior: 'smooth' });
+     }
+};
   return (
     <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -97,12 +102,7 @@ const TestimonialsSection = () => {
               <button onClick={handleBookSession} className="bg-vibrant-purple hover:bg-deep-purple text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-fade-in delay-1600">
                 Book Your Session
               </button>
-              <button onClick={() => {
-                const getInTouchSection = document.getElementById('get-in-touch-title');
-                if (getInTouchSection) {
-                  getInTouchSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }} className="border-2 border-vibrant-purple text-deep-purple hover:bg-light-lavender-pink px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 animate-fade-in delay-1800">
+              <button onClick={handleQuestionSession} className="border-2 border-vibrant-purple text-deep-purple hover:bg-light-lavender-pink px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 animate-fade-in delay-1800">
                 Ask a Question
               </button>
             </div>
