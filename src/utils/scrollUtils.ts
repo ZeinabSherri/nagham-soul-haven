@@ -1,3 +1,4 @@
+
 export const scrollToSection = (titleId: string) => {
   console.log(`Attempting to scroll to title: ${titleId}`);
   
@@ -7,21 +8,22 @@ export const scrollToSection = (titleId: string) => {
     return;
   }
 
-  const isMobile = window.innerWidth < 768;
+  const isMobile = window.innerWidth <= 767;
   console.log(`Device type: ${isMobile ? 'Mobile' : 'Desktop'}`);
 
   if (isMobile) {
-    console.log('Mobile device: Positioning title exactly at top of viewport');
+    console.log('Mobile device: Positioning title with comfortable margin from top');
     
     // Get the current scroll position and element position
     const elementRect = element.getBoundingClientRect();
     const currentScrollY = window.pageYOffset;
     const elementTop = elementRect.top + currentScrollY;
     
-    // Target position: element should be exactly at the top (0px from top)
-    const targetScrollY = elementTop;
+    // Add a comfortable 28px margin from the top for mobile
+    const mobileMargin = 28;
+    const targetScrollY = elementTop - mobileMargin;
     
-    console.log(`Mobile: Element absolute top: ${elementTop}px, target scroll: ${targetScrollY}px`);
+    console.log(`Mobile: Element absolute top: ${elementTop}px, target scroll with margin: ${targetScrollY}px`);
     
     // Smooth scroll to target position
     window.scrollTo({
@@ -34,11 +36,11 @@ export const scrollToSection = (titleId: string) => {
       const newRect = element.getBoundingClientRect();
       const actualTop = newRect.top;
       
-      console.log(`Mobile verification: Element top after scroll: ${actualTop}px, expected: 0px`);
+      console.log(`Mobile verification: Element top after scroll: ${actualTop}px, expected: ${mobileMargin}px`);
       
       // If position is off by more than 5px, apply correction
-      if (Math.abs(actualTop) > 5) {
-        const correction = actualTop;
+      if (Math.abs(actualTop - mobileMargin) > 5) {
+        const correction = actualTop - mobileMargin;
         const correctedScrollY = window.pageYOffset + correction;
         
         console.log(`Mobile: Applying precision correction: ${correction}px, new scroll: ${correctedScrollY}px`);
@@ -51,7 +53,7 @@ export const scrollToSection = (titleId: string) => {
         // Final verification
         setTimeout(() => {
           const finalRect = element.getBoundingClientRect();
-          console.log(`Mobile: Final position: ${finalRect.top}px from top`);
+          console.log(`Mobile: Final position: ${finalRect.top}px from top (target: ${mobileMargin}px)`);
         }, 50);
       }
     }, 700); // Wait for smooth scroll animation

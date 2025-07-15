@@ -26,12 +26,12 @@
   #services-title,
   #certifications-title,
   #testimonials-title {
-    scroll-margin-top: 20px !important;
+    scroll-margin-top: 28px !important;
   }
   
   /* Reset any conflicting mobile styles */
   .scroll-margin-top {
-    scroll-margin-top: 20px !important;
+    scroll-margin-top: 28px !important;
   }
 }
 
