@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from 'lucide-react';
@@ -32,17 +33,13 @@ const TestimonialsSection = () => {
     return colors[color as keyof typeof colors] || colors["soft-lavender"];
   };
 
-  // const handleBookSession = () => {
-  //   console.log('TestimonialsSection: Scrolling to services section');
-  //   scrollToSection('services-title');
-  // };
-const TestimonialsSection = () => {
   const handleBookSession = () => {
     const bookingSection = document.getElementById('services-section');
     if (bookingSection) {
       bookingSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   return (
     <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -57,16 +54,27 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {testimonials.map((testimonial, index) => <Card key={index} className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group`} style={{
-          animationDelay: `${400 + index * 200}ms`
-        }}>
+          {testimonials.map((testimonial, index) => (
+            <Card 
+              key={index} 
+              className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group`} 
+              style={{
+                animationDelay: `${400 + index * 200}ms`
+              }}
+            >
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <Quote className={`w-6 h-6 mr-3 ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-transform duration-300 group-hover:scale-110`} />
                   <div className="flex">
-                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className={`w-4 h-4 fill-current ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-all duration-300 hover:scale-110`} style={{
-                  animationDelay: `${i * 100}ms`
-                }} />)}
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star 
+                        key={i} 
+                        className={`w-4 h-4 fill-current ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-all duration-300 hover:scale-110`} 
+                        style={{
+                          animationDelay: `${i * 100}ms`
+                        }} 
+                      />
+                    ))}
                   </div>
                 </div>
                 <p className={`mb-4 leading-relaxed italic text-sm ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-deep-purple'} transition-all duration-300 group-hover:text-opacity-90`}>
@@ -76,7 +84,8 @@ const TestimonialsSection = () => {
                   — {testimonial.name}
                 </p>
               </CardContent>
-            </Card>)}
+            </Card>
+          ))}
         </div>
 
         <div className="text-center animate-fade-in delay-1000">
