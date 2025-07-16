@@ -5,16 +5,16 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Check, Award } from 'lucide-react';
 
 const CertificationsSection = () => {
-  const certifications = [{
-    title: "Time Line Therapy®",
-    org: "TLT® Association",
-    logo: "/lovable-uploads/83d5f222-8dd4-4a0b-b14f-93065557e489.png",
-    description: "Advanced therapeutic technique for emotional healing"
-  }, {
+  const certifications = [ {
     title: "Clinical Hypnotherapy",
     org: "American Board of Hypnotherapy (ABH)",
     logo: "/lovable-uploads/84ad1457-3c87-408c-9ce8-27d48a253d66.png",
     description: "Professional clinical hypnotherapy certification"
+  },{
+    title: "Time Line Therapy®",
+    org: "TLT® Association",
+    logo: "/lovable-uploads/83d5f222-8dd4-4a0b-b14f-93065557e489.png",
+    description: "Advanced therapeutic technique for emotional healing"
   }, {
     title: "Neuro-Linguistic Programming (NLP)",
     org: "American Board of NLP (ABNLP)",
