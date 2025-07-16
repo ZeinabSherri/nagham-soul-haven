@@ -30,7 +30,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send notification email to the coach
     const notificationResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: ["Hello@naghamthecoach.com"],
+      to: ["hello@naghamthecoach.com"],
       subject: `New Contact Form Message from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
