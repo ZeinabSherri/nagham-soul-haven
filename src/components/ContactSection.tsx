@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Calendar, Instagram, Youtube, Facebook } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/components/ui/use-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -11,13 +13,61 @@ const ContactSection = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log('ContactSection: Form submitted with data:', formData);
-    const subject = encodeURIComponent('New Message from Website');
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:Hello@naghamthecoach?subject=${subject}&body=${body}`;
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all fields before submitting.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        }
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      console.log('Email sent successfully:', data);
+      
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -117,16 +167,43 @@ const ContactSection = () => {
             <CardContent className="px-4 md:px-6">
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div>
-                  <Input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleInputChange} className="bg-white border-deep-purple/30 focus:border-vibrant-purple w-full" />
+                  <Input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Your Name" 
+                    value={formData.name} 
+                    onChange={handleInputChange} 
+                    className="bg-white border-deep-purple/30 focus:border-vibrant-purple w-full"
+                    disabled={isSubmitting}
+                  />
                 </div>
                 <div>
-                  <Input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleInputChange} className="bg-white border-deep-purple/30 focus:border-vibrant-purple w-full" />
+                  <Input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Your Email" 
+                    value={formData.email} 
+                    onChange={handleInputChange} 
+                    className="bg-white border-deep-purple/30 focus:border-vibrant-purple w-full"
+                    disabled={isSubmitting}
+                  />
                 </div>
                 <div>
-                  <Textarea name="message" placeholder="Tell me a bit about what you're looking for..." value={formData.message} onChange={handleInputChange} className="bg-white border-deep-purple/30 focus:border-vibrant-purple min-h-32 w-full resize-none" />
+                  <Textarea 
+                    name="message" 
+                    placeholder="Tell me a bit about what you're looking for..." 
+                    value={formData.message} 
+                    onChange={handleInputChange} 
+                    className="bg-white border-deep-purple/30 focus:border-vibrant-purple min-h-32 w-full resize-none"
+                    disabled={isSubmitting}
+                  />
                 </div>
-                <Button type="submit" className="w-full bg-deep-purple hover:bg-vibrant-purple text-white py-3 rounded-full font-semibold transition-all duration-300 touch-manipulation">
-                  Send Message
+                <Button 
+                  type="submit" 
+                  className="w-full bg-deep-purple hover:bg-vibrant-purple text-white py-3 rounded-full font-semibold transition-all duration-300 touch-manipulation"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </CardContent>
