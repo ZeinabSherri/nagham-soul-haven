@@ -124,6 +124,11 @@ const CertificationsSection = () => {
                   <CarouselPrevious className="hidden sm:flex" />
                   <CarouselNext className="hidden sm:flex" />
                 </Carousel>
+                
+                {/* Certification count indicator */}
+                <p className="text-center text-dark-olive text-sm mt-4">
+                  Showing {certifications.length} professional certifications
+                </p>
               </div>
               
               {/* Mobile swipe indicator */}
