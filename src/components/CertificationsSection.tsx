@@ -98,18 +98,19 @@ const CertificationsSection = () => {
                 <Carousel 
                   className="w-full" 
                   opts={{
-                    align: "center",
+                    align: "start",
                     loop: true,
                     slidesToScroll: 1,
                     startIndex: 0,
-                    dragFree: false
+                    dragFree: false,
+                    containScroll: "trimSnaps"
                   }}
                 >
-                  <CarouselContent className="flex">
+                  <CarouselContent className="flex w-full">
                     {mainCertifications.map((cert, index) => (
-                      <CarouselItem key={`cert-${index}`} className="basis-full min-w-full flex-shrink-0">
-                        <div className="p-2">
-                          <Card className="border-2 border-white shadow-md hover:shadow-lg transition-all duration-300">
+                      <CarouselItem key={`cert-${index}`} className="w-full flex-shrink-0">
+                        <div className="p-2 w-full">
+                          <Card className="border-2 border-white shadow-md hover:shadow-lg transition-all duration-300 w-full">
                             <CardContent className="p-4 sm:p-6">
                               <div className="aspect-square flex items-center justify-center mb-3 sm:mb-4 bg-white rounded-lg p-3 sm:p-4">
                                 <img 
