@@ -94,19 +94,19 @@ const CertificationsSection = () => {
             <div className="bg-gradient-to-br from-soft-lavender to-light-lavender-pink p-8 rounded-2xl shadow-lg overflow-x-hidden">
               <h3 className="text-2xl font-semibold text-deep-purple mb-6 text-center">Internationally Certified Master Practitioner in:</h3>
               
-              <div className="relative">
-                <Carousel className="w-full max-w-sm mx-auto" opts={{
+              <div className="relative px-4 sm:px-12">
+                <Carousel className="w-full max-w-xs sm:max-w-sm mx-auto" opts={{
                   align: "center",
                   loop: true,
                   slidesToScroll: 1,
                   startIndex: 0
                 }}>
-                  <CarouselContent className="-ml-2 md:-ml-4">
+                  <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4">
                     {mainCertifications.map((cert, index) => (
-                      <CarouselItem key={`cert-${index}`} className="pl-2 md:pl-4 basis-full">
+                      <CarouselItem key={`cert-${index}`} className="pl-1 sm:pl-2 md:pl-4 basis-full">
                         <Card className="border-2 border-white shadow-md hover:shadow-lg transition-all duration-300">
-                          <CardContent className="p-6">
-                            <div className="aspect-square flex items-center justify-center mb-4 bg-white rounded-lg p-4">
+                          <CardContent className="p-4 sm:p-6">
+                            <div className="aspect-square flex items-center justify-center mb-3 sm:mb-4 bg-white rounded-lg p-3 sm:p-4">
                               <img 
                                 src={cert.logo} 
                                 alt={`${cert.title} certification from ${cert.org}`} 
@@ -115,10 +115,10 @@ const CertificationsSection = () => {
                               />
                             </div>
                             <div className="text-center">
-                              <h4 className="font-semibold text-deep-purple text-lg mb-2">
+                              <h4 className="font-semibold text-deep-purple text-base sm:text-lg mb-2">
                                 {cert.title}
                               </h4>
-                              <p className="text-dark-olive text-sm mb-2">
+                              <p className="text-dark-olive text-xs sm:text-sm mb-2">
                                 {cert.org}
                               </p>
                               <p className="text-dark-olive text-xs italic">
@@ -130,8 +130,8 @@ const CertificationsSection = () => {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious className="-left-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple shadow-lg" />
-                  <CarouselNext className="-right-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple shadow-lg" />
+                  <CarouselPrevious className="left-0 sm:-left-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple shadow-lg" />
+                  <CarouselNext className="right-0 sm:-right-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple shadow-lg" />
                 </Carousel>
                 
                 {/* Certification count indicator */}
