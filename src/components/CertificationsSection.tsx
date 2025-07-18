@@ -1,17 +1,15 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Check, Award } from 'lucide-react';
-
 const CertificationsSection = () => {
   // Main 4 certifications for the carousel
-  const mainCertifications = [ {
+  const mainCertifications = [{
     title: "Clinical Hypnotherapy",
     org: "American Board of Hypnotherapy (ABH)",
     logo: "/lovable-uploads/84ad1457-3c87-408c-9ce8-27d48a253d66.png",
     description: "Professional clinical hypnotherapy certification"
-  },{
+  }, {
     title: "Time Line Therapy®",
     org: "TLT® Association",
     logo: "/lovable-uploads/83d5f222-8dd4-4a0b-b14f-93065557e489.png",
@@ -29,7 +27,7 @@ const CertificationsSection = () => {
   }];
 
   // All certifications including the new ones
-  const allCertifications = [ ...mainCertifications, {
+  const allCertifications = [...mainCertifications, {
     title: "Professional Certification",
     org: "Therapeutic Training Institute",
     logo: "/lovable-uploads/2403300f-e082-4573-93ac-849c73996313.png",
@@ -80,11 +78,8 @@ const CertificationsSection = () => {
     logo: "/lovable-uploads/61152745-2b6c-48ea-a08e-7cc1c58d477a.png",
     description: "Approved training in NLP coaching methodologies"
   }];
-
   const additionalTrainings = ["Access Bars® Practitioner & Facilitator", "Master Reiki", "Master Choa Kok Sui's Pranic Healing", "Access FaceLift® Practitioner", "Certified Trainer", "Intuitive Healing", "Space Clearing & Recharging", "Consciousness Advisor", "Sexual Agility Specialist", "Past-life Regression Specialist", "SuperRelationships Specialist", "Money Reiki", "Laughter Yoga Leader"];
-
-  return (
-    <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-x-hidden">
+  return <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto overflow-x-hidden">
         {/* Section Header */}
         <div className="text-center mb-12 animate-fade-in">
@@ -100,19 +95,15 @@ const CertificationsSection = () => {
               <h3 className="text-2xl font-semibold text-deep-purple mb-6 text-center">Internationally Certified Master Practitioner in:</h3>
               
               <div className="overflow-x-hidden">
-                <Carousel className="w-full max-w-md mx-auto overflow-x-hidden" opts={{ loop: true }}>
+                <Carousel className="w-full max-w-md mx-auto overflow-x-hidden" opts={{
+                loop: true
+              }}>
                   <CarouselContent className="overflow-x-hidden">
-                    {allCertifications.map((cert, index) => (
-                      <CarouselItem key={`cert-${index}`} className="overflow-x-hidden">
+                    {allCertifications.map((cert, index) => <CarouselItem key={`cert-${index}`} className="overflow-x-hidden">
                         <Card className="border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-x-hidden">
                           <CardContent className="p-6 overflow-x-hidden">
                             <div className="aspect-square flex items-center justify-center mb-4 bg-white rounded-lg p-4 overflow-hidden">
-                              <img 
-                                src={cert.logo} 
-                                alt={`${cert.title} certification from ${cert.org}`} 
-                                className="w-full h-full object-contain"
-                                loading="lazy"
-                              />
+                              <img src={cert.logo} alt={`${cert.title} certification from ${cert.org}`} className="w-full h-full object-contain" loading="lazy" />
                             </div>
                             <div className="text-center">
                               <h4 className="font-semibold text-deep-purple text-lg mb-2">
@@ -127,8 +118,7 @@ const CertificationsSection = () => {
                             </div>
                           </CardContent>
                         </Card>
-                      </CarouselItem>
-                    ))}
+                      </CarouselItem>)}
                   </CarouselContent>
                   <CarouselPrevious className="flex -left-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple" />
                   <CarouselNext className="flex -right-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple" />
@@ -136,12 +126,8 @@ const CertificationsSection = () => {
                 
                 {/* Certification count indicator */}
                 <div className="text-center mt-4">
-                  <p className="text-dark-olive text-sm">
-                    Showing {allCertifications.length} professional certifications
-                  </p>
-                  <p className="text-dark-olive text-xs mt-1">
-                    Use arrows to navigate through all certifications
-                  </p>
+                  
+                  
                 </div>
               </div>
               
@@ -163,8 +149,7 @@ const CertificationsSection = () => {
               
               
               <div className="space-y-4 overflow-x-hidden">
-                {mainCertifications.map((cert, index) => (
-                  <div key={index} className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm overflow-x-hidden">
+                {mainCertifications.map((cert, index) => <div key={index} className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm overflow-x-hidden">
                     <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
                     <div className="overflow-x-hidden">
                       <h4 className="font-semibold text-deep-purple">
@@ -174,8 +159,7 @@ const CertificationsSection = () => {
                         {cert.org}
                       </p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -186,14 +170,12 @@ const CertificationsSection = () => {
                 <h3 className="text-xl font-bold text-deep-purple">Additional Specialized Certifications</h3>
               </div>
               <div className="grid sm:grid-cols-2 gap-2 overflow-x-hidden">
-                {additionalTrainings.map((training, index) => (
-                  <div key={index} className="flex items-center space-x-2 p-2 bg-white/70 rounded-md overflow-x-hidden">
+                {additionalTrainings.map((training, index) => <div key={index} className="flex items-center space-x-2 p-2 bg-white/70 rounded-md overflow-x-hidden">
                     <div className="w-2 h-2 bg-vibrant-purple rounded-full flex-shrink-0"></div>
                     <span className="text-deep-purple text-sm font-medium">
                       {training}
                     </span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -212,8 +194,6 @@ const CertificationsSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CertificationsSection;
