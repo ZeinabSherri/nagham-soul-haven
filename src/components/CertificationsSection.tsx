@@ -5,7 +5,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Check, Award } from 'lucide-react';
 
 const CertificationsSection = () => {
-  const certifications = [ {
+  // Main 4 certifications for the carousel
+  const mainCertifications = [ {
     title: "Clinical Hypnotherapy",
     org: "American Board of Hypnotherapy (ABH)",
     logo: "/lovable-uploads/84ad1457-3c87-408c-9ce8-27d48a253d66.png",
@@ -25,7 +26,10 @@ const CertificationsSection = () => {
     org: "International Certification Board of Coaches And Hypnotist (ICBCH)",
     logo: "/lovable-uploads/0174fa00-b417-456f-a192-b363fbe2842b.png",
     description: "Specialized CBT therapeutic approach"
-  }, {
+  }];
+
+  // All certifications including the new ones
+  const allCertifications = [ ...mainCertifications, {
     title: "Professional Certification",
     org: "Therapeutic Training Institute",
     logo: "/lovable-uploads/2403300f-e082-4573-93ac-849c73996313.png",
@@ -98,7 +102,7 @@ const CertificationsSection = () => {
               <div className="overflow-x-hidden">
                 <Carousel className="w-full max-w-md mx-auto overflow-x-hidden">
                   <CarouselContent className="overflow-x-hidden">
-                    {certifications.map((cert, index) => (
+                    {mainCertifications.map((cert, index) => (
                       <CarouselItem key={index} className="overflow-x-hidden">
                         <Card className="border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-x-hidden">
                           <CardContent className="p-6 overflow-x-hidden">
@@ -127,7 +131,7 @@ const CertificationsSection = () => {
                 
                 {/* Certification count indicator */}
                 <p className="text-center text-dark-olive text-sm mt-4">
-                  Showing {certifications.length} professional certifications
+                  Showing {mainCertifications.length} professional certifications
                 </p>
               </div>
               
@@ -151,7 +155,7 @@ const CertificationsSection = () => {
               <div className="mb-6">
                 <Carousel className="w-full max-w-2xl mx-auto">
                   <CarouselContent>
-                    {certifications.map((cert, index) => (
+                    {allCertifications.map((cert, index) => (
                       <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                         <div className="p-2">
                           <Card className="border border-vibrant-purple/20 shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -171,7 +175,7 @@ const CertificationsSection = () => {
               </div>
               
               <div className="space-y-4 overflow-x-hidden">
-                {certifications.map((cert, index) => (
+                {mainCertifications.map((cert, index) => (
                   <div key={index} className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm overflow-x-hidden">
                     <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
                     <div className="overflow-x-hidden">
