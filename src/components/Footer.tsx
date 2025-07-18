@@ -14,6 +14,13 @@ const Footer = () => {
         </div>
 
         <div className="text-center mb-8">
+          <div className="flex justify-center mb-4">
+            <LogoProcessor 
+              originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png"
+              onProcessed={() => {}}
+              className="h-16 w-auto"
+            />
+          </div>
           <h4 className="text-lg font-semibold mb-4 text-deep-purple">Let's stay connected:</h4>
           <div className="flex justify-center space-x-6 mb-6">
             <a href="https://www.instagram.com/naghamthecoach/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-deep-purple hover:text-vibrant-purple transition-colors duration-300 transform hover:scale-105">
