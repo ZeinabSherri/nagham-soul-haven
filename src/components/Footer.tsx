@@ -8,13 +8,7 @@ const Footer = () => {
   return <footer className="bg-white border-t border-deep-purple/10 text-deep-purple py-12 px-4 sm:px-6 lg:px-8 animate-fade-in">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
-          <div className="flex justify-center mb-4">
-            <LogoProcessor 
-              originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png" 
-              onProcessed={() => {}} 
-              className="h-16 w-auto" 
-            />
-          </div>
+          
           <h3 className="text-2xl font-bold mb-2 text-deep-purple">Nagham The Coach</h3>
           <p className="text-dark-olive text-lg">Emotional Healing • Mind-Body Transformation • Energy Clearing</p>
         </div>
