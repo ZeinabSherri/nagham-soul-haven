@@ -25,6 +25,41 @@ const CertificationsSection = () => {
     org: "International Certification Board of Coaches And Hypnotist (ICBCH)",
     logo: "/lovable-uploads/0174fa00-b417-456f-a192-b363fbe2842b.png",
     description: "Specialized CBT therapeutic approach"
+  }, {
+    title: "Professional Certification",
+    org: "Therapeutic Training Institute",
+    logo: "/lovable-uploads/2403300f-e082-4573-93ac-849c73996313.png",
+    description: "Advanced therapeutic methodologies"
+  }, {
+    title: "Advanced Practitioner",
+    org: "International Healing Association",
+    logo: "/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png",
+    description: "Advanced healing techniques certification"
+  }, {
+    title: "Master Practitioner Certification",
+    org: "Global Wellness Institute",
+    logo: "/lovable-uploads/80cc333c-c44f-4b3d-90b2-857d22c7531a.png",
+    description: "Comprehensive wellness and healing practices"
+  }, {
+    title: "Specialized Training Certificate",
+    org: "Professional Development Academy",
+    logo: "/lovable-uploads/8e92d398-8495-4988-a303-5fb8be016750.png",
+    description: "Specialized therapeutic approaches"
+  }, {
+    title: "Advanced Certification",
+    org: "International Therapy Board",
+    logo: "/lovable-uploads/96c45d35-a86f-45f2-bb90-1fdb7c1455c1.png",
+    description: "Advanced therapeutic interventions"
+  }, {
+    title: "Professional Excellence Award",
+    org: "Healing Arts Institute",
+    logo: "/lovable-uploads/9b32dbbe-02c5-418a-b0c1-9fe944e8b0c2.png",
+    description: "Recognition for professional excellence"
+  }, {
+    title: "Master Healer Certification",
+    org: "Energy Healing Academy",
+    logo: "/lovable-uploads/b84e3626-0d98-484b-81e7-ee27351bbe3e.png",
+    description: "Comprehensive energy healing practices"
   }];
 
   const additionalTrainings = ["Access Bars® Practitioner & Facilitator", "Master Reiki", "Master Choa Kok Sui's Pranic Healing", "Access FaceLift® Practitioner", "Certified Trainer", "Intuitive Healing", "Space Clearing & Recharging", "Consciousness Advisor", "Sexual Agility Specialist", "Past-life Regression Specialist", "SuperRelationships Specialist", "Money Reiki", "Laughter Yoga Leader"];
