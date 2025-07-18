@@ -102,7 +102,7 @@ const CertificationsSection = () => {
               <div className="overflow-x-hidden">
                 <Carousel className="w-full max-w-md mx-auto overflow-x-hidden">
                   <CarouselContent className="overflow-x-hidden">
-                    {mainCertifications.map((cert, index) => (
+                    {allCertifications.map((cert, index) => (
                       <CarouselItem key={index} className="overflow-x-hidden">
                         <Card className="border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-x-hidden">
                           <CardContent className="p-6 overflow-x-hidden">
@@ -131,7 +131,7 @@ const CertificationsSection = () => {
                 
                 {/* Certification count indicator */}
                 <p className="text-center text-dark-olive text-sm mt-4">
-                  Showing {mainCertifications.length} professional certifications
+                  Showing {allCertifications.length} professional certifications
                 </p>
               </div>
               
@@ -151,28 +151,6 @@ const CertificationsSection = () => {
                 <h3 className="text-xl font-bold text-deep-purple">Internationally Certified Master Practitioner in:</h3>
               </div>
               
-              {/* Certification Images Carousel */}
-              <div className="mb-6">
-                <Carousel className="w-full max-w-2xl mx-auto">
-                  <CarouselContent>
-                    {allCertifications.map((cert, index) => (
-                      <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                        <div className="p-2">
-                          <Card className="border border-vibrant-purple/20 shadow-sm hover:shadow-md transition-shadow duration-300">
-                            <CardContent className="p-4">
-                              <div className="aspect-square flex items-center justify-center bg-white rounded-lg p-2 overflow-hidden">
-                                <img src={cert.logo} alt={`${cert.title} certification`} className="w-full h-full object-contain" />
-                              </div>
-                            </CardContent>
-                          </Card>
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="hidden sm:flex" />
-                  <CarouselNext className="hidden sm:flex" />
-                </Carousel>
-              </div>
               
               <div className="space-y-4 overflow-x-hidden">
                 {mainCertifications.map((cert, index) => (
