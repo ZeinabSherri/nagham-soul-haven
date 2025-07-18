@@ -94,16 +94,24 @@ const CertificationsSection = () => {
             <div className="bg-gradient-to-br from-soft-lavender to-light-lavender-pink p-8 rounded-2xl shadow-lg overflow-x-hidden">
               <h3 className="text-2xl font-semibold text-deep-purple mb-6 text-center">Internationally Certified Master Practitioner in:</h3>
               
-              <div className="overflow-x-hidden">
-                <Carousel className="w-full max-w-md mx-auto overflow-x-hidden" opts={{
-                loop: true
-              }}>
-                  <CarouselContent className="overflow-x-hidden">
-                    {allCertifications.map((cert, index) => <CarouselItem key={`cert-${index}`} className="overflow-x-hidden">
-                        <Card className="border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-x-hidden">
-                          <CardContent className="p-6 overflow-x-hidden">
-                            <div className="aspect-square flex items-center justify-center mb-4 bg-white rounded-lg p-4 overflow-hidden">
-                              <img src={cert.logo} alt={`${cert.title} certification from ${cert.org}`} className="w-full h-full object-contain" loading="lazy" />
+              <div className="relative">
+                <Carousel className="w-full max-w-sm mx-auto" opts={{
+                  align: "center",
+                  loop: true,
+                  slidesToScroll: 1
+                }}>
+                  <CarouselContent className="-ml-2 md:-ml-4">
+                    {allCertifications.map((cert, index) => (
+                      <CarouselItem key={`cert-${index}`} className="pl-2 md:pl-4 basis-full">
+                        <Card className="border-2 border-white shadow-md hover:shadow-lg transition-all duration-300">
+                          <CardContent className="p-6">
+                            <div className="aspect-square flex items-center justify-center mb-4 bg-white rounded-lg p-4">
+                              <img 
+                                src={cert.logo} 
+                                alt={`${cert.title} certification from ${cert.org}`} 
+                                className="w-full h-full object-contain" 
+                                loading="lazy" 
+                              />
                             </div>
                             <div className="text-center">
                               <h4 className="font-semibold text-deep-purple text-lg mb-2">
@@ -118,10 +126,11 @@ const CertificationsSection = () => {
                             </div>
                           </CardContent>
                         </Card>
-                      </CarouselItem>)}
+                      </CarouselItem>
+                    ))}
                   </CarouselContent>
-                  <CarouselPrevious className="flex -left-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple" />
-                  <CarouselNext className="flex -right-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple" />
+                  <CarouselPrevious className="-left-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple shadow-lg" />
+                  <CarouselNext className="-right-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple shadow-lg" />
                 </Carousel>
                 
                 {/* Certification count indicator */}
