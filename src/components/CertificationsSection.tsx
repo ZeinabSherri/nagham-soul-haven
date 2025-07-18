@@ -60,6 +60,21 @@ const CertificationsSection = () => {
     org: "Energy Healing Academy",
     logo: "/lovable-uploads/b84e3626-0d98-484b-81e7-ee27351bbe3e.png",
     description: "Comprehensive energy healing practices"
+  }, {
+    title: "Trainer of Master Time Line Therapy",
+    org: "Time Line Therapy Association",
+    logo: "/lovable-uploads/ac4801f4-1fe5-4fdd-9ab9-dbd984045148.png",
+    description: "Advanced trainer certification in Time Line Therapy"
+  }, {
+    title: "ICBCH Master Certification",
+    org: "International Certification Board of Coaches and Hypnotists",
+    logo: "/lovable-uploads/c0d768ac-ceaa-46a4-9dc3-1cfbb1e889e6.png",
+    description: "Master level coaching and hypnotherapy certification"
+  }, {
+    title: "NLP Coaching Division Certification",
+    org: "Coaching Division of the American Board of NLP",
+    logo: "/lovable-uploads/61152745-2b6c-48ea-a08e-7cc1c58d477a.png",
+    description: "Approved training in NLP coaching methodologies"
   }];
 
   const additionalTrainings = ["Access Bars® Practitioner & Facilitator", "Master Reiki", "Master Choa Kok Sui's Pranic Healing", "Access FaceLift® Practitioner", "Certified Trainer", "Intuitive Healing", "Space Clearing & Recharging", "Consciousness Advisor", "Sexual Agility Specialist", "Past-life Regression Specialist", "SuperRelationships Specialist", "Money Reiki", "Laughter Yoga Leader"];
