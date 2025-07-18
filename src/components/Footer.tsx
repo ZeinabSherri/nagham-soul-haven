@@ -18,7 +18,7 @@ const Footer = () => {
             <LogoProcessor 
               originalImageUrl="/lovable-uploads/aa0504d9-9244-495e-bdf6-b5ae3af2a200.png"
               onProcessed={() => {}}
-              className="h-20 w-auto"
+              className="h-24 sm:h-28 md:h-32 w-auto"
             />
           </div>
           <h4 className="text-lg font-semibold mb-4 text-deep-purple">Let's stay connected:</h4>
