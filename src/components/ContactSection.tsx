@@ -223,13 +223,13 @@ const ContactSection = () => {
                   WebkitTapHighlightColor: 'rgba(163, 57, 156, 0.3)'
                 }}>
                     <Phone className="w-5 h-5 md:w-6 md:h-6 text-vibrant-purple flex-shrink-0" />
-                    <span className="text-sm md:text-base text-deep-purple">+961 3 633 483</span>
+                    <span className="text-sm md:text-base text-deep-purple hover:text-vibrant-purple hover:scale-105 transition-all duration-300">+961 3 633 483</span>
                   </div>
                   <div className="flex items-center space-x-3 md:space-x-4 cursor-pointer hover:text-vibrant-purple transition-colors touch-manipulation" onClick={handleWhatsAppClicks} style={{
                   WebkitTapHighlightColor: 'rgba(163, 57, 156, 0.3)'
                 }}>
                     <Phone className="w-5 h-5 md:w-6 md:h-6 text-vibrant-purple flex-shrink-0" />
-                    <span className="text-sm md:text-base text-deep-purple">+971 50 660 70 34</span>
+                    <span className="text-sm md:text-base text-deep-purple hover:text-vibrant-purple hover:scale-105 transition-all duration-300">+971 50 660 70 34</span>
                   </div>
                   <div className="flex items-start space-x-3 md:space-x-4">
                     <MapPin className="w-5 h-5 md:w-6 md:h-6 text-vibrant-purple flex-shrink-0 mt-0.5" />
