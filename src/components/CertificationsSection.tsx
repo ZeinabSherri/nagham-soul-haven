@@ -98,7 +98,8 @@ const CertificationsSection = () => {
                 <Carousel className="w-full max-w-sm mx-auto" opts={{
                   align: "center",
                   loop: true,
-                  slidesToScroll: 1
+                  slidesToScroll: 1,
+                  startIndex: 0
                 }}>
                   <CarouselContent className="-ml-2 md:-ml-4">
                     {mainCertifications.map((cert, index) => (
