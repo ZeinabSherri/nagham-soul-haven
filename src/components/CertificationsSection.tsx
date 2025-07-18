@@ -101,7 +101,7 @@ const CertificationsSection = () => {
                   slidesToScroll: 1
                 }}>
                   <CarouselContent className="-ml-2 md:-ml-4">
-                    {allCertifications.map((cert, index) => (
+                    {mainCertifications.map((cert, index) => (
                       <CarouselItem key={`cert-${index}`} className="pl-2 md:pl-4 basis-full">
                         <Card className="border-2 border-white shadow-md hover:shadow-lg transition-all duration-300">
                           <CardContent className="p-6">
