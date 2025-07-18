@@ -100,14 +100,19 @@ const CertificationsSection = () => {
               <h3 className="text-2xl font-semibold text-deep-purple mb-6 text-center">Internationally Certified Master Practitioner in:</h3>
               
               <div className="overflow-x-hidden">
-                <Carousel className="w-full max-w-md mx-auto overflow-x-hidden">
+                <Carousel className="w-full max-w-md mx-auto overflow-x-hidden" opts={{ loop: true }}>
                   <CarouselContent className="overflow-x-hidden">
                     {allCertifications.map((cert, index) => (
-                      <CarouselItem key={index} className="overflow-x-hidden">
+                      <CarouselItem key={`cert-${index}`} className="overflow-x-hidden">
                         <Card className="border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-x-hidden">
                           <CardContent className="p-6 overflow-x-hidden">
                             <div className="aspect-square flex items-center justify-center mb-4 bg-white rounded-lg p-4 overflow-hidden">
-                              <img src={cert.logo} alt={`${cert.title} certification from ${cert.org}`} className="w-full h-full object-contain" />
+                              <img 
+                                src={cert.logo} 
+                                alt={`${cert.title} certification from ${cert.org}`} 
+                                className="w-full h-full object-contain"
+                                loading="lazy"
+                              />
                             </div>
                             <div className="text-center">
                               <h4 className="font-semibold text-deep-purple text-lg mb-2">
@@ -125,14 +130,19 @@ const CertificationsSection = () => {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious className="hidden sm:flex" />
-                  <CarouselNext className="hidden sm:flex" />
+                  <CarouselPrevious className="flex -left-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple" />
+                  <CarouselNext className="flex -right-12 bg-white hover:bg-vibrant-purple hover:text-white border-vibrant-purple text-vibrant-purple" />
                 </Carousel>
                 
                 {/* Certification count indicator */}
-                <p className="text-center text-dark-olive text-sm mt-4">
-                  Showing {allCertifications.length} professional certifications
-                </p>
+                <div className="text-center mt-4">
+                  <p className="text-dark-olive text-sm">
+                    Showing {allCertifications.length} professional certifications
+                  </p>
+                  <p className="text-dark-olive text-xs mt-1">
+                    Use arrows to navigate through all certifications
+                  </p>
+                </div>
               </div>
               
               {/* Mobile swipe indicator */}
