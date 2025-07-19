@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Check, Award } from 'lucide-react';
 const CertificationsSection = () => {
   // Main 4 certifications for the carousel
@@ -95,47 +94,44 @@ const CertificationsSection = () => {
               <h3 className="text-xl sm:text-2xl font-semibold text-deep-purple mb-6 text-center">Internationally Certified Master Practitioner in:</h3>
               
               <div className="w-full">
-                {/* Horizontal scroll container */}
-                <div className="relative">
-                  <div 
-                    className="flex gap-4 overflow-x-auto pb-4 scroll-smooth snap-x snap-mandatory scrollbar-hide"
-                    style={{
-                      scrollbarWidth: 'none',
-                      msOverflowStyle: 'none',
-                      WebkitOverflowScrolling: 'touch'
-                    }}
-                  >
-                    {mainCertifications.map((cert, index) => (
-                      <div 
-                        key={`cert-${index}`} 
-                        className="flex-shrink-0 w-full max-w-sm snap-center"
-                      >
-                        <Card className="border-2 border-white shadow-md hover:shadow-lg transition-all duration-300 h-full">
-                          <CardContent className="p-4 sm:p-6">
-                            <div className="aspect-square flex items-center justify-center mb-3 sm:mb-4 bg-white rounded-lg p-3 sm:p-4">
-                              <img 
-                                src={cert.logo} 
-                                alt={`${cert.title} certification from ${cert.org}`} 
-                                className="w-full h-full object-contain" 
-                                loading="lazy" 
-                              />
-                            </div>
-                            <div className="text-center">
-                              <h4 className="font-semibold text-deep-purple text-base sm:text-lg mb-2">
-                                {cert.title}
-                              </h4>
-                              <p className="text-dark-olive text-xs sm:text-sm mb-2">
-                                {cert.org}
-                              </p>
-                              <p className="text-dark-olive text-xs italic">
-                                {cert.description}
-                              </p>
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </div>
-                    ))}
-                  </div>
+                {/* Simple horizontal scroll container */}
+                <div 
+                  className="flex gap-4 overflow-x-auto py-4"
+                  style={{
+                    WebkitOverflowScrolling: 'touch'
+                  }}
+                >
+                  {mainCertifications.map((cert, index) => (
+                    <div 
+                      key={`cert-${index}`} 
+                      className="flex-shrink-0 w-80 sm:w-72"
+                      style={{ minWidth: '280px' }}
+                    >
+                      <Card className="border-2 border-white shadow-md hover:shadow-lg transition-all duration-300 h-full">
+                        <CardContent className="p-4 sm:p-6">
+                          <div className="aspect-square flex items-center justify-center mb-3 sm:mb-4 bg-white rounded-lg p-3 sm:p-4">
+                            <img 
+                              src={cert.logo} 
+                              alt={`${cert.title} certification from ${cert.org}`} 
+                              className="w-full h-full object-contain" 
+                              loading="lazy" 
+                            />
+                          </div>
+                          <div className="text-center">
+                            <h4 className="font-semibold text-deep-purple text-base sm:text-lg mb-2">
+                              {cert.title}
+                            </h4>
+                            <p className="text-dark-olive text-xs sm:text-sm mb-2">
+                              {cert.org}
+                            </p>
+                            <p className="text-dark-olive text-xs italic">
+                              {cert.description}
+                            </p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  ))}
                 </div>
                 
                 {/* Certification count indicator */}
