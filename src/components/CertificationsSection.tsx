@@ -97,6 +97,7 @@ const CertificationsSection = () => {
               <div className="w-full">
                 <Carousel 
                   className="w-full" 
+                  data-carousel="true"
                   opts={{
                     align: "start",
                     loop: true,
