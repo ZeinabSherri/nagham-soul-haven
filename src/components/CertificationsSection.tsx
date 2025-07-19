@@ -40,19 +40,19 @@ const CertificationsSection = () => {
             <div className="bg-gradient-to-br from-soft-lavender to-light-lavender-pink p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-semibold text-deep-purple mb-6 text-center">Internationally Certified Master Practitioner in:</h3>
               
-              <Carousel className="w-full max-w-md mx-auto">
-                <CarouselContent>
-                  {certifications.map((cert, index) => <CarouselItem key={index}>
-                      <Card className="border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300">
-                        <CardContent className="p-6">
-                          <div className="aspect-square flex items-center justify-center mb-4 bg-white rounded-lg p-4">
+              <Carousel className="w-full">
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {certifications.map((cert, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-[85%] sm:basis-[70%] md:basis-[60%] lg:basis-full">
+                      <Card className="border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300 h-full">
+                        <CardContent className="p-4 sm:p-6">
+                          <div className="aspect-square flex items-center justify-center mb-4 bg-white rounded-lg p-3 sm:p-4">
                             <img src={cert.logo} alt={`${cert.title} certification from ${cert.org}`} className="w-full h-full object-contain" />
                           </div>
                           <div className="text-center">
-                            <h4 className="font-semibold text-deep-purple text-lg mb-2">
+                            <h4 className="font-semibold text-deep-purple text-sm sm:text-lg mb-2">
                               {cert.title}
                             </h4>
-                            <p className="text-dark-olive text-sm mb-2">
+                            <p className="text-dark-olive text-xs sm:text-sm mb-2">
                               {cert.org}
                             </p>
                             <p className="text-dark-olive text-xs italic">
@@ -63,8 +63,8 @@ const CertificationsSection = () => {
                       </Card>
                     </CarouselItem>)}
                 </CarouselContent>
-                <CarouselPrevious className="hidden sm:flex" />
-                <CarouselNext className="hidden sm:flex" />
+                <CarouselPrevious className="-left-3 sm:-left-12" />
+                <CarouselNext className="-right-3 sm:-right-12" />
               </Carousel>
               
               {/* Mobile swipe indicator */}
