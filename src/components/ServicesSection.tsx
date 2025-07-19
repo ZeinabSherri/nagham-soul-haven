@@ -1,8 +1,10 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Users, Video, Home, Heart, Star, Sparkles, Zap, Eye } from 'lucide-react';
+
 const ServicesSection = () => {
   const services = [{
     title: "1:1 Private Coaching Session",
@@ -68,11 +70,15 @@ const ServicesSection = () => {
     icon: Eye,
     bookingLink: "http://lb.oneconsciousness.org/naghamrasbieh"
   }];
+
   const handleBookNow = (bookingLink: string) => {
     window.open(bookingLink, '_blank');
   };
+
   const isSignatureService = (title: string) => title === "1:1 Private Coaching Session";
-  return <section id="services-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+
+  return (
+    <section id="services-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Left-aligned title with semantic ID */}
         <div className="mb-12 animate-fade-in">
@@ -87,14 +93,24 @@ const ServicesSection = () => {
           {services.map((service, index) => {
           const IconComponent = service.icon;
           const isSignature = isSignatureService(service.title);
+          
           return <Card key={index} className={`
-            ${isSignature ? "bg-gradient-to-br from-light-lavender-pink via-soft-lavender to-creamy-beige border-2 border-vibrant-purple/40 shadow-xl hover:shadow-2xl" : "bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg"} 
+            ${isSignature 
+              ? "bg-gradient-to-br from-light-lavender-pink via-soft-lavender to-creamy-beige border-2 border-vibrant-purple/40 shadow-xl hover:shadow-2xl" 
+              : "bg-white border border-vibrant-purple/30 shadow-md hover:shadow-lg"
+            } 
             transition-all duration-300 transform hover:-translate-y-1 animate-fade-in h-80 flex flex-col relative overflow-hidden
           `} style={{
             animationDelay: `${400 + index * 200}ms`
           }}>
                 {/* Signature Badge */}
-                {isSignature}
+                {isSignature && (
+                  <div className="absolute top-3 right-3 z-10">
+                    <Badge className="bg-gradient-to-r from-vibrant-purple to-deep-purple text-white text-xs font-semibold px-3 py-1 shadow-md">
+                      Signature
+                    </Badge>
+                  </div>
+                )}
                 
                 <CardContent className="p-6 flex flex-col h-full">
                   {/* Icon */}
@@ -122,13 +138,19 @@ const ServicesSection = () => {
                   {/* Duration and Format */}
                   <div className="flex flex-wrap gap-2 mb-4 text-xs">
                     <span className={`
-                      ${isSignature ? "bg-vibrant-purple/20 text-deep-purple border border-vibrant-purple/30" : "bg-vibrant-purple/10 text-deep-purple"} 
+                      ${isSignature 
+                        ? "bg-vibrant-purple/20 text-deep-purple border border-vibrant-purple/30" 
+                        : "bg-vibrant-purple/10 text-deep-purple"
+                      } 
                       px-2 py-1 rounded-full
                     `}>
                       {service.duration}
                     </span>
                     <span className={`
-                      ${isSignature ? "bg-vibrant-purple/20 text-deep-purple border border-vibrant-purple/30" : "bg-vibrant-purple/10 text-deep-purple"} 
+                      ${isSignature 
+                        ? "bg-vibrant-purple/20 text-deep-purple border border-vibrant-purple/30" 
+                        : "bg-vibrant-purple/10 text-deep-purple"
+                      } 
                       px-2 py-1 rounded-full
                     `}>
                       {service.format}
@@ -136,10 +158,17 @@ const ServicesSection = () => {
                   </div>
                   
                   {/* Call-to-Action Button */}
-                  <Button onClick={() => handleBookNow(service.bookingLink)} size="sm" className={`
+                  <Button 
+                    onClick={() => handleBookNow(service.bookingLink)} 
+                    size="sm" 
+                    className={`
                       w-full text-sm font-medium transition-all duration-300 mt-auto
-                      ${isSignature ? "bg-gradient-to-r from-deep-purple to-vibrant-purple hover:from-vibrant-purple hover:to-deep-purple text-white shadow-lg hover:shadow-xl" : "bg-deep-purple hover:bg-vibrant-purple text-white"}
-                    `}>
+                      ${isSignature 
+                        ? "bg-gradient-to-r from-deep-purple to-vibrant-purple hover:from-vibrant-purple hover:to-deep-purple text-white shadow-lg hover:shadow-xl" 
+                        : "bg-deep-purple hover:bg-vibrant-purple text-white"
+                      }
+                    `}
+                  >
                     {service.title === "Consciousness Services" ? "Book Free 30 min Call" : "Book Now"}
                   </Button>
                 </CardContent>
@@ -170,6 +199,8 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ServicesSection;

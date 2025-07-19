@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles, Shield } from 'lucide-react';
-
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     console.log(`HeroSection: Scrolling to ${sectionId}`);
@@ -13,28 +11,23 @@ const HeroSection = () => {
       });
     }
   };
-
   const handleCalendlyClick = () => {
     console.log('HeroSection: Opening Calendly booking page');
     window.open('https://calendly.com/hello-naghamthecoach/new-healing-session', '_blank');
   };
-
   const handleServicesClick = () => {
     console.log('HeroSection: Scrolling to services section');
     scrollToSection('services-title');
   };
-
   const handleContactClick = () => {
     console.log('HeroSection: Scrolling to contact section');
     scrollToSection('contact-title');
   };
-
-  return (
-    <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
+  return <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-screen">
       {/* Background Texture Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
-      }}></div>
+      backgroundImage: "url('/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png')"
+    }}></div>
       
       {/* Semi-transparent Overlay */}
       <div className="absolute inset-0 bg-creamy-beige/45"></div>
@@ -49,10 +42,7 @@ const HeroSection = () => {
           {/* Left side - Content */}
           <div className="text-left my-[90px]">
             {/* Main Headline with smaller size and proper spacing */}
-            <h1 className="text-2xl md:text-3xl xl:text-5xl text-deep-purple mb-3 leading-tight animate-fade-in font-bold lg:text-5xl">
-              Start Feeling Safe,<br />
-              <span>Seen & Connected Again</span>
-            </h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-deep-purple mb-3 leading-tight animate-fade-in">Start Feeling Safe, Seen & Connected <br /><span>Again</span></h1>
             
             {/* Subheadline */}
             <p className="text-vibrant-purple mb-3 leading-relaxed animate-fade-in delay-300 font-normal text-lg my-[30px]">
@@ -107,19 +97,19 @@ const HeroSection = () => {
                   {/* Feature icons */}
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div className="flex flex-col items-center animate-fade-in delay-1600 hover:scale-110 transition-transform duration-300">
-                      <div className="w-12 h-12 rounded-full flex items-center justify-center mb-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110" style={{ backgroundColor: '#c6d48a' }}>
+                      <div className="w-12 h-12 bg-light-olive rounded-full flex items-center justify-center mb-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <Heart className="w-6 h-6 text-deep-purple" />
                       </div>
                       <p className="text-deep-purple text-xs">Safety</p>
                     </div>
                     <div className="flex flex-col items-center animate-fade-in delay-1800 hover:scale-110 transition-transform duration-300">
-                      <div className="w-12 h-12 rounded-full flex items-center justify-center mb-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110" style={{ backgroundColor: '#c6d48a' }}>
+                      <div className="w-12 h-12 bg-light-olive rounded-full flex items-center justify-center mb-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <Shield className="w-6 h-6 text-deep-purple" />
                       </div>
                       <p className="text-deep-purple text-xs">Healing</p>
                     </div>
                     <div className="flex flex-col items-center animate-fade-in delay-2000 hover:scale-110 transition-transform duration-300">
-                      <div className="w-12 h-12 rounded-full flex items-center justify-center mb-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110" style={{ backgroundColor: '#c6d48a' }}>
+                      <div className="w-12 h-12 bg-light-olive rounded-full flex items-center justify-center mb-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <Sparkles className="w-6 h-6 text-deep-purple" />
                       </div>
                       <p className="text-deep-purple text-xs">Transformation</p>
@@ -135,8 +125,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;

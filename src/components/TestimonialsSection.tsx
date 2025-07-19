@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from 'lucide-react';
@@ -9,18 +8,30 @@ const TestimonialsSection = () => {
     name: "Mark",
     text: "I tried years of therapy. One session with Nagham shifted something I didn't even know was stuck.",
     rating: 5,
-    bgColor: "#c6d48a"
+    color: "soft-lavender"
   }, {
     name: "Maya", 
     text: "I finally feel safe in my body after years of anxiety. Nagham gave me space to bring all my fears, and somehow, it felt okay to just be me.",
     rating: 5,
-    bgColor: "#f7e3fc"
+    color: "light-olive"
   }, {
     name: "Rana",
     text: "Her sessions helped me reconnect with myself in ways I didn't think were possible.",
     rating: 5,
-    bgColor: "#d8c8f4"
+    color: "light-lavender-pink"
   }];
+
+  const getColorClasses = (color: string) => {
+    const colors = {
+      "soft-lavender": "bg-soft-lavender border-soft-lavender text-deep-purple",
+      "light-olive": "bg-light-olive border-light-olive text-deep-purple",
+      "light-lavender-pink": "bg-light-lavender-pink border-light-lavender-pink text-deep-purple",
+      "vibrant-purple": "bg-vibrant-purple border-vibrant-purple text-white",
+      "dark-olive": "bg-dark-olive border-dark-olive text-white",
+      "creamy-beige": "bg-creamy-beige border-creamy-beige text-deep-purple"
+    };
+    return colors[color as keyof typeof colors] || colors["soft-lavender"];
+  };
 
   const handleBookSession = () => {
     const bookingSection = document.getElementById('services-section');
@@ -51,21 +62,19 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className="border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group text-deep-purple"
+              className={`${getColorClasses(testimonial.color)} border-2 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in group`} 
               style={{
-                backgroundColor: testimonial.bgColor,
-                borderColor: testimonial.bgColor,
                 animationDelay: `${400 + index * 200}ms`
               }}
             >
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <Quote className="w-6 h-6 mr-3 text-vibrant-purple transition-transform duration-300 group-hover:scale-110" />
+                  <Quote className={`w-6 h-6 mr-3 ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-transform duration-300 group-hover:scale-110`} />
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star 
                         key={i} 
-                        className="w-4 h-4 fill-current text-vibrant-purple transition-all duration-300 hover:scale-110" 
+                        className={`w-4 h-4 fill-current ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-vibrant-purple'} transition-all duration-300 hover:scale-110`} 
                         style={{
                           animationDelay: `${i * 100}ms`
                         }} 
@@ -73,10 +82,10 @@ const TestimonialsSection = () => {
                     ))}
                   </div>
                 </div>
-                <p className="mb-4 leading-relaxed italic text-sm text-deep-purple transition-all duration-300 group-hover:text-opacity-90">
+                <p className={`mb-4 leading-relaxed italic text-sm ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-deep-purple'} transition-all duration-300 group-hover:text-opacity-90`}>
                   "{testimonial.text}"
                 </p>
-                <p className="font-semibold text-sm text-deep-purple transition-all duration-300">
+                <p className={`font-semibold text-sm ${testimonial.color === 'vibrant-purple' || testimonial.color === 'dark-olive' ? 'text-white' : 'text-deep-purple'} transition-all duration-300`}>
                   — {testimonial.name}
                 </p>
               </CardContent>

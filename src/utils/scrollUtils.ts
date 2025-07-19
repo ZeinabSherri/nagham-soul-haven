@@ -1,3 +1,4 @@
+
 export const scrollToSection = (titleId: string) => {
   console.log(`Attempting to scroll to title: ${titleId}`);
   
@@ -11,44 +12,53 @@ export const scrollToSection = (titleId: string) => {
   console.log(`Device type: ${isMobile ? 'Mobile' : 'Desktop'}`);
 
   if (isMobile) {
-    console.log('Mobile device: Positioning title flush with top of viewport');
+    console.log('Mobile device: Positioning title with compact margin below navbar');
+    
+    // Dynamically get the actual mobile header height
+    const header = document.querySelector('nav');
+    const actualHeaderHeight = header ? header.offsetHeight : 100;
+    const compactMargin = 16; // 16px visual margin for mobile
     
     // Get the current scroll position and element position
     const elementRect = element.getBoundingClientRect();
     const currentScrollY = window.pageYOffset;
     const elementTop = elementRect.top + currentScrollY;
     
-    console.log(`Mobile: Element absolute top: ${elementTop}px, scrolling to make it flush with viewport top`);
+    // Calculate target position: element position minus header height minus compact margin
+    const targetPosition = elementTop - actualHeaderHeight - compactMargin;
     
-    // Scroll to make the title flush with the top of the viewport
+    console.log(`Mobile: Header height: ${actualHeaderHeight}px, target position: ${targetPosition}px`);
+    
+    // Scroll to position the title just below the navbar with compact margin
     window.scrollTo({
-      top: elementTop,
+      top: Math.max(0, targetPosition), // Ensure we don't scroll to negative position
       behavior: 'smooth'
     });
     
-    // Precision correction after scroll completes to ensure perfect alignment
+    // Precision correction after scroll completes
     setTimeout(() => {
       const newRect = element.getBoundingClientRect();
       const actualTop = newRect.top;
+      const expectedTop = actualHeaderHeight + compactMargin;
       
-      console.log(`Mobile verification: Element top after scroll: ${actualTop}px`);
+      console.log(`Mobile verification: Element top: ${actualTop}px, expected: ${expectedTop}px`);
       
-      // If the element is not exactly at the top (allowing 2px tolerance), apply correction
-      if (Math.abs(actualTop) > 2) {
-        const correction = actualTop;
+      // If the element is not in the expected position (allowing 3px tolerance), apply correction
+      if (Math.abs(actualTop - expectedTop) > 3) {
+        const correction = actualTop - expectedTop;
         const correctedScrollY = window.pageYOffset + correction;
         
         console.log(`Mobile: Applying precision correction: ${correction}px, new scroll: ${correctedScrollY}px`);
         
         window.scrollTo({
-          top: correctedScrollY,
+          top: Math.max(0, correctedScrollY),
           behavior: 'auto' // Instant for precision
         });
         
         // Final verification
         setTimeout(() => {
           const finalRect = element.getBoundingClientRect();
-          console.log(`Mobile: Final position: ${finalRect.top}px from top (target: 0px)`);
+          console.log(`Mobile: Final position: ${finalRect.top}px from top (target: ${expectedTop}px)`);
         }, 50);
       }
     }, 700); // Wait for smooth scroll animation

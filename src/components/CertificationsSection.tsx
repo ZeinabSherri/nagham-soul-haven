@@ -2,18 +2,18 @@ import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Check, Award } from 'lucide-react';
+
 const CertificationsSection = () => {
-  // Main 4 certifications for the carousel
-  const mainCertifications = [{
-    title: "Clinical Hypnotherapy",
-    org: "American Board of Hypnotherapy (ABH)",
-    logo: "/lovable-uploads/84ad1457-3c87-408c-9ce8-27d48a253d66.png",
-    description: "Professional clinical hypnotherapy certification"
-  }, {
+  const certifications = [{
     title: "Time Line Therapy®",
     org: "TLT® Association",
     logo: "/lovable-uploads/83d5f222-8dd4-4a0b-b14f-93065557e489.png",
     description: "Advanced therapeutic technique for emotional healing"
+  }, {
+    title: "Clinical Hypnotherapy",
+    org: "American Board of Hypnotherapy (ABH)",
+    logo: "/lovable-uploads/84ad1457-3c87-408c-9ce8-27d48a253d66.png",
+    description: "Professional clinical hypnotherapy certification"
   }, {
     title: "Neuro-Linguistic Programming (NLP)",
     org: "American Board of NLP (ABNLP)",
@@ -25,61 +25,9 @@ const CertificationsSection = () => {
     logo: "/lovable-uploads/0174fa00-b417-456f-a192-b363fbe2842b.png",
     description: "Specialized CBT therapeutic approach"
   }];
-
-  // All certifications including the new ones
-  const allCertifications = [...mainCertifications, {
-    title: "Professional Certification",
-    org: "Therapeutic Training Institute",
-    logo: "/lovable-uploads/2403300f-e082-4573-93ac-849c73996313.png",
-    description: "Advanced therapeutic methodologies"
-  }, {
-    title: "Advanced Practitioner",
-    org: "International Healing Association",
-    logo: "/lovable-uploads/63b0502e-a679-4e45-9e33-c4489d57e78a.png",
-    description: "Advanced healing techniques certification"
-  }, {
-    title: "Master Practitioner Certification",
-    org: "Global Wellness Institute",
-    logo: "/lovable-uploads/80cc333c-c44f-4b3d-90b2-857d22c7531a.png",
-    description: "Comprehensive wellness and healing practices"
-  }, {
-    title: "Specialized Training Certificate",
-    org: "Professional Development Academy",
-    logo: "/lovable-uploads/8e92d398-8495-4988-a303-5fb8be016750.png",
-    description: "Specialized therapeutic approaches"
-  }, {
-    title: "Advanced Certification",
-    org: "International Therapy Board",
-    logo: "/lovable-uploads/96c45d35-a86f-45f2-bb90-1fdb7c1455c1.png",
-    description: "Advanced therapeutic interventions"
-  }, {
-    title: "Professional Excellence Award",
-    org: "Healing Arts Institute",
-    logo: "/lovable-uploads/9b32dbbe-02c5-418a-b0c1-9fe944e8b0c2.png",
-    description: "Recognition for professional excellence"
-  }, {
-    title: "Master Healer Certification",
-    org: "Energy Healing Academy",
-    logo: "/lovable-uploads/b84e3626-0d98-484b-81e7-ee27351bbe3e.png",
-    description: "Comprehensive energy healing practices"
-  }, {
-    title: "Trainer of Master Time Line Therapy",
-    org: "Time Line Therapy Association",
-    logo: "/lovable-uploads/ac4801f4-1fe5-4fdd-9ab9-dbd984045148.png",
-    description: "Advanced trainer certification in Time Line Therapy"
-  }, {
-    title: "ICBCH Master Certification",
-    org: "International Certification Board of Coaches and Hypnotists",
-    logo: "/lovable-uploads/c0d768ac-ceaa-46a4-9dc3-1cfbb1e889e6.png",
-    description: "Master level coaching and hypnotherapy certification"
-  }, {
-    title: "NLP Coaching Division Certification",
-    org: "Coaching Division of the American Board of NLP",
-    logo: "/lovable-uploads/61152745-2b6c-48ea-a08e-7cc1c58d477a.png",
-    description: "Approved training in NLP coaching methodologies"
-  }];
   const additionalTrainings = ["Access Bars® Practitioner & Facilitator", "Master Reiki", "Master Choa Kok Sui's Pranic Healing", "Access FaceLift® Practitioner", "Certified Trainer", "Intuitive Healing", "Space Clearing & Recharging", "Consciousness Advisor", "Sexual Agility Specialist", "Past-life Regression Specialist", "SuperRelationships Specialist", "Money Reiki", "Laughter Yoga Leader"];
-  return <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-x-hidden">
+  return (
+    <section id="certifications-section" className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto overflow-x-hidden">
         {/* Section Header */}
         <div className="text-center mb-12 animate-fade-in">
@@ -90,50 +38,43 @@ const CertificationsSection = () => {
         {/* Main Content Layout */}
         <div className="grid lg:grid-cols-2 gap-12 items-start overflow-x-hidden">
           {/* Certification Carousel */}
-          <div className="animate-fade-in delay-300">
-            <div className="bg-gradient-to-br from-soft-lavender to-light-lavender-pink p-6 sm:p-8 rounded-2xl shadow-lg">
+          <div className="animate-fade-in delay-300 w-full overflow-x-hidden">
+            <div className="bg-gradient-to-br from-soft-lavender to-light-lavender-pink p-4 sm:p-8 rounded-2xl shadow-lg overflow-x-hidden">
               <h3 className="text-xl sm:text-2xl font-semibold text-deep-purple mb-6 text-center">Internationally Certified Master Practitioner in:</h3>
               
-              <div className="relative">
-                <Carousel className="w-full max-w-xs mx-auto" opts={{ align: "start", loop: true }}>
-                  <CarouselContent>
-                    {mainCertifications.map((cert, index) => (
-                      <CarouselItem key={index}>
-                        <div className="p-1">
-                          <Card>
-                            <CardContent className="flex flex-col items-center justify-center p-6 min-h-[280px]">
-                              <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                                <img 
-                                  src={cert.logo} 
-                                  alt={`${cert.title} certification logo`}
-                                  className="w-full h-full object-contain"
-                                />
-                              </div>
-                              <h4 className="font-bold text-deep-purple text-center text-sm mb-2 leading-tight">
+              <div className="w-full max-w-sm mx-auto overflow-x-hidden">
+                <Carousel className="w-full overflow-x-hidden" opts={{ align: "center", loop: true }}>
+                  <CarouselContent className="overflow-x-hidden">
+                    {certifications.map((cert, index) => (
+                      <CarouselItem key={index} className="overflow-x-hidden">
+                        <Card className="border-2 border-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-x-hidden">
+                          <CardContent className="p-4 sm:p-6 overflow-x-hidden">
+                            <div className="aspect-square flex items-center justify-center mb-4 bg-white rounded-lg p-2 sm:p-4 overflow-hidden">
+                              <img 
+                                src={cert.logo} 
+                                alt={`${cert.title} certification from ${cert.org}`} 
+                                className="w-full h-full object-contain max-w-full max-h-full" 
+                              />
+                            </div>
+                            <div className="text-center overflow-x-hidden">
+                              <h4 className="font-semibold text-deep-purple text-base sm:text-lg mb-2 break-words">
                                 {cert.title}
                               </h4>
-                              <p className="text-dark-olive text-xs text-center mb-2 leading-relaxed">
+                              <p className="text-dark-olive text-xs sm:text-sm mb-2 break-words">
                                 {cert.org}
                               </p>
-                              <p className="text-dark-olive text-xs text-center italic">
+                              <p className="text-dark-olive text-xs italic break-words">
                                 {cert.description}
                               </p>
-                            </CardContent>
-                          </Card>
-                        </div>
+                            </div>
+                          </CardContent>
+                        </Card>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious className="left-2" />
-                  <CarouselNext className="right-2" />
+                  <CarouselPrevious className="hidden sm:flex -left-8 sm:-left-12" />
+                  <CarouselNext className="hidden sm:flex -right-8 sm:-right-12" />
                 </Carousel>
-                
-                {/* Certification count indicator */}
-                <div className="text-center mt-4">
-                  <p className="text-dark-olive text-sm">
-                    {mainCertifications.length} Professional Certifications
-                  </p>
-                </div>
               </div>
               
               {/* Mobile swipe indicator */}
@@ -144,43 +85,45 @@ const CertificationsSection = () => {
           </div>
 
           {/* Certification Lists */}
-          <div className="space-y-8 animate-fade-in delay-500 overflow-x-hidden">
+          <div className="space-y-8 animate-fade-in delay-500 w-full overflow-x-hidden">
             {/* Main Certifications List */}
-            <div className="bg-creamy-beige p-6 rounded-xl overflow-x-hidden">
-              <div className="flex items-center mb-6">
-                <Award className="w-6 h-6 text-vibrant-purple mr-3" />
-                <h3 className="text-xl font-bold text-deep-purple">Internationally Certified Master Practitioner in:</h3>
+            <div className="bg-creamy-beige p-4 sm:p-6 rounded-xl overflow-x-hidden">
+              <div className="flex items-center mb-6 overflow-x-hidden">
+                <Award className="w-5 sm:w-6 h-5 sm:h-6 text-vibrant-purple mr-3 flex-shrink-0" />
+                <h3 className="text-lg sm:text-xl font-bold text-deep-purple break-words">Internationally Certified Master Practitioner in:</h3>
               </div>
-              
-              
               <div className="space-y-4 overflow-x-hidden">
-                {mainCertifications.map((cert, index) => <div key={index} className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm overflow-x-hidden">
-                    <Check className="w-5 h-5 text-vibrant-purple mt-1 flex-shrink-0" />
-                    <div className="overflow-x-hidden">
-                      <h4 className="font-semibold text-deep-purple">
+                {certifications.map((cert, index) => (
+                  <div key={index} className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm overflow-x-hidden">
+                    <Check className="w-4 sm:w-5 h-4 sm:h-5 text-vibrant-purple mt-1 flex-shrink-0" />
+                    <div className="overflow-x-hidden min-w-0 flex-1">
+                      <h4 className="font-semibold text-deep-purple text-sm sm:text-base break-words">
                         {cert.title}
                       </h4>
-                      <p className="text-dark-olive text-sm">
+                      <p className="text-dark-olive text-xs sm:text-sm break-words">
                         {cert.org}
                       </p>
                     </div>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Additional Trainings */}
-            <div className="bg-light-olive p-6 rounded-xl overflow-x-hidden">
-              <div className="flex items-center mb-6">
-                <Check className="w-6 h-6 text-vibrant-purple mr-3" />
-                <h3 className="text-xl font-bold text-deep-purple">Additional Specialized Certifications</h3>
+            <div className="bg-light-olive p-4 sm:p-6 rounded-xl overflow-x-hidden">
+              <div className="flex items-center mb-6 overflow-x-hidden">
+                <Check className="w-5 sm:w-6 h-5 sm:h-6 text-vibrant-purple mr-3 flex-shrink-0" />
+                <h3 className="text-lg sm:text-xl font-bold text-deep-purple break-words">Additional Specialized Certifications</h3>
               </div>
-              <div className="grid sm:grid-cols-2 gap-2 overflow-x-hidden">
-                {additionalTrainings.map((training, index) => <div key={index} className="flex items-center space-x-2 p-2 bg-white/70 rounded-md overflow-x-hidden">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 overflow-x-hidden">
+                {additionalTrainings.map((training, index) => (
+                  <div key={index} className="flex items-center space-x-2 p-2 bg-white/70 rounded-md overflow-x-hidden min-w-0">
                     <div className="w-2 h-2 bg-vibrant-purple rounded-full flex-shrink-0"></div>
-                    <span className="text-deep-purple text-sm font-medium">
+                    <span className="text-deep-purple text-xs sm:text-sm font-medium break-words min-w-0 flex-1">
                       {training}
                     </span>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -190,15 +133,21 @@ const CertificationsSection = () => {
         <div className="mt-16 text-center animate-fade-in delay-700 overflow-x-hidden">
           <div className="relative max-w-4xl mx-auto overflow-x-hidden">
             <div className="relative overflow-hidden rounded-xl shadow-lg border-2 border-soft-lavender">
-              <img src="/lovable-uploads/place.jpg" alt="Professional certification display wall showing years of dedicated training and education in therapeutic practices" className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+              <img 
+                src="/lovable-uploads/place.jpg" 
+                alt="Professional certification display wall showing years of dedicated training and education in therapeutic practices" 
+                className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 max-w-full" 
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            <div className="mt-6 bg-white p-6 rounded-lg shadow-md border border-soft-lavender overflow-x-hidden">
-              <p className="text-lg italic text-deep-purple font-medium mb-2">&quot;These are more than just title. They reflect the depth, care, and responsibility I bring into every session.&quot;</p>
+            <div className="mt-6 bg-white p-4 sm:p-6 rounded-lg shadow-md border border-soft-lavender overflow-x-hidden">
+              <p className="text-base sm:text-lg italic text-deep-purple font-medium mb-2 break-words">&quot;These are more than just title. They reflect the depth, care, and responsibility I bring into every session.&quot;</p>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default CertificationsSection;
