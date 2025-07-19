@@ -94,8 +94,39 @@ const CertificationsSection = () => {
             <div className="bg-gradient-to-br from-soft-lavender to-light-lavender-pink p-6 sm:p-8 rounded-2xl shadow-lg">
               <h3 className="text-xl sm:text-2xl font-semibold text-deep-purple mb-6 text-center">Internationally Certified Master Practitioner in:</h3>
               
-              <div className="w-full max-w-sm mx-auto">
-                
+              <div className="relative">
+                <Carousel className="w-full max-w-xs mx-auto" opts={{ align: "start", loop: true }}>
+                  <CarouselContent>
+                    {mainCertifications.map((cert, index) => (
+                      <CarouselItem key={index}>
+                        <div className="p-1">
+                          <Card>
+                            <CardContent className="flex flex-col items-center justify-center p-6 min-h-[280px]">
+                              <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                                <img 
+                                  src={cert.logo} 
+                                  alt={`${cert.title} certification logo`}
+                                  className="w-full h-full object-contain"
+                                />
+                              </div>
+                              <h4 className="font-bold text-deep-purple text-center text-sm mb-2 leading-tight">
+                                {cert.title}
+                              </h4>
+                              <p className="text-dark-olive text-xs text-center mb-2 leading-relaxed">
+                                {cert.org}
+                              </p>
+                              <p className="text-dark-olive text-xs text-center italic">
+                                {cert.description}
+                              </p>
+                            </CardContent>
+                          </Card>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2" />
+                  <CarouselNext className="right-2" />
+                </Carousel>
                 
                 {/* Certification count indicator */}
                 <div className="text-center mt-4">
